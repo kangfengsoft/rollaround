@@ -1,0 +1,10 @@
+.directory
+.classpath
+.project
+.buildpath
+.settings
+.checkstyle
+.metadata
+Servers
+target
+*.swp
