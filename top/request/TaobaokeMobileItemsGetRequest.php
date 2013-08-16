@@ -3,7 +3,7 @@
  * TOP API: taobao.taobaoke.mobile.items.get request
  * 
  * @author auto create
- * @since 1.0, 2013-08-11 16:49:19
+ * @since 1.0, 2013-08-16 12:49:12
  */
 class TaobaokeMobileItemsGetRequest
 {

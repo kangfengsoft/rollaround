@@ -5,7 +5,7 @@ class TopClient
 
 	public $secretKey;
 
-	public $gatewayUrl = "http://gw.api.tbsandbox.com/router/rest";
+	public $gatewayUrl = "http://gw.api.taobao.com/router/rest";
 
 	public $format = "xml";
 
@@ -16,7 +16,7 @@ class TopClient
 
 	protected $apiVersion = "2.0";
 
-	protected $sdkVersion = "top-sdk-php-20130811";
+	protected $sdkVersion = "top-sdk-php-20130816";
 
 	protected function generateSign($params)
 	{
