@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.sku.add request
@@ -45,54 +44,6 @@ class FenxiaoProductSkuAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.product.sku.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoProductSkuAddRequest
-{
-	/** 
-	 * 代销采购价
-	 **/
-	private $agentCostPrice;
-	
-	/** 
-	 * 经销采购价
-	 **/
-	private $dealerCostPrice;
-	
-	/** 
-	 * 产品ID
-	 **/
-	private $productId;
-	
-	/** 
-	 * sku属性
-	 **/
-	private $properties;
-	
-	/** 
-	 * sku产品库存，在0到1000000之间，如果不传，则库存为0
-	 **/
-	private $quantity;
-	
-	/** 
-	 * 商家编码
-	 **/
-	private $skuNumber;
-	
-	/** 
-	 * 采购基准价，最大值1000000000
-	 **/
-	private $standardPrice;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAgentCostPrice($agentCostPrice)
 	{
 		$this->agentCostPrice = $agentCostPrice;

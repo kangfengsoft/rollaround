@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.refund.refuse request
@@ -35,44 +34,6 @@ class RefundRefuseRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.refund.refuse request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class RefundRefuseRequest
-{
-	/** 
-	 * 退款记录对应的交易子订单号
-	 **/
-	private $oid;
-	
-	/** 
-	 * 退款单号
-	 **/
-	private $refundId;
-	
-	/** 
-	 * 拒绝退款时的说明信息，长度2-200
-	 **/
-	private $refuseMessage;
-	
-	/** 
-	 * 拒绝退款时的退款凭证，一般是卖家拒绝退款时使用的发货凭证，最大长度130000字节，支持的图片格式：GIF, JPG, PNG
-	 **/
-	private $refuseProof;
-	
-	/** 
-	 * 退款记录对应的交易订单号
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setOid($oid)
 	{
 		$this->oid = $oid;

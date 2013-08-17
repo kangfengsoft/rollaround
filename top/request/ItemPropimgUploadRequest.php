@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.item.propimg.upload request
@@ -35,44 +34,6 @@ class ItemPropimgUploadRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.item.propimg.upload request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemPropimgUploadRequest
-{
-	/** 
-	 * 属性图片ID。如果是新增不需要填写
-	 **/
-	private $id;
-	
-	/** 
-	 * 属性图片内容。类型:JPG,GIF;最大长度:500K;图片大小不超过:1M
-	 **/
-	private $image;
-	
-	/** 
-	 * 商品数字ID，必选
-	 **/
-	private $numIid;
-	
-	/** 
-	 * 图片位置
-	 **/
-	private $position;
-	
-	/** 
-	 * 属性列表。调用taobao.itemprops.get获取类目属性，属性必须是颜色属性，再用taobao.itempropvalues.get取得vid。格式:pid:vid。
-	 **/
-	private $properties;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

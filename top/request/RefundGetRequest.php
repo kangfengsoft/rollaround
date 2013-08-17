@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.refund.get request
@@ -20,29 +19,6 @@ class RefundGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.refund.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class RefundGetRequest
-{
-	/** 
-	 * 需要返回的字段。目前支持有：refund_id, alipay_no, tid, oid, buyer_nick, seller_nick, total_fee, status, created, refund_fee, good_status, has_good_return, payment, reason, desc, num_iid, title, price, num, good_return_time, company_name, sid, address, shipping_type, refund_remind_timeout
-	 **/
-	private $fields;
-	
-	/** 
-	 * 退款单号
-	 **/
-	private $refundId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

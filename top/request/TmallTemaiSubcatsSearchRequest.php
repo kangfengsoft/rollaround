@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.temai.subcats.search request
@@ -15,24 +14,6 @@ class TmallTemaiSubcatsSearchRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.temai.subcats.search request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallTemaiSubcatsSearchRequest
-{
-	/** 
-	 * 父类目ID，固定是特卖前台一级类目id：50100982
-	 **/
-	private $cat;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCat($cat)
 	{
 		$this->cat = $cat;

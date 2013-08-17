@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.keywords.delete request
@@ -25,34 +24,6 @@ class SimbaKeywordsDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.keywords.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaKeywordsDeleteRequest
-{
-	/** 
-	 * 推广计划Id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 关键词Id数组，最多100个
-	 **/
-	private $keywordIds;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

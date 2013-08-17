@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.subuser.employee.add request
@@ -80,89 +79,6 @@ class SubuserEmployeeAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.subuser.employee.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SubuserEmployeeAddRequest
-{
-	/** 
-	 * 当前员工所属部门ID
-	 **/
-	private $departmentId;
-	
-	/** 
-	 * 当前员工担任职务ID
-	 **/
-	private $dutyId;
-	
-	/** 
-	 * 员工姓名
-	 **/
-	private $employeeName;
-	
-	/** 
-	 * 员工花名
-	 **/
-	private $employeeNickname;
-	
-	/** 
-	 * 员工工号(可以用大小写英文字母和数字)
-	 **/
-	private $employeeNum;
-	
-	/** 
-	 * 员工入职时间
-	 **/
-	private $entryDate;
-	
-	/** 
-	 * 员工身份证号码
-	 **/
-	private $idCardNum;
-	
-	/** 
-	 * 直接上级的员工ID
-	 **/
-	private $leaderId;
-	
-	/** 
-	 * 办公电话
-	 **/
-	private $officePhone;
-	
-	/** 
-	 * 员工私人邮箱
-	 **/
-	private $personalEmail;
-	
-	/** 
-	 * 员工手机号码
-	 **/
-	private $personalMobile;
-	
-	/** 
-	 * 员工性别 1：男; 2:女
-	 **/
-	private $sex;
-	
-	/** 
-	 * 子账号ID
-	 **/
-	private $subId;
-	
-	/** 
-	 * 工作地点
-	 **/
-	private $workLocation;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDepartmentId($departmentId)
 	{
 		$this->departmentId = $departmentId;

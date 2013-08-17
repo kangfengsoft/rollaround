@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.rooms.update request
@@ -22,31 +21,6 @@ class HotelRoomsUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.rooms.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelRoomsUpdateRequest
-{
-	/** 
-	 * 多商品房态信息。json encode。每个商品房态参考单商品更新中的room_quota字段。反序列化后入：array(( 'gid'=>1, 'roomQuota'=>array(('date'=>'2011-01-29', 'price'=>100, 'num'=>1),('date'=>'2011-01-30', 'price'=>100, 'num'=>1)),( 'gid'=>2, 'roomQuota'=>array(('date'=>'2011-01-29', 'price'=>100, 'num'=>1),('date'=>'2011-01-30', 'price'=>100, 'num'=>1)))
-	 **/
-	private $gidRoomQuotaMap;
-	
-	/** 
-	 * 为到店支付卖家特殊使用，可传入多种支付类型的房态信息。
-该参数有值时，忽略gid_room_quota_map参数；
-该参数无值时，使用gid_room_quota_map参数
-	 **/
-	private $multiRoomQuotas;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setGidRoomQuotaMap($gidRoomQuotaMap)
 	{
 		$this->gidRoomQuotaMap = $gidRoomQuotaMap;

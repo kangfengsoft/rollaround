@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.map.batch.query request
@@ -30,39 +29,6 @@ class ScitemMapBatchQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.map.batch.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemMapBatchQueryRequest
-{
-	/** 
-	 * 后端商品的商家编码
-	 **/
-	private $outerCode;
-	
-	/** 
-	 * 当前页码数
-	 **/
-	private $pageIndex;
-	
-	/** 
-	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 后端商品id
-	 **/
-	private $scItemId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setOuterCode($outerCode)
 	{
 		$this->outerCode = $outerCode;

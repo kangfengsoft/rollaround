@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.udp.item.get request
@@ -70,79 +69,6 @@ class UdpItemGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.udp.item.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UdpItemGetRequest
-{
-	/** 
-	 * 地区ID
-	 **/
-	private $area;
-	
-	/** 
-	 * 开始时间
-	 **/
-	private $beginTime;
-	
-	/** 
-	 * 结束时间
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 指标ID(参阅指标编号)
-	 **/
-	private $fields;
-	
-	/** 
-	 * 商品ID
-	 **/
-	private $itemid;
-	
-	/** 
-	 * 多个宝贝列表
-	 **/
-	private $items;
-	
-	/** 
-	 * 排序指标
-	 **/
-	private $orderBy;
-	
-	/** 
-	 * 排序规则
-	 **/
-	private $orderRule;
-	
-	/** 
-	 * 查询页码，0为第一页
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页记录数
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 备用
-	 **/
-	private $parameters;
-	
-	/** 
-	 * 来源ID
-	 **/
-	private $source;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setArea($area)
 	{
 		$this->area = $area;

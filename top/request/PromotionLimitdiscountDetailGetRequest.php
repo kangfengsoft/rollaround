@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.limitdiscount.detail.get request
@@ -15,24 +14,6 @@ class PromotionLimitdiscountDetailGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.promotion.limitdiscount.detail.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PromotionLimitdiscountDetailGetRequest
-{
-	/** 
-	 * 限时打折ID。这个针对查询唯一限时打折情况。
-	 **/
-	private $limitDiscountId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setLimitDiscountId($limitDiscountId)
 	{
 		$this->limitDiscountId = $limitDiscountId;

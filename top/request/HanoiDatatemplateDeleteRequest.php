@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.datatemplate.delete request
@@ -20,29 +19,6 @@ class HanoiDatatemplateDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.datatemplate.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiDatatemplateDeleteRequest
-{
-	/** 
-	 * APPName
-	 **/
-	private $appName;
-	
-	/** 
-	 * id：通过query服务接口得到ID
-	 **/
-	private $parameter;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

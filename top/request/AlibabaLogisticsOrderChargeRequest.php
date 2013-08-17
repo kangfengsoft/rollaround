@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alibaba.logistics.order.charge request
@@ -50,59 +49,6 @@ class AlibabaLogisticsOrderChargeRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alibaba.logistics.order.charge request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlibabaLogisticsOrderChargeRequest
-{
-	/** 
-	 * 货物描述
-	 **/
-	private $cargoDescription;
-	
-	/** 
-	 * 货物名称
-	 **/
-	private $cargoName;
-	
-	/** 
-	 * 付款方式。0：发货人支付；1：收货人支付；2：双方支付
-	 **/
-	private $payType;
-	
-	/** 
-	 * 线路标志
-	 **/
-	private $routeCode;
-	
-	/** 
-	 * 货物件数
-	 **/
-	private $totalNumber;
-	
-	/** 
-	 * 货物体积
-	 **/
-	private $totalVolume;
-	
-	/** 
-	 * 货物重量
-	 **/
-	private $totalWeight;
-	
-	/** 
-	 * 下单选中的增值服务
-	 **/
-	private $vasList;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCargoDescription($cargoDescription)
 	{
 		$this->cargoDescription = $cargoDescription;

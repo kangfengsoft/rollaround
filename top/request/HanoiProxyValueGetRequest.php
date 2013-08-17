@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.proxy.value.get request
@@ -20,29 +19,6 @@ class HanoiProxyValueGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.proxy.value.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiProxyValueGetRequest
-{
-	/** 
-	 * app的密匙
-	 **/
-	private $appName;
-	
-	/** 
-	 * 结构化数据组装参数。
-	 **/
-	private $data;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

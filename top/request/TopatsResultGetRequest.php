@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.result.get request
@@ -15,24 +14,6 @@ class TopatsResultGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.topats.result.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TopatsResultGetRequest
-{
-	/** 
-	 * 任务id号，创建任务时返回的task_id
-	 **/
-	private $taskId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setTaskId($taskId)
 	{
 		$this->taskId = $taskId;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.product.spec.get request
@@ -15,24 +14,6 @@ class TmallProductSpecGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.product.spec.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallProductSpecGetRequest
-{
-	/** 
-	 * 要获取信息的产品规格信息。
-	 **/
-	private $specId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setSpecId($specId)
 	{
 		$this->specId = $specId;

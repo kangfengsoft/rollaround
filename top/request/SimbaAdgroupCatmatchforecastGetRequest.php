@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.catmatchforecast.get request
@@ -25,34 +24,6 @@ class SimbaAdgroupCatmatchforecastGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.adgroup.catmatchforecast.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaAdgroupCatmatchforecastGetRequest
-{
-	/** 
-	 * 推广组ID
-	 **/
-	private $adgroupId;
-	
-	/** 
-	 * 类目出价,出价范围在5-9999之间,单位分
-	 **/
-	private $catmatchPrice;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

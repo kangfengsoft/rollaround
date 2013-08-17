@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.grade.delete request
@@ -15,24 +14,6 @@ class FenxiaoGradeDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.grade.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoGradeDeleteRequest
-{
-	/** 
-	 * 等级ID
-	 **/
-	private $gradeId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setGradeId($gradeId)
 	{
 		$this->gradeId = $gradeId;

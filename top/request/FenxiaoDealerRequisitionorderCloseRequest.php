@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.dealer.requisitionorder.close request
@@ -30,39 +29,6 @@ class FenxiaoDealerRequisitionorderCloseRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.dealer.requisitionorder.close request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDealerRequisitionorderCloseRequest
-{
-	/** 
-	 * 采购申请单编号
-	 **/
-	private $dealerOrderId;
-	
-	/** 
-	 * 关闭原因：
-1：长时间无法联系到分销商，取消交易。
-2：分销商错误提交申请，取消交易。
-3：缺货，近段时间都无法发货。
-4：分销商恶意提交申请单。
-5：其他原因。
-	 **/
-	private $reason;
-	
-	/** 
-	 * 关闭详细原因，字数5-200字
-	 **/
-	private $reasonDetail;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDealerOrderId($dealerOrderId)
 	{
 		$this->dealerOrderId = $dealerOrderId;

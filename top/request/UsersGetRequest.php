@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.users.get request
@@ -20,29 +19,6 @@ class UsersGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.users.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UsersGetRequest
-{
-	/** 
-	 * 查询字段：User数据结构的公开信息字段列表，以半角逗号(,)分隔
-	 **/
-	private $fields;
-	
-	/** 
-	 * 用户昵称，多个以半角逗号(,)分隔，最多40个
-	 **/
-	private $nicks;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

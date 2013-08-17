@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.subuser.dutys.get request
@@ -15,24 +14,6 @@ class SubuserDutysGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.subuser.dutys.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SubuserDutysGetRequest
-{
-	/** 
-	 * 主账号用户名
-	 **/
-	private $userNick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setUserNick($userNick)
 	{
 		$this->userNick = $userNick;

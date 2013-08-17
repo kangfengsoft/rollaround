@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.product.img.upload request
@@ -35,44 +34,6 @@ class ProductImgUploadRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.product.img.upload request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ProductImgUploadRequest
-{
-	/** 
-	 * 产品图片ID.修改图片时需要传入
-	 **/
-	private $id;
-	
-	/** 
-	 * 图片内容.图片最大为500K,只支持JPG,GIF格式.
-	 **/
-	private $image;
-	
-	/** 
-	 * 是否将该图片设为主图.可选值:true,false;默认值:false.
-	 **/
-	private $isMajor;
-	
-	/** 
-	 * 图片序号
-	 **/
-	private $position;
-	
-	/** 
-	 * 产品ID.Product的id
-	 **/
-	private $productId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.get request
@@ -15,24 +14,6 @@ class ScitemGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemGetRequest
-{
-	/** 
-	 * 商品id
-	 **/
-	private $itemId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

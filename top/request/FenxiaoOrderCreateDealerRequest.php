@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.create.dealer request
@@ -82,91 +81,6 @@ class FenxiaoOrderCreateDealerRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.order.create.dealer request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoOrderCreateDealerRequest
-{
-	/** 
-	 * 街道
-	 **/
-	private $addr;
-	
-	/** 
-	 * 买家姓名
-	 **/
-	private $buyerName;
-	
-	/** 
-	 * 市
-	 **/
-	private $city;
-	
-	/** 
-	 * 区
-	 **/
-	private $country;
-	
-	/** 
-	 * 运费，单位为分
-	 **/
-	private $logisticFee;
-	
-	/** 
-	 * 运输方式，快递,平邮等
-	 **/
-	private $logisticType;
-	
-	/** 
-	 * 留言
-	 **/
-	private $message;
-	
-	/** 
-	 * 买家手机号码和电话号码两者中必须有一个
-	 **/
-	private $mobilePhone;
-	
-	/** 
-	 * erp主订单号，用于去重。当传入号已存在将返回原来的采购单
-	 **/
-	private $outerId;
-	
-	/** 
-	 * 支付类型,需要供应支持该支付类型
-	 **/
-	private $payType;
-	
-	/** 
-	 * 买家电话号码
-	 **/
-	private $phone;
-	
-	/** 
-	 * 省
-	 **/
-	private $province;
-	
-	/** 
-	 * 子单信息,子单内部以‘,’隔开，多个子单以‘;’隔开.
-例(分销产品id,skuid,购买数量,单价;分销产品id:,skuid,购买数量,单价)
-单价的单位位分
-	 **/
-	private $subOrderDetail;
-	
-	/** 
-	 * 邮编
-	 **/
-	private $zipCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAddr($addr)
 	{
 		$this->addr = $addr;

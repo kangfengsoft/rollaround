@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.campaign.schedule.update request
@@ -25,34 +24,6 @@ class SimbaCampaignScheduleUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.campaign.schedule.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaCampaignScheduleUpdateRequest
-{
-	/** 
-	 * 推广计划Id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 值为：“all”；或者用“;”分割的每天的设置字符串，该字符串为用“,”分割的时段折扣字符串，格式为：起始时间-结束时间:折扣，其中时间是24小时格式记录，折扣是1-150整数，表示折扣百分比；
-	 **/
-	private $schedule;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

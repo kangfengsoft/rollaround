@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.tasks.get request
@@ -20,29 +19,6 @@ class TopatsTasksGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.topats.tasks.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TopatsTasksGetRequest
-{
-	/** 
-	 * 要查询的已经创建的定时任务的结束时间(这里的时间是指执行时间)。
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 要查询的已创建过的定时任务的开始时间(这里的时间是指执行时间)。
-	 **/
-	private $startTime;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setEndTime($endTime)
 	{
 		$this->endTime = $endTime;

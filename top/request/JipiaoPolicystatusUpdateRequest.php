@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.jipiao.policystatus.update request
@@ -25,34 +24,6 @@ class JipiaoPolicystatusUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.jipiao.policystatus.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class JipiaoPolicystatusUpdateRequest
-{
-	/** 
-	 * type为0，表示机票政策id；type为1，表示机票政策out_product_id；最大支持政策数100，注意不要如果不要超出字符串的长度限制，超出的话，请调小批量的个数
-	 **/
-	private $policyId;
-	
-	/** 
-	 * 政策的状态: 0，挂起；1，解挂；2，删除
-	 **/
-	private $status;
-	
-	/** 
-	 * 0，表示按政策id进行查询；1，表示按政策外部id进行查询
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPolicyId($policyId)
 	{
 		$this->policyId = $policyId;

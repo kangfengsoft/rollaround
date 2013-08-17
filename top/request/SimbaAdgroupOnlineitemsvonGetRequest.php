@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.onlineitemsvon.get request
@@ -35,44 +34,6 @@ class SimbaAdgroupOnlineitemsvonGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.adgroup.onlineitemsvon.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaAdgroupOnlineitemsvonGetRequest
-{
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 排序，true:降序， false:升序
-	 **/
-	private $orderBy;
-	
-	/** 
-	 * 排序字段，starts：按开始时间排序bidCount:按销量排序
-	 **/
-	private $orderField;
-	
-	/** 
-	 * 页码，从1开始,最大50。最大只能获取1W个宝贝
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 页尺寸，最大200
-	 **/
-	private $pageSize;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setNick($nick)
 	{
 		$this->nick = $nick;

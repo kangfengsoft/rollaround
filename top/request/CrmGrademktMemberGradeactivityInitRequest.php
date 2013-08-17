@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.grademkt.member.gradeactivity.init request
@@ -20,29 +19,6 @@ class CrmGrademktMemberGradeactivityInitRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.grademkt.member.gradeactivity.init request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmGrademktMemberGradeactivityInitRequest
-{
-	/** 
-	 * 扩展字段
-	 **/
-	private $feather;
-	
-	/** 
-	 * 活动名称，不传默认为“等级营销”
-	 **/
-	private $parameter;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFeather($feather)
 	{
 		$this->feather = $feather;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.topats.user.accountreport.get request
@@ -35,44 +34,6 @@ class AlipayTopatsUserAccountreportGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.topats.user.accountreport.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayTopatsUserAccountreportGetRequest
-{
-	/** 
-	 * 返回下载结果文件的数据格式，只支持utf-8和gbk编码，默认是utf-8
-	 **/
-	private $charset;
-	
-	/** 
-	 * 对账单结束时间。end_time - start_time <= 1个自然月
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 需要返回的字段列表。create_time:创建时间,type：账务类型,business_type:子业务类型,balance:当时支付宝账户余额,in_amount:收入金额,out_amount:支出金额,alipay_order_no:支付宝订单号,merchant_order_no:商户订单号,self_user_id:自己的支付宝ID,opt_user_id:对方的支付宝ID,memo:账号备注
-	 **/
-	private $fields;
-	
-	/** 
-	 * 对账单开始时间。最近一个月内的日期。
-	 **/
-	private $startTime;
-	
-	/** 
-	 * 账务类型。多个类型是，用逗号分隔，不传则查询所有类型的。PAYMENT:在线支付，TRANSFER:转账，DEPOSIT:充值，WITHDRAW:提现，CHARGE:收费，PREAUTH:预授权，OTHER：其它。
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCharset($charset)
 	{
 		$this->charset = $charset;

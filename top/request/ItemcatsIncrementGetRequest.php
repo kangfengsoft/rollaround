@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.itemcats.increment.get request
@@ -25,34 +24,6 @@ class ItemcatsIncrementGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.itemcats.increment.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemcatsIncrementGetRequest
-{
-	/** 
-	 * 一级类目ID列表，用半角逗号(,)分隔，例如:"16,19562"，一次最多可以获取10个类目的增量数据。
-	 **/
-	private $cids;
-	
-	/** 
-	 * 要获取最近哪一天的增量类目数据，可选值为：1~7。默认值为1，表示获取昨天发生变更的类目数据。
-	 **/
-	private $days;
-	
-	/** 
-	 * 获取类目的类型：1代表集市、2代表天猫
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCids($cids)
 	{
 		$this->cids = $cids;

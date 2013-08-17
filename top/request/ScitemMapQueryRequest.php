@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.map.query request
@@ -22,31 +21,6 @@ map_type为2：分销商品的skuid
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.map.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemMapQueryRequest
-{
-	/** 
-	 * map_type为1：前台ic商品id
-map_type为2：分销productid
-	 **/
-	private $itemId;
-	
-	/** 
-	 * map_type为1：前台ic商品skuid 
-map_type为2：分销商品的skuid
-	 **/
-	private $skuId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.snapshot.get request
@@ -20,29 +19,6 @@ class TradeSnapshotGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trade.snapshot.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TradeSnapshotGetRequest
-{
-	/** 
-	 * 需要返回的字段列表。现只支持："snapshot"字段
-	 **/
-	private $fields;
-	
-	/** 
-	 * 交易编号
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.bill.accounts.get request
@@ -20,29 +19,6 @@ class BillAccountsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.bill.accounts.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class BillAccountsGetRequest
-{
-	/** 
-	 * 需要获取的科目ID
-	 **/
-	private $aids;
-	
-	/** 
-	 * 需要返回的字段
-	 **/
-	private $fields;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAids($aids)
 	{
 		$this->aids = $aids;

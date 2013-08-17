@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.group.delete request
@@ -15,24 +14,6 @@ class CrmGroupDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.group.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmGroupDeleteRequest
-{
-	/** 
-	 * 要删除的分组id
-	 **/
-	private $groupId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setGroupId($groupId)
 	{
 		$this->groupId = $groupId;

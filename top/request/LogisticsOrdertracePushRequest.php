@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.ordertrace.push request
@@ -60,69 +59,6 @@ class LogisticsOrdertracePushRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.logistics.ordertrace.push request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class LogisticsOrdertracePushRequest
-{
-	/** 
-	 * 物流公司名称
-	 **/
-	private $companyName;
-	
-	/** 
-	 * 流转节点的当前城市
-	 **/
-	private $currentCity;
-	
-	/** 
-	 * 网点名称
-	 **/
-	private $facilityName;
-	
-	/** 
-	 * 快递单号。各个快递公司的运单号格式不同。
-	 **/
-	private $mailNo;
-	
-	/** 
-	 * 流转节点的下一个城市
-	 **/
-	private $nextCity;
-	
-	/** 
-	 * 描述当前节点的操作，操作是“揽收”、“派送”或“签收”。
-	 **/
-	private $nodeDescription;
-	
-	/** 
-	 * 流转节点发生时间
-	 **/
-	private $occureTime;
-	
-	/** 
-	 * 流转节点的详细地址及操作描述
-	 **/
-	private $operateDetail;
-	
-	/** 
-	 * 快递业务员联系方式，手机号码或电话。
-	 **/
-	private $operatorContact;
-	
-	/** 
-	 * 快递业务员名称
-	 **/
-	private $operatorName;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCompanyName($companyName)
 	{
 		$this->companyName = $companyName;

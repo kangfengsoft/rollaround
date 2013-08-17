@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.address.search request
@@ -9,18 +8,6 @@
 class LogisticsAddressSearchRequest
 {
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.logistics.address.search request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class LogisticsAddressSearchRequest
-{
-	/** 
->>>>>>> #develop update w8
 	 * 可选，参数列表如下：<br><font color='red'>
 no_def:查询非默认地址<br>
 get_def:查询默认取货地址<br>

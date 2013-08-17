@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.function.add request
@@ -35,44 +34,6 @@ class HanoiFunctionAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.function.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiFunctionAddRequest
-{
-	/** 
-	 * 分配给调用方的名称信息，内部统计使用
-	 **/
-	private $appName;
-	
-	/** 
-	 * 函数配置名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 函数规则类型 0：JSON 1：条件表达式
-	 **/
-	private $parseType;
-	
-	/** 
-	 * 函数规则定义。支持JSON格式，条件表达式等等。groupId：要匹配人群的标签Id。actionId：需要执行动作的动作Id。filterType：匹配类型。0代表动态标签 1代表标签组 doAction:true代表执行动作 getData:true 或者false true代表要匹配结果
-	 **/
-	private $rule;
-	
-	/** 
-	 * 规则开放策略 0：user_id私有 1：所有user_id可以使用 2：同一创建者下的user_id拥有
-	 **/
-	private $strategy;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

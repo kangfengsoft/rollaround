@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.dealer.requisitionorder.modify request
@@ -35,44 +34,6 @@ class FenxiaoDealerRequisitionorderModifyRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.dealer.requisitionorder.modify request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDealerRequisitionorderModifyRequest
-{
-	/** 
-	 * 采购申请单编号
-	 **/
-	private $dealerOrderId;
-	
-	/** 
-	 * 要删除的商品明细id列表，多个id使用英文符号的逗号隔开
-	 **/
-	private $deleteDetailIds;
-	
-	/** 
-	 * 采购申请单的商品明细的新的采购价格。格式为商品明细id:价格修改值,商品明细id:价格修改值
-	 **/
-	private $detailIdPrices;
-	
-	/** 
-	 * 修改采购申请单的商品明细的新的库存。格式为商品明细id:库存修改值,商品明细id:库存修改值
-	 **/
-	private $detailIdQuantities;
-	
-	/** 
-	 * 新邮费（单位：分，示例值1005表示10.05元）。必须大于等于0。自提方式不可修改邮费。不提交该参数表示不修改邮费。
-	 **/
-	private $newPostFee;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDealerOrderId($dealerOrderId)
 	{
 		$this->dealerOrderId = $dealerOrderId;

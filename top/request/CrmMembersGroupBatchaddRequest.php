@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.members.group.batchadd request
@@ -20,29 +19,6 @@ class CrmMembersGroupBatchaddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.members.group.batchadd request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmMembersGroupBatchaddRequest
-{
-	/** 
-	 * 会员的id（一次最多传入10个）
-	 **/
-	private $buyerIds;
-	
-	/** 
-	 * 分组id
-	 **/
-	private $groupIds;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBuyerIds($buyerIds)
 	{
 		$this->buyerIds = $buyerIds;

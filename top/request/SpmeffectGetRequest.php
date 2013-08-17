@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.spmeffect.get request
@@ -25,34 +24,6 @@ class SpmeffectGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.spmeffect.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SpmeffectGetRequest
-{
-	/** 
-	 * 日期
-	 **/
-	private $date;
-	
-	/** 
-	 * 查询指定的SPM第四位的效果报表。默认值为false，不传视为不需要
-	 **/
-	private $moduleDetail;
-	
-	/** 
-	 * 查询指定的SPM第三位的效果报表。默认值为false，不传视为不需要
-	 **/
-	private $pageDetail;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDate($date)
 	{
 		$this->date = $date;

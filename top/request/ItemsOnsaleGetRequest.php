@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.items.onsale.get request
@@ -19,28 +18,6 @@ class ItemsOnsaleGetRequest
 	private $endModified;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.items.onsale.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemsOnsaleGetRequest
-{
-	/** 
-	 * 商品类目ID。ItemCat中的cid字段。可以通过taobao.itemcats.get取到
-	 **/
-	private $cid;
-	
-	/** 
-	 * 结束的修改时间
-	 **/
-	private $endModified;
-	
-	/** 
->>>>>>> #develop update w8
 	 * 需返回的字段列表。可选值：Item商品结构体中的以下字段： 
 approve_status,num_iid,title,nick,type,cid,pic_url,num,props,valid_thru,list_time,price,has_discount,has_invoice,has_warranty,has_showcase,modified,delist_time,postage_id,seller_cids,outer_id；字段之间用“,”分隔。
 不支持其他字段，如果需要获取其他字段数据，调用taobao.item.get。

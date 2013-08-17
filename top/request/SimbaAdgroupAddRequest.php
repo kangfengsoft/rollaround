@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.add request
@@ -40,49 +39,6 @@ class SimbaAdgroupAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.adgroup.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaAdgroupAddRequest
-{
-	/** 
-	 * 推广计划Id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 推广组默认出价，单位为分，不能小于5 不能大于日最高限额
-	 **/
-	private $defaultPrice;
-	
-	/** 
-	 * 创意图片地址，必须是商品的图片之一
-	 **/
-	private $imgUrl;
-	
-	/** 
-	 * 商品Id
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 创意标题，最多20个汉字
-	 **/
-	private $title;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

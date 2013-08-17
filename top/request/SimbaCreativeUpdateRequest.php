@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.creative.update request
@@ -35,44 +34,6 @@ class SimbaCreativeUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.creative.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaCreativeUpdateRequest
-{
-	/** 
-	 * 推广组Id
-	 **/
-	private $adgroupId;
-	
-	/** 
-	 * 创意Id
-	 **/
-	private $creativeId;
-	
-	/** 
-	 * 创意图片地址，必须是推广组对应商品的图片之一
-	 **/
-	private $imgUrl;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 创意标题，最多20个汉字
-	 **/
-	private $title;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

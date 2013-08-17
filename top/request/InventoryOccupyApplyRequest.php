@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.occupy.apply request
@@ -47,56 +46,6 @@ AUTO_CALCULATE:自动计算可供占用，如果库存不够返回失败 ClIENT_
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.occupy.apply request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryOccupyApplyRequest
-{
-	/** 
-	 * 外部订单类型, BALANCE:盘点、NON_TAOBAO_TRADE:非淘宝交易、ALLOCATE:调拨、OTHERS:其他
-	 **/
-	private $bizType;
-	
-	/** 
-	 * 商家外部定单号
-	 **/
-	private $bizUniqueCode;
-	
-	/** 
-	 * 渠道编号
-	 **/
-	private $channelFlags;
-	
-	/** 
-	 * 商品库存预留信息： [{"scItemId":"商品后端ID，如果有传scItemCode,参数可以为0","scItemCode":"商品商家编码","inventoryType":"库存类型  1：正常,2：损坏,3：冻结,10：质押",11-20:商家自定义,”inventoryTypeName”:”库存类型名称,可选”,"occupyQuantity":"数量"}]
-	 **/
-	private $items;
-	
-	/** 
-	 * 天数，默认5天，最大15天
-	 **/
-	private $occupyTime;
-	
-	/** 
-	 * 占用类型
-参数定义
-AUTO_CALCULATE:自动计算可供占用，如果库存不够返回失败 ClIENT_FORCE：强制要求最大化占用，有多少占用多少
-	 **/
-	private $occupyType;
-	
-	/** 
-	 * 商家仓库编码
-	 **/
-	private $storeCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBizType($bizType)
 	{
 		$this->bizType = $bizType;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.refund.get request
@@ -20,29 +19,6 @@ class FenxiaoRefundGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.refund.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoRefundGetRequest
-{
-	/** 
-	 * 是否查询下游买家的退款信息
-	 **/
-	private $querySellerRefund;
-	
-	/** 
-	 * 要查询的退款子单的id
-	 **/
-	private $subOrderId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setQuerySellerRefund($querySellerRefund)
 	{
 		$this->querySellerRefund = $querySellerRefund;

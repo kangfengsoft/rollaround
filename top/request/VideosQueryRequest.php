@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.videos.query request
@@ -25,34 +24,6 @@ class VideosQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.videos.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class VideosQueryRequest
-{
-	/** 
-	 * 需要返回的视频对象字段。VideoItem结构体中所有字段均可返回；多个字段用“,”分隔；其中video_play_info中的播放url可选择性返回，其余属性全部返回；如果想返回整个子对象中所有url，那字段为video_play_info，如果是想返回子对象里面的字段，那字段为video_play_info.web_url。
-	 **/
-	private $fields;
-	
-	/** 
-	 * 在淘宝视频中的应用key，该值向淘宝视频申请产生
-	 **/
-	private $videoAppKey;
-	
-	/** 
-	 * 视频id列表
-	 **/
-	private $videoIds;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

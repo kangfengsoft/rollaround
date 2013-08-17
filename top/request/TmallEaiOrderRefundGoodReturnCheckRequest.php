@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.good.return.check request
@@ -47,56 +46,6 @@ class TmallEaiOrderRefundGoodReturnCheckRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.eai.order.refund.good.return.check request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallEaiOrderRefundGoodReturnCheckRequest
-{
-	/** 
-	 * 物流公司编号
-	 **/
-	private $companyCode;
-	
-	/** 
-	 * 1.验货通过
-2.验货不通过
-	 **/
-	private $confirmResult;
-	
-	/** 
-	 * 验货时间
-	 **/
-	private $confirmTime;
-	
-	/** 
-	 * 验货人员
-	 **/
-	private $operator;
-	
-	/** 
-	 * 退款单编号
-	 **/
-	private $refundId;
-	
-	/** 
-	 * 售中：onsale
-售后：aftersale
-	 **/
-	private $refundPhase;
-	
-	/** 
-	 * 物流运单号
-	 **/
-	private $sid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCompanyCode($companyCode)
 	{
 		$this->companyCode = $companyCode;

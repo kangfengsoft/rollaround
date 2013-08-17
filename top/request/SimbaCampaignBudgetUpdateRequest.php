@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.campaign.budget.update request
@@ -30,39 +29,6 @@ class SimbaCampaignBudgetUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.campaign.budget.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaCampaignBudgetUpdateRequest
-{
-	/** 
-	 * 如果为空则取消限额；否则必须为整数，单位是元，不得小于30；
-	 **/
-	private $budget;
-	
-	/** 
-	 * 推广计划Id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 是否平滑消耗：false-否，true-是
-	 **/
-	private $useSmooth;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBudget($budget)
 	{
 		$this->budget = $budget;

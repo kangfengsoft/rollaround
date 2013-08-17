@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.replenish.statistics request
@@ -35,44 +34,6 @@ class WlbReplenishStatisticsRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.replenish.statistics request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbReplenishStatisticsRequest
-{
-	/** 
-	 * 商品编码
-	 **/
-	private $itemCode;
-	
-	/** 
-	 * 商品名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 分页参数，默认第一页
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 分页每页页数，默认20，最大50
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 仓库编码
-	 **/
-	private $storeCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemCode($itemCode)
 	{
 		$this->itemCode = $itemCode;

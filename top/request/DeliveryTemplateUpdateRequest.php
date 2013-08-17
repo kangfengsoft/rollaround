@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.delivery.template.update request
@@ -24,33 +23,6 @@ class DeliveryTemplateUpdateRequest
 	private $templateAddFees;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.delivery.template.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class DeliveryTemplateUpdateRequest
-{
-	/** 
-	 * 可选值：0,1 <br>  说明<br>0:表示买家承担服务费;<br>1:表示卖家承担服务费
-	 **/
-	private $assumer;
-	
-	/** 
-	 * 模板名称，长度不能大于50个字节
-	 **/
-	private $name;
-	
-	/** 
-	 * 增费：输入0.00-999.99（最多包含两位小数）<br/><font color=blue>增费可以为0</font><br/><font color=red>输入的格式分号个数和template_types数量一致，逗号个数必须与template_dests以分号隔开之后一一对应的数量一致</font>
-	 **/
-	private $templateAddFees;
-	
-	/** 
->>>>>>> #develop update w8
 	 * 增费标准：当valuation(记价方式)为0时输入1-9999范围内的整数<br><font color=blue>增费标准目前只能为1</font>
 <br><font color=red>输入的格式分号个数和template_types数量一致，逗号个数必须与template_dests以分号隔开之后一一对应的数量一致</font>
 	 **/

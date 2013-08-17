@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.adgroupcatmatchs.get request
@@ -20,29 +19,6 @@ class SimbaAdgroupAdgroupcatmatchsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.adgroup.adgroupcatmatchs.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaAdgroupAdgroupcatmatchsGetRequest
-{
-	/** 
-	 * 推广组Id列表
-	 **/
-	private $adgroupIds;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAdgroupIds($adgroupIds)
 	{
 		$this->adgroupIds = $adgroupIds;

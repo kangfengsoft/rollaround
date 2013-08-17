@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.range.delete request
@@ -25,34 +24,6 @@ class UmpRangeDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.ump.range.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UmpRangeDeleteRequest
-{
-	/** 
-	 * 活动id
-	 **/
-	private $actId;
-	
-	/** 
-	 * id列表，当范围类型为商品时，该id为商品id；当范围类型为类目时，该id为类目id
-	 **/
-	private $ids;
-	
-	/** 
-	 * 范围的类型，比如是全店，商品，类目见：MarketingConstants.PARTICIPATE_TYPE_*
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setActId($actId)
 	{
 		$this->actId = $actId;

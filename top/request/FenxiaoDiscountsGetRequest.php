@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.discounts.get request
@@ -20,29 +19,6 @@ class FenxiaoDiscountsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.discounts.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDiscountsGetRequest
-{
-	/** 
-	 * 折扣ID
-	 **/
-	private $discountId;
-	
-	/** 
-	 * 指定查询额外的信息，可选值：DETAIL（查询折扣详情），多个可选值用逗号分割。（只允许指定折扣ID情况下使用）
-	 **/
-	private $extFields;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDiscountId($discountId)
 	{
 		$this->discountId = $discountId;

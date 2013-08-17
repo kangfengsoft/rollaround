@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.receivetime.delay request
@@ -20,29 +19,6 @@ class TradeReceivetimeDelayRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trade.receivetime.delay request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TradeReceivetimeDelayRequest
-{
-	/** 
-	 * 延长收货的天数，可选值为：3, 5, 7, 10。
-	 **/
-	private $days;
-	
-	/** 
-	 * 主订单号
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDays($days)
 	{
 		$this->days = $days;

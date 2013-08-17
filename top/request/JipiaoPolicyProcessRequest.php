@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.jipiao.policy.process request
@@ -42,51 +41,6 @@ class JipiaoPolicyProcessRequest
 	private $autoTicketFlag;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.jipiao.policy.process request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class JipiaoPolicyProcessRequest
-{
-	/** 
-	 * 政策所支持的航空公司二字码
-	 **/
-	private $airline;
-	
-	/** 
-	 * 政策支持的到达机场列表，逗号分隔的机场三字码，
-注： 
-1.让利(8)政策，当到达支持多个(最多25)时，出发只能支持一个； 
-2.特价(6)/特殊(10)政策，出发/到达城市只支持一个
-	 **/
-	private $arrAirports;
-	
-	/** 
-	 * 扩展字段：
-    "rfc" 对应值 1:不退不改不签,2:收费退改签（退、改、签中任意一个收费即为收费退改签）3:免费退改签
-    "ipt" 对应值 1:等额行程单 2:不提供发票5:等额“行程单+发票”（对应旧的2） 6:等额发票（对应旧的1）,例如：rfc=1;ipt=1
-    "fdtod"对应值起飞时间“0000”为0时0分 
-    "ldtod"对应值：到达时间“2359”为23时59分
-	 **/
-	private $attributes;
-	
-	/** 
-	 * 政策是否支持自动HK，默认为不支持
-	 **/
-	private $autoHkFlag;
-	
-	/** 
-	 * 政策是否支持自动出票，默认不支持，
-注：自动出票时，必须同时自动HK
-	 **/
-	private $autoTicketFlag;
-	
-	/** 
->>>>>>> #develop update w8
 	 * @1: [{"matcher":{"mode":"ALL","list":["D"]},"priceStrategy":{"mode":
 "TICKET_PRICE","modeBaseValue":500,"retention":500,"rebase":-5}}]
 

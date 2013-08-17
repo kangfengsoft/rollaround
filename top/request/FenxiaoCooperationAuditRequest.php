@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.cooperation.audit request
@@ -36,45 +35,6 @@ class FenxiaoCooperationAuditRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.cooperation.audit request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoCooperationAuditRequest
-{
-	/** 
-	 * 1:审批通过，审批通过后要加入授权产品线列表；
-2:审批拒绝
-	 **/
-	private $auditResult;
-	
-	/** 
-	 * 当审批通过时需要指定授权产品线id列表(代销)，如果没传则表示不开通，且经销和代销的授权产品线列表至少传入一种，同时传入则表示都开通。
-	 **/
-	private $productLineListAgent;
-	
-	/** 
-	 * 当审批通过时需要指定授权产品线id列表(经销)，如果没传则表示不开通，且经销和代销的授权产品线列表至少传入一种，同时传入则表示都开通。
-	 **/
-	private $productLineListDealer;
-	
-	/** 
-	 * 备注
-	 **/
-	private $remark;
-	
-	/** 
-	 * 合作申请Id
-	 **/
-	private $requisitionId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAuditResult($auditResult)
 	{
 		$this->auditResult = $auditResult;

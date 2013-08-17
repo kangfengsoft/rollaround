@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.itemrecommend.items.get request
@@ -30,39 +29,6 @@ class ItemrecommendItemsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.itemrecommend.items.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemrecommendItemsGetRequest
-{
-	/** 
-	 * 请求返回宝贝的个数，建议取20个
-	 **/
-	private $count;
-	
-	/** 
-	 * 额外的参数信息
-	 **/
-	private $ext;
-	
-	/** 
-	 * 商品ID
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 查询类型标识符，可传入1-3，1：同类商品推荐，2：异类商品推荐， 3：同店商品推荐。其他值当非法值处理
-	 **/
-	private $recommendType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCount($count)
 	{
 		$this->count = $count;

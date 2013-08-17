@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.template.update request
@@ -65,74 +64,6 @@ class HanoiTemplateUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.template.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiTemplateUpdateRequest
-{
-	/** 
-	 * 认证信息
-	 **/
-	private $appName;
-	
-	/** 
-	 * 所使用的数据模板
-	 **/
-	private $dataTemplateId;
-	
-	/** 
-	 * 模板的描述
-	 **/
-	private $description;
-	
-	/** 
-	 * 模板的表达式
-	 **/
-	private $expression;
-	
-	/** 
-	 * 模板上次更新时间
-	 **/
-	private $gmtModified;
-	
-	/** 
-	 * 需要更新的模板id
-	 **/
-	private $id;
-	
-	/** 
-	 * 模板的名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 模板的开放策略，默认为false，不开放
-	 **/
-	private $open;
-	
-	/** 
-	 * 设置表达式中参数的类型。ParaVO对象的json格式
-	 **/
-	private $paraList;
-	
-	/** 
-	 * 模板的源模板id，0表示没有源模板
-	 **/
-	private $sourceTemplateId;
-	
-	/** 
-	 * 模板的编码
-	 **/
-	private $templateCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

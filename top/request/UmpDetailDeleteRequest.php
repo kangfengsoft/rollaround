@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.detail.delete request
@@ -15,24 +14,6 @@ class UmpDetailDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.ump.detail.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UmpDetailDeleteRequest
-{
-	/** 
-	 * 活动详情id
-	 **/
-	private $detailId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDetailId($detailId)
 	{
 		$this->detailId = $detailId;

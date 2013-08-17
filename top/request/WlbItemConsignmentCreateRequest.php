@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.consignment.create request
@@ -35,44 +34,6 @@ class WlbItemConsignmentCreateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.item.consignment.create request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbItemConsignmentCreateRequest
-{
-	/** 
-	 * 商品id
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 代销数量
-	 **/
-	private $number;
-	
-	/** 
-	 * 货主商品id
-	 **/
-	private $ownerItemId;
-	
-	/** 
-	 * 货主id
-	 **/
-	private $ownerUserId;
-	
-	/** 
-	 * 通过taobao.wlb.item.authorization.add接口创建后得到的rule_id，规则中设定了代销商可以代销的商品数量
-	 **/
-	private $ruleId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

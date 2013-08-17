@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.group.append request
@@ -20,29 +19,6 @@ class CrmGroupAppendRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.group.append request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmGroupAppendRequest
-{
-	/** 
-	 * 添加的来源分组
-	 **/
-	private $fromGroupId;
-	
-	/** 
-	 * 添加的目标分组
-	 **/
-	private $toGroupId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFromGroupId($fromGroupId)
 	{
 		$this->fromGroupId = $fromGroupId;

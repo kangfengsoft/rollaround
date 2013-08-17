@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.product.add request
@@ -9,18 +8,6 @@
 class ProductAddRequest
 {
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.product.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ProductAddRequest
-{
-	/** 
->>>>>>> #develop update w8
 	 * 非关键属性结构:pid:vid;pid:vid.<br>
 非关键属性<font color=red>不包含</font>关键属性、销售属性、用户自定义属性、商品属性;
 <br>调用taobao.itemprops.get获取pid,调用taobao.itempropvalues.get获取vid.<br><font color=red>注:支持最大长度为512字节</font>

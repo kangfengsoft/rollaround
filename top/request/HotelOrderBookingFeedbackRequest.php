@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.order.booking.feedback request
@@ -47,56 +46,6 @@ F:失败
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.order.booking.feedback request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelOrderBookingFeedbackRequest
-{
-	/** 
-	 * 失败原因,当result为failed时,此项为必填，最长200个字符
-	 **/
-	private $failedReason;
-	
-	/** 
-	 * 指令消息中的messageid,最长128字符
-	 **/
-	private $messageId;
-	
-	/** 
-	 * 酒店订单id
-	 **/
-	private $oid;
-	
-	/** 
-	 * 合作方订单号,最长250个字符
-	 **/
-	private $outOid;
-	
-	/** 
-	 * 在合作方退订时可能要用到的标识码，最长250个字符
-	 **/
-	private $refundCode;
-	
-	/** 
-	 * 预订结果 
-S:成功
-F:失败
-	 **/
-	private $result;
-	
-	/** 
-	 * 指令消息中的session_id
-	 **/
-	private $sessionId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFailedReason($failedReason)
 	{
 		$this->failedReason = $failedReason;

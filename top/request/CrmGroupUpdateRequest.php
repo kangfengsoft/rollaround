@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.group.update request
@@ -20,29 +19,6 @@ class CrmGroupUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.group.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmGroupUpdateRequest
-{
-	/** 
-	 * 分组的id
-	 **/
-	private $groupId;
-	
-	/** 
-	 * 新的分组名，分组名称不能包含|或者：
-	 **/
-	private $newGroupName;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setGroupId($groupId)
 	{
 		$this->groupId = $groupId;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.confirmfee.get request
@@ -20,29 +19,6 @@ class TradeConfirmfeeGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trade.confirmfee.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TradeConfirmfeeGetRequest
-{
-	/** 
-	 * 是否是子订单。可选值:IS_FATHER(父订单),IS_CHILD(子订单)
-	 **/
-	private $isDetail;
-	
-	/** 
-	 * 交易编号，或子订单编号
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setIsDetail($isDetail)
 	{
 		$this->isDetail = $isDetail;

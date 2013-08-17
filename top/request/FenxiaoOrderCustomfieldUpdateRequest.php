@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.customfield.update request
@@ -25,34 +24,6 @@ class FenxiaoOrderCustomfieldUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.order.customfield.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoOrderCustomfieldUpdateRequest
-{
-	/** 
-	 * 自定义key
-	 **/
-	private $isvCustomKey;
-	
-	/** 
-	 * 自定义的值
-	 **/
-	private $isvCustomValue;
-	
-	/** 
-	 * 采购单id
-	 **/
-	private $purchaseOrderId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setIsvCustomKey($isvCustomKey)
 	{
 		$this->isvCustomKey = $isvCustomKey;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.authorize.removeall request
@@ -20,29 +19,6 @@ class InventoryAuthorizeRemoveallRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.authorize.removeall request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryAuthorizeRemoveallRequest
-{
-	/** 
-	 * 后端商品id
-	 **/
-	private $scItemId;
-	
-	/** 
-	 * 移除授权的目标用户昵称列表，用”,”隔开
-	 **/
-	private $userNickList;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setScItemId($scItemId)
 	{
 		$this->scItemId = $scItemId;

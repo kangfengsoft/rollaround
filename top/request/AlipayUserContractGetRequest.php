@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.user.contract.get request
@@ -15,24 +14,6 @@ class AlipayUserContractGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.user.contract.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayUserContractGetRequest
-{
-	/** 
-	 * 订购者支付宝ID。session与subscriber_user_id二选一即可。
-	 **/
-	private $subscriberUserId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setSubscriberUserId($subscriberUserId)
 	{
 		$this->subscriberUserId = $subscriberUserId;

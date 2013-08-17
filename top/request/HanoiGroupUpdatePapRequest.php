@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.group.update.pap request
@@ -55,64 +54,6 @@ class HanoiGroupUpdatePapRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.group.update.pap request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiGroupUpdatePapRequest
-{
-	/** 
-	 * 认证信息
-	 **/
-	private $appName;
-	
-	/** 
-	 * 分组的描述
-	 **/
-	private $description;
-	
-	/** 
-	 * 分组上次更新时间
-	 **/
-	private $gmtModified;
-	
-	/** 
-	 * 分组的编码
-	 **/
-	private $groupCode;
-	
-	/** 
-	 * 需要更新的分组id
-	 **/
-	private $id;
-	
-	/** 
-	 * 分组的名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 开放策略（true 开放，默认为false）
-	 **/
-	private $open;
-	
-	/** 
-	 * 使用场景
-	 **/
-	private $scene;
-	
-	/** 
-	 * 分组的类型，0 互斥，1 共存，默认为0
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

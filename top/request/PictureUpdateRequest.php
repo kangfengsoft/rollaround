@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.update request
@@ -20,29 +19,6 @@ class PictureUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.picture.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PictureUpdateRequest
-{
-	/** 
-	 * 新的图片名，最大长度50字符，不能为空
-	 **/
-	private $newName;
-	
-	/** 
-	 * 要更改名字的图片的id
-	 **/
-	private $pictureId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setNewName($newName)
 	{
 		$this->newName = $newName;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alibaba.logistics.route.query request
@@ -85,94 +84,6 @@ class AlibabaLogisticsRouteQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alibaba.logistics.route.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlibabaLogisticsRouteQueryRequest
-{
-	/** 
-	 * 是否是空运的条件
-	 **/
-	private $airTransport;
-	
-	/** 
-	 * 过滤线路的公司塞选条件
-	 **/
-	private $corpList;
-	
-	/** 
-	 * 目的地id，可以是市和区
-	 **/
-	private $endAreaId;
-	
-	/** 
-	 * 是否合并线路
-	 **/
-	private $mergeRoute;
-	
-	/** 
-	 * 当前第几页
-	 **/
-	private $pageIndex;
-	
-	/** 
-	 * 每页显示的线路数
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 线路是否具有代收货款服务
-	 **/
-	private $showCods;
-	
-	/** 
-	 * 线路是否显示保障服务
-	 **/
-	private $showSpecials;
-	
-	/** 
-	 * 是否在线路中显示评价和网点信息
-	 **/
-	private $showStatisticsInfo;
-	
-	/** 
-	 * 线路排序方式。具体值如下,precise：精确匹配，corp：公司,wpa：重物价格升序,wpd：重物价格降序,vpa：体积价格升序,vpd：体积价格降序,trtid：运输时效降序,trtia：运输时效升序,corpLevel：公司级别，品牌>集市,evalScore：评价分数,routeTop：线路是否置顶,orderCount：下单量多少排序,special：保障服务优先排序。
-	 **/
-	private $sortType;
-	
-	/** 
-	 * 数据来源，默认开放部分物流公司。
-	 **/
-	private $source;
-	
-	/** 
-	 * 起始地id，可以是市和区
-	 **/
-	private $startAreaId;
-	
-	/** 
-	 * 是否查询总的查询条件的公司数目
-	 **/
-	private $summaryTotalCorps;
-	
-	/** 
-	 * 是否统计对应公司的线路数
-	 **/
-	private $summeryByCorp;
-	
-	/** 
-	 * 如果查找不到指定地区的线路，是否对地址进行上翻。如杭州市滨江区的地址呗翻转为杭州市。
-	 **/
-	private $turnLevel;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAirTransport($airTransport)
 	{
 		$this->airTransport = $airTransport;

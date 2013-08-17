@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.product.spec.add request
@@ -70,79 +69,6 @@ class TmallProductSpecAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.product.spec.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallProductSpecAddRequest
-{
-	/** 
-	 * 产品二维码
-	 **/
-	private $barcode;
-	
-	/** 
-	 * 存放产品规格认证类型-认证图片url映射信息，格式为k:v;k:v;，其中key为认证类型数字id，value为调用tmall.product.spec.pic.upload返回的认证图片url文本
-	 **/
-	private $certifiedPicStr;
-	
-	/** 
-	 * 存放产品规格认证类型-认证文本映射信息，格式为k:v;k:v;，其中key为认证类型数字id，value为认证文本值
-	 **/
-	private $certifiedTxtStr;
-	
-	/** 
-	 * 产品基础色，数据格式为：pid:vid:rvid1,rvid2,rvid3;pid:vid:rvid1
-	 **/
-	private $changeProp;
-	
-	/** 
-	 * 用户自定义销售属性，结构：pid1:value1;pid2:value2。在
-	 **/
-	private $customerSpecProps;
-	
-	/** 
-	 * 产品图片
-	 **/
-	private $image;
-	
-	/** 
-	 * 产品规格吊牌价，以分为单位，无默认值，上限999999999
-	 **/
-	private $labelPrice;
-	
-	/** 
-	 * 产品上市时间
-	 **/
-	private $marketTime;
-	
-	/** 
-	 * 产品货号
-	 **/
-	private $productCode;
-	
-	/** 
-	 * 产品ID
-	 **/
-	private $productId;
-	
-	/** 
-	 * 产品的规格属性
-	 **/
-	private $specProps;
-	
-	/** 
-	 * 规格属性别名,只允许传颜色别名
-	 **/
-	private $specPropsAlias;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBarcode($barcode)
 	{
 		$this->barcode = $barcode;

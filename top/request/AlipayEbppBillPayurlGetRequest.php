@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.ebpp.bill.payurl.get request
@@ -30,39 +29,6 @@ class AlipayEbppBillPayurlGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.ebpp.bill.payurl.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayEbppBillPayurlGetRequest
-{
-	/** 
-	 * 支付宝的业务订单号，具有唯一性。
-	 **/
-	private $alipayOrderNo;
-	
-	/** 
-	 * 如有有淘宝授权的session可以不传这个字段
-	 **/
-	private $authToken;
-	
-	/** 
-	 * 输出机构的业务流水号，需要保证唯一性。
-	 **/
-	private $merchantOrderNo;
-	
-	/** 
-	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK。
-	 **/
-	private $orderType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

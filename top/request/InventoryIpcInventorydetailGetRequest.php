@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.ipc.inventorydetail.get request
@@ -40,49 +39,6 @@ class InventoryIpcInventorydetailGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.ipc.inventorydetail.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryIpcInventorydetailGetRequest
-{
-	/** 
-	 * 主订单号，可选
-	 **/
-	private $bizOrderId;
-	
-	/** 
-	 * 子订单号，可选
-	 **/
-	private $bizSubOrderId;
-	
-	/** 
-	 * 当前页数
-	 **/
-	private $pageIndex;
-	
-	/** 
-	 * 一页显示多少条
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 仓储商品id
-	 **/
-	private $scItemId;
-	
-	/** 
-	 * 1:查询预扣  4：查询占用
-	 **/
-	private $statusQuery;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBizOrderId($bizOrderId)
 	{
 		$this->bizOrderId = $bizOrderId;

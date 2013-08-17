@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.query request
@@ -30,39 +29,6 @@ class InventoryQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryQueryRequest
-{
-	/** 
-	 * 后端商品的商家编码列表，控制到50个
-	 **/
-	private $scItemCodes;
-	
-	/** 
-	 * 后端商品ID 列表，控制到50个
-	 **/
-	private $scItemIds;
-	
-	/** 
-	 * 卖家昵称
-	 **/
-	private $sellerNick;
-	
-	/** 
-	 * 仓库列表:GLY001^GLY002
-	 **/
-	private $storeCodes;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setScItemCodes($scItemCodes)
 	{
 		$this->scItemCodes = $scItemCodes;

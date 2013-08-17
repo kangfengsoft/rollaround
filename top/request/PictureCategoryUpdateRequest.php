@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.category.update request
@@ -25,34 +24,6 @@ class PictureCategoryUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.picture.category.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PictureCategoryUpdateRequest
-{
-	/** 
-	 * 要更新的图片分类的id
-	 **/
-	private $categoryId;
-	
-	/** 
-	 * 图片分类的新名字，最大长度20字符，不能为空
-	 **/
-	private $categoryName;
-	
-	/** 
-	 * 图片分类的新父分类id
-	 **/
-	private $parentId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCategoryId($categoryId)
 	{
 		$this->categoryId = $categoryId;

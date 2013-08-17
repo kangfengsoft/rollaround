@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.product.specs.get request
@@ -27,36 +26,6 @@ class TmallProductSpecsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.product.specs.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallProductSpecsGetRequest
-{
-	/** 
-	 * 类目的ID号，该id必须和properties同时传入。
-而且只有当product_id不传入的时候才起效果。
-	 **/
-	private $catId;
-	
-	/** 
-	 * 产品的ID。这个不能和properties和cat_id同时起效果
-	 **/
-	private $productId;
-	
-	/** 
-	 * 关键属性的字符串，pid:vid;pid:vid
-该字段必须和cat_id同时传入才起效果。 而且只有当product_id不传入的时候才起效果。
-	 **/
-	private $properties;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCatId($catId)
 	{
 		$this->catId = $catId;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.query request
@@ -45,54 +44,6 @@ class ScitemQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemQueryRequest
-{
-	/** 
-	 * 条形码
-	 **/
-	private $barCode;
-	
-	/** 
-	 * 商品名称
-	 **/
-	private $itemName;
-	
-	/** 
-	 * ITEM类型(只允许输入以下英文或空) NORMAL 0:普通商品; COMBINE 1:是否是组合商品 DISTRIBUTION
-	 **/
-	private $itemType;
-	
-	/** 
-	 * 商家给商品的一个编码
-	 **/
-	private $outerCode;
-	
-	/** 
-	 * 当前页码数
-	 **/
-	private $pageIndex;
-	
-	/** 
-	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 仓库编码
-	 **/
-	private $wmsCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBarCode($barCode)
 	{
 		$this->barCode = $barCode;

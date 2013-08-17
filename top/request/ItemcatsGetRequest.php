@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.itemcats.get request
@@ -25,34 +24,6 @@ class ItemcatsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.itemcats.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemcatsGetRequest
-{
-	/** 
-	 * 商品所属类目ID列表，用半角逗号(,)分隔 例如:(18957,19562,) (cids、parent_cid至少传一个)
-	 **/
-	private $cids;
-	
-	/** 
-	 * 需要返回的字段列表，见ItemCat，默认返回：cid,parent_cid,name,is_parent
-	 **/
-	private $fields;
-	
-	/** 
-	 * 父商品类目 id，0表示根节点, 传输该参数返回所有子类目。 (cids、parent_cid至少传一个)
-	 **/
-	private $parentCid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCids($cids)
 	{
 		$this->cids = $cids;

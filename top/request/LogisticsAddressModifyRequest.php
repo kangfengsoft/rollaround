@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.address.modify request
@@ -81,90 +80,6 @@ class LogisticsAddressModifyRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.logistics.address.modify request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class LogisticsAddressModifyRequest
-{
-	/** 
-	 * 详细街道地址，不需要重复填写省/市/区
-	 **/
-	private $addr;
-	
-	/** 
-	 * 默认退货地址。<br>
-<font color='red'>选择此项(true)，将当前地址设为默认退货地址，撤消原默认退货地址</font>
-	 **/
-	private $cancelDef;
-	
-	/** 
-	 * 所在市
-	 **/
-	private $city;
-	
-	/** 
-	 * 地址库ID
-	 **/
-	private $contactId;
-	
-	/** 
-	 * 联系人姓名
-<font color='red'>长度不可超过20个字节</font>
-	 **/
-	private $contactName;
-	
-	/** 
-	 * 区、县
-<br><font color='red'>如果所在地区是海外的可以为空，否则为必参</font>
-	 **/
-	private $country;
-	
-	/** 
-	 * 默认取货地址。<br>
-<font color='red'>选择此项(true)，将当前地址设为默认取货地址，撤消原默认取货地址</font>
-	 **/
-	private $getDef;
-	
-	/** 
-	 * 备注,<br><font color='red'>备注不能超过256字节</font>
-	 **/
-	private $memo;
-	
-	/** 
-	 * 手机号码，手机与电话必需有一个 <br><font color='red'>手机号码不能超过20位</font>
-	 **/
-	private $mobilePhone;
-	
-	/** 
-	 * 电话号码,手机与电话必需有一个
-	 **/
-	private $phone;
-	
-	/** 
-	 * 所在省
-	 **/
-	private $province;
-	
-	/** 
-	 * 公司名称,
-<br><font color='red'>公司名称长能不能超过20字节</font>
-	 **/
-	private $sellerCompany;
-	
-	/** 
-	 * 地区邮政编码
-<br><font color='red'>如果所在地区是海外的可以为空，否则为必参</font>
-	 **/
-	private $zipCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAddr($addr)
 	{
 		$this->addr = $addr;

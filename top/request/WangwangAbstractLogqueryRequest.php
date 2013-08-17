@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.abstract.logquery request
@@ -45,54 +44,6 @@ class WangwangAbstractLogqueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wangwang.abstract.logquery request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WangwangAbstractLogqueryRequest
-{
-	/** 
-	 * 传入参数的字符集
-	 **/
-	private $charset;
-	
-	/** 
-	 * 获取记录条数，默认值是1000
-	 **/
-	private $count;
-	
-	/** 
-	 * 东八区时间
-	 **/
-	private $endDate;
-	
-	/** 
-	 * 卖家id，有cntaobao前缀
-	 **/
-	private $fromId;
-	
-	/** 
-	 * 设置了这个值，那么聊天记录就从这个点开始查询
-	 **/
-	private $nextKey;
-	
-	/** 
-	 * 东八区时间
-	 **/
-	private $startDate;
-	
-	/** 
-	 * 买家id，有cntaobao前缀
-	 **/
-	private $toId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCharset($charset)
 	{
 		$this->charset = $charset;

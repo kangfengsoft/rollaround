@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.type.add request
@@ -25,34 +24,6 @@ class HotelTypeAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.type.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelTypeAddRequest
-{
-	/** 
-	 * 酒店id。必须为数字
-	 **/
-	private $hid;
-	
-	/** 
-	 * 房型名称。长度不能超过30
-	 **/
-	private $name;
-	
-	/** 
-	 * 接入卖家数据主键,格式为“接入方酒店id-接入方房型id”
-	 **/
-	private $siteParam;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setHid($hid)
 	{
 		$this->hid = $hid;

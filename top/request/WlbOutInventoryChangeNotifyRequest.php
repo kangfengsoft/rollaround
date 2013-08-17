@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.out.inventory.change.notify request
@@ -63,72 +62,6 @@ IC_SKU--淘宝sku
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.out.inventory.change.notify request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbOutInventoryChangeNotifyRequest
-{
-	/** 
-	 * 库存变化数量
-	 **/
-	private $changeCount;
-	
-	/** 
-	 * 物流宝商品id或前台宝贝id（由type类型决定）
-	 **/
-	private $itemId;
-	
-	/** 
-	 * OUT--出库
-IN--入库
-	 **/
-	private $opType;
-	
-	/** 
-	 * 订单号，如果source为TAOBAO_TRADE,order_source_code必须为淘宝交易号
-	 **/
-	private $orderSourceCode;
-	
-	/** 
-	 * 库存变化唯一标识，用于去重，一个外部唯一编码唯一标识一次库存变化。
-	 **/
-	private $outBizCode;
-	
-	/** 
-	 * 本次库存变化后库存余额
-	 **/
-	private $resultCount;
-	
-	/** 
-	 * （1）OTHER： 其他 
-（2）TAOBAO_TRADE： 淘宝交易 
-（3）OTHER_TRADE：其他交易 
-（4）ALLCOATE： 调拨 
-（5）CHECK:盘点
-（6）PURCHASE:采购
-	 **/
-	private $source;
-	
-	/** 
-	 * 目前非必须，系统会选择默认值
-	 **/
-	private $storeCode;
-	
-	/** 
-	 * WLB_ITEM--物流宝商品
-IC_ITEM--淘宝商品
-IC_SKU--淘宝sku
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setChangeCount($changeCount)
 	{
 		$this->changeCount = $changeCount;

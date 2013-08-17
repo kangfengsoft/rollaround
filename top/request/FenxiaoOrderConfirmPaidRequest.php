@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.confirm.paid request
@@ -20,29 +19,6 @@ class FenxiaoOrderConfirmPaidRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.order.confirm.paid request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoOrderConfirmPaidRequest
-{
-	/** 
-	 * 确认支付信息（字数小于100）
-	 **/
-	private $confirmRemark;
-	
-	/** 
-	 * 采购单编号。
-	 **/
-	private $purchaseOrderId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setConfirmRemark($confirmRemark)
 	{
 		$this->confirmRemark = $confirmRemark;

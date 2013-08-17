@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.activities.list.get request
@@ -15,24 +14,6 @@ class UmpActivitiesListGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.ump.activities.list.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UmpActivitiesListGetRequest
-{
-	/** 
-	 * 营销活动id列表。
-	 **/
-	private $ids;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setIds($ids)
 	{
 		$this->ids = $ids;

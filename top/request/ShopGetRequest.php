@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.shop.get request
@@ -20,29 +19,6 @@ class ShopGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.shop.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ShopGetRequest
-{
-	/** 
-	 * 需返回的字段列表。可选值：Shop 结构中的所有字段；多个字段之间用逗号(,)分隔
-	 **/
-	private $fields;
-	
-	/** 
-	 * 卖家昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

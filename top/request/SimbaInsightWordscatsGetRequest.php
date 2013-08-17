@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.insight.wordscats.get request
@@ -26,35 +25,6 @@ class SimbaInsightWordscatsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.insight.wordscats.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaInsightWordscatsGetRequest
-{
-	/** 
-	 * 结果过滤。PV：返回展现量；CLICK：返回点击量；AVGCPC：返回平均出价；COMPETITION ：返回竞争宝贝数;CTR 点击率。filter可由,组合
-	 **/
-	private $filter;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 查询词和类目数组，最大长度200，每一个数组元素都是词+类目，以”^^”分割如下：
-词^^类目
-	 **/
-	private $wordCategories;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFilter($filter)
 	{
 		$this->filter = $filter;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.tool.get request
@@ -15,24 +14,6 @@ class UmpToolGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.ump.tool.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UmpToolGetRequest
-{
-	/** 
-	 * 工具的id
-	 **/
-	private $toolId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setToolId($toolId)
 	{
 		$this->toolId = $toolId;

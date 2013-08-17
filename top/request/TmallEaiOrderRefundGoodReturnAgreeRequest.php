@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.good.return.agree request
@@ -36,45 +35,6 @@ class TmallEaiOrderRefundGoodReturnAgreeRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.eai.order.refund.good.return.agree request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallEaiOrderRefundGoodReturnAgreeRequest
-{
-	/** 
-	 * 同意退货留言
-	 **/
-	private $message;
-	
-	/** 
-	 * 退款单编号
-	 **/
-	private $refundId;
-	
-	/** 
-	 * 售中：onsale
-售后：aftersale
-	 **/
-	private $refundPhase;
-	
-	/** 
-	 * 退款版本号
-	 **/
-	private $refundVersion;
-	
-	/** 
-	 * 卖家收货地址编号
-	 **/
-	private $sellerLogisticsAddressId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setMessage($message)
 	{
 		$this->message = $message;

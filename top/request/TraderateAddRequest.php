@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.traderate.add request
@@ -40,49 +39,6 @@ class TraderateAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.traderate.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TraderateAddRequest
-{
-	/** 
-	 * 是否匿名,卖家评不能匿名。可选值:true(匿名),false(非匿名)。注意：如果交易订单匿名，则评价也匿名
-	 **/
-	private $anony;
-	
-	/** 
-	 * 评价内容,最大长度: 500个汉字 .注意：当评价结果为good时就不用输入评价内容.评价内容为neutral/bad的时候需要输入评价内容
-	 **/
-	private $content;
-	
-	/** 
-	 * 子订单ID
-	 **/
-	private $oid;
-	
-	/** 
-	 * 评价结果,可选值:good(好评),neutral(中评),bad(差评)
-	 **/
-	private $result;
-	
-	/** 
-	 * 评价者角色,可选值:seller(卖家),buyer(买家)
-	 **/
-	private $role;
-	
-	/** 
-	 * 交易ID
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAnony($anony)
 	{
 		$this->anony = $anony;

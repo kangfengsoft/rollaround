@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.authorize.getall request
@@ -20,29 +19,6 @@ class InventoryAuthorizeGetallRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.authorize.getall request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryAuthorizeGetallRequest
-{
-	/** 
-	 * 商品编码列表，使用”,”分割多个号码，最大50个
-	 **/
-	private $scItemIdList;
-	
-	/** 
-	 * 指定的商家仓库编码，使用”,”分割多个仓库
-	 **/
-	private $storeCodeList;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setScItemIdList($scItemIdList)
 	{
 		$this->scItemIdList = $scItemIdList;

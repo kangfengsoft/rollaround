@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.message.get request
@@ -31,40 +30,6 @@ class TmallEaiOrderRefundMessageGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.eai.order.refund.message.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallEaiOrderRefundMessageGetRequest
-{
-	/** 
-	 * 页码。取值范围:大于零的整数; 默认值:1
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页条数。取值范围:大于零的整数; 默认值:40;最大值:100
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 退款单编号
-	 **/
-	private $refundId;
-	
-	/** 
-	 * 售中：onsale
-售后：aftersale
-	 **/
-	private $refundPhase;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;

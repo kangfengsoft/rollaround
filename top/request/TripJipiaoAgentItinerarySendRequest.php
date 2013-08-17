@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.itinerary.send request
@@ -35,44 +34,6 @@ class TripJipiaoAgentItinerarySendRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trip.jipiao.agent.itinerary.send request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TripJipiaoAgentItinerarySendRequest
-{
-	/** 
-	 * 物流公司代码CODE，如不清楚，请找运营提供
-	 **/
-	private $companyCode;
-	
-	/** 
-	 * 邮寄单号，长度不能超过32字节
-	 **/
-	private $expressCode;
-	
-	/** 
-	 * 淘宝系统行程单唯一键
-	 **/
-	private $itineraryId;
-	
-	/** 
-	 * 行程单号
-	 **/
-	private $itineraryNo;
-	
-	/** 
-	 * 邮寄日期，格式yyyy-mm-dd
-	 **/
-	private $sendDate;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCompanyCode($companyCode)
 	{
 		$this->companyCode = $companyCode;

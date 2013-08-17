@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.room.quotas.query.feedback request
@@ -52,61 +51,6 @@ F:失败
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.room.quotas.query.feedback request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelRoomQuotasQueryFeedbackRequest
-{
-	/** 
-	 * 选中日期范围内的最大可用房量
-	 **/
-	private $avaliableRoomCount;
-	
-	/** 
-	 * 入住酒店的日期
-	 **/
-	private $checkinDate;
-	
-	/** 
-	 * 离开酒店的日期
-	 **/
-	private $checkoutDate;
-	
-	/** 
-	 * 失败原因,当result为F时,此项为必填,最长200个字符
-	 **/
-	private $failedReason;
-	
-	/** 
-	 * 指令消息中的messageid,最长128字符
-	 **/
-	private $messageId;
-	
-	/** 
-	 * 预订结果 
-S:成功
-F:失败
-	 **/
-	private $result;
-	
-	/** 
-	 * 从入住时期到离店日期的每日一间房价与预定房量,JSON格式传递。 date：代表房态日期，格式为YYYY-MM-DD， price：代表当天房价，0～99999900，存储的单位是分，货币单位为人民币，num：代表当天剩余房量，0～999，所有日期的预订间数应该一致。 如： [{"date":2011-01-28,"price":10000, "num":10},{"date":2011-01-29,"price":12000,"num":10}],最长1500个字符
-	 **/
-	private $roomQuotas;
-	
-	/** 
-	 * 订单总价。0～99999999的正整数。货币单位为人民币。
-	 **/
-	private $totalRoomPrice;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAvaliableRoomCount($avaliableRoomCount)
 	{
 		$this->avaliableRoomCount = $avaliableRoomCount;

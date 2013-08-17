@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.keywords.qscore.get request
@@ -20,29 +19,6 @@ class SimbaKeywordsQscoreGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.keywords.qscore.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaKeywordsQscoreGetRequest
-{
-	/** 
-	 * 推广组Id
-	 **/
-	private $adgroupId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

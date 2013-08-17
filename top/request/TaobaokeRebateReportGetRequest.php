@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.rebate.report.get request
@@ -36,45 +35,6 @@ class TaobaokeRebateReportGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.taobaoke.rebate.report.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TaobaokeRebateReportGetRequest
-{
-	/** 
-	 * 需返回的字段列表.可选值:TaobaokePayment淘宝客订单构体中的所有字段;字段之间用","分隔.
-	 **/
-	private $fields;
-	
-	/** 
-	 * 当前页数
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页返回结果数，最小每页40条，默认每页40条，最大每页100条
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 查询报表的时间跨度，单位秒。
-以用户输入的start_time时间为起始时间，start_time+span为结束时间，查询该时间段内的订单。span最小值为60秒，最大值为600秒，默认值为60秒
-	 **/
-	private $span;
-	
-	/** 
-	 * 需要查询报表的开始日期，有效的日期为从当前日期开始起90天以内的订单
-	 **/
-	private $startTime;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

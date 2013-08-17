@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.skus.custom.get request
@@ -20,29 +19,6 @@ class SkusCustomGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.skus.custom.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SkusCustomGetRequest
-{
-	/** 
-	 * 需返回的字段列表。可选值：Sku结构体中的所有字段；字段之间用“,”隔开
-	 **/
-	private $fields;
-	
-	/** 
-	 * Sku的外部商家ID
-	 **/
-	private $outerId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

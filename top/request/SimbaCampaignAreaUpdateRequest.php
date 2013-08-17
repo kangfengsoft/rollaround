@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.campaign.area.update request
@@ -25,34 +24,6 @@ class SimbaCampaignAreaUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.campaign.area.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaCampaignAreaUpdateRequest
-{
-	/** 
-	 * 值为：“all”；或者用“,”分割的数字，数字必须是直通车全国省市列表的AreaID；
-	 **/
-	private $area;
-	
-	/** 
-	 * 推广计划Id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setArea($area)
 	{
 		$this->area = $area;

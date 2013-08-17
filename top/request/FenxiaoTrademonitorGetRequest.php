@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.trademonitor.get request
@@ -45,54 +44,6 @@ class FenxiaoTrademonitorGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.trademonitor.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoTrademonitorGetRequest
-{
-	/** 
-	 * 经销商的淘宝账号
-	 **/
-	private $distributorNick;
-	
-	/** 
-	 * 结束时间 格式 yyyy-MM-dd HH:mm:ss.支持到秒的查询。若不传时分秒，默认为0时0分0秒。
-	 **/
-	private $endCreated;
-	
-	/** 
-	 * 多个字段用","分隔。 fields 如果为空：返回所有采购单对象(purchase_orders)字段。 如果不为空：返回指定采购单对象(purchase_orders)字段。例如：trade_monitors.item_title表示只返回item_title
-	 **/
-	private $fields;
-	
-	/** 
-	 * 页码。（大于0的整数。小于1按1计）
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页条数。（每页条数不超过50条，超过50或小于0均按50计）
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 产品id
-	 **/
-	private $productId;
-	
-	/** 
-	 * 起始时间 格式 yyyy-MM-dd HH:mm:ss.支持到秒的查询。若不传时分秒，默认为0时0分0秒。
-	 **/
-	private $startCreated;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDistributorNick($distributorNick)
 	{
 		$this->distributorNick = $distributorNick;

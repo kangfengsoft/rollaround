@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.authorization.query request
@@ -48,57 +47,6 @@ ON_COMMISSION -- 被授权人
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.item.authorization.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbItemAuthorizationQueryRequest
-{
-	/** 
-	 * 授权商品ID
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 授权名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 当前页
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 授权编码
-	 **/
-	private $ruleCode;
-	
-	/** 
-	 * 状态： 只能输入如下值,范围外的默认按VALID处理;不选则查询所有; 
-VALID -- 1 有效； INVALIDATION -- 2 失效
-	 **/
-	private $status;
-	
-	/** 
-	 * 类型：可由不同角色来查询，默认值OWNER,
-OWNER -- 授权人,
-ON_COMMISSION -- 被授权人
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

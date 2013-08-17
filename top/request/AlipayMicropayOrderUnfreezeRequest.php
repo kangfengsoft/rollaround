@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.micropay.order.unfreeze request
@@ -25,34 +24,6 @@ class AlipayMicropayOrderUnfreezeRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.micropay.order.unfreeze request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayMicropayOrderUnfreezeRequest
-{
-	/** 
-	 * 冻结资金流水号,在创建资金订单时支付宝返回的流水号
-	 **/
-	private $alipayOrderNo;
-	
-	/** 
-	 * 支付宝用户给应用的授权.
-	 **/
-	private $authToken;
-	
-	/** 
-	 * 冻结备注
-	 **/
-	private $memo;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.label.query.count request
@@ -70,79 +69,6 @@ class HanoiLabelQueryCountRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.label.query.count request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiLabelQueryCountRequest
-{
-	/** 
-	 * 认证信息
-	 **/
-	private $appName;
-	
-	/** 
-	 * 模板业务状态 1 审核 0 创建
-	 **/
-	private $bizStatus;
-	
-	/** 
-	 * 模板的编码
-	 **/
-	private $code;
-	
-	/** 
-	 * 根据时间查询 创建时间结束点
-	 **/
-	private $gmtCreateEnd;
-	
-	/** 
-	 * 根据时间查询 创建时间截止点
-	 **/
-	private $gmtCreateStart;
-	
-	/** 
-	 * 根据时间查询，最近修改时间截止
-	 **/
-	private $gmtModifiedEnd;
-	
-	/** 
-	 * 根据时间查询，最近修改时间起点
-	 **/
-	private $gmtModifiedStart;
-	
-	/** 
-	 * 模板id
-	 **/
-	private $id;
-	
-	/** 
-	 * 模板名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 开放策略
-	 **/
-	private $open;
-	
-	/** 
-	 * 使用场景
-	 **/
-	private $scene;
-	
-	/** 
-	 * 标签的源模板id
-	 **/
-	private $templateId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

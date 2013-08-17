@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.outercode.get request
@@ -15,24 +14,6 @@ class ScitemOutercodeGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.outercode.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemOutercodeGetRequest
-{
-	/** 
-	 * 商品编码
-	 **/
-	private $outerCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setOuterCode($outerCode)
 	{
 		$this->outerCode = $outerCode;

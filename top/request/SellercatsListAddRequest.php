@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.sellercats.list.add request
@@ -30,39 +29,6 @@ class SellercatsListAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.sellercats.list.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SellercatsListAddRequest
-{
-	/** 
-	 * 卖家自定义类目名称。不超过20个字符
-	 **/
-	private $name;
-	
-	/** 
-	 * 父类目编号，如果类目为店铺下的一级类目：值等于0，如果类目为子类目，调用获取taobao.sellercats.list.get父类目编号
-	 **/
-	private $parentCid;
-	
-	/** 
-	 * 链接图片URL地址。(绝对地址，格式：http://host/image_path)
-	 **/
-	private $pictUrl;
-	
-	/** 
-	 * 该类目在页面上的排序位置,取值范围:大于零的整数
-	 **/
-	private $sortOrder;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setName($name)
 	{
 		$this->name = $name;

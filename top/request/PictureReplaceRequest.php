@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.replace request
@@ -20,29 +19,6 @@ class PictureReplaceRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.picture.replace request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PictureReplaceRequest
-{
-	/** 
-	 * 图片二进制文件流,不能为空,允许png、jpg、gif图片格式
-	 **/
-	private $imageData;
-	
-	/** 
-	 * 要替换的图片的id，必须大于0
-	 **/
-	private $pictureId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setImageData($imageData)
 	{
 		$this->imageData = $imageData;

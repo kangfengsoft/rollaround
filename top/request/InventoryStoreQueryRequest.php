@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.store.query request
@@ -15,24 +14,6 @@ class InventoryStoreQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.store.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryStoreQueryRequest
-{
-	/** 
-	 * 商家的仓库编码
-	 **/
-	private $storeCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setStoreCode($storeCode)
 	{
 		$this->storeCode = $storeCode;

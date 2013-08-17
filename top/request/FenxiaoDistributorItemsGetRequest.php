@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.distributor.items.get request
@@ -40,49 +39,6 @@ class FenxiaoDistributorItemsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.distributor.items.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDistributorItemsGetRequest
-{
-	/** 
-	 * 分销商ID 。
-	 **/
-	private $distributorId;
-	
-	/** 
-	 * 设置结束时间,空为不设置。
-	 **/
-	private $endModified;
-	
-	/** 
-	 * 页码（大于0的整数，默认1）
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页记录数（默认20，最大50）
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 产品ID
-	 **/
-	private $productId;
-	
-	/** 
-	 * 设置开始时间。空为不设置。
-	 **/
-	private $startModified;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDistributorId($distributorId)
 	{
 		$this->distributorId = $distributorId;

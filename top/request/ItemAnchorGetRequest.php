@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.item.anchor.get request
@@ -20,29 +19,6 @@ class ItemAnchorGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.item.anchor.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItemAnchorGetRequest
-{
-	/** 
-	 * 对应类目编号
-	 **/
-	private $catId;
-	
-	/** 
-	 * 宝贝模板类型是人工打标还是自动打标：人工打标为1，自动打标为0.人工和自动打标为-1.
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCatId($catId)
 	{
 		$this->catId = $catId;

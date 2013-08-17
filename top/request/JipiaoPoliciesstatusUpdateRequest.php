@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.jipiao.policiesstatus.update request
@@ -50,59 +49,6 @@ class JipiaoPoliciesstatusUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.jipiao.policiesstatus.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class JipiaoPoliciesstatusUpdateRequest
-{
-	/** 
-	 * 航空公司二字码
-	 **/
-	private $airline;
-	
-	/** 
-	 * 到达机场三字码,此项必需与出发机场同时为空或不为空
-	 **/
-	private $arrAirport;
-	
-	/** 
-	 * 出发机场三字码,此项必需与到达机场同时为空或不为空
-	 **/
-	private $depAirport;
-	
-	/** 
-	 * 外部产品id集,最多支持1000个,后续调大,其中的out_product_id含有空格将不会处理
-	 **/
-	private $outProductIds;
-	
-	/** 
-	 * 产品id集,最多支持1000个，后续调大，其中单个的policy_id含有留空格或不是数字将会忽略不处理
-	 **/
-	private $policyIds;
-	
-	/** 
-	 * 发布日期
-	 **/
-	private $publishDate;
-	
-	/** 
-	 * 发布来源, 通过接口taobao.jipiao.policy.process添加的政策会自动加上source为TOP,代理商后台页面录入的source为PC,excel上传的source为UPLOAD,通过接口taobao.jipiao.policies.fulladd,taobao.jipiao.policies.add的自定义source也可以
-	 **/
-	private $source;
-	
-	/** 
-	 * 0：按policy_ids更新；1：按out_product_ids更新；2:按其它条件更新
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAirline($airline)
 	{
 		$this->airline = $airline;

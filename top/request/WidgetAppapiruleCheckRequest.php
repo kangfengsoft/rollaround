@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.widget.appapirule.check request
@@ -15,24 +14,6 @@ class WidgetAppapiruleCheckRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.widget.appapirule.check request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WidgetAppapiruleCheckRequest
-{
-	/** 
-	 * 要判断权限的api名称，如果指定的api不存在，报错invalid method
-	 **/
-	private $apiName;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setApiName($apiName)
 	{
 		$this->apiName = $apiName;

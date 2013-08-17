@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.grademkt.member.query request
@@ -26,35 +25,6 @@ class CrmGrademktMemberQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.grademkt.member.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmGrademktMemberQueryRequest
-{
-	/** 
-	 * 会员nick
-	 **/
-	private $buyerNick;
-	
-	/** 
-	 * 系统属性，json格式
-	 **/
-	private $feather;
-	
-	/** 
-	 * 会员属性-json format
-生成方法见http://open.taobao.com/doc/detail.htm?id=101281
-	 **/
-	private $parameter;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBuyerNick($buyerNick)
 	{
 		$this->buyerNick = $buyerNick;

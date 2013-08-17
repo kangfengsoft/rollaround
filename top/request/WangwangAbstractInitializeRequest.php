@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.abstract.initialize request
@@ -15,24 +14,6 @@ class WangwangAbstractInitializeRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wangwang.abstract.initialize request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WangwangAbstractInitializeRequest
-{
-	/** 
-	 * 传入参数的字符集
-	 **/
-	private $charset;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCharset($charset)
 	{
 		$this->charset = $charset;

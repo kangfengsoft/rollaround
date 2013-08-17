@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.memo.update request
@@ -32,41 +31,6 @@ class TradeMemoUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trade.memo.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TradeMemoUpdateRequest
-{
-	/** 
-	 * 交易备注旗帜，可选值为：0(灰色), 1(红色), 2(黄色), 3(绿色), 4(蓝色), 5(粉红色)，默认值为0
-	 **/
-	private $flag;
-	
-	/** 
-	 * 交易备注。最大长度: 1000个字节
-	 **/
-	private $memo;
-	
-	/** 
-	 * 是否对memo的值置空
-若为true，则不管传入的memo字段的值是否为空，都将会对已有的memo值清空，慎用；
-若用false，则会根据memo是否为空来修改memo的值：若memo为空则忽略对已有memo字段的修改，若memo非空，则使用新传入的memo覆盖已有的memo的值
-	 **/
-	private $reset;
-	
-	/** 
-	 * 交易编号
-	 **/
-	private $tid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFlag($flag)
 	{
 		$this->flag = $flag;

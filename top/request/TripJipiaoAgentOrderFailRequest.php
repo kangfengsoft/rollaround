@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.order.fail request
@@ -25,34 +24,6 @@ class TripJipiaoAgentOrderFailRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.trip.jipiao.agent.order.fail request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TripJipiaoAgentOrderFailRequest
-{
-	/** 
-	 * 失败类型为0，说明备注原因
-	 **/
-	private $failMemo;
-	
-	/** 
-	 * 失败原因：1．客户要求失败订单；2．此舱位已售完（经济舱或特舱）；3．剩余座位少于用户购买数量；4．特价管理里录入的特价票已经售完；5．假舱（请及时通过旺旺或者电话反馈给淘宝工作人员）；0．其它（请在备注中说明原因）
-	 **/
-	private $failType;
-	
-	/** 
-	 * 国内机票订单id
-	 **/
-	private $orderId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFailMemo($failMemo)
 	{
 		$this->failMemo = $failMemo;

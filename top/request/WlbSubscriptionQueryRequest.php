@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.subscription.query request
@@ -31,40 +30,6 @@ SYNCHRONIZING 5-同步中;
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.subscription.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbSubscriptionQueryRequest
-{
-	/** 
-	 * 当前页
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 状态 
-AUDITING 1-待审核; 
-CANCEL 2-撤销 ;
-CHECKED 3-审核通过 ;
-FAILED 4-审核未通过 ;
-SYNCHRONIZING 5-同步中;
-只允许输入上面指定的值，且可以为空，为空时查询所有状态。若输错了，则按AUDITING处理。
-	 **/
-	private $status;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;

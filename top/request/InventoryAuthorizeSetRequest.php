@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.authorize.set request
@@ -24,33 +23,6 @@ PRIVATE:独享
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.authorize.set request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryAuthorizeSetRequest
-{
-	/** 
-	 * 配额授权方式 
-PUBLIC: 全共享
-PRIVATE:独享
-	 **/
-	private $authorizeType;
-	
-	/** 
-	 * 授权明细
-[{“index”:0,“scItemId”:232323,”scItemCode”:”A232”,”storeCode”:”Kj11”,”inventoryType”:1,”channelFlag”:0,”quotaQuantity”:1000,”nickNameList”:”s108,TY000”，“nickName":"ca11"}]
-每次请求的列表数据量是1条，如果authorize_type是PUBLIC,使用nickNameList，否则请用nickName
-	 **/
-	private $items;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAuthorizeType($authorizeType)
 	{
 		$this->authorizeType = $authorizeType;

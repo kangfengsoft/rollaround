@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.distributor.products.get request
@@ -75,84 +74,6 @@ class FenxiaoDistributorProductsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.distributor.products.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDistributorProductsGetRequest
-{
-	/** 
-	 * 下载状态，默认未下载。UNDOWNLOAD：未下载，DOWNLOADED：已下载。
-	 **/
-	private $downloadStatus;
-	
-	/** 
-	 * 结束时间
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 指定查询额外的信息，可选值：skus（sku数据）、images（多图），多个可选值用逗号分割。
-	 **/
-	private $fields;
-	
-	/** 
-	 * 根据商品ID列表查询，优先级次于产品ID列表，高于其他分页查询条件。如果商品不是分销商品，自动过滤。最大限制20，用逗号分割，例如：“1001,1002,1003,1004,1005”
-	 **/
-	private $itemIds;
-	
-	/** 
-	 * 排序。QUANTITY_DESC：库存降序，CREATE_TIME_DESC，创建时间降序。
-	 **/
-	private $orderBy;
-	
-	/** 
-	 * 页码（大于0的整数，默认1）
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页记录数（默认20，最大50）
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 产品ID列表，优先级最高，传了忽略其他查询条件。用逗号分割，例如：“1001,1002,1003,1004,1005”
-	 **/
-	private $pids;
-	
-	/** 
-	 * 产品线ID
-	 **/
-	private $productcatId;
-	
-	/** 
-	 * 开始时间
-	 **/
-	private $startTime;
-	
-	/** 
-	 * 供应商nick，分页查询时，必传
-	 **/
-	private $supplierNick;
-	
-	/** 
-	 * 查询时间类型，默认更新时间。MODIFIED:更新时间，CREATE:创建时间
-	 **/
-	private $timeType;
-	
-	/** 
-	 * 分销方式，分页查询时，必传。AGENT：代销，DEALER：经销
-	 **/
-	private $tradeType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDownloadStatus($downloadStatus)
 	{
 		$this->downloadStatus = $downloadStatus;

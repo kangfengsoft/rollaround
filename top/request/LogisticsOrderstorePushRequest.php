@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.orderstore.push request
@@ -45,54 +44,6 @@ class LogisticsOrderstorePushRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.logistics.orderstore.push request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class LogisticsOrderstorePushRequest
-{
-	/** 
-	 * 表明是否是拆单，默认值0，1表示拆单
-	 **/
-	private $isSplit;
-	
-	/** 
-	 * 流转状态发生时间
-	 **/
-	private $occureTime;
-	
-	/** 
-	 * 仓内操作描述
-	 **/
-	private $operateDetail;
-	
-	/** 
-	 * 快递业务员联系方式
-	 **/
-	private $operatorContact;
-	
-	/** 
-	 * 快递业务员名称
-	 **/
-	private $operatorName;
-	
-	/** 
-	 * 拆单子订单列表，对应的数据是：子订单号的列表。可以不传，但是如果传了则必须符合传递的规则。子订单必须是操作的物流订单的子订单的真子集！
-	 **/
-	private $subTid;
-	
-	/** 
-	 * 淘宝订单交易号
-	 **/
-	private $tradeId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setIsSplit($isSplit)
 	{
 		$this->isSplit = $isSplit;

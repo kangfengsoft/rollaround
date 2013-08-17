@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.mobile.items.elite.get request
@@ -34,43 +33,6 @@ class TaobaokeMobileItemsEliteGetRequest
 	private $endPrice;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.taobaoke.mobile.items.elite.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TaobaokeMobileItemsEliteGetRequest
-{
-	/** 
-	 * 商品所在地，只作为权重
-	 **/
-	private $area;
-	
-	/** 
-	 * 后台类目,逗号分隔
-	 **/
-	private $ecat;
-	
-	/** 
-	 * 可选值和start_credit一样.start_credit的值一定要小于或等于end_credit的值。注：end_credit与start_credit一起使用才生效
-	 **/
-	private $endCredit;
-	
-	/** 
-	 * 折扣比率上限，如：2345表示23.45%。注：start_discount_rate和end_discount_rate一起设置才有效。
-	 **/
-	private $endDiscountRate;
-	
-	/** 
-	 * 最高价格
-	 **/
-	private $endPrice;
-	
-	/** 
->>>>>>> #develop update w8
 	 * 需返回的字段列表.可选值:num_iid,title,nick,pic_url,price,click_url,commission,commission_rate,commission_num,commission_volume,shop_click_url,seller_credit_score,item_location,volume
 ;字段之间用","分隔
 	 **/

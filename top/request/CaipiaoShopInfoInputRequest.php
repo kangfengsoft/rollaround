@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.caipiao.shop.info.input request
@@ -40,49 +39,6 @@ class CaipiaoShopInfoInputRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.caipiao.shop.info.input request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CaipiaoShopInfoInputRequest
-{
-	/** 
-	 * 活动结束时间，格式需严格遵守yyyy-MM-dd HH:mm:ss，不可为空
-	 **/
-	private $actEndDate;
-	
-	/** 
-	 * 活动开始时间，格式需严格遵守yyyy-MM-dd HH:mm:ss，不可为空
-	 **/
-	private $actStartDate;
-	
-	/** 
-	 * 赠送类型：0-满就送；1-好评送；2-分享送；3-游戏送；4-收藏送，不可为空
-	 **/
-	private $presentType;
-	
-	/** 
-	 * 店铺参加的送彩票活动描述
-	 **/
-	private $shopDesc;
-	
-	/** 
-	 * 店铺名称
-	 **/
-	private $shopName;
-	
-	/** 
-	 * 店铺类目编号，不可为空
-	 **/
-	private $shopType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setActEndDate($actEndDate)
 	{
 		$this->actEndDate = $actEndDate;

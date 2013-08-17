@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.refund.message.add request
@@ -25,34 +24,6 @@ class RefundMessageAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.refund.message.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class RefundMessageAddRequest
-{
-	/** 
-	 * 留言内容。最大长度: 400个字节
-	 **/
-	private $content;
-	
-	/** 
-	 * 图片（凭证）。类型: JPG,GIF,PNG;最大为: 500K
-	 **/
-	private $image;
-	
-	/** 
-	 * 退款编号。
-	 **/
-	private $refundId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setContent($content)
 	{
 		$this->content = $content;

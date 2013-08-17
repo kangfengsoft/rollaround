@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.grade.add request
@@ -15,24 +14,6 @@ class FenxiaoGradeAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.grade.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoGradeAddRequest
-{
-	/** 
-	 * 等级名称，等级名称不可重复
-	 **/
-	private $name;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setName($name)
 	{
 		$this->name = $name;

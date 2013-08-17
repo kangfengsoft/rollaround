@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.marketing.promotion.kfc request
@@ -20,29 +19,6 @@ class MarketingPromotionKfcRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.marketing.promotion.kfc request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class MarketingPromotionKfcRequest
-{
-	/** 
-	 * 活动描述
-	 **/
-	private $promotionDesc;
-	
-	/** 
-	 * 活动名称
-	 **/
-	private $promotionTitle;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPromotionDesc($promotionDesc)
 	{
 		$this->promotionDesc = $promotionDesc;

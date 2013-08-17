@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.subuser.department.update request
@@ -30,39 +29,6 @@ class SubuserDepartmentUpdateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.subuser.department.update request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SubuserDepartmentUpdateRequest
-{
-	/** 
-	 * 部门ID
-	 **/
-	private $departmentId;
-	
-	/** 
-	 * 部门名称
-	 **/
-	private $departmentName;
-	
-	/** 
-	 * 父部门ID 如果是最高部门则传入0
-	 **/
-	private $parentId;
-	
-	/** 
-	 * 主账号用户名
-	 **/
-	private $userNick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDepartmentId($departmentId)
 	{
 		$this->departmentId = $departmentId;

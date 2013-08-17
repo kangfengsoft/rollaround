@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.get request
@@ -25,34 +24,6 @@ class HotelGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelGetRequest
-{
-	/** 
-	 * true表示查询酒店审核状态，false表示查询已审核通过酒店详细信息
-	 **/
-	private $checkAudit;
-	
-	/** 
-	 * 要查询的酒店id。必须为数字
-	 **/
-	private $hid;
-	
-	/** 
-	 * 是否需要返回该酒店的房型列表。可选值：true，false。
-	 **/
-	private $needRoomType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCheckAudit($checkAudit)
 	{
 		$this->checkAudit = $checkAudit;

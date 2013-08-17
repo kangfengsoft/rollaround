@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.productcat.add request
@@ -35,44 +34,6 @@ class FenxiaoProductcatAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.productcat.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoProductcatAddRequest
-{
-	/** 
-	 * 代销默认采购价比例，注意：100.00%，则输入为10000
-	 **/
-	private $agentCostPercent;
-	
-	/** 
-	 * 经销默认采购价比例，注意：100.00%，则输入为10000
-	 **/
-	private $dealerCostPercent;
-	
-	/** 
-	 * 产品线名称
-	 **/
-	private $name;
-	
-	/** 
-	 * 最高零售价比例，注意：100.00%，则输入为10000
-	 **/
-	private $retailHighPercent;
-	
-	/** 
-	 * 最低零售价比例，注意：100.00%，则输入为10000
-	 **/
-	private $retailLowPercent;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAgentCostPercent($agentCostPercent)
 	{
 		$this->agentCostPercent = $agentCostPercent;

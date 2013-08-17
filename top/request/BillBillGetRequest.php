@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.bill.bill.get request
@@ -20,29 +19,6 @@ class BillBillGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.bill.bill.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class BillBillGetRequest
-{
-	/** 
-	 * 账单编号
-	 **/
-	private $bid;
-	
-	/** 
-	 * 传入需要返回的字段
-	 **/
-	private $fields;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBid($bid)
 	{
 		$this->bid = $bid;

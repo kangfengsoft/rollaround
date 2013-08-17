@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.ebpp.bill.add request
@@ -75,84 +74,6 @@ class AlipayEbppBillAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.ebpp.bill.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayEbppBillAddRequest
-{
-	/** 
-	 * 如果传入调用api有淘宝授权的session可以不传这个字段
-	 **/
-	private $authToken;
-	
-	/** 
-	 * 账单的账期，例如201203表示2012年3月的账单。
-	 **/
-	private $billDate;
-	
-	/** 
-	 * 账单单据号，例如水费单号，手机号，电费号，信用卡卡号。没有唯一性要求。
-	 **/
-	private $billKey;
-	
-	/** 
-	 * 支付宝给每个出账机构指定了一个对应的英文短名称来唯一表示该收费单位。
-	 **/
-	private $chargeInst;
-	
-	/** 
-	 * 输出机构的业务流水号，需要保证唯一性。
-	 **/
-	private $merchantOrderNo;
-	
-	/** 
-	 * 用户的手机号
-	 **/
-	private $mobile;
-	
-	/** 
-	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
-	 **/
-	private $orderType;
-	
-	/** 
-	 * 拥有该账单的用户姓名
-	 **/
-	private $ownerName;
-	
-	/** 
-	 * 缴费金额。用户支付的总金额。单位为：RMB Yuan。取值范围为[0.01，100000000.00]，精确到小数点后两位。
-	 **/
-	private $payAmount;
-	
-	/** 
-	 * 账单的服务费。
-	 **/
-	private $serviceAmount;
-	
-	/** 
-	 * 子业务类型是业务类型的下一级概念，例如：WATER表示JF下面的水费，ELECTRIC表示JF下面的电费，GAS表示JF下面的燃气费。
-	 **/
-	private $subOrderType;
-	
-	/** 
-	 * 交通违章地点，sub_order_type=TRAFFIC时填写。
-	 **/
-	private $trafficLocation;
-	
-	/** 
-	 * 违章行为，sub_order_type=TRAFFIC时填写。
-	 **/
-	private $trafficRegulations;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAuthToken($authToken)
 	{
 		$this->authToken = $authToken;

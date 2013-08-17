@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alibaba.logistics.order.cancel request
@@ -20,29 +19,6 @@ class AlibabaLogisticsOrderCancelRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alibaba.logistics.order.cancel request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlibabaLogisticsOrderCancelRequest
-{
-	/** 
-	 * 物流订单id
-	 **/
-	private $orderId;
-	
-	/** 
-	 * 撤销原因说明。
-	 **/
-	private $reason;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setOrderId($orderId)
 	{
 		$this->orderId = $orderId;

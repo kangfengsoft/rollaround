@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.mobile.shops.convert request
@@ -32,41 +31,6 @@ class TaobaokeMobileShopsConvertRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.taobaoke.mobile.shops.convert request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TaobaokeMobileShopsConvertRequest
-{
-	/** 
-	 * 需返回的字段列表.可选值:TaobaokeShop淘宝客商品结构体中的user_id,shop_title,click_url,commission_rate;字段之间用","分隔.
-	 **/
-	private $fields;
-	
-	/** 
-	 * 自定义输入串.格式:英文和数字组成;长度不能大于12个字符,区分不同的推广渠道,如:bbs,表示bbs为推广渠道;blog,表示blog为推广渠道.
-	 **/
-	private $outerCode;
-	
-	/** 
-	 * 卖家昵称串.最大输入10个.格式如:"value1,value2,value3" 用" , "号分隔。
-注意：sids和seller_nicks两个参数任意必须输入一个，如果同时输入，则以seller_nicks为准
-	 **/
-	private $sellerNicks;
-	
-	/** 
-	 * 店铺id串.最大输入10个.格式如:"value1,value2,value3" 用" , "号分隔店铺id.
-注意：sids和seller_nicks两个参数任意必须输入一个，如果同时输入，则以seller_nicks为准
-	 **/
-	private $sids;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

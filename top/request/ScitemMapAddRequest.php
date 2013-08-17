@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.map.add request
@@ -37,46 +36,6 @@ false:不进行高级校验
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.scitem.map.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ScitemMapAddRequest
-{
-	/** 
-	 * 前台ic商品id
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 默认值为false
-true:进行高级校验,前端商品或SKU的商家编码必须与后端商品的商家编码一致，否则会拒绝关联
-false:不进行高级校验
-	 **/
-	private $needCheck;
-	
-	/** 
-	 * sc_item_id和outer_code 其中一个不能为空
-	 **/
-	private $outerCode;
-	
-	/** 
-	 * sc_item_id和outer_code 其中一个不能为空
-	 **/
-	private $scItemId;
-	
-	/** 
-	 * 前台ic商品skuid
-	 **/
-	private $skuId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

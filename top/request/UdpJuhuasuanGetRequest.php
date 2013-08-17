@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.udp.juhuasuan.get request
@@ -40,49 +39,6 @@ class UdpJuhuasuanGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.udp.juhuasuan.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UdpJuhuasuanGetRequest
-{
-	/** 
-	 * 开始时间
-	 **/
-	private $beginTime;
-	
-	/** 
-	 * 类目编号
-	 **/
-	private $catid;
-	
-	/** 
-	 * 结束时间
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 指标ID(参阅指标编号)
-	 **/
-	private $fields;
-	
-	/** 
-	 * 2407364
-	 **/
-	private $itemid;
-	
-	/** 
-	 * 备用
-	 **/
-	private $parameters;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBeginTime($beginTime)
 	{
 		$this->beginTime = $beginTime;

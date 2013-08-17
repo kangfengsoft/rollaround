@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.itemprops.get request
@@ -70,79 +69,6 @@ class ItempropsGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.itemprops.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ItempropsGetRequest
-{
-	/** 
-	 * 类目子属性路径,由该子属性上层的类目属性和类目属性值组成,格式pid:vid;pid:vid.取类目子属性需要传child_path,cid
-	 **/
-	private $childPath;
-	
-	/** 
-	 * 叶子类目ID，如果只传cid，则只返回一级属性,通过taobao.itemcats.get获得叶子类目ID
-	 **/
-	private $cid;
-	
-	/** 
-	 * 需要返回的字段列表，见：ItemProp，默认返回：pid, name, must, multi, prop_values
-	 **/
-	private $fields;
-	
-	/** 
-	 * 是否颜色属性。可选值:true(是),false(否) (删除的属性不会匹配和返回这个条件)
-	 **/
-	private $isColorProp;
-	
-	/** 
-	 * 是否枚举属性。可选值:true(是),false(否) (删除的属性不会匹配和返回这个条件)。如果返回true，属性值是下拉框选择输入，如果返回false，属性值是用户自行手工输入。
-	 **/
-	private $isEnumProp;
-	
-	/** 
-	 * 在is_enum_prop是true的前提下，是否是卖家可以自行输入的属性（注：如果is_enum_prop返回false，该参数统一返回false）。可选值:true(是),false(否) (删除的属性不会匹配和返回这个条件)
-	 **/
-	private $isInputProp;
-	
-	/** 
-	 * 是否商品属性，这个属性只能放于发布商品时使用。可选值:true(是),false(否)
-	 **/
-	private $isItemProp;
-	
-	/** 
-	 * 是否关键属性。可选值:true(是),false(否)
-	 **/
-	private $isKeyProp;
-	
-	/** 
-	 * 是否销售属性。可选值:true(是),false(否)
-	 **/
-	private $isSaleProp;
-	
-	/** 
-	 * 父属性ID
-	 **/
-	private $parentPid;
-	
-	/** 
-	 * 属性id (取类目属性时，传pid，不用同时传PID和parent_pid)
-	 **/
-	private $pid;
-	
-	/** 
-	 * 获取类目的类型：1代表集市、2代表天猫
-	 **/
-	private $type;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setChildPath($childPath)
 	{
 		$this->childPath = $childPath;

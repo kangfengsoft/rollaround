@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.product.propimg.delete request
@@ -20,29 +19,6 @@ class ProductPropimgDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.product.propimg.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class ProductPropimgDeleteRequest
-{
-	/** 
-	 * 属性图片ID
-	 **/
-	private $id;
-	
-	/** 
-	 * 产品ID.Product的id.
-	 **/
-	private $productId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

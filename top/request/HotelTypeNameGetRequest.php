@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.type.name.get request
@@ -20,29 +19,6 @@ class HotelTypeNameGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.type.name.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelTypeNameGetRequest
-{
-	/** 
-	 * 要查询的酒店id。必须为数字
-	 **/
-	private $hid;
-	
-	/** 
-	 * 房型全部名称/别名。不能超过60字节
-	 **/
-	private $name;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setHid($hid)
 	{
 		$this->hid = $hid;

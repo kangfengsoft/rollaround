@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.room.get request
@@ -40,49 +39,6 @@ class HotelRoomGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.room.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelRoomGetRequest
-{
-	/** 
-	 * 酒店房间商品gid。必须为数字。gid和item_id至少要传一个。
-	 **/
-	private $gid;
-	
-	/** 
-	 * 酒店房间商品item_id。必须为数字。item_id和gid至少要传一个。
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 是否需要返回该商品的酒店信息。可选值：true，false。
-	 **/
-	private $needHotel;
-	
-	/** 
-	 * 是否需要返回该商品的宝贝描述。可选值：true，false。
-	 **/
-	private $needRoomDesc;
-	
-	/** 
-	 * 是否需要返回该商品的房态列表。可选值：true，false。
-	 **/
-	private $needRoomQuotas;
-	
-	/** 
-	 * 是否需要返回该商品的房型信息。可选值：true，false。
-	 **/
-	private $needRoomType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setGid($gid)
 	{
 		$this->gid = $gid;

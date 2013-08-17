@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.order.face.check request
@@ -30,39 +29,6 @@ class HotelOrderFaceCheckRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hotel.order.face.check request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HotelOrderFaceCheckRequest
-{
-	/** 
-	 * 核实已入住或者未入住，true：已入住，false：未入住
-	 **/
-	private $checked;
-	
-	/** 
-	 * 实际入住时间
-	 **/
-	private $checkinDate;
-	
-	/** 
-	 * 实际离店时间
-	 **/
-	private $checkoutDate;
-	
-	/** 
-	 * 酒店订单id
-	 **/
-	private $oid;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setChecked($checked)
 	{
 		$this->checked = $checked;

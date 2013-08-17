@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.authorize.remove request
@@ -25,34 +24,6 @@ class InventoryAuthorizeRemoveRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.authorize.remove request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryAuthorizeRemoveRequest
-{
-	/** 
-	 * 库存授权结果码
-	 **/
-	private $authorizeCode;
-	
-	/** 
-	 * 后端商品id
-	 **/
-	private $scItemId;
-	
-	/** 
-	 * 移除授权的目标用户昵称列表，用”,”隔开
-	 **/
-	private $userNickList;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAuthorizeCode($authorizeCode)
 	{
 		$this->authorizeCode = $authorizeCode;

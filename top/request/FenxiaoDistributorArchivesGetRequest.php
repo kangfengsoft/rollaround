@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.distributor.archives.get request
@@ -15,24 +14,6 @@ class FenxiaoDistributorArchivesGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.distributor.archives.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoDistributorArchivesGetRequest
-{
-	/** 
-	 * 分销商淘宝店主nick
-	 **/
-	private $distributorUserNick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDistributorUserNick($distributorUserNick)
 	{
 		$this->distributorUserNick = $distributorUserNick;

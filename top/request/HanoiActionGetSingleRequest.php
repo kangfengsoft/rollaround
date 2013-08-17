@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.action.get.single request
@@ -25,34 +24,6 @@ class HanoiActionGetSingleRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.hanoi.action.get.single request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class HanoiActionGetSingleRequest
-{
-	/** 
-	 * action的code
-	 **/
-	private $actionCode;
-	
-	/** 
-	 * action的id
-	 **/
-	private $id;
-	
-	/** 
-	 * action的name
-	 **/
-	private $name;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setActionCode($actionCode)
 	{
 		$this->actionCode = $actionCode;

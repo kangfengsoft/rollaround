@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.sellercenter.role.add request
@@ -30,39 +29,6 @@ class SellercenterRoleAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.sellercenter.role.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SellercenterRoleAddRequest
-{
-	/** 
-	 * 角色描述
-	 **/
-	private $description;
-	
-	/** 
-	 * 角色名
-	 **/
-	private $name;
-	
-	/** 
-	 * 表示卖家昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 需要授权的权限点permission_code列表,以","分割.其code值可以通过调用taobao.sellercenter.user.permissions.get返回，其中permission.is_authorize=1的权限点可以通过本接口授权给对应角色。
-	 **/
-	private $permissionCodes;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDescription($description)
 	{
 		$this->description = $description;

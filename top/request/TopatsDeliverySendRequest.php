@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.delivery.send request
@@ -9,18 +8,6 @@
 class TopatsDeliverySendRequest
 {
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.topats.delivery.send request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TopatsDeliverySendRequest
-{
-	/** 
->>>>>>> #develop update w8
 	 * 每个tid所对应的物流公司代码。可以不传，表示所有的物流公司都为"其他"，但是只要有一个订单需要指定物流公司，所有的订单都需要指定物流公司,每个类型之间用";"连接。排列要和tid顺序一致，不需要指定物流公司的订单，该位置上放上一个空字符串""。可以不传，传了长度和位置要和tid保持一致。
 
 每个company_code表示物流公司代码.如"POST"就代表中国邮政,"ZJS"就代表宅急送.调用 taobao.logisticcompanies.get 获取。如传入的代码非淘宝官方物流合作公司，默认是“其他”物流的方式，在淘宝不显示物流具体进度，故传入需谨慎。如果orderType为delivery_needed，则必传

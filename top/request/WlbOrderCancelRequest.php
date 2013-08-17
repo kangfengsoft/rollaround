@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.order.cancel request
@@ -15,24 +14,6 @@ class WlbOrderCancelRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.order.cancel request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbOrderCancelRequest
-{
-	/** 
-	 * 物流宝订单编号
-	 **/
-	private $wlbOrderCode;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setWlbOrderCode($wlbOrderCode)
 	{
 		$this->wlbOrderCode = $wlbOrderCode;

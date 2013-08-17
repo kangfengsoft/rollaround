@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.isreferenced.get request
@@ -15,24 +14,6 @@ class PictureIsreferencedGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.picture.isreferenced.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PictureIsreferencedGetRequest
-{
-	/** 
-	 * 图片id
-	 **/
-	private $pictureId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPictureId($pictureId)
 	{
 		$this->pictureId = $pictureId;

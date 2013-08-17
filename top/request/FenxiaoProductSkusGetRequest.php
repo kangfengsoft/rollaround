@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.skus.get request
@@ -15,24 +14,6 @@ class FenxiaoProductSkusGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.fenxiao.product.skus.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class FenxiaoProductSkusGetRequest
-{
-	/** 
-	 * 产品ID
-	 **/
-	private $productId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setProductId($productId)
 	{
 		$this->productId = $productId;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.user.trade.search request
@@ -55,64 +54,6 @@ class AlipayUserTradeSearchRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.user.trade.search request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayUserTradeSearchRequest
-{
-	/** 
-	 * 支付宝订单号，为空查询所有记录
-	 **/
-	private $alipayOrderNo;
-	
-	/** 
-	 * 结束时间。与开始时间间隔在七天之内
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 商户订单号，为空查询所有记录
-	 **/
-	private $merchantOrderNo;
-	
-	/** 
-	 * 订单来源，为空查询所有来源。淘宝(TAOBAO)，支付宝(ALIPAY)，其它(OTHER)
-	 **/
-	private $orderFrom;
-	
-	/** 
-	 * 订单状态，为空查询所有状态订单
-	 **/
-	private $orderStatus;
-	
-	/** 
-	 * 订单类型，为空查询所有类型订单。
-	 **/
-	private $orderType;
-	
-	/** 
-	 * 页码。取值范围:大于零的整数; 默认值1
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页获取条数。最大值500。
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 开始时间，时间必须是今天范围之内。格式为yyyy-MM-dd HH:mm:ss，精确到秒
-	 **/
-	private $startTime;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

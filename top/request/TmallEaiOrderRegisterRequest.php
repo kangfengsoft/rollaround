@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.register request
@@ -61,70 +60,6 @@ tmall.eai.order.refund.refundStatus.push
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.eai.order.register request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallEaiOrderRegisterRequest
-{
-	/** 
-	 * 对传入的事件的操作类型 0:取消订阅;1:订阅
-	 **/
-	private $action;
-	
-	/** 
-	 * 1:主订单模式;
-2:子订单模式;
-天猫退款消息订阅默认子订单模式。
-不传入即可。
-	 **/
-	private $dataMode;
-	
-	/** 
-	 * 需要订阅或者取消订阅的事件名称。
-可选择的值如下所示:
-RcRefundClosedEvent;
-RcRefundPrepaidEvent;
-RcReturnCreatedEvent;
-RcRefundSucceedEvent;
-RcRefundCreatedEvent;
-RcRefundModifiedEvent;
-RcReturnModifiedEvent;
-RcRefundSellerRefuseEvent;
-RcReturnConfirmFailedEvent;
-RcRefundTaobaoInvolvedEvent;
-RcRefundMessageCreatedEvent;
-RcReturnConfirmSucceedEvent;
-RcRefundPaymentFinishedEvent;
-RcRefundRefundableMarkedEvent;
-RcReturnBuyerReturnGoodsEvent;
-RcRefundSellerAgreeReturnEvent;
-RcRefundRefundableCanceledEvent;
-	 **/
-	private $eventName;
-	
-	/** 
-	 * 天猫退款订单可选topic:
-tmall.eai.order.refund.refundBill.push;
-tmall.eai.order.refund.refundStatus.push
-	 **/
-	private $topic;
-	
-	/** 
-	 * 标识出用户类型。
-这里“用户”指的是外部开发者。
-0:TOP-OPEN-API 用户
-1:JIP用户
-	 **/
-	private $userType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAction($action)
 	{
 		$this->action = $action;

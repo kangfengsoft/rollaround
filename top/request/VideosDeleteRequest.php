@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.videos.delete request
@@ -20,29 +19,6 @@ class VideosDeleteRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.videos.delete request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class VideosDeleteRequest
-{
-	/** 
-	 * 在淘宝视频中的应用key，该值向淘宝视频申请产生
-	 **/
-	private $videoAppKey;
-	
-	/** 
-	 * 视频id列表
-	 **/
-	private $videoIds;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setVideoAppKey($videoAppKey)
 	{
 		$this->videoAppKey = $videoAppKey;

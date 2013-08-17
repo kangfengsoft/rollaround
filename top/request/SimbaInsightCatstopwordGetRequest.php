@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.insight.catstopword.get request
@@ -25,34 +24,6 @@ class SimbaInsightCatstopwordGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.insight.catstopword.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaInsightCatstopwordGetRequest
-{
-	/** 
-	 * 类目id数组，最大长度200
-	 **/
-	private $categoryIds;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 最大返回数量(1-100)
-	 **/
-	private $resultNum;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCategoryIds($categoryIds)
 	{
 		$this->categoryIds = $categoryIds;

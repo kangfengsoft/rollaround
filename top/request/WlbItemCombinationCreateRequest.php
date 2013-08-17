@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.combination.create request
@@ -25,34 +24,6 @@ class WlbItemCombinationCreateRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.item.combination.create request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbItemCombinationCreateRequest
-{
-	/** 
-	 * 组合商品的id列表
-	 **/
-	private $destItemList;
-	
-	/** 
-	 * 要建立组合关系的商品id
-	 **/
-	private $itemId;
-	
-	/** 
-	 * 组成组合商品的比例列表，描述组合商品的组合比例，默认为1,1,1
-	 **/
-	private $proportionList;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setDestItemList($destItemList)
 	{
 		$this->destItemList = $destItemList;

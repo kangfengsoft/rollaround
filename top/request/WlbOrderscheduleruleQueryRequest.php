@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.orderschedulerule.query request
@@ -20,29 +19,6 @@ class WlbOrderscheduleruleQueryRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.orderschedulerule.query request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbOrderscheduleruleQueryRequest
-{
-	/** 
-	 * 当前页
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
-	 **/
-	private $pageSize;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.examine request
@@ -36,45 +35,6 @@ class TmallEaiOrderRefundExamineRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: tmall.eai.order.refund.examine request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallEaiOrderRefundExamineRequest
-{
-	/** 
-	 * 审核留言
-	 **/
-	private $message;
-	
-	/** 
-	 * 审核人姓名
-	 **/
-	private $operator;
-	
-	/** 
-	 * 退款单编号
-	 **/
-	private $refundId;
-	
-	/** 
-	 * 售中：onsale
-售后：aftersale
-	 **/
-	private $refundPhase;
-	
-	/** 
-	 * 退款版本号
-	 **/
-	private $refundVersion;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setMessage($message)
 	{
 		$this->message = $message;

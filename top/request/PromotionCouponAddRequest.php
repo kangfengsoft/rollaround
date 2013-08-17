@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.coupon.add request
@@ -30,39 +29,6 @@ class PromotionCouponAddRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.promotion.coupon.add request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class PromotionCouponAddRequest
-{
-	/** 
-	 * 订单满多少元才能用这个优惠券，500就是满500元才能使用
-	 **/
-	private $condition;
-	
-	/** 
-	 * 优惠券的面额，必须是3，5，10，20，50，100
-	 **/
-	private $denominations;
-	
-	/** 
-	 * 优惠券的截止日期
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 优惠券的生效时间
-	 **/
-	private $startTime;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCondition($condition)
 	{
 		$this->condition = $condition;

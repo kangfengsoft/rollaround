@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.membergrade.set request
@@ -20,29 +19,6 @@ class CrmMembergradeSetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.crm.membergrade.set request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class CrmMembergradeSetRequest
-{
-	/** 
-	 * 买家昵称
-	 **/
-	private $buyerNick;
-	
-	/** 
-	 * 买家会员级别有四种1：普通会员。2：高级会员。 3VIP会员。 4：至尊VIP
-	 **/
-	private $grade;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBuyerNick($buyerNick)
 	{
 		$this->buyerNick = $buyerNick;

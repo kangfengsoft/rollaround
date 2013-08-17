@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.product.spec.pic.upload request
@@ -14,23 +13,6 @@ class TmallProductSpecPicUploadRequest
 	private $certifyPic;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: tmall.product.spec.pic.upload request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class TmallProductSpecPicUploadRequest
-{
-	/** 
-	 * 上传的认证图片文件
-	 **/
-	private $certifyPic;
-	
-	/** 
->>>>>>> #develop update w8
 	 * 上传的认证图片的认证类型<br>
 1：代表产品包装正面图<br>
 2：代表完整产品资质<br>

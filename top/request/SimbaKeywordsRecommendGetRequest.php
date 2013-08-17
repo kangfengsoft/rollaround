@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.keywords.recommend.get request
@@ -50,59 +49,6 @@ class SimbaKeywordsRecommendGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.keywords.recommend.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaKeywordsRecommendGetRequest
-{
-	/** 
-	 * 推广组ID
-	 **/
-	private $adgroupId;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 排序方式: 
-搜索量 search_volume 
-市场平均价格 average_price 
-相关度 relevance 
-不排序 non 
-默认为 non
-	 **/
-	private $orderBy;
-	
-	/** 
-	 * 返回的第几页数据，默认为1
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 返回的每页数据量大小,最大200
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 相关度
-	 **/
-	private $pertinence;
-	
-	/** 
-	 * 搜索量,设置此值后返回的就是大于此搜索量的词列表
-	 **/
-	private $search;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

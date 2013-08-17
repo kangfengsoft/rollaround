@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.rpt.campadgroupeffect.get request
@@ -55,64 +54,6 @@ class SimbaRptCampadgroupeffectGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.rpt.campadgroupeffect.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaRptCampadgroupeffectGetRequest
-{
-	/** 
-	 * 查询推广计划id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 结束日期，格式yyyy-mm-dd
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 页码
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页大小
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 报表类型（搜索：SEARCH,类目出价：CAT, 定向投放：NOSEARCH汇总：SUMMARY）SUMMARY必须单选，其他值可多选例如：SEARCH,CAT
-	 **/
-	private $searchType;
-	
-	/** 
-	 * 数据来源（站内：1，站外：2 ，汇总：SUMMARY）SUMMARY必须单选，其他值可多选例如1,2
-	 **/
-	private $source;
-	
-	/** 
-	 * 开始日期，格式yyyy-mm-dd
-	 **/
-	private $startTime;
-	
-	/** 
-	 * 权限验证信息
-	 **/
-	private $subwayToken;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

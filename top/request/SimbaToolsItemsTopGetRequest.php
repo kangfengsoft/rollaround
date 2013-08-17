@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.tools.items.top.get request
@@ -25,34 +24,6 @@ class SimbaToolsItemsTopGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.tools.items.top.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaToolsItemsTopGetRequest
-{
-	/** 
-	 * 输入的必须是一个符合ipv4或者ipv6格式的IP地址
-	 **/
-	private $ip;
-	
-	/** 
-	 * 关键词
-	 **/
-	private $keyword;
-	
-	/** 
-	 * 主人昵称
-	 **/
-	private $nick;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setIp($ip)
 	{
 		$this->ip = $ip;

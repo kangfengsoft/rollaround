@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.groupmember.get request
@@ -15,24 +14,6 @@ class WangwangEserviceGroupmemberGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wangwang.eservice.groupmember.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WangwangEserviceGroupmemberGetRequest
-{
-	/** 
-	 * 被查询用户组管理员ID：cntaobao+淘宝nick，例如cntaobaotest
-	 **/
-	private $managerId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setManagerId($managerId)
 	{
 		$this->managerId = $managerId;

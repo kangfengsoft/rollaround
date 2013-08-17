@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.ebpp.bill.get request
@@ -25,34 +24,6 @@ class AlipayEbppBillGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: alipay.ebpp.bill.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class AlipayEbppBillGetRequest
-{
-	/** 
-	 * 支付宝授权凭证，如果有淘宝的session可以不传
-	 **/
-	private $authToken;
-	
-	/** 
-	 * 输出机构的业务流水号，需要保证唯一性。
-	 **/
-	private $merchantOrderNo;
-	
-	/** 
-	 * 支付宝订单类型。公共事业缴纳JF,信用卡还款HK
-	 **/
-	private $orderType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setAuthToken($authToken)
 	{
 		$this->authToken = $authToken;

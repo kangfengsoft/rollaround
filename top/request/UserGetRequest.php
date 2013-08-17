@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.user.get request
@@ -14,23 +13,6 @@ class UserGetRequest
 	private $fields;
 	
 	/** 
-=======
-<?php
-/**
- * TOP API: taobao.user.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class UserGetRequest
-{
-	/** 
-	 * 需返回的字段列表。可选值：User结构体中的所有字段；以半角逗号(,)分隔。需要用户授权才能获取用户对应的uid和user_id。
-	 **/
-	private $fields;
-	
-	/** 
->>>>>>> #develop update w8
 	 * 用户昵称，如果昵称为中文，请使用UTF-8字符集对昵称进行URL编码。
 <br><font color="red">注：在传入session的情况下,可以不传nick，表示取当前用户信息；否则nick必须传.<br>
 自用型应用不需要传入nick

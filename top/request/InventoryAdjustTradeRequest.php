@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.adjust.trade request
@@ -30,39 +29,6 @@ class InventoryAdjustTradeRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.inventory.adjust.trade request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class InventoryAdjustTradeRequest
-{
-	/** 
-	 * 商家外部定单号
-	 **/
-	private $bizUniqueCode;
-	
-	/** 
-	 * 商品初始库存信息： [{ "TBOrderCode”:”淘宝交易号”,"TBSubOrderCode ":"淘宝子交易单号,赠品可以不填","”isGift”:”TRUE或者FALSE,是否赠品”,storeCode":"商家仓库编码"," scItemId ":"商品后端ID","scItemCode":"商品商家编码"," originScItemId ":"原商品ID","inventoryType":"","quantity":"111","isComplete":"TRUE或者FALSE，是否全部确认出库"}]
-	 **/
-	private $items;
-	
-	/** 
-	 * 业务操作时间
-	 **/
-	private $operateTime;
-	
-	/** 
-	 * 订单类型：B2C、B2B
-	 **/
-	private $tbOrderType;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setBizUniqueCode($bizUniqueCode)
 	{
 		$this->bizUniqueCode = $bizUniqueCode;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.rpt.campaignbase.get request
@@ -55,64 +54,6 @@ class SimbaRptCampaignbaseGetRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.simba.rpt.campaignbase.get request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class SimbaRptCampaignbaseGetRequest
-{
-	/** 
-	 * 推广计划id
-	 **/
-	private $campaignId;
-	
-	/** 
-	 * 结束时间，格式yyyy-mm-dd
-	 **/
-	private $endTime;
-	
-	/** 
-	 * 昵称
-	 **/
-	private $nick;
-	
-	/** 
-	 * 页码
-	 **/
-	private $pageNo;
-	
-	/** 
-	 * 每页大小
-	 **/
-	private $pageSize;
-	
-	/** 
-	 * 报表类型（搜索：SEARCH,类目出价：CAT, 定向投放：NOSEARCH 全部：ALL）可以一次取多个例如：SEARCH,CAT
-	 **/
-	private $searchType;
-	
-	/** 
-	 * 数据来源（站内：1，站外：2）可多选以逗号分隔，默认值为：1,2
-	 **/
-	private $source;
-	
-	/** 
-	 * 开始时间，格式yyyy-mm-dd
-	 **/
-	private $startTime;
-	
-	/** 
-	 * 权限校验参数
-	 **/
-	private $subwayToken;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

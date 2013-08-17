@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.notify.message.confirm request
@@ -15,24 +14,6 @@ class WlbNotifyMessageConfirmRequest
 	
 	private $apiParas = array();
 	
-=======
-<?php
-/**
- * TOP API: taobao.wlb.notify.message.confirm request
- * 
- * @author auto create
- * @since 1.0, 2013-08-16 12:49:12
- */
-class WlbNotifyMessageConfirmRequest
-{
-	/** 
-	 * 物流宝通知消息的id，通过taobao.wlb.notify.message.page.get接口得到的WlbMessage数据结构中的id字段
-	 **/
-	private $messageId;
-	
-	private $apiParas = array();
-	
->>>>>>> #develop update w8
 	public function setMessageId($messageId)
 	{
 		$this->messageId = $messageId;
