@@ -5,13 +5,13 @@
 
 <div id="main-content" class="clearfix">
 	<div id="breadcrumbs">
-		<ul class="breadcrumb">
-			<li><i class="icon-home"></i> <a href="#">Home</a> <span
-				class="divider"> <i class="icon-angle-right"></i>
-			</span></li>
-			<li class="active">Dashboard</li>
-		</ul>
-		<!--.breadcrumb-->
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+			'htmlOptions'=>array ('class'=>'breadcrumb'),
+			'homeLink' => '<i class="icon-home"></i> <a href="#">Home</a>',
+			'activeLinkTemplate'=>'<li><a href="{url}">{label}</a> <span class="divider">/</span></li>',
+		)); ?><!-- breadcrumbs -->
+		
 
 		<div id="nav-search">
 			<form class="form-search">
