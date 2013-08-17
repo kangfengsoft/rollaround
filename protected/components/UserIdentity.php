@@ -30,4 +30,9 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_NONE;
 		return !$this->errorCode;
 	}
+	
+	public function setToken($token){
+		$this->setState('access_token', $token->access_token);
+		$this->setState('nick', $token->taobao_user_nick);
+	}
 }

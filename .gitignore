@@ -5,6 +5,8 @@
 .settings
 .checkstyle
 .metadata
+.log
+.bak
 Servers
 target
 *.swp
