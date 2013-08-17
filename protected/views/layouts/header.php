@@ -157,14 +157,18 @@
 						</a></li>
 					</ul></li>
 
-				<li class="light-blue user-profile"><a data-toggle="dropdown"
-					href="#" class="user-menu dropdown-toggle"> <img
-						class="nav-user-photo" src="themes/images/user.png"
-						alt="Jason's Photo" /> <span id="user_info"> <small>Welcome,</small>
-							Jason
-					</span> <i class="icon-caret-down"></i>
-				</a>
-
+				<li class="light-blue user-profile">
+				<?php if(!Yii::app()->user->isGuest){?>
+					<a data-toggle="dropdown"
+						href="#" class="user-menu dropdown-toggle"> <img
+							class="nav-user-photo" src="themes/images/user.png"
+							alt="Jason's Photo" /> 
+						<span id="user_info"> <small>Welcome,</small><?php echo Yii::app()->user->nick; ?></span> 
+						<i class="icon-caret-down"></i>
+					</a>
+				<?php }else{?>
+					<a href="https://oauth.tbsandbox.com/authorize?response_type=code&client_id=1021594899&redirect_uri=http://127.0.0.1/kfsoft/index.php&state=1">login first</a>
+				<?php }?>
 					<ul
 						class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer"
 						id="user_menu">
@@ -176,7 +180,7 @@
 
 						<li class="divider"></li>
 
-						<li><a href="#"> <i class="icon-off"></i> Logout
+						<li><a href="/kfsoft/index.php?r=site/logout"> <i class="icon-off"></i> Logout
 						</a></li>
 					</ul></li>
 			</ul>

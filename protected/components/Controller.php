@@ -24,7 +24,7 @@ class Controller extends CController
 	
 	public function filters(){
 		return array(
-			'accessControl',
+			'accessControl - login',
 		);
 	}
 	
@@ -59,8 +59,7 @@ class Controller extends CController
 			Yii::app()->user->login($identity);
 			header("Location: $redirect_uri");
 		}else{
-			$url = "https://oauth.tbsandbox.com/authorize?response_type=code&client_id=1021594899&redirect_uri=http://127.0.0.1/kfsoft/index.php&state=1";
-			header("Location: $url");
+			$this->redirect($this->createUrl("site/login")); 
 		}
 	}
 	
