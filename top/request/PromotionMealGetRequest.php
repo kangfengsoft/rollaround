@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.meal.get request
@@ -19,6 +20,29 @@ class PromotionMealGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.promotion.meal.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PromotionMealGetRequest
+{
+	/** 
+	 * 搭配套餐id
+	 **/
+	private $mealId;
+	
+	/** 
+	 * 套餐状态。有效：VALID;失效：INVALID(有效套餐为可使用的套餐,无效套餐为套餐中有商品下架或库存为0时)。默认时两种情况都会查询。
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setMealId($mealId)
 	{
 		$this->mealId = $mealId;

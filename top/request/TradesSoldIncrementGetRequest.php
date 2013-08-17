@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trades.sold.increment.get request
@@ -18,6 +19,28 @@ class TradesSoldIncrementGetRequest
 	private $extType;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.trades.sold.increment.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TradesSoldIncrementGetRequest
+{
+	/** 
+	 * 查询修改结束时间，必须大于修改开始时间(修改时间跨度不能大于一天)，格式:yyyy-MM-dd HH:mm:ss。<span style="color:red;font-weight: bold;">建议使用30分钟以内的时间跨度，能大大提高响应速度和成功率</span>。
+	 **/
+	private $endModified;
+	
+	/** 
+	 * 可选值有ershou(二手市场的订单）,service（商城服务子订单）mark（双十一大促活动异常订单）作为扩展类型筛选只能做单个ext_type查询，不能全部查询所有的ext_type类型
+	 **/
+	private $extType;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * 需要返回的字段。目前支持有：
 1.Trade中可以指定返回的fields:seller_nick, buyer_nick, title, type, created, tid, seller_rate,seller_can_rate, buyer_rate,can_rate,status, payment, discount_fee, adjust_fee, post_fee, total_fee, pay_time, end_time, modified, consign_time, buyer_obtain_point_fee, point_fee, real_point_fee, received_payment,pic_path, num_iid, num, price, cod_fee, cod_status, shipping_type, receiver_name, receiver_state, receiver_city, receiver_district, receiver_address, receiver_zip, receiver_mobile, receiver_phone,alipay_id,alipay_no,is_lgtype,is_force_wlb,is_brand_sale,has_buyer_message,credit_card_fee,step_trade_status,step_paid_fee,mark_desc,send_time,,has_yfx,yfx_fee,yfx_id,yfx_type,trade_source,seller_flag,is_daixiao,is_part_consign
 2.Order中可以指定返回fields：

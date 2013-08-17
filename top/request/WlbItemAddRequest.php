@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.add request
@@ -125,6 +126,135 @@ DISTRIBUTION--分销
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemAddRequest
+{
+	/** 
+	 * 商品颜色
+	 **/
+	private $color;
+	
+	/** 
+	 * 货类
+	 **/
+	private $goodsCat;
+	
+	/** 
+	 * 商品高度，单位毫米
+	 **/
+	private $height;
+	
+	/** 
+	 * 是否危险品
+	 **/
+	private $isDangerous;
+	
+	/** 
+	 * 是否易碎品
+	 **/
+	private $isFriable;
+	
+	/** 
+	 * 是否sku
+	 **/
+	private $isSku;
+	
+	/** 
+	 * 商品编码
+	 **/
+	private $itemCode;
+	
+	/** 
+	 * 商品长度，单位毫米
+	 **/
+	private $length;
+	
+	/** 
+	 * 商品名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 商品包装材料类型
+	 **/
+	private $packageMaterial;
+	
+	/** 
+	 * 商品价格，单位：分
+	 **/
+	private $price;
+	
+	/** 
+	 * 计价货类
+	 **/
+	private $pricingCat;
+	
+	/** 
+	 * 属性名列表,目前支持的属性：
+毛重:GWeight	
+净重:Nweight
+皮重: Tweight
+自定义属性：
+paramkey1
+paramkey2
+paramkey3
+paramkey4
+	 **/
+	private $proNameList;
+	
+	/** 
+	 * 属性值列表：
+10,8
+	 **/
+	private $proValueList;
+	
+	/** 
+	 * 商品备注
+	 **/
+	private $remark;
+	
+	/** 
+	 * 是否支持批次
+	 **/
+	private $supportBatch;
+	
+	/** 
+	 * 商品标题
+	 **/
+	private $title;
+	
+	/** 
+	 * NORMAL--普通商品
+COMBINE--组合商品
+DISTRIBUTION--分销
+	 **/
+	private $type;
+	
+	/** 
+	 * 商品体积，单位立方厘米
+	 **/
+	private $volume;
+	
+	/** 
+	 * 商品重量，单位G
+	 **/
+	private $weight;
+	
+	/** 
+	 * 商品宽度，单位毫米
+	 **/
+	private $width;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setColor($color)
 	{
 		$this->color = $color;

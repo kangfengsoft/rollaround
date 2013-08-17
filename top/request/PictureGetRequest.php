@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.get request
@@ -59,6 +60,69 @@ class PictureGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.picture.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PictureGetRequest
+{
+	/** 
+	 * 是否删除,unfroze代表没有删除
+	 **/
+	private $deleted;
+	
+	/** 
+	 * 查询上传结束时间点,格式:yyyy-MM-dd HH:mm:ss
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 图片被修改的时间点，格式:yyyy-MM-dd HH:mm:ss。查询此修改时间点之后到目前的图片。
+	 **/
+	private $modifiedTime;
+	
+	/** 
+	 * 图片查询结果排序,time:desc按上传时间从晚到早(默认), time:asc按上传时间从早到晚,sizes:desc按图片从大到小，sizes:asc按图片从小到大,默认time:desc
+	 **/
+	private $orderBy;
+	
+	/** 
+	 * 页码.传入值为1代表第一页,传入值为2代表第二页,依此类推,默认值为1
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数.每页返回最多返回100条,默认值40
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 图片分类ID
+	 **/
+	private $pictureCategoryId;
+	
+	/** 
+	 * 图片ID
+	 **/
+	private $pictureId;
+	
+	/** 
+	 * 查询上传开始时间点,格式:yyyy-MM-dd HH:mm:ss
+	 **/
+	private $startDate;
+	
+	/** 
+	 * 图片标题,最大长度50字符,中英文都算一字符
+	 **/
+	private $title;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDeleted($deleted)
 	{
 		$this->deleted = $deleted;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.video.add request
@@ -44,6 +45,54 @@ class VideoAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.video.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class VideoAddRequest
+{
+	/** 
+	 * 视频封面url,不能为空且不能超过512个英文字母
+	 **/
+	private $coverUrl;
+	
+	/** 
+	 * 视频描述信息，不能为空且不能超过256个汉字
+	 **/
+	private $description;
+	
+	/** 
+	 * 视频标签，以','隔开，不能为空且总长度不超过128个汉字
+	 **/
+	private $tags;
+	
+	/** 
+	 * 视频标题，不能为空且不超过128个汉字
+	 **/
+	private $title;
+	
+	/** 
+	 * 上传唯一识别符,上传id
+	 **/
+	private $uploadId;
+	
+	/** 
+	 * 视频上传者数字id
+	 **/
+	private $uploaderId;
+	
+	/** 
+	 * 在淘宝视频中的应用key，该值向淘宝视频申请产生
+	 **/
+	private $videoAppKey;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCoverUrl($coverUrl)
 	{
 		$this->coverUrl = $coverUrl;

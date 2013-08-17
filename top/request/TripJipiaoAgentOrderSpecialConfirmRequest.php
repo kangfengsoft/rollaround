@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.order.special.confirm request
@@ -34,6 +35,44 @@ class TripJipiaoAgentOrderSpecialConfirmRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trip.jipiao.agent.order.special.confirm request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TripJipiaoAgentOrderSpecialConfirmRequest
+{
+	/** 
+	 * 能否支付
+	 **/
+	private $canPay;
+	
+	/** 
+	 * can_pay=false,fail_type=0时，必需提供失败原因
+	 **/
+	private $failMemo;
+	
+	/** 
+	 * can_pay=false时，必需提供失败原因；失败原因：11,座位已售完;12,座位申请不成功;13,航班价格变动;14,买家要求失败订单;0,其它(必须在备注中说明原因)
+	 **/
+	private $failType;
+	
+	/** 
+	 * 国内机票订单id
+	 **/
+	private $orderId;
+	
+	/** 
+	 * can_pay=true，必需提供最迟支付时间
+	 **/
+	private $payLatestTime;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCanPay($canPay)
 	{
 		$this->canPay = $canPay;

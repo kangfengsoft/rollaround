@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.name.get request
@@ -43,6 +44,53 @@ domestic为true时，province,city,district不能同时为空或为0
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.name.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelNameGetRequest
+{
+	/** 
+	 * 城市编码。参见：http://kezhan.trip.taobao.com/area.html。
+domestic为true时，province,city,district不能同时为空或为0
+	 **/
+	private $city;
+	
+	/** 
+	 * domestic为true时，固定China；
+domestic为false时，必须传定义的海外国家编码值，是必填项。参见：http://kezhan.trip.taobao.com/countrys.html
+	 **/
+	private $country;
+	
+	/** 
+	 * 区域（县级市）编码。参见：http://kezhan.trip.taobao.com/area.html。
+domestic为true时，province,city,district不能同时为空或为0
+	 **/
+	private $district;
+	
+	/** 
+	 * 是否国内酒店。可选值：true，false
+	 **/
+	private $domestic;
+	
+	/** 
+	 * 酒店全部名称/别名。不能超过60字节
+	 **/
+	private $name;
+	
+	/** 
+	 * 省份编码。参见：http://kezhan.trip.taobao.com/area.html。
+domestic为true时，province,city,district不能同时为空或为0
+	 **/
+	private $province;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCity($city)
 	{
 		$this->city = $city;

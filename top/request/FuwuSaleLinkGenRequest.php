@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fuwu.sale.link.gen request
@@ -19,6 +20,29 @@ class FuwuSaleLinkGenRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fuwu.sale.link.gen request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FuwuSaleLinkGenRequest
+{
+	/** 
+	 * 用户需要营销的目标人群中的用户nick
+	 **/
+	private $nick;
+	
+	/** 
+	 * 从服务商后台，营销链接功能中生成的参数串直接复制使用。不要修改，否则抛错。
+	 **/
+	private $paramStr;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNick($nick)
 	{
 		$this->nick = $nick;

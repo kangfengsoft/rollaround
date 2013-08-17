@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.detail.update request
@@ -19,6 +20,29 @@ class UmpDetailUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.detail.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpDetailUpdateRequest
+{
+	/** 
+	 * 活动详情内容，可以通过ump sdk中的MarketingTool来生成这个内容
+	 **/
+	private $content;
+	
+	/** 
+	 * 活动详情id
+	 **/
+	private $detailId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setContent($content)
 	{
 		$this->content = $content;

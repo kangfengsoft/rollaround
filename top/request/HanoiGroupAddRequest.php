@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.group.add request
@@ -44,6 +45,54 @@ class HanoiGroupAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.group.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiGroupAddRequest
+{
+	/** 
+	 * 认证信息
+	 **/
+	private $appName;
+	
+	/** 
+	 * 分组的简单描述
+	 **/
+	private $description;
+	
+	/** 
+	 * 分组的编码
+	 **/
+	private $groupCode;
+	
+	/** 
+	 * 分组的名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 开放策略 true开放，默认为false
+	 **/
+	private $open;
+	
+	/** 
+	 * 使用场景
+	 **/
+	private $scene;
+	
+	/** 
+	 * 分组的类型，0 互斥，1 共存，默认为0
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

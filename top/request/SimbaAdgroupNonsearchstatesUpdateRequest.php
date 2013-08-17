@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.nonsearchstates.update request
@@ -24,6 +25,34 @@ class SimbaAdgroupNonsearchstatesUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroup.nonsearchstates.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupNonsearchstatesUpdateRequest
+{
+	/** 
+	 * 推广组ID通投状态json数组字符串，数组个数最多200个。json数组中的key必须和对应实体ADGroup 中的属性字段保持一致，否则对应的实体对象属性获取不到相应的值推广组ID,通投状态不传默认为1
+	 **/
+	private $adgroupidNonsearchstateJson;
+	
+	/** 
+	 * 推广计划ID
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupidNonsearchstateJson($adgroupidNonsearchstateJson)
 	{
 		$this->adgroupidNonsearchstateJson = $adgroupidNonsearchstateJson;

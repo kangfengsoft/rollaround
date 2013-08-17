@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.increment.authorize.message.get request
@@ -29,6 +30,39 @@ class IncrementAuthorizeMessageGetRequest
 	private $pageSize;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.increment.authorize.message.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class IncrementAuthorizeMessageGetRequest
+{
+	/** 
+	 * 消息的结束时间，消息所对应的操作时间的最大值。和start_modified搭配使用能过滤消通知消息的时间段。不传时：如果设置了start_modified，默认为与start_modified同一天的23:59:59；否则默认为调用接口当天的23:59:59。（格式：yyyy-MM-dd HH:mm:ss）
+注意：start_modified和end_modified的日期必须在必须在同一天内，比如：start_modified设置2000-01-01 00:00:00，则end_modified必须设置为2000-01-01这个日期
+	 **/
+	private $endModified;
+	
+	/** 
+	 * 消息所属的用户nick，他用型应用必传，自用型不传
+	 **/
+	private $nick;
+	
+	/** 
+	 * 页码，取值范围:大于零的整数; 默认值:1,即返回第一页数据。
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数，取值范围:大于零的整数;最大值:200;默认值:40
+	 **/
+	private $pageSize;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * 消息的开始时间，消息所对应的操作时间的最小值和end_modified搭配使用能过滤消通知消息的时间段。不传时：如果设置了end_modified，默认为与 end_modified同一天的00:00:00，否则默认为调用接口当天的00:00:00。（格式：yyyy-MM-dd HH:mm:ss）最早可取6天内的数据。
 注意：start_modified和end_modified的日期必须在必须在同一天内，比如：start_modified设置2000-01-01 00:00:00，则end_modified必须设置为2000-01-01这个日期
 	 **/

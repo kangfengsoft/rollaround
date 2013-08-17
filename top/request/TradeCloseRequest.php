@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.close request
@@ -8,6 +9,18 @@
 class TradeCloseRequest
 {
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.trade.close request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TradeCloseRequest
+{
+	/** 
+>>>>>>> #develop update w8
 	 * 交易关闭原因。可以选择的理由有：
 1.未及时付款
 2.买家联系不上

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.favorite.add request
@@ -24,6 +25,34 @@ class FavoriteAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.favorite.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FavoriteAddRequest
+{
+	/** 
+	 * ITEM表示宝贝，SHOP表示店铺，只能传入这两者之一
+	 **/
+	private $collectType;
+	
+	/** 
+	 * 如果收藏的是商品，就传num_iid，如果是店铺，就传入sid
+	 **/
+	private $itemNumid;
+	
+	/** 
+	 * 该收藏是否公开
+	 **/
+	private $shared;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCollectType($collectType)
 	{
 		$this->collectType = $collectType;

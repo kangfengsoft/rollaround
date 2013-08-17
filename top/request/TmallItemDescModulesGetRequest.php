@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.item.desc.modules.get request
@@ -19,6 +20,29 @@ class TmallItemDescModulesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: tmall.item.desc.modules.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TmallItemDescModulesGetRequest
+{
+	/** 
+	 * 叶子类目id
+	 **/
+	private $catId;
+	
+	/** 
+	 * 商家主帐号id
+	 **/
+	private $usrId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCatId($catId)
 	{
 		$this->catId = $catId;

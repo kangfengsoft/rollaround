@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.sellercenter.rolemembers.get request
@@ -14,6 +15,24 @@ class SellercenterRolemembersGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.sellercenter.rolemembers.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SellercenterRolemembersGetRequest
+{
+	/** 
+	 * 角色id
+	 **/
+	private $roleId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setRoleId($roleId)
 	{
 		$this->roleId = $roleId;

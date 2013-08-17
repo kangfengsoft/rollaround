@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.user.get request
@@ -19,6 +20,29 @@ class AlipayUserGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: alipay.user.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class AlipayUserGetRequest
+{
+	/** 
+	 * 支付宝给用户的授权。如果没有top的授权，这个字段是必填项
+	 **/
+	private $authToken;
+	
+	/** 
+	 * 需要返回的字段列表。alipay_user_id：支付宝用户userId,user_status：支付宝用户状态,user_type：支付宝用户类型,certified：是否通过实名认证,real_name：真实姓名,logon_id：支付宝登录号,sex：用户性别
+	 **/
+	private $fields;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAuthToken($authToken)
 	{
 		$this->authToken = $authToken;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.synchronize.delete request
@@ -24,6 +25,34 @@ class WlbItemSynchronizeDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.synchronize.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemSynchronizeDeleteRequest
+{
+	/** 
+	 * 外部实体ID
+	 **/
+	private $extEntityId;
+	
+	/** 
+	 * 外部实体类型.存如下值 IC_ITEM --表示IC商品; IC_SKU --表示IC最小单位商品;若输入其他值，则按IC_ITEM处理
+	 **/
+	private $extEntityType;
+	
+	/** 
+	 * 物流宝商品ID
+	 **/
+	private $itemId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setExtEntityId($extEntityId)
 	{
 		$this->extEntityId = $extEntityId;

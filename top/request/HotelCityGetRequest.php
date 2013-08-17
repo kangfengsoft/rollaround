@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.city.get request
@@ -14,6 +15,24 @@ class HotelCityGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.city.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelCityGetRequest
+{
+	/** 
+	 * 国家编码
+	 **/
+	private $country;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCountry($country)
 	{
 		$this->country = $country;

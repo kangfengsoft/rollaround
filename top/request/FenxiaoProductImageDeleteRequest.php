@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.image.delete request
@@ -24,6 +25,34 @@ class FenxiaoProductImageDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.product.image.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductImageDeleteRequest
+{
+	/** 
+	 * 图片位置
+	 **/
+	private $position;
+	
+	/** 
+	 * 产品ID
+	 **/
+	private $productId;
+	
+	/** 
+	 * properties表示sku图片的属性。key:value形式，key是pid，value是vid。如果position是0的话，则properties需要是必传项
+	 **/
+	private $properties;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPosition($position)
 	{
 		$this->position = $position;

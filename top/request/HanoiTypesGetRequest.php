@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.types.get request
@@ -29,6 +30,39 @@ class HanoiTypesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.types.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiTypesGetRequest
+{
+	/** 
+	 * 分页时需要用。默认第一页。
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 类型的唯一标识
+	 **/
+	private $id;
+	
+	/** 
+	 * 类型的名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 分页时 每页显示的条数。最小1 最大30 默认10页
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCurrentPage($currentPage)
 	{
 		$this->currentPage = $currentPage;

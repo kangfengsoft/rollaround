@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.gradeprice.get request
@@ -24,6 +25,34 @@ class FenxiaoProductGradepriceGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.product.gradeprice.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductGradepriceGetRequest
+{
+	/** 
+	 * 产品id
+	 **/
+	private $productId;
+	
+	/** 
+	 * skuId
+	 **/
+	private $skuId;
+	
+	/** 
+	 * 经、代销模式（1：代销、2：经销）
+	 **/
+	private $tradeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setProductId($productId)
 	{
 		$this->productId = $productId;

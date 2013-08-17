@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.distributor.procuct.static.get request
@@ -20,6 +21,30 @@ class FenxiaoDistributorProcuctStaticGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.distributor.procuct.static.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoDistributorProcuctStaticGetRequest
+{
+	/** 
+	 * 分销商淘宝店主nick
+	 **/
+	private $distributorUserNick;
+	
+	/** 
+	 * 供应商商品id，一次可以传多个，每次最多40个。
+以,(英文)作为分隔符。
+	 **/
+	private $productIdArray;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDistributorUserNick($distributorUserNick)
 	{
 		$this->distributorUserNick = $distributorUserNick;

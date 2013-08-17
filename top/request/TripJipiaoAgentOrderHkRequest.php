@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.order.hk request
@@ -19,6 +20,29 @@ class TripJipiaoAgentOrderHkRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trip.jipiao.agent.order.hk request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TripJipiaoAgentOrderHkRequest
+{
+	/** 
+	 * 国内机票订单id
+	 **/
+	private $orderId;
+	
+	/** 
+	 * hk（占座）时需要的信息信息列表，元素结构：乘机人姓名;pnr (以分号进行分隔).
+	 **/
+	private $pnrInfo;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOrderId($orderId)
 	{
 		$this->orderId = $orderId;

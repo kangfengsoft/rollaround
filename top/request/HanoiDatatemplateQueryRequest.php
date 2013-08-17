@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.datatemplate.query request
@@ -22,6 +23,32 @@ owner:创建者，填入appkey
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.datatemplate.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDatatemplateQueryRequest
+{
+	/** 
+	 * AppName
+	 **/
+	private $appName;
+	
+	/** 
+	 * templateName:String 根据模板的名字查找
+isNeedDetail：Boolean 是否返回模板详情
+opened:int 开放策略
+owner:创建者，填入appkey
+	 **/
+	private $parameter;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

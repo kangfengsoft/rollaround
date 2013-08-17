@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.update request
@@ -105,6 +106,115 @@ parking：停车场，airportShuttle：机场接送，rentCar：租车，meeting
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelUpdateRequest
+{
+	/** 
+	 * 酒店地址。长度不能超过120
+	 **/
+	private $address;
+	
+	/** 
+	 * 城市编码。参见：http://kezhan.trip.taobao.com/area.html，domestic为false时，输入对应国家的海外城市编码，可调用海外城市查询接口获取
+	 **/
+	private $city;
+	
+	/** 
+	 * domestic为true时，固定China；
+domestic为false时，传海外国家编码。参见：http://kezhan.trip.taobao.com/countrys.html
+	 **/
+	private $country;
+	
+	/** 
+	 * 装修时间。长度不能超过4。
+	 **/
+	private $decorateTime;
+	
+	/** 
+	 * 酒店介绍。不超过25000个汉字
+	 **/
+	private $desc;
+	
+	/** 
+	 * 区域（县级市）编码。参见：http://kezhan.trip.taobao.com/area.html
+	 **/
+	private $district;
+	
+	/** 
+	 * 是否国内酒店。可选值：true，false
+	 **/
+	private $domestic;
+	
+	/** 
+	 * 酒店id。必须为数字。
+	 **/
+	private $hid;
+	
+	/** 
+	 * 酒店级别。可选值：A,B,C,D,E,F。代表客栈公寓、经济连锁、二星级/以下、三星级/舒适、四星级/高档、五星级/豪华
+	 **/
+	private $level;
+	
+	/** 
+	 * 酒店名称。不能超过60字节
+	 **/
+	private $name;
+	
+	/** 
+	 * 开业时间。长度不能超过4。
+	 **/
+	private $openingTime;
+	
+	/** 
+	 * 酒店定位。可选值：T,B。代表旅游度假、商务出行
+	 **/
+	private $orientation;
+	
+	/** 
+	 * 酒店图片。类型:JPG,GIF;最大长度:500K。支持的文件类型：gif,jpg,jpeg,png。
+图片没有传，则代表不更新图片，使用原来的图片
+	 **/
+	private $pic;
+	
+	/** 
+	 * 省份编码。参见：http://kezhan.trip.taobao.com/area.html，domestic为false时默认为0
+	 **/
+	private $province;
+	
+	/** 
+	 * 房间数。长度不能超过4。
+	 **/
+	private $rooms;
+	
+	/** 
+	 * 交通距离与设施服务。JSON格式。cityCenterDistance、railwayDistance、airportDistance分别代表距离市中心、距离火车站、距离机场公里数，为不超过3位正整数，默认-1代表无数据。
+其他key值true代表有此服务，false代表没有。
+parking：停车场，airportShuttle：机场接送，rentCar：租车，meetingRoom：会议室，businessCenter：商务中心，swimmingPool：游泳池，fitnessClub：健身中心，laundry：洗衣服务，morningCall：叫早服务，bankCard：接受银行卡，creditCard：接受信用卡，chineseRestaurant：中餐厅，westernRestaurant：西餐厅，cafe：咖啡厅，bar：酒吧，ktv：KTV。
+如：
+{"airportShuttle":true,"parking":false,"fitnessClub":false,"chineseRestaurant":false,"rentCar":false,"laundry":false,"bankCard":false,"cityCenterDistance":-1,"creditCard":false,"westernRestaurant":false,"ktv":false,"railwayDistance":-1,"swimmingPool":false,"cafe":false,"businessCenter":false,"morningCall":false,"bar":false,"meetingRoom":false,"airportDistance":-1}
+	 **/
+	private $service;
+	
+	/** 
+	 * 楼层数。长度不能超过4。
+	 **/
+	private $storeys;
+	
+	/** 
+	 * 酒店电话。格式：国家代码（最长6位）#区号（最长4位）#电话（最长20位）。国家代码提示：中国大陆0086、香港00852、澳门00853、台湾00886
+	 **/
+	private $tel;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAddress($address)
 	{
 		$this->address = $address;

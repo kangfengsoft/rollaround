@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.initial request
@@ -19,6 +20,29 @@ class InventoryInitialRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.inventory.initial request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class InventoryInitialRequest
+{
+	/** 
+	 * 商品初始库存信息： [{"scItemId":"商品后端ID，如果有传scItemCode,参数可以为0","scItemCode":"商品商家编码","inventoryType":"库存类型  1：正常,2：损坏,3：冻结,10：质押,11-20:用户自定义","quantity":"数量"}]
+	 **/
+	private $items;
+	
+	/** 
+	 * 商家仓库编码
+	 **/
+	private $storeCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setItems($items)
 	{
 		$this->items = $items;

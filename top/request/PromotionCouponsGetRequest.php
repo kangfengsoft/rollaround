@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.coupons.get request
@@ -34,6 +35,44 @@ class PromotionCouponsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.promotion.coupons.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PromotionCouponsGetRequest
+{
+	/** 
+	 * 优惠券的id，唯一标识这个优惠券
+	 **/
+	private $couponId;
+	
+	/** 
+	 * 优惠券的面额，必须是3，5，10，20，50,100
+	 **/
+	private $denominations;
+	
+	/** 
+	 * 优惠券的截止日期
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 查询的页号，结果集是分页返回的，每页20条
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCouponId($couponId)
 	{
 		$this->couponId = $couponId;

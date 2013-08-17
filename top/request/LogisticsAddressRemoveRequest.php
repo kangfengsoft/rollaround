@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.address.remove request
@@ -14,6 +15,24 @@ class LogisticsAddressRemoveRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.logistics.address.remove request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class LogisticsAddressRemoveRequest
+{
+	/** 
+	 * 地址库ID
+	 **/
+	private $contactId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setContactId($contactId)
 	{
 		$this->contactId = $contactId;

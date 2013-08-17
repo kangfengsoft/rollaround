@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.bill.book.bill.get request
@@ -19,6 +20,29 @@ class BillBookBillGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.bill.book.bill.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class BillBookBillGetRequest
+{
+	/** 
+	 * 虚拟账户流水编号
+	 **/
+	private $bid;
+	
+	/** 
+	 * 需要返回的字段:参见BookBill结构体
+	 **/
+	private $fields;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBid($bid)
 	{
 		$this->bid = $bid;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.avgwaittime.get request
@@ -24,6 +25,34 @@ class WangwangEserviceAvgwaittimeGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wangwang.eservice.avgwaittime.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WangwangEserviceAvgwaittimeGetRequest
+{
+	/** 
+	 * 结束时间
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 客服人员id：cntaobao+淘宝nick，例如cntaobaotest
+	 **/
+	private $serviceStaffId;
+	
+	/** 
+	 * 开始时间
+	 **/
+	private $startDate;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

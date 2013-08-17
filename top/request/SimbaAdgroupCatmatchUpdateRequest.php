@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.catmatch.update request
@@ -39,6 +40,49 @@ class SimbaAdgroupCatmatchUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroup.catmatch.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupCatmatchUpdateRequest
+{
+	/** 
+	 * 推广组Id
+	 **/
+	private $adgroupId;
+	
+	/** 
+	 * 类目出价Id
+	 **/
+	private $catmatchId;
+	
+	/** 
+	 * 类目出价，单位为分，不能小于5。如果use_default_price字段为使用默认出价，则此max_price字段所传入的值不起作用。商品将会使用默认出价。
+	 **/
+	private $maxPrice;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 是否启用类目出价； offline-不启用 online-启用,如果此字段状态为offline时，则max_price,use_default_price字段值不起作用
+	 **/
+	private $onlineStatus;
+	
+	/** 
+	 * 是否使用推广组默认出价false为不使用，true为使用
+	 **/
+	private $useDefaultPrice;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

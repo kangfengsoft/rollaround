@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.shop.update request
@@ -24,6 +25,34 @@ class ShopUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.shop.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ShopUpdateRequest
+{
+	/** 
+	 * 店铺公告。不超过1024个字符
+	 **/
+	private $bulletin;
+	
+	/** 
+	 * 店铺描述。10～2000个字符以内
+	 **/
+	private $desc;
+	
+	/** 
+	 * 店铺标题。不超过30个字符；过滤敏感词，如淘咖啡、阿里巴巴等。title, bulletin和desc至少必须传一个
+	 **/
+	private $title;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBulletin($bulletin)
 	{
 		$this->bulletin = $bulletin;

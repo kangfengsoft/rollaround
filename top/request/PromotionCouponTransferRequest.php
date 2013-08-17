@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.coupon.transfer request
@@ -19,6 +20,29 @@ class PromotionCouponTransferRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.promotion.coupon.transfer request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PromotionCouponTransferRequest
+{
+	/** 
+	 * 优惠券编号
+	 **/
+	private $couponNumber;
+	
+	/** 
+	 * 要赠送的淘宝昵称
+	 **/
+	private $receiveingBuyerName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCouponNumber($couponNumber)
 	{
 		$this->couponNumber = $couponNumber;

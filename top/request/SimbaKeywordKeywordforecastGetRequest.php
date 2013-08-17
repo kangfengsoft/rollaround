@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.keyword.keywordforecast.get request
@@ -24,6 +25,34 @@ class SimbaKeywordKeywordforecastGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.keyword.keywordforecast.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaKeywordKeywordforecastGetRequest
+{
+	/** 
+	 * 词的出价,范围在5-9999之间,单位分
+	 **/
+	private $bidwordPrice;
+	
+	/** 
+	 * 词ID
+	 **/
+	private $keywordId;
+	
+	/** 
+	 * 经典名表行
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBidwordPrice($bidwordPrice)
 	{
 		$this->bidwordPrice = $bidwordPrice;

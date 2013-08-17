@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.distributors.get request
@@ -14,6 +15,24 @@ class FenxiaoDistributorsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.distributors.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoDistributorsGetRequest
+{
+	/** 
+	 * 分销商用户名列表。多个之间以“,”分隔;最多支持50个分销商用户名。
+	 **/
+	private $nicks;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNicks($nicks)
 	{
 		$this->nicks = $nicks;

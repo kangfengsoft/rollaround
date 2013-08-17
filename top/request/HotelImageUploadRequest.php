@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.image.upload request
@@ -19,6 +20,29 @@ class HotelImageUploadRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.image.upload request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelImageUploadRequest
+{
+	/** 
+	 * 酒店id
+	 **/
+	private $hid;
+	
+	/** 
+	 * 上传的图片
+	 **/
+	private $pic;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setHid($hid)
 	{
 		$this->hid = $hid;

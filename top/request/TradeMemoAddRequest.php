@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.memo.add request
@@ -24,6 +25,34 @@ class TradeMemoAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trade.memo.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TradeMemoAddRequest
+{
+	/** 
+	 * 交易备注旗帜，可选值为：0(灰色), 1(红色), 2(黄色), 3(绿色), 4(蓝色), 5(粉红色)，默认值为0
+	 **/
+	private $flag;
+	
+	/** 
+	 * 交易备注。最大长度: 1000个字节
+	 **/
+	private $memo;
+	
+	/** 
+	 * 交易编号
+	 **/
+	private $tid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFlag($flag)
 	{
 		$this->flag = $flag;

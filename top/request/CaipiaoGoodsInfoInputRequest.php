@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.caipiao.goods.info.input request
@@ -59,6 +60,69 @@ class CaipiaoGoodsInfoInputRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.caipiao.goods.info.input request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CaipiaoGoodsInfoInputRequest
+{
+	/** 
+	 * 活动结束时间，格式需严格遵守yyyy-MM-dd HH:mm:ss，不可为空
+	 **/
+	private $actEndDate;
+	
+	/** 
+	 * 活动开始时间，格式需严格遵守yyyy-MM-dd HH:mm:ss，不可为空
+	 **/
+	private $actStartDate;
+	
+	/** 
+	 * 店铺相关商品参加的送彩票活动描述
+	 **/
+	private $goodsDesc;
+	
+	/** 
+	 * 商品在淘宝的唯一id，不可为空
+	 **/
+	private $goodsId;
+	
+	/** 
+	 * 商品主图地址
+	 **/
+	private $goodsImage;
+	
+	/** 
+	 * 商品价格,保留两位小数，不可为空
+	 **/
+	private $goodsPrice;
+	
+	/** 
+	 * 商品标题
+	 **/
+	private $goodsTitle;
+	
+	/** 
+	 * 商品类目编号，不可为空
+	 **/
+	private $goodsType;
+	
+	/** 
+	 * 彩种id,不可为空
+	 **/
+	private $lotteryTypeId;
+	
+	/** 
+	 * 赠送类型：0-满就送；1-好评送；2-分享送；3-游戏送；4-收藏送，不可为空
+	 **/
+	private $presentType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setActEndDate($actEndDate)
 	{
 		$this->actEndDate = $actEndDate;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.group.list.query request
@@ -84,6 +85,94 @@ class HanoiGroupListQueryRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.group.list.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiGroupListQueryRequest
+{
+	/** 
+	 * 认证信息
+	 **/
+	private $appName;
+	
+	/** 
+	 * 模板业务状态 1 审核 0 创建
+	 **/
+	private $bizStatus;
+	
+	/** 
+	 * 当前页、默认为1
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 根据时间查询 创建时间结束点
+	 **/
+	private $gmtCreateEnd;
+	
+	/** 
+	 * 根据时间查询 创建时间截止点
+	 **/
+	private $gmtCreateStart;
+	
+	/** 
+	 * 根据时间查询，最近修改时间截止
+	 **/
+	private $gmtModifiedEnd;
+	
+	/** 
+	 * 根据时间查询，最近修改时间起点
+	 **/
+	private $gmtModifiedStart;
+	
+	/** 
+	 * 分组的编码
+	 **/
+	private $groupCode;
+	
+	/** 
+	 * 分组id
+	 **/
+	private $id;
+	
+	/** 
+	 * 是否查询总数，默认false
+	 **/
+	private $isTotal;
+	
+	/** 
+	 * 分组名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 开放策略(true 开放)
+	 **/
+	private $open;
+	
+	/** 
+	 * 分页查询，默认20
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 使用场景
+	 **/
+	private $scene;
+	
+	/** 
+	 * 分组类型 0互斥 1 共存
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

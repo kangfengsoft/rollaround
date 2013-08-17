@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.mget request
@@ -39,6 +40,49 @@ class TmallEaiOrderRefundMgetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: tmall.eai.order.refund.mget request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TmallEaiOrderRefundMgetRequest
+{
+	/** 
+	 * 批量查询结束时间
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 页码。取值范围:大于零的整数; 默认值:1
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数。取值范围:大于零的整数; 默认值:40;最大值:100
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 批量查询开始时间
+	 **/
+	private $startTime;
+	
+	/** 
+	 * 退货单 退款单状态
+	 **/
+	private $status;
+	
+	/** 
+	 * 是否启用has_next的分页方式，如果指定true,则返回的结果中不包含总记录数，但是会新增一个是否存在下一页的的字段，通过此种方式获取增量退款，接口调用成功率在原有的基础上有所提升。
+	 **/
+	private $useHasNext;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndTime($endTime)
 	{
 		$this->endTime = $endTime;

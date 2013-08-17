@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.members.get request
@@ -59,6 +60,69 @@ class CrmMembersGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.members.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmMembersGetRequest
+{
+	/** 
+	 * 买家的昵称
+	 **/
+	private $buyerNick;
+	
+	/** 
+	 * 显示第几页的会员，如果输入的页码大于总共的页码数，例如总共10页，但是current_page的值为11，则返回空白页，最小页数为1，最大页数为1000
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 会员等级，0：店铺客户，1：普通会员，2：高级会员，3：VIP会员， 4：至尊VIP会员。如果不传入值则默认为全部等级。
+	 **/
+	private $grade;
+	
+	/** 
+	 * 最迟上次交易时间
+	 **/
+	private $maxLastTradeTime;
+	
+	/** 
+	 * 最大交易额，单位为元
+	 **/
+	private $maxTradeAmount;
+	
+	/** 
+	 * 最大交易量
+	 **/
+	private $maxTradeCount;
+	
+	/** 
+	 * 最早上次交易时间
+	 **/
+	private $minLastTradeTime;
+	
+	/** 
+	 * 最小交易额,单位为元
+	 **/
+	private $minTradeAmount;
+	
+	/** 
+	 * 最小交易量
+	 **/
+	private $minTradeCount;
+	
+	/** 
+	 * 表示每页显示的会员数量,page_size的最大值不能超过100条,最小值不能低于1，
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBuyerNick($buyerNick)
 	{
 		$this->buyerNick = $buyerNick;

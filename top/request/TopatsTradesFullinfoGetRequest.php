@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.trades.fullinfo.get request
@@ -19,6 +20,29 @@ class TopatsTradesFullinfoGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.topats.trades.fullinfo.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TopatsTradesFullinfoGetRequest
+{
+	/** 
+	 * 可以返回taobao.trade.fullinfo.get允许的所有字段。
+	 **/
+	private $fields;
+	
+	/** 
+	 * 交易订单号tid列表，多个tid之间用半角分号分隔。tid个数的取值范围是：1~100个。由于这个接口限制每个应用的调用量是3万次/天，所以强烈建议采用尽可能多的tid，以取到更多的交易数据。
+	 **/
+	private $tids;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

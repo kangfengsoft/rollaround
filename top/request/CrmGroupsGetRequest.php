@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.groups.get request
@@ -19,6 +20,29 @@ class CrmGroupsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.groups.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmGroupsGetRequest
+{
+	/** 
+	 * 显示第几页的分组，如果输入的页码大于总共的页码数，例如总共10页，但是current_page的值为11，则返回空白页，最小页码为1
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 每页显示的记录数，其最大值不能超过100条，最小值为1，默认20条
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCurrentPage($currentPage)
 	{
 		$this->currentPage = $currentPage;

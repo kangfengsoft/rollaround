@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.favorite.search request
@@ -19,6 +20,29 @@ class FavoriteSearchRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.favorite.search request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FavoriteSearchRequest
+{
+	/** 
+	 * ITEM表示宝贝，SHOP表示商铺，collect_type只能为这两者之一
+	 **/
+	private $collectType;
+	
+	/** 
+	 * 页码。取值范围:大于零的整数; 默认值:1。一页20条记录。
+	 **/
+	private $pageNo;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCollectType($collectType)
 	{
 		$this->collectType = $collectType;

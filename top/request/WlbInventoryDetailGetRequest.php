@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.inventory.detail.get request
@@ -31,6 +32,41 @@ EXPIRATION--过保
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.inventory.detail.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbInventoryDetailGetRequest
+{
+	/** 
+	 * 库存类型列表，值包括：
+VENDIBLE--可销售库存
+FREEZE--冻结库存
+ONWAY--在途库存
+DEFECT--残次品库存
+ENGINE_DAMAGE--机损
+BOX_DAMAGE--箱损
+EXPIRATION--过保
+	 **/
+	private $inventoryTypeList;
+	
+	/** 
+	 * 商品ID
+	 **/
+	private $itemId;
+	
+	/** 
+	 * 仓库编码
+	 **/
+	private $storeCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setInventoryTypeList($inventoryTypeList)
 	{
 		$this->inventoryTypeList = $inventoryTypeList;

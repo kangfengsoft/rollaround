@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.cooperation.update request
@@ -24,6 +25,34 @@ class FenxiaoCooperationUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.cooperation.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoCooperationUpdateRequest
+{
+	/** 
+	 * 分销商ID
+	 **/
+	private $distributorId;
+	
+	/** 
+	 * 等级ID(0代表取消)
+	 **/
+	private $gradeId;
+	
+	/** 
+	 * 分销方式(新增)： AGENT(代销)、DEALER(经销)(默认为代销)
+	 **/
+	private $tradeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDistributorId($distributorId)
 	{
 		$this->distributorId = $distributorId;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.notify.message.page.get request
@@ -48,6 +49,58 @@ ORDER_CONFIRMED--订单处理成功
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.notify.message.page.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbNotifyMessagePageGetRequest
+{
+	/** 
+	 * 查询条件：记录截至时间
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 通知消息编码：
+STOCK_IN_NOT_CONSISTENT---入库单不一致
+CANCEL_ORDER_SUCCESS---取消订单成功
+INVENTORY_CHECK---盘点
+CANCEL_ORDER_FAILURE---取消订单失败
+ORDER_REJECT--wms拒单
+ORDER_CONFIRMED--订单处理成功
+	 **/
+	private $msgCode;
+	
+	/** 
+	 * 分页查询页数
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 分页查询的每页页数
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 查询条件：记录开始时间
+	 **/
+	private $startDate;
+	
+	/** 
+	 * 消息状态：
+不需要确认：NO_NEED_CONFIRM
+已确认：CONFIRMED
+待确认：TO_BE_CONFIRM
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

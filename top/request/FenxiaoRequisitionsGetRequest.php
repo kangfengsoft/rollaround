@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.requisitions.get request
@@ -34,6 +35,44 @@ class FenxiaoRequisitionsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.requisitions.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoRequisitionsGetRequest
+{
+	/** 
+	 * 申请结束时间yyyy-MM-dd
+	 **/
+	private $applyEnd;
+	
+	/** 
+	 * 申请开始时间yyyy-MM-dd
+	 **/
+	private $applyStart;
+	
+	/** 
+	 * 页码（大于0的整数，默认1）
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页记录数（默认20，最大50）
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 申请状态（1-申请中、2-成功、3-被退回、4-已撤消、5-过期）
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setApplyEnd($applyEnd)
 	{
 		$this->applyEnd = $applyEnd;

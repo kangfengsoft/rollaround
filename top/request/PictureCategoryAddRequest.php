@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.category.add request
@@ -19,6 +20,29 @@ class PictureCategoryAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.picture.category.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PictureCategoryAddRequest
+{
+	/** 
+	 * 图片分类的父分类,一级分类的parent_id为0,二级分类的则为其父分类的picture_category_id
+	 **/
+	private $parentId;
+	
+	/** 
+	 * 图片分类名称，最大长度20字符，中英文都算一字符，不能为空
+	 **/
+	private $pictureCategoryName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setParentId($parentId)
 	{
 		$this->parentId = $parentId;

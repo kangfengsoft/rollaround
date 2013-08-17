@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.simba.campkeywordbase.get request
@@ -34,6 +35,44 @@ class TopatsSimbaCampkeywordbaseGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.topats.simba.campkeywordbase.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TopatsSimbaCampkeywordbaseGetRequest
+{
+	/** 
+	 * 查询推广计划ID
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 查询的昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 报表类型。可选值：SEARCH（搜索）、CAT（类目出价）、 NOSEARCH（定向投放），可多选，如：SEARCH,CAT
+	 **/
+	private $searchType;
+	
+	/** 
+	 * 数据来源。可选值：1（站内）、2（站外）、SUMMARY（汇总），其中SUMMARY必须单选，其它值可多选，如：1,2
+	 **/
+	private $source;
+	
+	/** 
+	 * 时间参数（昨天：DAY、 前一周：7DAY 、前15天：15DAY 、前30天：30DAY 、前90天：90DAY）单选
+	 **/
+	private $timeSlot;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

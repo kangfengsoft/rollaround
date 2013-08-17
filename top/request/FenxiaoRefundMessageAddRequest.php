@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.refund.message.add request
@@ -24,6 +25,34 @@ class FenxiaoRefundMessageAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.refund.message.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoRefundMessageAddRequest
+{
+	/** 
+	 * 留言凭证
+	 **/
+	private $image;
+	
+	/** 
+	 * 留言内容
+	 **/
+	private $messageContent;
+	
+	/** 
+	 * 发生退款的子采购单id
+	 **/
+	private $subOrderId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setImage($image)
 	{
 		$this->image = $image;

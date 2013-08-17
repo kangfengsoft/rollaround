@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.chatpeers.get request
@@ -29,6 +30,39 @@ class WangwangEserviceChatpeersGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wangwang.eservice.chatpeers.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WangwangEserviceChatpeersGetRequest
+{
+	/** 
+	 * 字符集
+	 **/
+	private $charset;
+	
+	/** 
+	 * 聊天用户ID：cntaobao+淘宝nick，例如cntaobaotest
+	 **/
+	private $chatId;
+	
+	/** 
+	 * 查询结束日期。如2010-03-24，与起始日期跨度不能超过7天
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 查询起始日期。如2010-02-01，与当前日期间隔小于1个月。
+	 **/
+	private $startDate;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCharset($charset)
 	{
 		$this->charset = $charset;

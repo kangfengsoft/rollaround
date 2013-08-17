@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.rds.db.get request
@@ -19,6 +20,29 @@ class RdsDbGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.rds.db.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class RdsDbGetRequest
+{
+	/** 
+	 * 数据库状态，默认值1
+	 **/
+	private $dbStatus;
+	
+	/** 
+	 * rds的实例名
+	 **/
+	private $instanceName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDbStatus($dbStatus)
 	{
 		$this->dbStatus = $dbStatus;

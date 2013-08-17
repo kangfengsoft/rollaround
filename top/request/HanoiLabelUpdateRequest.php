@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.label.update request
@@ -59,6 +60,69 @@ class HanoiLabelUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.label.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiLabelUpdateRequest
+{
+	/** 
+	 * 认证信息
+	 **/
+	private $appName;
+	
+	/** 
+	 * 针对标签的一个简单描述
+	 **/
+	private $description;
+	
+	/** 
+	 * 标签最近一次修改时间
+	 **/
+	private $gmtModified;
+	
+	/** 
+	 * 要修改的标签的id
+	 **/
+	private $id;
+	
+	/** 
+	 * 标签的编码，用于检索
+	 **/
+	private $labelCode;
+	
+	/** 
+	 * 标签的名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 开放策略 true 开放
+	 **/
+	private $open;
+	
+	/** 
+	 * 针对模板表达式中需要设置的参数的一个实例化，List<ParameterVO>对象的json格式
+	 **/
+	private $paras;
+	
+	/** 
+	 * 场景字段
+	 **/
+	private $scene;
+	
+	/** 
+	 * 标签对应的模板id。修改了模板，必须同时修改标签的参数paras
+	 **/
+	private $templateId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

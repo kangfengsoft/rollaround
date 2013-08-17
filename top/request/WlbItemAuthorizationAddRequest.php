@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.authorization.add request
@@ -50,6 +51,60 @@ class WlbItemAuthorizationAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.authorization.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemAuthorizationAddRequest
+{
+	/** 
+	 * 授权类型：1=全量授权，0=部分授权
+当部分授权时，需要指定授权数量quantity
+	 **/
+	private $authType;
+	
+	/** 
+	 * 授权结束时间
+	 **/
+	private $authorizeEndTime;
+	
+	/** 
+	 * 授权开始时间
+	 **/
+	private $authorizeStartTime;
+	
+	/** 
+	 * 被授权人用户id
+	 **/
+	private $consignUserNick;
+	
+	/** 
+	 * 商品id列表，以英文逗号,分隔，最多可放入50个商品ID。
+	 **/
+	private $itemIdList;
+	
+	/** 
+	 * 规则名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 授权数量
+	 **/
+	private $quantity;
+	
+	/** 
+	 * 授权规则：目前只有GRANT_FIX，按照数量授权
+	 **/
+	private $ruleCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAuthType($authType)
 	{
 		$this->authType = $authType;

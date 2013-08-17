@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.group.add request
@@ -14,6 +15,24 @@ class CrmGroupAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.group.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmGroupAddRequest
+{
+	/** 
+	 * 分组名称，每个卖家最多可以拥有100个分组
+	 **/
+	private $groupName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setGroupName($groupName)
 	{
 		$this->groupName = $groupName;

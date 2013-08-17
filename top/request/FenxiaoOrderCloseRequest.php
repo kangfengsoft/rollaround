@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.close request
@@ -24,6 +25,34 @@ class FenxiaoOrderCloseRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.order.close request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoOrderCloseRequest
+{
+	/** 
+	 * 关闭理由,特殊字符会被转义，会改变长度，有特殊字符是请注意
+	 **/
+	private $message;
+	
+	/** 
+	 * 采购单编号
+	 **/
+	private $purchaseOrderId;
+	
+	/** 
+	 * 子采购单ID，可传多笔子单ID，逗号分隔
+	 **/
+	private $subOrderIds;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setMessage($message)
 	{
 		$this->message = $message;

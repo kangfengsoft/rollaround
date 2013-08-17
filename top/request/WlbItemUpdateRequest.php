@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.update request
@@ -99,6 +100,109 @@ class WlbItemUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemUpdateRequest
+{
+	/** 
+	 * 商品颜色
+	 **/
+	private $color;
+	
+	/** 
+	 * 需要删除的商品属性key列表
+	 **/
+	private $deletePropertyKeyList;
+	
+	/** 
+	 * 商品货类
+	 **/
+	private $goodsCat;
+	
+	/** 
+	 * 商品高度，单位厘米
+	 **/
+	private $height;
+	
+	/** 
+	 * 要修改的商品id
+	 **/
+	private $id;
+	
+	/** 
+	 * 是否危险品
+	 **/
+	private $isDangerous;
+	
+	/** 
+	 * 是否易碎品
+	 **/
+	private $isFriable;
+	
+	/** 
+	 * 商品长度，单位厘米
+	 **/
+	private $length;
+	
+	/** 
+	 * 要修改的商品名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 商品包装材料类型
+	 **/
+	private $packageMaterial;
+	
+	/** 
+	 * 商品计价货类
+	 **/
+	private $pricingCat;
+	
+	/** 
+	 * 要修改的商品备注
+	 **/
+	private $remark;
+	
+	/** 
+	 * 要修改的商品标题
+	 **/
+	private $title;
+	
+	/** 
+	 * 需要修改的商品属性值的列表，如果属性不存在，则新增属性
+	 **/
+	private $updatePropertyKeyList;
+	
+	/** 
+	 * 需要修改的属性值的列表
+	 **/
+	private $updatePropertyValueList;
+	
+	/** 
+	 * 商品体积，单位立方厘米
+	 **/
+	private $volume;
+	
+	/** 
+	 * 商品重量，单位G
+	 **/
+	private $weight;
+	
+	/** 
+	 * 商品宽度，单位厘米
+	 **/
+	private $width;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setColor($color)
 	{
 		$this->color = $color;

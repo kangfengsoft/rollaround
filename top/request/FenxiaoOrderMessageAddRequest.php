@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.message.add request
@@ -19,6 +20,29 @@ class FenxiaoOrderMessageAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.order.message.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoOrderMessageAddRequest
+{
+	/** 
+	 * 留言内容
+	 **/
+	private $message;
+	
+	/** 
+	 * 采购单id
+	 **/
+	private $purchaseOrderId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setMessage($message)
 	{
 		$this->message = $message;

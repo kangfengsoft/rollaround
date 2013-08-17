@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.authorization.delete request
@@ -14,6 +15,24 @@ class WlbItemAuthorizationDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.authorization.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemAuthorizationDeleteRequest
+{
+	/** 
+	 * 授权关系ID
+	 **/
+	private $authorizeId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAuthorizeId($authorizeId)
 	{
 		$this->authorizeId = $authorizeId;

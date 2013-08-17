@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.rooms.search request
@@ -54,6 +55,64 @@ class HotelRoomsSearchRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.rooms.search request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelRoomsSearchRequest
+{
+	/** 
+	 * 酒店房间商品gid列表，多个gid用英文逗号隔开，一次不超过20个。gids，item_ids , hids，rids四项必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为gids，item_ids , hids，rids。
+	 **/
+	private $gids;
+	
+	/** 
+	 * 酒店hid列表，多个hid用英文逗号隔开，一次不超过5个。gids，item_ids , hids，rids四项必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为gids，item_ids , hids，rids。
+	 **/
+	private $hids;
+	
+	/** 
+	 * 酒店房间商品item_id列表，多个item_id用英文逗号隔开，一次不超过20个。gids，item_ids , hids，rids四项必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为gids，item_ids , hids，rids。当item_ids参数值为-1，gids项不传值时，会返回卖家所有商品列表
+	 **/
+	private $itemIds;
+	
+	/** 
+	 * 是否需要返回该商品的酒店信息。可选值：true，false。
+	 **/
+	private $needHotel;
+	
+	/** 
+	 * 是否需要返回该商品的宝贝描述。可选值：true，false。
+	 **/
+	private $needRoomDesc;
+	
+	/** 
+	 * 是否需要返回该商品的房态列表。可选值：true，false。
+	 **/
+	private $needRoomQuotas;
+	
+	/** 
+	 * 是否需要返回该商品的房型信息。可选值：true，false。
+	 **/
+	private $needRoomType;
+	
+	/** 
+	 * 分页页码。取值范围，大于零的整数，默认值1，即返回第一页的数据。页面大小为20
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 房型rid列表，多个rid用英文逗号隔开，一次不超过20个。gids，item_ids , hids，rids四项必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为gids，item_ids , hids，rids。
+	 **/
+	private $rids;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setGids($gids)
 	{
 		$this->gids = $gids;

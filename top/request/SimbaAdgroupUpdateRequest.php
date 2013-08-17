@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.update request
@@ -39,6 +40,49 @@ class SimbaAdgroupUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroup.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupUpdateRequest
+{
+	/** 
+	 * 推广组Id
+	 **/
+	private $adgroupId;
+	
+	/** 
+	 * 默认出价，单位是分，不能小于5
+	 **/
+	private $defaultPrice;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 非搜索出价，单位是分，不能小于5，如果use_nonseatch_default_price为使用默认出价，则此nonsearch_max_price字段传入的数据不起作用，商品将使用默认非搜索出价
+	 **/
+	private $nonsearchMaxPrice;
+	
+	/** 
+	 * 用户设置的上下线状态 offline-下线(暂停竞价)； online-上线；默认为online
+	 **/
+	private $onlineStatus;
+	
+	/** 
+	 * 非搜索是否使用默认出价，false-不用；true-使用；默认为true;
+	 **/
+	private $useNonsearchDefaultPrice;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

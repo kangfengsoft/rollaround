@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.subuser.info.update request
@@ -24,6 +25,34 @@ class SubuserInfoUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.subuser.info.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SubuserInfoUpdateRequest
+{
+	/** 
+	 * 是否停用子账号 true:表示停用该子账号false:表示开启该子账号
+	 **/
+	private $isDisableSubaccount;
+	
+	/** 
+	 * 子账号是否参与分流 true:参与分流 false:不参与分流
+	 **/
+	private $isDispatch;
+	
+	/** 
+	 * 子账号ID
+	 **/
+	private $subId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setIsDisableSubaccount($isDisableSubaccount)
 	{
 		$this->isDisableSubaccount = $isDisableSubaccount;

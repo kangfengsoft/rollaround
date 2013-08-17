@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.refund.message.get request
@@ -24,6 +25,34 @@ class FenxiaoRefundMessageGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.refund.message.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoRefundMessageGetRequest
+{
+	/** 
+	 * 页码。（大于0的整数。默认为1）
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数。（默认10）
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 子采购单id
+	 **/
+	private $subOrderId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.waybillallocation.requestwaybillnum request
@@ -34,6 +35,44 @@ class WlbWaybillallocationRequestwaybillnumRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.waybillallocation.requestwaybillnum request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbWaybillallocationRequestwaybillnumRequest
+{
+	/** 
+	 * 申请号码数量
+	 **/
+	private $num;
+	
+	/** 
+	 * 外部去重号
+	 **/
+	private $outBizCode;
+	
+	/** 
+	 * 面单类型
+	 **/
+	private $poolType;
+	
+	/** 
+	 * 服务编码
+	 **/
+	private $serviceCode;
+	
+	/** 
+	 * 用户ID
+	 **/
+	private $userId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNum($num)
 	{
 		$this->num = $num;

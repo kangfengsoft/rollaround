@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.image.upload request
@@ -34,6 +35,44 @@ class FenxiaoProductImageUploadRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.product.image.upload request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductImageUploadRequest
+{
+	/** 
+	 * 产品图片
+	 **/
+	private $image;
+	
+	/** 
+	 * 产品主图图片空间相对路径或绝对路径
+	 **/
+	private $picPath;
+	
+	/** 
+	 * 图片位置，0-14之间。0：操作sku属性图片，1：主图，2-5：细节图，6-14：额外主图
+	 **/
+	private $position;
+	
+	/** 
+	 * 产品ID
+	 **/
+	private $productId;
+	
+	/** 
+	 * properties表示sku图片的属性。key:value形式，key是pid，value是vid。如果position是0的话，则properties需要是必传项
+	 **/
+	private $properties;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setImage($image)
 	{
 		$this->image = $image;

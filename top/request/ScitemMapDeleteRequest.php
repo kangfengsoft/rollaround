@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.map.delete request
@@ -19,6 +20,29 @@ class ScitemMapDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.scitem.map.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ScitemMapDeleteRequest
+{
+	/** 
+	 * 后台商品ID
+	 **/
+	private $scItemId;
+	
+	/** 
+	 * 店铺用户nick。 如果该参数为空则删除后端商品与当前调用人的商品映射关系;如果不为空则删除指定用户与后端商品的映射关系
+	 **/
+	private $userNick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setScItemId($scItemId)
 	{
 		$this->scItemId = $scItemId;

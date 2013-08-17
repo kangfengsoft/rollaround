@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.travel.itemplay.get request
@@ -24,6 +25,34 @@ class TravelItemplayGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.travel.itemplay.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TravelItemplayGetRequest
+{
+	/** 
+	 * 商品所属类目ID。旅游线路商品有两个值：1(国内线路类目ID)，2(国际线路类目ID)
+	 **/
+	private $cid;
+	
+	/** 
+	 * 目的地code列表，多个目的地code以“,”分隔
+	 **/
+	private $destCodes;
+	
+	/** 
+	 * 玩法类型，1跟团游、2自由行
+	 **/
+	private $playType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCid($cid)
 	{
 		$this->cid = $cid;

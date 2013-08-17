@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.traderate.explain.add request
@@ -19,6 +20,29 @@ class TraderateExplainAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.traderate.explain.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TraderateExplainAddRequest
+{
+	/** 
+	 * 子订单ID
+	 **/
+	private $oid;
+	
+	/** 
+	 * 评价解释内容,最大长度: 500个汉字
+	 **/
+	private $reply;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOid($oid)
 	{
 		$this->oid = $oid;

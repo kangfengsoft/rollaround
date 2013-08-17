@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.occupy.cancel request
@@ -24,6 +25,34 @@ class InventoryOccupyCancelRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.inventory.occupy.cancel request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class InventoryOccupyCancelRequest
+{
+	/** 
+	 * 商家外部定单号
+	 **/
+	private $bizUniqueCode;
+	
+	/** 
+	 * 申请预留时的操作返回码
+	 **/
+	private $operateCode;
+	
+	/** 
+	 * 商家仓库编码
+	 **/
+	private $storeCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBizUniqueCode($bizUniqueCode)
 	{
 		$this->bizUniqueCode = $bizUniqueCode;

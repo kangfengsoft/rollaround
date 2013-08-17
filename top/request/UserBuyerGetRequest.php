@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.user.buyer.get request
@@ -14,6 +15,24 @@ class UserBuyerGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.user.buyer.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UserBuyerGetRequest
+{
+	/** 
+	 * 只返回user_id,nick,sex,buyer_credit,avatar,has_shop,vip_info参数
+	 **/
+	private $fields;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

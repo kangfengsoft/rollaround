@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.feedback.add request
@@ -19,6 +20,29 @@ class FeedbackAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.feedback.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FeedbackAddRequest
+{
+	/** 
+	 * 具体反馈的信息，一个json构成的字符串
+	 **/
+	private $info;
+	
+	/** 
+	 * 反馈信息的类型，例如是同步服务的或者其他系统的
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setInfo($info)
 	{
 		$this->info = $info;

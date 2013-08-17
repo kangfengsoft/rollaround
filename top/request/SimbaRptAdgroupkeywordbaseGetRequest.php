@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.rpt.adgroupkeywordbase.get request
@@ -59,6 +60,69 @@ class SimbaRptAdgroupkeywordbaseGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.rpt.adgroupkeywordbase.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaRptAdgroupkeywordbaseGetRequest
+{
+	/** 
+	 * 推广组ID
+	 **/
+	private $adgroupId;
+	
+	/** 
+	 * 推广计划ID
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 结束时间，格式yyyy-mm-dd
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 页码
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页大小
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 报表类型（搜索：SEARCH,类目出价：CAT, 定向投放：NOSEARCH）可多选例如：SEARCH,CAT
+	 **/
+	private $searchType;
+	
+	/** 
+	 * 数据来源（站内：1，站外：2 ，汇总：SUMMARY）SUMMARY必须单选，其他值可多选例如1,2
+	 **/
+	private $source;
+	
+	/** 
+	 * 开始时间，格式yyyy-mm-dd
+	 **/
+	private $startTime;
+	
+	/** 
+	 * 权限校验参数
+	 **/
+	private $subwayToken;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

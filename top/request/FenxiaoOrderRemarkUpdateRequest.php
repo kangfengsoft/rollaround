@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.order.remark.update request
@@ -29,6 +30,39 @@ class FenxiaoOrderRemarkUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.order.remark.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoOrderRemarkUpdateRequest
+{
+	/** 
+	 * 采购单编号
+	 **/
+	private $purchaseOrderId;
+	
+	/** 
+	 * 备注旗子(供应商操作)
+	 **/
+	private $supplierMemo;
+	
+	/** 
+	 * 旗子的标记，1-5之间的数字。非1-5之间，都采用1作为默认。
+1:红色
+2:黄色
+3:绿色
+4:蓝色
+5:粉红色
+	 **/
+	private $supplierMemoFlag;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPurchaseOrderId($purchaseOrderId)
 	{
 		$this->purchaseOrderId = $purchaseOrderId;

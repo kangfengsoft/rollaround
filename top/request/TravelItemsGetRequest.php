@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.travel.items.get request
@@ -14,6 +15,24 @@ class TravelItemsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.travel.items.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TravelItemsGetRequest
+{
+	/** 
+	 * 商品数字ID。
+	 **/
+	private $itemId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

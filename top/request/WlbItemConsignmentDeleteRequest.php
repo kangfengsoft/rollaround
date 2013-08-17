@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.consignment.delete request
@@ -24,6 +25,34 @@ class WlbItemConsignmentDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.consignment.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemConsignmentDeleteRequest
+{
+	/** 
+	 * 代销商前台宝贝ID
+	 **/
+	private $icItemId;
+	
+	/** 
+	 * 货主的物流宝商品ID
+	 **/
+	private $ownerItemId;
+	
+	/** 
+	 * 授权关系id
+	 **/
+	private $ruleId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setIcItemId($icItemId)
 	{
 		$this->icItemId = $icItemId;

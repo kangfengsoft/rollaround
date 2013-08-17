@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.evaluation.get request
@@ -24,6 +25,34 @@ class WangwangEserviceEvaluationGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wangwang.eservice.evaluation.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WangwangEserviceEvaluationGetRequest
+{
+	/** 
+	 * 查询结束日期
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 客服人员id：cntaobao+淘宝nick，例如cntaobaotest
+	 **/
+	private $serviceStaffId;
+	
+	/** 
+	 * 查询开始日期
+	 **/
+	private $startDate;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

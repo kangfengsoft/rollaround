@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.add request
@@ -197,6 +198,207 @@ no:不需要授权
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.product.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductAddRequest
+{
+	/** 
+	 * 警戒库存必须是0到29999。
+	 **/
+	private $alarmNumber;
+	
+	/** 
+	 * 所属类目id，参考Taobao.itemcats.get，不支持成人等类目，输入成人类目id保存提示类目属性错误。
+	 **/
+	private $categoryId;
+	
+	/** 
+	 * 所在地：市，例：“杭州”
+	 **/
+	private $city;
+	
+	/** 
+	 * 代销采购价格，单位：元。例：“10.56”。必须在0.01元到10000000元之间。
+	 **/
+	private $costPrice;
+	
+	/** 
+	 * 经销采购价，单位：元。例：“10.56”。必须在0.01元到10000000元之间。
+	 **/
+	private $dealerCostPrice;
+	
+	/** 
+	 * 产品描述，长度为5到25000字符。
+	 **/
+	private $desc;
+	
+	/** 
+	 * 折扣ID
+	 **/
+	private $discountId;
+	
+	/** 
+	 * 是否有保修，可选值：false（否）、true（是），默认false。
+	 **/
+	private $haveGuarantee;
+	
+	/** 
+	 * 是否有发票，可选值：false（否）、true（是），默认false。
+	 **/
+	private $haveInvoice;
+	
+	/** 
+	 * 产品主图，大小不超过500k，格式为gif,jpg,jpeg,png,bmp等图片
+	 **/
+	private $image;
+	
+	/** 
+	 * 自定义属性。格式为pid:value;pid:value
+	 **/
+	private $inputProperties;
+	
+	/** 
+	 * 添加产品时，添加入参isAuthz:yes|no 
+yes:需要授权 
+no:不需要授权 
+默认是需要授权
+	 **/
+	private $isAuthz;
+	
+	/** 
+	 * 导入的商品ID
+	 **/
+	private $itemId;
+	
+	/** 
+	 * 产品名称，长度不超过60个字节。
+	 **/
+	private $name;
+	
+	/** 
+	 * 商家编码，长度不能超过60个字节。
+	 **/
+	private $outerId;
+	
+	/** 
+	 * 产品主图图片空间相对路径或绝对路径
+	 **/
+	private $picPath;
+	
+	/** 
+	 * ems费用，单位：元。例：“10.56”。 大小为0.00元到999999元之间。
+	 **/
+	private $postageEms;
+	
+	/** 
+	 * 快递费用，单位：元。例：“10.56”。 大小为0.01元到999999元之间。
+	 **/
+	private $postageFast;
+	
+	/** 
+	 * 运费模板ID，参考taobao.postages.get。
+	 **/
+	private $postageId;
+	
+	/** 
+	 * 平邮费用，单位：元。例：“10.56”。 大小为0.01元到999999元之间。
+	 **/
+	private $postageOrdinary;
+	
+	/** 
+	 * 运费类型，可选值：seller（供应商承担运费）、buyer（分销商承担运费）,默认seller。
+	 **/
+	private $postageType;
+	
+	/** 
+	 * 产品线ID
+	 **/
+	private $productcatId;
+	
+	/** 
+	 * 产品属性，格式为pid:vid;pid:vid
+	 **/
+	private $properties;
+	
+	/** 
+	 * 属性别名，格式为：pid:vid:alias;pid:vid:alias（alias为别名）
+	 **/
+	private $propertyAlias;
+	
+	/** 
+	 * 所在地：省，例：“浙江”
+	 **/
+	private $prov;
+	
+	/** 
+	 * 产品库存必须是1到999999。
+	 **/
+	private $quantity;
+	
+	/** 
+	 * 最高零售价，单位：元。例：“10.56”。必须在0.01元到10000000元之间，最高零售价必须大于最低零售价。
+	 **/
+	private $retailPriceHigh;
+	
+	/** 
+	 * 最低零售价，单位：元。例：“10.56”。必须在0.01元到10000000元之间。
+	 **/
+	private $retailPriceLow;
+	
+	/** 
+	 * sku的采购价。如果多个，用逗号分隔，并与其他sku信息保持相同顺序
+	 **/
+	private $skuCostPrices;
+	
+	/** 
+	 * sku的经销采购价。如果多个，用逗号分隔，并与其他sku信息保持相同顺序。其中每个值的单位：元。例：“10.56,12.3”。必须在0.01元到10000000元之间。
+	 **/
+	private $skuDealerCostPrices;
+	
+	/** 
+	 * sku的商家编码。如果多个，用逗号分隔，并与其他sku信息保持相同顺序
+	 **/
+	private $skuOuterIds;
+	
+	/** 
+	 * sku的属性。如果多个，用逗号分隔，并与其他sku信息保持相同顺序
+	 **/
+	private $skuProperties;
+	
+	/** 
+	 * sku的库存。如果多个，用逗号分隔，并与其他sku信息保持相同顺序
+	 **/
+	private $skuQuantitys;
+	
+	/** 
+	 * sku的采购基准价。如果多个，用逗号分隔，并与其他sku信息保持相同顺序
+	 **/
+	private $skuStandardPrices;
+	
+	/** 
+	 * 采购基准价格，单位：元。例：“10.56”。必须在0.01元到10000000元之间。
+	 **/
+	private $standardPrice;
+	
+	/** 
+	 * 零售基准价，单位：元。例：“10.56”。必须在0.01元到10000000元之间。
+	 **/
+	private $standardRetailPrice;
+	
+	/** 
+	 * 分销方式：AGENT（只做代销，默认值）、DEALER（只做经销）、ALL（代销和经销都做）
+	 **/
+	private $tradeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAlarmNumber($alarmNumber)
 	{
 		$this->alarmNumber = $alarmNumber;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.action.get.list request
@@ -19,6 +20,29 @@ class HanoiActionGetListRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.action.get.list request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiActionGetListRequest
+{
+	/** 
+	 * 分页查询当前查询的页数；
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * action的状态（0：审核中 1：审核通过，正常）
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCurrentPage($currentPage)
 	{
 		$this->currentPage = $currentPage;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.mobile.items.relate.get request
@@ -38,6 +39,48 @@ class TaobaokeMobileItemsRelateGetRequest
 	private $referType;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.taobaoke.mobile.items.relate.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TaobaokeMobileItemsRelateGetRequest
+{
+	/** 
+	 * 分类id.推荐类型为5时cid不能为空。仅支持叶子类目ID，即通过taobao.itemcats.get获取到is_parent=false的cid。
+	 **/
+	private $cid;
+	
+	/** 
+	 * 需返回的字段列表.可选值:num_iid,title,nick,pic_url,price,click_url,commission,ommission_rate,commission_num,commission_volume,shop_click_url,seller_credit_score,item_location,volume;字段之间用","分隔
+	 **/
+	private $fields;
+	
+	/** 
+	 * 指定返回结果的最大条数.实际返回结果个数根据算法来确定,所以该值会小于或者等于该值
+	 **/
+	private $maxCount;
+	
+	/** 
+	 * 淘宝客商品数字id.推荐类型为1,2,3时num_iid不能为空
+	 **/
+	private $numIid;
+	
+	/** 
+	 * 自定义输入串.格式:英文和数字组成;长度不能大于12个字符,区分不同的推广渠道,如:bbs,表示bbs为推广渠道;blog,表示blog为推广渠道
+	 **/
+	private $outerCode;
+	
+	/** 
+	 * 点击串跳转类型，1：单品，2：单品中间页（无线暂无）
+	 **/
+	private $referType;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * <p>推荐类型.</p>
 <p>1:同类商品推荐;此时必须得输入num_iid</p>
 <p>2:异类商品推荐;此时必须得输入num_iid</p>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.map.get.by.extentity request
@@ -19,6 +20,29 @@ class WlbItemMapGetByExtentityRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.map.get.by.extentity request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemMapGetByExtentityRequest
+{
+	/** 
+	 * 外部实体类型对应的商品id
+	 **/
+	private $extEntityId;
+	
+	/** 
+	 * 外部实体类型： IC_ITEM--ic商品 IC_SKU--ic销售单元
+	 **/
+	private $extEntityType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setExtEntityId($extEntityId)
 	{
 		$this->extEntityId = $extEntityId;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.receivenum.get request
@@ -24,6 +25,34 @@ class WangwangEserviceReceivenumGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wangwang.eservice.receivenum.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WangwangEserviceReceivenumGetRequest
+{
+	/** 
+	 * 查询接待人数的结束日期 时间精确到日 时分秒可以直接传00:00:00
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 客服人员id：cntaobao+淘宝nick，例如cntaobaotest
+	 **/
+	private $serviceStaffId;
+	
+	/** 
+	 * 查询接待人数的开始日期 时间精确到日 时分秒可直接传 00:00:00
+	 **/
+	private $startDate;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

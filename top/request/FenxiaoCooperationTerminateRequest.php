@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.cooperation.terminate request
@@ -24,6 +25,34 @@ class FenxiaoCooperationTerminateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.cooperation.terminate request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoCooperationTerminateRequest
+{
+	/** 
+	 * 合作编号
+	 **/
+	private $cooperateId;
+	
+	/** 
+	 * 终止天数，可选1,2,3,5,7,15，在多少天数内终止
+	 **/
+	private $endRemainDays;
+	
+	/** 
+	 * 终止说明（5-2000字）
+	 **/
+	private $endRemark;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCooperateId($cooperateId)
 	{
 		$this->cooperateId = $cooperateId;

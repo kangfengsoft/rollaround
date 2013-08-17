@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.subuser.duty.add request
@@ -24,6 +25,34 @@ class SubuserDutyAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.subuser.duty.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SubuserDutyAddRequest
+{
+	/** 
+	 * 职务级别
+	 **/
+	private $dutyLevel;
+	
+	/** 
+	 * 职务名称
+	 **/
+	private $dutyName;
+	
+	/** 
+	 * 主账号用户名
+	 **/
+	private $userNick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDutyLevel($dutyLevel)
 	{
 		$this->dutyLevel = $dutyLevel;

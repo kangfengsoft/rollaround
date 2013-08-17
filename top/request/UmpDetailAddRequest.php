@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.detail.add request
@@ -19,6 +20,29 @@ class UmpDetailAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.detail.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpDetailAddRequest
+{
+	/** 
+	 * 增加工具详情
+	 **/
+	private $actId;
+	
+	/** 
+	 * 活动详情内容，json格式，可以通过ump sdk中的MarketingTool来进行处理
+	 **/
+	private $content;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setActId($actId)
 	{
 		$this->actId = $actId;

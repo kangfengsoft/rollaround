@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: alibaba.logistics.order.consign request
@@ -259,6 +260,269 @@ class AlibabaLogisticsOrderConsignRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: alibaba.logistics.order.consign request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class AlibabaLogisticsOrderConsignRequest
+{
+	/** 
+	 * 货物描述
+	 **/
+	private $cargoDescription;
+	
+	/** 
+	 * 货物名称
+	 **/
+	private $cargoName;
+	
+	/** 
+	 * 物流订单id
+	 **/
+	private $orderId;
+	
+	/** 
+	 * 付款方式。0：发货人支付；1：收货人支付；2：双方支付
+	 **/
+	private $payType;
+	
+	/** 
+	 * 收件人地址
+	 **/
+	private $receiverAddress;
+	
+	/** 
+	 * 收件人地区编码
+	 **/
+	private $receiverAreaId;
+	
+	/** 
+	 * 收件人城市名
+	 **/
+	private $receiverCityName;
+	
+	/** 
+	 * 收件人公司名称
+	 **/
+	private $receiverCorpName;
+	
+	/** 
+	 * 收件人区名
+	 **/
+	private $receiverCountyName;
+	
+	/** 
+	 * 收件人手机号
+	 **/
+	private $receiverMobile;
+	
+	/** 
+	 * 收件人名
+	 **/
+	private $receiverName;
+	
+	/** 
+	 * 收件人电话区号
+	 **/
+	private $receiverPhoneAreaCode;
+	
+	/** 
+	 * 收件人电话号码
+	 **/
+	private $receiverPhoneTel;
+	
+	/** 
+	 * 收件人电话分机号
+	 **/
+	private $receiverPhoneTelExt;
+	
+	/** 
+	 * 收件人邮编
+	 **/
+	private $receiverPostcode;
+	
+	/** 
+	 * 收件人省名
+	 **/
+	private $receiverProvinceName;
+	
+	/** 
+	 * 收件人旺旺号
+	 **/
+	private $receiverWangwangNo;
+	
+	/** 
+	 * 退货接收人地址
+	 **/
+	private $refunderAddress;
+	
+	/** 
+	 * 退货接收人地区id
+	 **/
+	private $refunderAreaId;
+	
+	/** 
+	 * 退货接收人城市名
+	 **/
+	private $refunderCityName;
+	
+	/** 
+	 * 退货接收人公司名称
+	 **/
+	private $refunderCorpName;
+	
+	/** 
+	 * 退货接收人区名
+	 **/
+	private $refunderCountyName;
+	
+	/** 
+	 * 退货接收人手机号码
+	 **/
+	private $refunderMobile;
+	
+	/** 
+	 * 退货接收人姓名
+	 **/
+	private $refunderName;
+	
+	/** 
+	 * 退货接收人电话区号
+	 **/
+	private $refunderPhoneAreaCode;
+	
+	/** 
+	 * 退货接收人电话号码
+	 **/
+	private $refunderPhoneTel;
+	
+	/** 
+	 * 退货接收人电话分机号
+	 **/
+	private $refunderPhoneTelExt;
+	
+	/** 
+	 * 退货接收人邮编
+	 **/
+	private $refunderPostcode;
+	
+	/** 
+	 * 退货接收人省名
+	 **/
+	private $refunderProvinceName;
+	
+	/** 
+	 * 退货接收人旺旺id
+	 **/
+	private $refunderWangwangNo;
+	
+	/** 
+	 * 发货备注
+	 **/
+	private $remark;
+	
+	/** 
+	 * 线路code，线路的业务标识。
+	 **/
+	private $routeCode;
+	
+	/** 
+	 * 发货人地址
+	 **/
+	private $senderAddress;
+	
+	/** 
+	 * 发货地区编码
+	 **/
+	private $senderAreaId;
+	
+	/** 
+	 * 发货人城市名
+	 **/
+	private $senderCityName;
+	
+	/** 
+	 * 发货人公司名称
+	 **/
+	private $senderCorpName;
+	
+	/** 
+	 * 发货人区名
+	 **/
+	private $senderCountyName;
+	
+	/** 
+	 * 发货人手机号
+	 **/
+	private $senderMobile;
+	
+	/** 
+	 * 发货人姓名
+	 **/
+	private $senderName;
+	
+	/** 
+	 * 发货人电话区号
+	 **/
+	private $senderPhoneAreaCode;
+	
+	/** 
+	 * 发货人电话
+	 **/
+	private $senderPhoneTel;
+	
+	/** 
+	 * 发货人电话分机号
+	 **/
+	private $senderPhoneTelExt;
+	
+	/** 
+	 * 发货人地区邮编
+	 **/
+	private $senderPostcode;
+	
+	/** 
+	 * 发货人省名
+	 **/
+	private $senderProvinceName;
+	
+	/** 
+	 * 发货人旺旺号
+	 **/
+	private $senderWangwangNo;
+	
+	/** 
+	 * top开放的来源。默认都使用：TAOBAO_TOP。
+	 **/
+	private $source;
+	
+	/** 
+	 * 货物件数
+	 **/
+	private $totalNumber;
+	
+	/** 
+	 * 货物体积
+	 **/
+	private $totalVolume;
+	
+	/** 
+	 * 货物重量
+	 **/
+	private $totalWeight;
+	
+	/** 
+	 * 下单选中的增值服务
+	 **/
+	private $vasList;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCargoDescription($cargoDescription)
 	{
 		$this->cargoDescription = $cargoDescription;

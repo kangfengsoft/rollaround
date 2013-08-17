@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.micropay.order.get request
@@ -19,6 +20,29 @@ class AlipayMicropayOrderGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: alipay.micropay.order.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class AlipayMicropayOrderGetRequest
+{
+	/** 
+	 * 支付宝订单号，冻结流水号(创建冻结订单返回)
+	 **/
+	private $alipayOrderNo;
+	
+	/** 
+	 * 支付宝用户给应用的授权.
+	 **/
+	private $authToken;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAlipayOrderNo($alipayOrderNo)
 	{
 		$this->alipayOrderNo = $alipayOrderNo;

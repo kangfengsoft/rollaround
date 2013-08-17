@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.sellercenter.subuser.permissions.roles.get request
@@ -14,6 +15,24 @@ class SellercenterSubuserPermissionsRolesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.sellercenter.subuser.permissions.roles.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SellercenterSubuserPermissionsRolesGetRequest
+{
+	/** 
+	 * 子账号昵称(子账号标识)
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNick($nick)
 	{
 		$this->nick = $nick;

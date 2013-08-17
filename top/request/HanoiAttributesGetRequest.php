@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.attributes.get request
@@ -54,6 +55,64 @@ class HanoiAttributesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.attributes.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiAttributesGetRequest
+{
+	/** 
+	 * 属性编码
+	 **/
+	private $code;
+	
+	/** 
+	 * 分页时需要用。默认第一页。
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 属性的唯一标识
+	 **/
+	private $id;
+	
+	/** 
+	 * 是否支持模糊查询
+	 **/
+	private $indistinctQuery;
+	
+	/** 
+	 * 分页时 每页显示的条数。最小1 最大30 默认10页
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 属性名称
+	 **/
+	private $title;
+	
+	/** 
+	 * Top 的访问权限。按位与。1：可读，2：可写，4：可规则计算。如可读且可写的权限值为3。
+	 **/
+	private $topAccess;
+	
+	/** 
+	 * 类型 唯一标识
+	 **/
+	private $typeId;
+	
+	/** 
+	 * 类型名称
+	 **/
+	private $typeName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCode($code)
 	{
 		$this->code = $code;

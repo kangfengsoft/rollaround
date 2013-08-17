@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.datatemplate.detail.add request
@@ -25,6 +26,35 @@ name: 详情的名称
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.datatemplate.detail.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDatatemplateDetailAddRequest
+{
+	/** 
+	 * appName
+	 **/
+	private $appName;
+	
+	/** 
+	 * attr: 将AttributeVO转换成JSON格式
+name: 详情的名称
+	 **/
+	private $dataTemplateDetails;
+	
+	/** 
+	 * id:数据模板唯一标识
+	 **/
+	private $dataTemplateVo;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

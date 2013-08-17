@@ -1,9 +1,9 @@
 
-<div class="navbar navbar-inverse">
+<div class="navbar navbar-inverse container">
 	<div class="navbar-inner">
 		<div class="container-fluid">
 			<a href="#" class="brand"> <small> <i class="icon-unlock-alt"></i>
-					滚屏王
+					无忧上架
 			</small>
 			</a>
 			<!--/.brand-->

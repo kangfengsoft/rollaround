@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.coupon.send request
@@ -19,6 +20,29 @@ class PromotionCouponSendRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.promotion.coupon.send request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PromotionCouponSendRequest
+{
+	/** 
+	 * 买家昵称用半角','号分割
+	 **/
+	private $buyerNick;
+	
+	/** 
+	 * 优惠券的id
+	 **/
+	private $couponId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBuyerNick($buyerNick)
 	{
 		$this->buyerNick = $buyerNick;

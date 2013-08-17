@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.product.map.delete request
@@ -19,6 +20,29 @@ class FenxiaoProductMapDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.product.map.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductMapDeleteRequest
+{
+	/** 
+	 * 分销产品id。
+	 **/
+	private $productId;
+	
+	/** 
+	 * 分销产品的sku id列表，逗号分隔，在有sku时需要指定。
+	 **/
+	private $skuIds;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setProductId($productId)
 	{
 		$this->productId = $productId;

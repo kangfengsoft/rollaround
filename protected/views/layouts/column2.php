@@ -1,7 +1,7 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 
-<?php include 'sidebar.php'; ?>
+<?php include '/protected/views/layouts/sidebar.php'; ?>
 
 <div id="main-content" class="clearfix">
 	<div id="breadcrumbs">

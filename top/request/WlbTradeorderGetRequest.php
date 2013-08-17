@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.tradeorder.get request
@@ -22,6 +23,32 @@ YOUA--有啊交易
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.tradeorder.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbTradeorderGetRequest
+{
+	/** 
+	 * 指定交易类型的交易号
+	 **/
+	private $tradeId;
+	
+	/** 
+	 * 交易类型:
+TAOBAO--淘宝交易
+PAIPAI--拍拍交易
+YOUA--有啊交易
+	 **/
+	private $tradeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setTradeId($tradeId)
 	{
 		$this->tradeId = $tradeId;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.inventory.sync request
@@ -28,6 +29,38 @@ WLB_ITEM  --表示WLB商品.
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.inventory.sync request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbInventorySyncRequest
+{
+	/** 
+	 * 商品ID
+	 **/
+	private $itemId;
+	
+	/** 
+	 * 外部实体类型.存如下值 
+IC_ITEM --表示IC商品; 
+IC_SKU --表示IC最小单位商品;
+WLB_ITEM  --表示WLB商品.
+若值不在范围内，则按WLB_ITEM处理
+	 **/
+	private $itemType;
+	
+	/** 
+	 * 库存数量
+	 **/
+	private $quantity;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setItemId($itemId)
 	{
 		$this->itemId = $itemId;

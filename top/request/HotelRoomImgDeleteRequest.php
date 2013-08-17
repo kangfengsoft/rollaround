@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.room.img.delete request
@@ -21,6 +22,31 @@ class HotelRoomImgDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.room.img.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelRoomImgDeleteRequest
+{
+	/** 
+	 * 酒店房间商品gid。必须为数字。
+	 **/
+	private $gid;
+	
+	/** 
+	 * 图片序号，可选值：1，2，3，4，5。
+如果原图片个数小于等于1，则报错，不能删除图片。
+如果原图片个数小于待删除的图片序号，则报错，图片序号错误。
+	 **/
+	private $position;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setGid($gid)
 	{
 		$this->gid = $gid;

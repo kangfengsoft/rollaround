@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.label.para.query request
@@ -19,6 +20,29 @@ class HanoiLabelParaQueryRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.label.para.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiLabelParaQueryRequest
+{
+	/** 
+	 * 认证信息
+	 **/
+	private $appName;
+	
+	/** 
+	 * 要删除的标签id
+	 **/
+	private $id;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

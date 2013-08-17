@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.order.page.get request
@@ -59,6 +60,69 @@ class WlbOrderPageGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.order.page.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbOrderPageGetRequest
+{
+	/** 
+	 * 查询截止时间
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 物流订单编号
+	 **/
+	private $orderCode;
+	
+	/** 
+	 * 订单状态
+	 **/
+	private $orderStatus;
+	
+	/** 
+	 * 订单子类型： 
+（1）OTHER： 其他 
+（2）TAOBAO_TRADE： 淘宝交易 
+（3）OTHER_TRADE：其他交易
+（4）ALLCOATE： 调拨
+（5）CHECK:  盘点单
+（6）PURCHASE: 采购单
+	 **/
+	private $orderSubType;
+	
+	/** 
+	 * 订单类型: 
+（1）NORMAL_OUT ：正常出库 
+（2）NORMAL_IN：正常入库 
+（3）RETURN_IN：退货入库 
+（4）EXCHANGE_OUT：换货出库
+	 **/
+	private $orderType;
+	
+	/** 
+	 * 分页的第几页
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页多少条
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 查询开始时间
+	 **/
+	private $startTime;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndTime($endTime)
 	{
 		$this->endTime = $endTime;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.consignment.page.get request
@@ -24,6 +25,34 @@ class WlbItemConsignmentPageGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.consignment.page.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemConsignmentPageGetRequest
+{
+	/** 
+	 * 代销商宝贝id
+	 **/
+	private $icItemId;
+	
+	/** 
+	 * 供应商商品id
+	 **/
+	private $ownerItemId;
+	
+	/** 
+	 * 供应商用户昵称
+	 **/
+	private $ownerUserNick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setIcItemId($icItemId)
 	{
 		$this->icItemId = $icItemId;

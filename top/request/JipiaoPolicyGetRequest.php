@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.jipiao.policy.get request
@@ -19,6 +20,29 @@ class JipiaoPolicyGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.jipiao.policy.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class JipiaoPolicyGetRequest
+{
+	/** 
+	 * type外0，表示机票政策id；type为1，表示机票政策out_product_id
+	 **/
+	private $policyId;
+	
+	/** 
+	 * 0，表示按政策id进行查询；1，表示按政策外部id进行查询
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPolicyId($policyId)
 	{
 		$this->policyId = $policyId;

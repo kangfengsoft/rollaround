@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.store.manage request
@@ -59,6 +60,69 @@ class InventoryStoreManageRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.inventory.store.manage request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class InventoryStoreManageRequest
+{
+	/** 
+	 * 仓库的物理地址，可更新
+	 **/
+	private $address;
+	
+	/** 
+	 * 仓库区域名，可更新
+	 **/
+	private $addressAreaName;
+	
+	/** 
+	 * 仓库简称，可更新
+	 **/
+	private $aliasName;
+	
+	/** 
+	 * 联系人，可更新
+	 **/
+	private $contact;
+	
+	/** 
+	 * 参数定义，ADD：新建; UPDATE：更新
+	 **/
+	private $operateType;
+	
+	/** 
+	 * 联系电话，可更新
+	 **/
+	private $phone;
+	
+	/** 
+	 * 邮编，可更新
+	 **/
+	private $postcode;
+	
+	/** 
+	 * 商家的仓库编码，不允许重复，不允许更新
+	 **/
+	private $storeCode;
+	
+	/** 
+	 * 商家的仓库名称，可更新
+	 **/
+	private $storeName;
+	
+	/** 
+	 * 仓库类型，可更新。目前只支持自有仓，TYPE_OWN：自有物理仓
+	 **/
+	private $storeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAddress($address)
 	{
 		$this->address = $address;

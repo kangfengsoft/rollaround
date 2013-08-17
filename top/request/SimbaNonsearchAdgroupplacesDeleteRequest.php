@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.nonsearch.adgroupplaces.delete request
@@ -24,6 +25,34 @@ class SimbaNonsearchAdgroupplacesDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.nonsearch.adgroupplaces.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaNonsearchAdgroupplacesDeleteRequest
+{
+	/** 
+	 * 推广组id，投放位置id  json数组字符串，数组个数最多200个。其中json数组中的key必须和对应实体AdGroupPlace中的属性字段保持一致，否则对应的实体对象属性获取不到相应的值
+	 **/
+	private $adgroupPlacesJson;
+	
+	/** 
+	 * 推广计划ID
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupPlacesJson($adgroupPlacesJson)
 	{
 		$this->adgroupPlacesJson = $adgroupPlacesJson;

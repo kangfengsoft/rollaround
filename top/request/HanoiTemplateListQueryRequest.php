@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.template.list.query request
@@ -89,6 +90,99 @@ class HanoiTemplateListQueryRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.template.list.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiTemplateListQueryRequest
+{
+	/** 
+	 * 认证信息
+	 **/
+	private $appName;
+	
+	/** 
+	 * 模板业务状态 1 审核 0 创建
+	 **/
+	private $bizStatus;
+	
+	/** 
+	 * 创建者id
+	 **/
+	private $creater;
+	
+	/** 
+	 * 当前页、默认为1
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 所使用的数据模板
+	 **/
+	private $dataTemplateId;
+	
+	/** 
+	 * 根据时间查询 创建时间结束点
+	 **/
+	private $gmtCreateEnd;
+	
+	/** 
+	 * 根据时间查询 创建时间截止点
+	 **/
+	private $gmtCreateStart;
+	
+	/** 
+	 * 根据时间查询，最近修改时间截止
+	 **/
+	private $gmtModifiedEnd;
+	
+	/** 
+	 * 根据时间查询，最近修改时间起点
+	 **/
+	private $gmtModifiedStart;
+	
+	/** 
+	 * 模板id
+	 **/
+	private $id;
+	
+	/** 
+	 * 是否查询总数，默认false
+	 **/
+	private $isTotal;
+	
+	/** 
+	 * 模板名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 模板的开放策略
+	 **/
+	private $open;
+	
+	/** 
+	 * 分页查询，默认20
+	 **/
+	private $pagesize;
+	
+	/** 
+	 * 源模板id
+	 **/
+	private $sourceTemplateId;
+	
+	/** 
+	 * 模板编码
+	 **/
+	private $templateCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

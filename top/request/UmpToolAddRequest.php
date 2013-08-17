@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.tool.add request
@@ -14,6 +15,24 @@ class UmpToolAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.tool.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpToolAddRequest
+{
+	/** 
+	 * 工具内容，由sdk里面的MarketingTool生成的json字符串
+	 **/
+	private $content;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setContent($content)
 	{
 		$this->content = $content;

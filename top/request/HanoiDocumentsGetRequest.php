@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.documents.get request
@@ -34,6 +35,44 @@ class HanoiDocumentsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.documents.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDocumentsGetRequest
+{
+	/** 
+	 * 档案资源对象的编码信息
+	 **/
+	private $code;
+	
+	/** 
+	 * 分页时需要用。默认第一页。
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * id:唯一标示
+	 **/
+	private $id;
+	
+	/** 
+	 * 档案的名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 分页时 每页显示的条数。最小1 最大30 默认10页
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCode($code)
 	{
 		$this->code = $code;

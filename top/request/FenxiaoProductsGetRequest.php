@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.products.get request
@@ -71,6 +72,81 @@ no:不需要授权
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.products.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductsGetRequest
+{
+	/** 
+	 * 结束修改时间
+	 **/
+	private $endModified;
+	
+	/** 
+	 * 指定查询额外的信息，可选值：skus（sku数据）、images（多图），多个可选值用逗号分割。
+	 **/
+	private $fields;
+	
+	/** 
+	 * 查询产品列表时，查询入参“是否需要授权”
+yes:需要授权 
+no:不需要授权
+	 **/
+	private $isAuthz;
+	
+	/** 
+	 * 可根据导入的商品ID列表查询，优先级次于产品ID、sku_numbers，高于其他分页查询条件。最大限制20，用逗号分割，例如：“1001,1002,1003,1004,1005”
+	 **/
+	private $itemIds;
+	
+	/** 
+	 * 商家编码
+	 **/
+	private $outerId;
+	
+	/** 
+	 * 页码（大于0的整数，默认1）
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页记录数（默认20，最大50）
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 产品ID列表（最大限制30），用逗号分割，例如：“1001,1002,1003,1004,1005”
+	 **/
+	private $pids;
+	
+	/** 
+	 * 产品线ID
+	 **/
+	private $productcatId;
+	
+	/** 
+	 * sku商家编码
+	 **/
+	private $skuNumber;
+	
+	/** 
+	 * 开始修改时间
+	 **/
+	private $startModified;
+	
+	/** 
+	 * 产品状态，可选值：up（上架）、down（下架），不传默认查询所有
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndModified($endModified)
 	{
 		$this->endModified = $endModified;

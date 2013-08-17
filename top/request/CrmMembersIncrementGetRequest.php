@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.members.increment.get request
@@ -34,6 +35,44 @@ class CrmMembersIncrementGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.members.increment.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmMembersIncrementGetRequest
+{
+	/** 
+	 * 显示第几页的会员，如果输入的页码大于总共的页码数，例如总共10页，但是current_page的值为11，则返回空白页，最小页数为1
+	 **/
+	private $currentPage;
+	
+	/** 
+	 * 对应买家 最后一次 修改交易订单的时间，如果不填写此字段，默认为当前时间
+	 **/
+	private $endModify;
+	
+	/** 
+	 * 会员等级，0：店铺客户，1：普通会员，2：高级会员，3：VIP会员， 4：至尊VIP会员
+	 **/
+	private $grade;
+	
+	/** 
+	 * 每页显示的会员数，page_size的值不能超过100，最小值要大于1
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 对应买家 最后一次 修改交易订单的时间
+	 **/
+	private $startModify;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCurrentPage($currentPage)
 	{
 		$this->currentPage = $currentPage;

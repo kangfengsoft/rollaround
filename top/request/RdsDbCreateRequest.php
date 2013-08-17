@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.rds.db.create request
@@ -19,6 +20,29 @@ class RdsDbCreateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.rds.db.create request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class RdsDbCreateRequest
+{
+	/** 
+	 * 数据库名
+	 **/
+	private $dbName;
+	
+	/** 
+	 * rds的实例名
+	 **/
+	private $instanceName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDbName($dbName)
 	{
 		$this->dbName = $dbName;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.rebate.authorize.get request
@@ -24,6 +25,34 @@ class TaobaokeRebateAuthorizeGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.taobaoke.rebate.authorize.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TaobaokeRebateAuthorizeGetRequest
+{
+	/** 
+	 * 卖家淘宝会员昵称.注：指的是淘宝的会员登录名
+	 **/
+	private $nick;
+	
+	/** 
+	 * 商品数字ID
+	 **/
+	private $numIid;
+	
+	/** 
+	 * 卖家淘宝会员数字ID.
+	 **/
+	private $sellerId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNick($nick)
 	{
 		$this->nick = $nick;

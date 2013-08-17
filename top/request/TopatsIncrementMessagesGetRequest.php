@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.increment.messages.get request
@@ -24,6 +25,34 @@ class TopatsIncrementMessagesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.topats.increment.messages.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TopatsIncrementMessagesGetRequest
+{
+	/** 
+	 * 消息结束时间，格式：yyyy-MM-dd HH:mm:ss，其中start < end < 现在，并且start和end在同一天。
+	 **/
+	private $end;
+	
+	/** 
+	 * 消息开始时间，格式：yyyy-MM-dd HH:mm:ss，其中start >= 前天零点
+	 **/
+	private $start;
+	
+	/** 
+	 * 消息类型，多个类型之间用半角逗号分隔，可选值为：item,trade,refund。
+	 **/
+	private $topics;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEnd($end)
 	{
 		$this->end = $end;

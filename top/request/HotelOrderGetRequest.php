@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.order.get request
@@ -29,6 +30,39 @@ class HotelOrderGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.order.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelOrderGetRequest
+{
+	/** 
+	 * 是否需要返回该订单的入住人列表。可选值：true，false。
+	 **/
+	private $needGuest;
+	
+	/** 
+	 * 是否显示买家留言，可选值true、false
+	 **/
+	private $needMessage;
+	
+	/** 
+	 * 酒店订单oid，必须为数字。oid，tid必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为oid，tid。
+	 **/
+	private $oid;
+	
+	/** 
+	 * 淘宝订单tid，必须为数字。oid，tid必须传一项，同时传递的情况下，作为查询条件的优先级由高到低依次为oid，tid。
+	 **/
+	private $tid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNeedGuest($needGuest)
 	{
 		$this->needGuest = $needGuest;

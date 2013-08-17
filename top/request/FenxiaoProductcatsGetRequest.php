@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.productcats.get request
@@ -14,6 +15,24 @@ class FenxiaoProductcatsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.productcats.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoProductcatsGetRequest
+{
+	/** 
+	 * 返回字段列表
+	 **/
+	private $fields;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

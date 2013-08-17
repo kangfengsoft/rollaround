@@ -55,9 +55,9 @@
 
 <body>
 
-<?php include 'header.php'; ?>
+<?php include '/protected/views/layouts/header.php'; ?>
 
-	<div class="container-fluid" id="main-container">
+	<div class="container" id="main-container">
 		<a id="menu-toggler" href="#"> <span></span>
 		</a>
 
@@ -71,7 +71,7 @@
 
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='themes/js/jquery-1.9.1.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.min.js'>"+"<"+"/script>");
 		</script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery-ui-1.10.3.custom.min.js"></script>

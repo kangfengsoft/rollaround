@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.travel.itemsprops.get request
@@ -19,6 +20,29 @@ class TravelItemspropsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.travel.itemsprops.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TravelItemspropsGetRequest
+{
+	/** 
+	 * 商品所属叶子类目ID，支持旅游度假线路8个类目。
+	 **/
+	private $cid;
+	
+	/** 
+	 * 属性id (取某个类目属性时，传pid；若不传该值，返回该类目下所有属性)
+	 **/
+	private $pid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCid($cid)
 	{
 		$this->cid = $cid;

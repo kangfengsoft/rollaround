@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.keywordsbykeywordids.get request
@@ -19,6 +20,29 @@ class SimbaKeywordsbykeywordidsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.keywordsbykeywordids.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaKeywordsbykeywordidsGetRequest
+{
+	/** 
+	 * 关键词Id数组，最多200个；
+	 **/
+	private $keywordIds;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setKeywordIds($keywordIds)
 	{
 		$this->keywordIds = $keywordIds;

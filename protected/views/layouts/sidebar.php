@@ -25,24 +25,29 @@
 		</div>
 	</div>
 	<!--#sidebar-shortcuts-->
+	
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'encodeLabel'=>false,
+			'activeCssClass'=>'active',
+				'activateParents' => true,
+			'htmlOptions' => array('class'=>'nav nav-list'),
+			'items'=>array(
+				array('label'=>'<i class="icon-dashboard"></i><span>上架优化</span><b class="arrow icon-angle-down"></b>', 
+					'url'=>array(''),
+					'linkOptions'=>array('class'=>'dropdown-toggle'),
+					'submenuOptions'=>array('class'=>'submenu'),
+						'items'=>array(
+							array('label'=>'<i class="icon-double-angle-right"></i>上架总控制台', 'url'=>array('site/index','id'=>'12')),
+							array('label'=>'<i class="icon-double-angle-right"></i>自定义上架', 'url'=>array('site/login','id'=>'13')),
+			
+					)),
+				array('label'=>'<i class="icon-edit"></i><span>权限设置</span>', 'url'=>array('site/contact')),
 
-	<ul class="nav nav-list">
-		<li class="active"><a href="index.html"> <i class="icon-desktop"></i>
-				<span>Dashboard</span> <b class="arrow icon-angle-down"></b>
-		</a>
+			),
+		)); ?>
+	
 
-			<ul class="submenu">
-				<li><a href="#"> <i class="icon-double-angle-right"></i> 最新评语
-				</a></li>
 
-				<li><a href="#"> <i class="icon-double-angle-right"></i> 成交记录
-				</a></li>
-
-				<li><a href="#"> <i class="icon-double-angle-right"></i> 自定义
-				</a></li>
-			</ul></li>
-
-	</ul>
 	<!--/.nav-list-->
 
 	<div id="sidebar-collapse">

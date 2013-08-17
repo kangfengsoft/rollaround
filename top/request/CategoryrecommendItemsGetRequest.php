@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.categoryrecommend.items.get request
@@ -29,6 +30,39 @@ class CategoryrecommendItemsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.categoryrecommend.items.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CategoryrecommendItemsGetRequest
+{
+	/** 
+	 * 传入叶子类目ID
+	 **/
+	private $categoryId;
+	
+	/** 
+	 * 请求个数，建议获取20个
+	 **/
+	private $count;
+	
+	/** 
+	 * 额外参数
+	 **/
+	private $ext;
+	
+	/** 
+	 * 请求类型，1：类目下热门商品推荐。其他值当非法值处理
+	 **/
+	private $recommendType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCategoryId($categoryId)
 	{
 		$this->categoryId = $categoryId;

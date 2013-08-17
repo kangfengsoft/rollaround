@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.function.search request
@@ -19,6 +20,29 @@ class HanoiFunctionSearchRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.function.search request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiFunctionSearchRequest
+{
+	/** 
+	 * 分配给调用方的名称信息，内部统计使用
+	 **/
+	private $appName;
+	
+	/** 
+	 * FunctionQuery的json格式
+	 **/
+	private $sdata;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

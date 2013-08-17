@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroup.campcatmatchs.get request
@@ -29,6 +30,39 @@ class SimbaAdgroupCampcatmatchsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroup.campcatmatchs.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupCampcatmatchsGetRequest
+{
+	/** 
+	 * 推广计划Id
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 页码，从1开始
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 页尺寸，最大200
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

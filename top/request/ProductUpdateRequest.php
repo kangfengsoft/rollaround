@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.product.update request
@@ -80,6 +81,90 @@ class ProductUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.product.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ProductUpdateRequest
+{
+	/** 
+	 * 非关键属性.调用taobao.itemprops.get获取pid,调用taobao.itempropvalues.get获取vid;格式:pid:vid;pid:vid
+	 **/
+	private $binds;
+	
+	/** 
+	 * 产品描述.最大25000个字节
+	 **/
+	private $desc;
+	
+	/** 
+	 * 存放产品扩展信息，由List(ProductExtraInfo)转化成jsonArray存入.
+	 **/
+	private $extraInfo;
+	
+	/** 
+	 * 产品主图.最大500K,目前仅支持GIF,JPG
+	 **/
+	private $image;
+	
+	/** 
+	 * 是否是主图
+	 **/
+	private $major;
+	
+	/** 
+	 * 市场ID，1为更新C2C市场的产品信息， 2为更新B2C市场的产品信息。
+不填写此值则C用户更新B2C市场的产品信息，B用户更新B2C市场的产品信息。
+	 **/
+	private $marketId;
+	
+	/** 
+	 * 产品名称.最大60个字节
+	 **/
+	private $name;
+	
+	/** 
+	 * 自定义非关键属性
+	 **/
+	private $nativeUnkeyprops;
+	
+	/** 
+	 * 外部产品ID
+	 **/
+	private $outerId;
+	
+	/** 
+	 * 保证清单。
+	 **/
+	private $packingList;
+	
+	/** 
+	 * 产品市场价.精确到2位小数;单位为元.如:200.07
+	 **/
+	private $price;
+	
+	/** 
+	 * 产品ID
+	 **/
+	private $productId;
+	
+	/** 
+	 * 销售属性.调用taobao.itemprops.get获取pid,调用taobao.itempropvalues.get获取vid;格式:pid:vid;pid:vid
+	 **/
+	private $saleProps;
+	
+	/** 
+	 * 产品卖点描述，最长40个字节
+	 **/
+	private $sellPt;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBinds($binds)
 	{
 		$this->binds = $binds;

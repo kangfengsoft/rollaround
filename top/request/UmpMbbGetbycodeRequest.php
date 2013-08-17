@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.mbb.getbycode request
@@ -14,6 +15,24 @@ class UmpMbbGetbycodeRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.mbb.getbycode request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpMbbGetbycodeRequest
+{
+	/** 
+	 * 营销积木块code
+	 **/
+	private $code;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCode($code)
 	{
 		$this->code = $code;

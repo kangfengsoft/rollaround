@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.activities.get request
@@ -24,6 +25,34 @@ class UmpActivitiesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.activities.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpActivitiesGetRequest
+{
+	/** 
+	 * 分页的页码
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页的最大条数
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 工具id
+	 **/
+	private $toolId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPageNo($pageNo)
 	{
 		$this->pageNo = $pageNo;

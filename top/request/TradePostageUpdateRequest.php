@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.postage.update request
@@ -19,6 +20,29 @@ class TradePostageUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trade.postage.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TradePostageUpdateRequest
+{
+	/** 
+	 * 邮费价格(邮费单位是元）
+	 **/
+	private $postFee;
+	
+	/** 
+	 * 主订单编号
+	 **/
+	private $tid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setPostFee($postFee)
 	{
 		$this->postFee = $postFee;

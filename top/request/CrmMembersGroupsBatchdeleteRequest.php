@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.members.groups.batchdelete request
@@ -19,6 +20,29 @@ class CrmMembersGroupsBatchdeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.members.groups.batchdelete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmMembersGroupsBatchdeleteRequest
+{
+	/** 
+	 * 买家的Id集合
+	 **/
+	private $buyerIds;
+	
+	/** 
+	 * 会员需要删除的分组
+	 **/
+	private $groupIds;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBuyerIds($buyerIds)
 	{
 		$this->buyerIds = $buyerIds;

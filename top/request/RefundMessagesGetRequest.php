@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.refund.messages.get request
@@ -29,6 +30,39 @@ class RefundMessagesGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.refund.messages.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class RefundMessagesGetRequest
+{
+	/** 
+	 * 需返回的字段列表。可选值：RefundMessage结构体中的所有字段，以半角逗号(,)分隔。
+	 **/
+	private $fields;
+	
+	/** 
+	 * 页码。取值范围:大于零的整数; 默认值:1
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数。取值范围:大于零的整数; 默认值:40;最大值:100
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 退款单号
+	 **/
+	private $refundId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

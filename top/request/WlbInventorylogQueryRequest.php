@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.inventorylog.query request
@@ -61,6 +62,71 @@ CHANGE_KU 6-库存类型变更
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.inventorylog.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbInventorylogQueryRequest
+{
+	/** 
+	 * 结束修改时间,小于等于该时间
+	 **/
+	private $gmtEnd;
+	
+	/** 
+	 * 起始修改时间,大于等于该时间
+	 **/
+	private $gmtStart;
+	
+	/** 
+	 * 商品ID
+	 **/
+	private $itemId;
+	
+	/** 
+	 * 库存操作作类型(可以为空)
+CHU_KU 1-出库
+RU_KU 2-入库
+FREEZE 3-冻结
+THAW 4-解冻
+CHECK_FREEZE 5-冻结确认
+CHANGE_KU 6-库存类型变更
+若值不在范围内，则按CHU_KU处理
+	 **/
+	private $opType;
+	
+	/** 
+	 * 可指定授权的用户来查询
+	 **/
+	private $opUserId;
+	
+	/** 
+	 * 单号
+	 **/
+	private $orderCode;
+	
+	/** 
+	 * 当前页
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 分页记录个数
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 仓库编码
+	 **/
+	private $storeCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setGmtEnd($gmtEnd)
 	{
 		$this->gmtEnd = $gmtEnd;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.tmsorder.query request
@@ -24,6 +25,34 @@ class WlbTmsorderQueryRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.tmsorder.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbTmsorderQueryRequest
+{
+	/** 
+	 * 物流订单编号
+	 **/
+	private $orderCode;
+	
+	/** 
+	 * 当前页
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOrderCode($orderCode)
 	{
 		$this->orderCode = $orderCode;

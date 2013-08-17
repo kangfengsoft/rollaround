@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.travel.itemarea.get request
@@ -14,6 +15,24 @@ class TravelItemareaGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.travel.itemarea.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TravelItemareaGetRequest
+{
+	/** 
+	 * 商品所属类目ID。旅游线路商品有两个值：1(国内线路类目ID)，2(国际线路类目ID)。
+	 **/
+	private $cid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCid($cid)
 	{
 		$this->cid = $cid;

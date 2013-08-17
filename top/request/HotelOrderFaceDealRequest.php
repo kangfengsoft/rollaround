@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.order.face.deal request
@@ -30,6 +31,40 @@ class HotelOrderFaceDealRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.order.face.deal request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelOrderFaceDealRequest
+{
+	/** 
+	 * 酒店订单oid
+	 **/
+	private $oid;
+	
+	/** 
+	 * 操作类型，1：确认预订，2：取消订单
+	 **/
+	private $operType;
+	
+	/** 
+	 * 取消订单时的取消原因备注信息
+	 **/
+	private $reasonText;
+	
+	/** 
+	 * 取消订单时的取消原因，可选值：1,2,3,4；
+1：无房，2：价格变动，3：买家原因，4：其它原因
+	 **/
+	private $reasonType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOid($oid)
 	{
 		$this->oid = $oid;

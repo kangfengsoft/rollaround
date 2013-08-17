@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.products.get request
@@ -29,6 +30,39 @@ class ProductsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.products.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ProductsGetRequest
+{
+	/** 
+	 * 需返回的字段列表.可选值:Product数据结构中的所有字段;多个字段之间用","分隔
+	 **/
+	private $fields;
+	
+	/** 
+	 * 用户昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 页码.传入值为1代表第一页,传入值为2代表第二页,依此类推.默认返回的数据是从第一页开始.
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页条数.每页返回最多返回100条,默认值为40
+	 **/
+	private $pageSize;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

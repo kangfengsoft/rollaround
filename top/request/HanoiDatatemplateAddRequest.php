@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.datatemplate.add request
@@ -20,6 +21,30 @@ opened:int类型，标识此数据模板是否对其他人可见
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.datatemplate.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDatatemplateAddRequest
+{
+	/** 
+	 * appName
+	 **/
+	private $appName;
+	
+	/** 
+	 * name:String类型，数据模板的名称
+opened:int类型，标识此数据模板是否对其他人可见
+	 **/
+	private $parameter;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

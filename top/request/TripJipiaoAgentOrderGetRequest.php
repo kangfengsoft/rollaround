@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.order.get request
@@ -14,6 +15,24 @@ class TripJipiaoAgentOrderGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trip.jipiao.agent.order.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TripJipiaoAgentOrderGetRequest
+{
+	/** 
+	 * 淘宝政策id列表，当前支持列表长度为1，即当前只支持单个订单详情查询
+	 **/
+	private $orderIds;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOrderIds($orderIds)
 	{
 		$this->orderIds = $orderIds;

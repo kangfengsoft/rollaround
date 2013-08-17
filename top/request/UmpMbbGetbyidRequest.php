@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.mbb.getbyid request
@@ -14,6 +15,24 @@ class UmpMbbGetbyidRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.mbb.getbyid request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpMbbGetbyidRequest
+{
+	/** 
+	 * 积木块的id
+	 **/
+	private $id;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.bill.book.bills.get request
@@ -44,6 +45,54 @@ class BillBookBillsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.bill.book.bills.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class BillBookBillsGetRequest
+{
+	/** 
+	 * 虚拟账户科目编号
+	 **/
+	private $accountId;
+	
+	/** 
+	 * 记账结束时间,end_time与start_time相差不能超过30天
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 需要返回的字段:bid,account_id,journal_type,amount,book_time,description,gmt_create,gmt_modified ,如果不是以上字段将自动忽略
+	 **/
+	private $fields;
+	
+	/** 
+	 * 明细流水类型:流水类型:101、可用金充值；102、可用金扣除；103、冻结；104、解冻；105、冻结金充值；106、冻结金扣除
+	 **/
+	private $journalTypes;
+	
+	/** 
+	 * 页码,传入值为1代表第一页,传入值为2代表第二页,依此类推.默认返回的数据是从第一页开始
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页大小,建议40~100,不能超过100
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 记账开始时间
+	 **/
+	private $startTime;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAccountId($accountId)
 	{
 		$this->accountId = $accountId;

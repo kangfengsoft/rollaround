@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.promotion.activity.add request
@@ -31,6 +32,41 @@ class PromotionActivityAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.promotion.activity.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PromotionActivityAddRequest
+{
+	/** 
+	 * 优惠券总领用数量
+	 **/
+	private $couponCount;
+	
+	/** 
+	 * 优惠券的id，唯一标识这个优惠券
+	 **/
+	private $couponId;
+	
+	/** 
+	 * 每个人最多领用数量，0代表不限
+	 **/
+	private $personLimitCount;
+	
+	/** 
+	 * 是否将该活动优惠券同步到淘券市场
+1（不同步）
+2（同步）
+	 **/
+	private $uploadToTaoquan;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCouponCount($couponCount)
 	{
 		$this->couponCount = $couponCount;

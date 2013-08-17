@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.crm.group.move request
@@ -19,6 +20,29 @@ class CrmGroupMoveRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.crm.group.move request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CrmGroupMoveRequest
+{
+	/** 
+	 * 需要移动的分组
+	 **/
+	private $fromGroupId;
+	
+	/** 
+	 * 目的分组
+	 **/
+	private $toGroupId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFromGroupId($fromGroupId)
 	{
 		$this->fromGroupId = $fromGroupId;

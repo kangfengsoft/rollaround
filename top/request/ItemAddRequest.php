@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.item.add request
@@ -23,6 +24,33 @@ class ItemAddRequest
 	private $auctionPoint;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.item.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ItemAddRequest
+{
+	/** 
+	 * 售后说明模板id
+	 **/
+	private $afterSaleId;
+	
+	/** 
+	 * 商品上传后的状态。可选值:onsale(出售中),instock(仓库中);默认值:onsale
+	 **/
+	private $approveStatus;
+	
+	/** 
+	 * 商品的积分返点比例。如:5,表示:返点比例0.5%. 注意：返点比例必须是>0的整数，而且最大是90,即为9%.B商家在发布非虚拟商品时，返点必须是 5的倍数，即0.5%的倍数。其它是1的倍数，即0.1%的倍数。无名良品商家发布商品时，复用该字段记录积分宝返点比例，返点必须是对应类目的返点步长的整数倍，默认是5，即0.5%。注意此时该字段值依旧必须是>0的整数，最高值不超过500，即50%
+	 **/
+	private $auctionPoint;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * 代充商品类型。在代充商品的类目下，不传表示不标记商品类型（交易搜索中就不能通过标记搜到相关的交易了）。可选类型： 
 no_mark(不做类型标记) 
 time_card(点卡软件代充) 

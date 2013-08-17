@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.order.schedule.rule.update request
@@ -34,6 +35,44 @@ class WlbOrderScheduleRuleUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.order.schedule.rule.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbOrderScheduleRuleUpdateRequest
+{
+	/** 
+	 * 备用发货仓库id
+	 **/
+	private $backupStoreId;
+	
+	/** 
+	 * 默认发货仓库id
+	 **/
+	private $defaultStoreId;
+	
+	/** 
+	 * 订单调度规则的额外规则设置： REMARK_STOP--有订单留言不自动下发 COD_STOP--货到付款订单不自动下发 CHECK_WAREHOUSE_DELIVER--检查仓库的配送范围
+	 **/
+	private $option;
+	
+	/** 
+	 * 国家地区标准编码列表
+	 **/
+	private $provAreaIds;
+	
+	/** 
+	 * 要修改的订单调度规则明细id
+	 **/
+	private $scheduleRuleId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBackupStoreId($backupStoreId)
 	{
 		$this->backupStoreId = $backupStoreId;

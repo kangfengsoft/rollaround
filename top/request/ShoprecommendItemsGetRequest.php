@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.shoprecommend.items.get request
@@ -23,6 +24,33 @@ class ShoprecommendItemsGetRequest
 	private $recommendType;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.shoprecommend.items.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ShoprecommendItemsGetRequest
+{
+	/** 
+	 * 请求个数，最大只能获取10个
+	 **/
+	private $count;
+	
+	/** 
+	 * 额外参数
+	 **/
+	private $ext;
+	
+	/** 
+	 * 请求类型，1：店内热门商品推荐。其他值当非法值处理
+	 **/
+	private $recommendType;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * <p>传入卖家ID。这里的seller_id得通过<a href="http://api.taobao.com/apidoc/api.htm?path=cid:38-apiId:10449">taobao.taobaoke.shops.get</a>
 跟<a href="http://api.taobao.com/apidoc/api.htm?path=cid:38-apiId:21419">taobao.taobaoke.widget.shops.convert</a>这两个接口去获取user_id字段。</p>
 <p>如果是非淘客卖家，则无法获取，暂无替代方案。</p>

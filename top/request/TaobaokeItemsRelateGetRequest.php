@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.items.relate.get request
@@ -53,6 +54,63 @@ class TaobaokeItemsRelateGetRequest
 	private $referType;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.taobaoke.items.relate.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TaobaokeItemsRelateGetRequest
+{
+	/** 
+	 * 分类id.推荐类型为5时cid不能为空。仅支持叶子类目ID，即通过taobao.itemcats.get获取到is_parent=false的cid。
+	 **/
+	private $cid;
+	
+	/** 
+	 * 需返回的字段列表.可选值:num_iid,title,nick,pic_url,price,click_url,commission,ommission_rate,commission_num,commission_volume,shop_click_url,seller_credit_score,item_location,volume;字段之间用","分隔
+	 **/
+	private $fields;
+	
+	/** 
+	 * 标识一个应用是否来在无线或者手机应用,如果是true则会使用其他规则加密点击串.如果不传值,则默认是false
+	 **/
+	private $isMobile;
+	
+	/** 
+	 * 指定返回结果的最大条数.实际返回结果个数根据算法来确定,所以该值会小于或者等于该值
+	 **/
+	private $maxCount;
+	
+	/** 
+	 * 推广者的淘宝会员昵称.注:指的是淘宝的会员登录名
+	 **/
+	private $nick;
+	
+	/** 
+	 * 淘宝客商品数字id.推荐类型为1,2,3时num_iid不能为空
+	 **/
+	private $numIid;
+	
+	/** 
+	 * 自定义输入串.格式:英文和数字组成;长度不能大于12个字符,区分不同的推广渠道,如:bbs,表示bbs为推广渠道;blog,表示blog为推广渠道
+	 **/
+	private $outerCode;
+	
+	/** 
+	 * 用户的pid,必须是mm_xxxx_0_0这种格式中间的"xxxx". 注意nick和pid至少需要传递一个,如果2个都传了,将以pid为准,且pid的最大长度是20。第一次调用接口的用户，推荐该入参不要填写，使用nick=（淘宝账号）的方式去获取，以免出错。
+	 **/
+	private $pid;
+	
+	/** 
+	 * 点击串跳转类型，1：单品，2：单品中间页（无线暂无）
+	 **/
+	private $referType;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * <p>推荐类型.</p>
 <p>1:同类商品推荐;此时必须得输入num_iid</p>
 <p>2:异类商品推荐;此时必须得输入num_iid</p>

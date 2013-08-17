@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.rds.db.delete request
@@ -19,6 +20,29 @@ class RdsDbDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.rds.db.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class RdsDbDeleteRequest
+{
+	/** 
+	 * 数据库的name，可以通过 taobao.rds.db.get 获取
+	 **/
+	private $dbName;
+	
+	/** 
+	 * rds的实例名
+	 **/
+	private $instanceName;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDbName($dbName)
 	{
 		$this->dbName = $dbName;

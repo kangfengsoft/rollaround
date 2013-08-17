@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.increment.customers.get request
@@ -34,6 +35,44 @@ class IncrementCustomersGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.increment.customers.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class IncrementCustomersGetRequest
+{
+	/** 
+	 * 需要返回的字段。可填写的字段参见AppCustomer中的返回字段。如：nick,created,status,type,subscriptions。
+	 **/
+	private $fields;
+	
+	/** 
+	 * 查询用户的昵称。当为空时通过分页方式查询appkey开通的所有用户,最多填入20个昵称。
+	 **/
+	private $nicks;
+	
+	/** 
+	 * 分页查询时，查询的页码。此参数只有nicks为空时起作用。
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 分布查询时，页的大小。此参数只有当nicks为空时起作用。
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 查询用户开通的功能。值可为get,notify和syn分别表示增量api取消息，主动发送消息和同步数据功能。这三个值不分次序。在查询时，type里面的参数会根据应用订阅的类型进行相应的过虑。如应用只订阅主动通知，则默认值过滤后为get,notify，如果应用只订阅数据同步服务，默认值过滤后为syn。
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setFields($fields)
 	{
 		$this->fields = $fields;

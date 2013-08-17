@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.comet.discardinfo.get request
@@ -34,6 +35,44 @@ class CometDiscardinfoGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.comet.discardinfo.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CometDiscardinfoGetRequest
+{
+	/** 
+	 * 指定截止日志，如果不传则为服务端当前时间
+	 **/
+	private $end;
+	
+	/** 
+	 * 用户nick
+	 **/
+	private $nick;
+	
+	/** 
+	 * 指定从那个时间开始找丢弃的消息
+	 **/
+	private $start;
+	
+	/** 
+	 * 指定多个消息类型
+	 **/
+	private $types;
+	
+	/** 
+	 * 指定查看那个用户的丢弃消息
+	 **/
+	private $userId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEnd($end)
 	{
 		$this->end = $end;

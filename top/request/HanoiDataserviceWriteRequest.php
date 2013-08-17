@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.dataservice.write request
@@ -24,6 +25,34 @@ class HanoiDataserviceWriteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.dataservice.write request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDataserviceWriteRequest
+{
+	/** 
+	 * 分配给调用方的名称信息，内部统计使用
+	 **/
+	private $appName;
+	
+	/** 
+	 * json对象，key为属性ID，值为需要回写的内容,如果属性值域不为空（通过taobao.hanoi.ranges.get获取）则需要把值转成key回写，并以逗号","隔开拼接成字符串
+	 **/
+	private $data;
+	
+	/** 
+	 * 回流数据的主键或上下文环境，如卖家id，类目id等。
+	 **/
+	private $params;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

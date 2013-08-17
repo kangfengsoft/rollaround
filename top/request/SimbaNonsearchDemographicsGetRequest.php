@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.nonsearch.demographics.get request
@@ -19,6 +20,29 @@ class SimbaNonsearchDemographicsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.nonsearch.demographics.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaNonsearchDemographicsGetRequest
+{
+	/** 
+	 * 推广计划ID
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

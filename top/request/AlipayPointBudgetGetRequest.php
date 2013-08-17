@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.point.budget.get request
@@ -14,6 +15,24 @@ class AlipayPointBudgetGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: alipay.point.budget.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class AlipayPointBudgetGetRequest
+{
+	/** 
+	 * 支付宝给用户的授权。如果没有top的授权，这个字段是必填项
+	 **/
+	private $authToken;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAuthToken($authToken)
 	{
 		$this->authToken = $authToken;

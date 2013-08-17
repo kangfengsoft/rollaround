@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.taobaoke.items.get request
@@ -58,6 +59,68 @@ class TaobaokeItemsGetRequest
 	private $endTotalnum;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.taobaoke.items.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TaobaokeItemsGetRequest
+{
+	/** 
+	 * 商品所在地
+	 **/
+	private $area;
+	
+	/** 
+	 * 是否自动发货
+	 **/
+	private $autoSend;
+	
+	/** 
+	 * 是否支持抵价券，设置为true表示该商品支持抵价券，设置为false或不设置表示不判断这个属性
+	 **/
+	private $cashCoupon;
+	
+	/** 
+	 * 是否支持货到付款，设置为true表示该商品是支持货到付款，设置为false或不设置表示不判断这个属性
+	 **/
+	private $cashOndelivery;
+	
+	/** 
+	 * 标准商品后台类目id。该ID可以通过taobao.itemcats.get接口获取到。
+	 **/
+	private $cid;
+	
+	/** 
+	 * 30天累计推广量（与返回数据中的commission_num字段对应）上限.
+	 **/
+	private $endCommissionNum;
+	
+	/** 
+	 * 佣金比率上限，如：2345表示23.45%。注：start_commissionRate和end_commissionRate一起设置才有效。
+	 **/
+	private $endCommissionRate;
+	
+	/** 
+	 * 可选值和start_credit一样.start_credit的值一定要小于或等于end_credit的值。注：end_credit与start_credit一起使用才生效
+	 **/
+	private $endCredit;
+	
+	/** 
+	 * 最高价格
+	 **/
+	private $endPrice;
+	
+	/** 
+	 * 商品总成交量（与返回字段volume对应）上限。
+	 **/
+	private $endTotalnum;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * 需返回的字段列表.可选值:num_iid,title,nick,pic_url,price,click_url,commission,commission_rate,commission_num,commission_volume,shop_click_url,seller_credit_score,item_location,volume
 ;字段之间用","分隔
 	 **/

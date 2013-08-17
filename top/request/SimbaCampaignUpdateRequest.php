@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.campaign.update request
@@ -29,6 +30,39 @@ class SimbaCampaignUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.campaign.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaCampaignUpdateRequest
+{
+	/** 
+	 * 推广计划Id
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 用户设置的上下限状态；offline-下线；online-上线；
+	 **/
+	private $onlineStatus;
+	
+	/** 
+	 * 推广计划名称，不能多余20个字符，不能和客户其他推广计划同名。
+	 **/
+	private $title;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

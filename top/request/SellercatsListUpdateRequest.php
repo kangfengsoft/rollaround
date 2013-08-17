@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.sellercats.list.update request
@@ -29,6 +30,39 @@ class SellercatsListUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.sellercats.list.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SellercatsListUpdateRequest
+{
+	/** 
+	 * 卖家自定义类目编号
+	 **/
+	private $cid;
+	
+	/** 
+	 * 卖家自定义类目名称。不超过20个字符
+	 **/
+	private $name;
+	
+	/** 
+	 * 链接图片URL地址
+	 **/
+	private $pictUrl;
+	
+	/** 
+	 * 该类目在页面上的排序位置,取值范围:大于零的整数
+	 **/
+	private $sortOrder;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCid($cid)
 	{
 		$this->cid = $cid;

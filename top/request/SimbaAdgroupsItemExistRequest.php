@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroups.item.exist request
@@ -24,6 +25,34 @@ class SimbaAdgroupsItemExistRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroups.item.exist request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupsItemExistRequest
+{
+	/** 
+	 * 推广计划Id
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 商品Id
+	 **/
+	private $itemId;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCampaignId($campaignId)
 	{
 		$this->campaignId = $campaignId;

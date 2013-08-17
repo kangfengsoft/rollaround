@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.scitem.add request
@@ -119,6 +120,129 @@ class ScitemAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.scitem.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ScitemAddRequest
+{
+	/** 
+	 * 条形码
+	 **/
+	private $barCode;
+	
+	/** 
+	 * 品牌id
+	 **/
+	private $brandId;
+	
+	/** 
+	 * brand_Name
+	 **/
+	private $brandName;
+	
+	/** 
+	 * 高 单位：mm
+	 **/
+	private $height;
+	
+	/** 
+	 * 1表示区域销售，0或是空是非区域销售
+	 **/
+	private $isAreaSale;
+	
+	/** 
+	 * 是否是贵重品 0:不是 1：是
+	 **/
+	private $isCostly;
+	
+	/** 
+	 * 是否危险 0：不是  1：是
+	 **/
+	private $isDangerous;
+	
+	/** 
+	 * 是否易碎 0：不是  1：是
+	 **/
+	private $isFriable;
+	
+	/** 
+	 * 是否保质期：0:不是 1：是
+	 **/
+	private $isWarranty;
+	
+	/** 
+	 * 商品名称
+	 **/
+	private $itemName;
+	
+	/** 
+	 * 0.普通供应链商品 1.供应链组合主商品
+	 **/
+	private $itemType;
+	
+	/** 
+	 * 长度 单位：mm
+	 **/
+	private $length;
+	
+	/** 
+	 * 0:液体，1：粉体，2：固体
+	 **/
+	private $matterStatus;
+	
+	/** 
+	 * 商家编码
+	 **/
+	private $outerCode;
+	
+	/** 
+	 * 价格 单位：分
+	 **/
+	private $price;
+	
+	/** 
+	 * 商品属性格式是  p1:v1,p2:v2,p3:v3
+	 **/
+	private $properties;
+	
+	/** 
+	 * remark
+	 **/
+	private $remark;
+	
+	/** 
+	 * spuId或是cspuid
+	 **/
+	private $spuId;
+	
+	/** 
+	 * 体积：立方厘米
+	 **/
+	private $volume;
+	
+	/** 
+	 * 重量 单位：g
+	 **/
+	private $weight;
+	
+	/** 
+	 * 宽 单位：mm
+	 **/
+	private $width;
+	
+	/** 
+	 * 仓储商编码
+	 **/
+	private $wmsCode;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBarCode($barCode)
 	{
 		$this->barCode = $barCode;

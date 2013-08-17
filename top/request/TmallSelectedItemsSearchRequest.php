@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.selected.items.search request
@@ -14,6 +15,24 @@ class TmallSelectedItemsSearchRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: tmall.selected.items.search request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TmallSelectedItemsSearchRequest
+{
+	/** 
+	 * 后台类目ID，支持父类目或叶子类目，可以通过taobao.itemcats.get 获取到后台类目ID列表
+	 **/
+	private $cid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCid($cid)
 	{
 		$this->cid = $cid;

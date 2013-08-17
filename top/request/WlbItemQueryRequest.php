@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wlb.item.query request
@@ -62,6 +63,72 @@ ITEM_STATUS_LOCK  -- 2 表示锁住。
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wlb.item.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WlbItemQueryRequest
+{
+	/** 
+	 * 是否是最小库存单元，只有最小库存单元的商品才可以有库存,值只能给"true","false"来表示;
+若值不在范围内，则按true处理
+	 **/
+	private $isSku;
+	
+	/** 
+	 * 商家编码
+	 **/
+	private $itemCode;
+	
+	/** 
+	 * ITEM类型(只允许输入以下英文或空)
+NORMAL  0:普通商品; 
+COMBINE  1:是否是组合商品 
+DISTRIBUTION  2:是否是分销商品(货主是别人)
+若值不在范围内，则按NORMAL处理
+	 **/
+	private $itemType;
+	
+	/** 
+	 * 商品名称
+	 **/
+	private $name;
+	
+	/** 
+	 * 当前页
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 分页记录个数，如果用户输入的记录数大于50，则一页显示50条记录
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 父ID,只有is_sku=1时才能有父ID，商品也可以没有付商品
+	 **/
+	private $parentId;
+	
+	/** 
+	 * 只能输入以下值或空：
+ITEM_STATUS_VALID -- 1 表示 有效；
+ITEM_STATUS_LOCK  -- 2 表示锁住。
+若值不在范围内，按ITEM_STATUS_VALID处理
+	 **/
+	private $status;
+	
+	/** 
+	 * 商品前台销售名字
+	 **/
+	private $title;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setIsSku($isSku)
 	{
 		$this->isSku = $isSku;

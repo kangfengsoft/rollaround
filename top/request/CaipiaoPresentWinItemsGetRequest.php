@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.caipiao.present.win.items.get request
@@ -29,6 +30,39 @@ class CaipiaoPresentWinItemsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.caipiao.present.win.items.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CaipiaoPresentWinItemsGetRequest
+{
+	/** 
+	 * 查询日期，格式请严格遵守yyyy-MM-dd
+	 **/
+	private $date;
+	
+	/** 
+	 * 查询个数，最大值为500.如果为空、0和负数，则取默认值500
+	 **/
+	private $num;
+	
+	/** 
+	 * 查询页码，空，零，负的情况默认为1（注意每页数据量为50）
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 0：查询中奖订单，1：查询所有订单，默认为0，注意按列表数量查询只会查询中奖订单。
+	 **/
+	private $searchType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setDate($date)
 	{
 		$this->date = $date;

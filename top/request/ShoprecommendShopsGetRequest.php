@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.shoprecommend.shops.get request
@@ -29,6 +30,39 @@ class ShoprecommendShopsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.shoprecommend.shops.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ShoprecommendShopsGetRequest
+{
+	/** 
+	 * 请求个数，建议获取16个
+	 **/
+	private $count;
+	
+	/** 
+	 * 额外参数
+	 **/
+	private $ext;
+	
+	/** 
+	 * 请求类型，1：关联店铺推荐。其他值当非法值处理
+	 **/
+	private $recommendType;
+	
+	/** 
+	 * 传入卖家ID
+	 **/
+	private $sellerId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCount($count)
 	{
 		$this->count = $count;

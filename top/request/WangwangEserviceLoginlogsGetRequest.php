@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.wangwang.eservice.loginlogs.get request
@@ -24,6 +25,34 @@ class WangwangEserviceLoginlogsGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.wangwang.eservice.loginlogs.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class WangwangEserviceLoginlogsGetRequest
+{
+	/** 
+	 * 查询登录日志的结束时间，必须按示例的格式，否则会返回错误
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 需要查询登录日志的账号列表
+	 **/
+	private $serviceStaffId;
+	
+	/** 
+	 * 查询登录日志的开始日期，必须按示例的格式，否则会返回错误
+	 **/
+	private $startDate;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

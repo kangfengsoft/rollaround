@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: alipay.system.oauth.token request
@@ -24,6 +25,34 @@ class AlipaySystemOauthTokenRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: alipay.system.oauth.token request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class AlipaySystemOauthTokenRequest
+{
+	/** 
+	 * 授权码，用户对应用授权后得到。
+	 **/
+	private $code;
+	
+	/** 
+	 * 获取访问令牌的类型，authorization_code表示用授权码换，refresh_token表示用刷新令牌来换。
+	 **/
+	private $grantType;
+	
+	/** 
+	 * 刷新令牌，上次换取访问令牌是得到。
+	 **/
+	private $refreshToken;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCode($code)
 	{
 		$this->code = $code;

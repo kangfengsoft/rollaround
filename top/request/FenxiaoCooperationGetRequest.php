@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.cooperation.get request
@@ -39,6 +40,49 @@ class FenxiaoCooperationGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.cooperation.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoCooperationGetRequest
+{
+	/** 
+	 * 合作结束时间yyyy-MM-dd HH:mm:ss
+	 **/
+	private $endDate;
+	
+	/** 
+	 * 页码（大于0的整数，默认1）
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页记录数（默认20，最大50）
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 合作开始时间yyyy-MM-dd HH:mm:ss
+	 **/
+	private $startDate;
+	
+	/** 
+	 * 合作状态： NORMAL(合作中)、 ENDING(终止中) 、END (终止)
+	 **/
+	private $status;
+	
+	/** 
+	 * 分销方式：AGENT(代销) 、DEALER（经销）
+	 **/
+	private $tradeType;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setEndDate($endDate)
 	{
 		$this->endDate = $endDate;

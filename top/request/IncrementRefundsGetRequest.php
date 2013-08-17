@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.increment.refunds.get request
@@ -8,6 +9,18 @@
 class IncrementRefundsGetRequest
 {
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.increment.refunds.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class IncrementRefundsGetRequest
+{
+	/** 
+>>>>>>> #develop update w8
 	 * 消息所对应的操作时间的最大值。和start_modified搭配使用能过滤消通知消息的时间段。不传时：如果设置了start_modified，默认为与start_modified同一天的23:59:59；否则默认为调用接口当天的23:59:59。（格式：yyyy-MM-dd HH:mm:ss）<br>
 <font color="red">注意：start_modified和end_modified的日期必须在必须在同一天内，比如：start_modified设置2000-01-01 00:00:00，则end_modified必须设置为2000-01-01这个日期</font>
 	 **/

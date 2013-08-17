@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.adgroups.changed.get request
@@ -29,6 +30,39 @@ class SimbaAdgroupsChangedGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.adgroups.changed.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaAdgroupsChangedGetRequest
+{
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 返回的第几页数据，默认为1
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 返回的每页数据量大小,默认200最大1000
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 得到此时间点之后的数据，不能大于一个月
+	 **/
+	private $startTime;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setNick($nick)
 	{
 		$this->nick = $nick;

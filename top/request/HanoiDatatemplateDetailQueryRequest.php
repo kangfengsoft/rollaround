@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hanoi.datatemplate.detail.query request
@@ -26,6 +27,36 @@ justQueryParamNotInput（Boolean 默认False）:是否只查询每天如PK的详
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hanoi.datatemplate.detail.query request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HanoiDatatemplateDetailQueryRequest
+{
+	/** 
+	 * appName
+	 **/
+	private $appName;
+	
+	/** 
+	 * attrId(Long):AttributeVO的唯一标识<br/>
+templateId(Long):数据模板的唯一标识<br/>
+name(String):数据模板详情的名称<br/>
+id(Long):根据模板唯一标识去查询<br/>
+pageSize:分页大小（最大值30）<br/>
+currentPage:当前页码<br/>
+needRetPage(Boolean 默认False):是否返回总条数<br/>
+justQueryParamNotInput（Boolean 默认False）:是否只查询每天如PK的详情列表<br/>
+	 **/
+	private $parameter;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAppName($appName)
 	{
 		$this->appName = $appName;

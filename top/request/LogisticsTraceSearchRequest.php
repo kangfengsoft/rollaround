@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.logistics.trace.search request
@@ -29,6 +30,39 @@ class LogisticsTraceSearchRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.logistics.trace.search request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class LogisticsTraceSearchRequest
+{
+	/** 
+	 * 表明是否是拆单，默认值0，1表示拆单
+	 **/
+	private $isSplit;
+	
+	/** 
+	 * 卖家昵称
+	 **/
+	private $sellerNick;
+	
+	/** 
+	 * 拆单子订单列表，对应的数据是：子订单号的列表。可以不传，但是如果传了则必须符合传递的规则。子订单必须是操作的物流订单的子订单的真子集
+	 **/
+	private $subTid;
+	
+	/** 
+	 * 淘宝交易号，请勿传非淘宝交易号
+	 **/
+	private $tid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setIsSplit($isSplit)
 	{
 		$this->isSplit = $isSplit;

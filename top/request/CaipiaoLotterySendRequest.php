@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.caipiao.lottery.send request
@@ -34,6 +35,44 @@ class CaipiaoLotterySendRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.caipiao.lottery.send request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class CaipiaoLotterySendRequest
+{
+	/** 
+	 * 彩票接收方淘宝数字ID，不可为空、0和负数。
+	 **/
+	private $buyerNumId;
+	
+	/** 
+	 * 彩种ID，此彩种ID为彩票系统中的序号。
+	 **/
+	private $lotteryTypeId;
+	
+	/** 
+	 * 送彩方淘宝数字ID， 不可为空、0和负数。
+	 **/
+	private $sellerNumId;
+	
+	/** 
+	 * 彩票注数，不可为空、0和负数，最大值为100。
+	 **/
+	private $stakeCount;
+	
+	/** 
+	 * 送彩票给接收方的赠言。 不能超过50个字符，1个中文字符、1个英文字母及1个数字等均当作一个字符，如果超过，则会截取。
+	 **/
+	private $sweetyWords;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBuyerNumId($buyerNumId)
 	{
 		$this->buyerNumId = $buyerNumId;

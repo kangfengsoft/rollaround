@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trip.jipiao.agent.order.success request
@@ -19,6 +20,29 @@ class TripJipiaoAgentOrderSuccessRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trip.jipiao.agent.order.success request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TripJipiaoAgentOrderSuccessRequest
+{
+	/** 
+	 * 淘宝系统订单id
+	 **/
+	private $orderId;
+	
+	/** 
+	 * 成功订单参数：列表元素结构为——旧乘机人姓名;新乘机人姓名;pnr;票号 (以分号进行分隔)。说明：有时用户输入的乘机人姓名输入错误或者有生僻字，代理商必须输入新的名字以保证验真通过；即旧乘机人姓名和新乘机人姓名不需要变化时可以相同
+	 **/
+	private $successInfo;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOrderId($orderId)
 	{
 		$this->orderId = $orderId;

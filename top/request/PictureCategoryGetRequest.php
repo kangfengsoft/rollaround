@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.picture.category.get request
@@ -36,6 +37,46 @@ class PictureCategoryGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.picture.category.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class PictureCategoryGetRequest
+{
+	/** 
+	 * 图片分类的修改时间点，格式:yyyy-MM-dd HH:mm:ss。查询此修改时间点之后到目前的图片分类。
+	 **/
+	private $modifiedTime;
+	
+	/** 
+	 * 取二级分类时设置为对应父分类id
+取一级分类时父分类id设为0
+取全部分类的时候不设或设为-1
+	 **/
+	private $parentId;
+	
+	/** 
+	 * 图片分类ID
+	 **/
+	private $pictureCategoryId;
+	
+	/** 
+	 * 图片分类名，不支持模糊查询
+	 **/
+	private $pictureCategoryName;
+	
+	/** 
+	 * 分类类型,fixed代表店铺装修分类类别，auction代表宝贝分类类别，user-define代表用户自定义分类类别
+	 **/
+	private $type;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setModifiedTime($modifiedTime)
 	{
 		$this->modifiedTime = $modifiedTime;

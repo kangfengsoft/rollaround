@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.hotel.match.feedback request
@@ -24,6 +25,34 @@ class HotelMatchFeedbackRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.hotel.match.feedback request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class HotelMatchFeedbackRequest
+{
+	/** 
+	 * 需进行匹配的酒店id
+	 **/
+	private $haid;
+	
+	/** 
+	 * 匹配命中的酒店id
+	 **/
+	private $hid;
+	
+	/** 
+	 * 匹配结果 0:未匹配，1:匹配
+	 **/
+	private $matchResult;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setHaid($haid)
 	{
 		$this->haid = $haid;

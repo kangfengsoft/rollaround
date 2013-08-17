@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.fenxiao.cooperation.productcat.add request
@@ -24,6 +25,34 @@ class FenxiaoCooperationProductcatAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.fenxiao.cooperation.productcat.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class FenxiaoCooperationProductcatAddRequest
+{
+	/** 
+	 * 合作关系id
+	 **/
+	private $cooperateId;
+	
+	/** 
+	 * 等级ID（为空则不修改）
+	 **/
+	private $gradeId;
+	
+	/** 
+	 * 产品线id列表，若有多个，以逗号分隔
+	 **/
+	private $productLineList;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCooperateId($cooperateId)
 	{
 		$this->cooperateId = $cooperateId;

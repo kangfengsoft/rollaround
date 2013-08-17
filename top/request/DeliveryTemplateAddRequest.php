@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.delivery.template.add request
@@ -47,6 +48,57 @@ class DeliveryTemplateAddRequest
 	private $templateAddStandards;
 	
 	/** 
+=======
+<?php
+/**
+ * TOP API: taobao.delivery.template.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class DeliveryTemplateAddRequest
+{
+	/** 
+	 * 可选值：0,1 <br>  说明<br>0:表示买家承担服务费;<br>1:表示卖家承担服务费
+	 **/
+	private $assumer;
+	
+	/** 
+	 * 卖家发货地址区域ID
+<br/><br/><font color=blue>可以不填，如果没有填写取卖家默认发货地址的区域ID，如果需要输入必须用taobao.areas.get接口获取.或者参考：http://www.stats.gov.cn/tjbz/xzqhdm/t20080215_402462675.htm 
+</font>
+
+<br/><br/><font color=red>注意：填入该值时必须取您的发货地址最小区域级别ID，比如您的发货地址是：某省XX市xx区（县）时需要填入区(县)的ID，当然有些地方没有区或县可以直接填市级别的ID</font>
+	 **/
+	private $consignAreaId;
+	
+	/** 
+	 * 运费模板的名称，长度不能超过50个字节
+	 **/
+	private $name;
+	
+	/** 
+	 * 增费：输入0.00-999.99（最多包含两位小数）
+
+<br/><br/><font color=blue>增费必须小于等于首费，但是当首费为0时增费可以大于首费</font>
+
+
+<br/><br/><font color=red>输入的格式分号个数和template_types数量一致，逗号个数必须与template_dests以分号隔开之后一一对应的数量一致</font>
+	 **/
+	private $templateAddFees;
+	
+	/** 
+	 * 增费标准：当valuation(记价方式)为0时输入1-9999范围内的整数<br/><br/><font color=red>当valuation(记价方式)为1时输入0.1-9999.9范围内的小数只能包含以为小数（单位为千克）<br/><br/><font color=blue>当valuation(记价方式)为3时输入0.1-999.9范围内的数值，数值只能包含一位小数（单位为 立方米）
+<br/>
+<br/>
+<br/>
+
+<br><font color=red>输入的格式分号个数和template_types数量一致，逗号个数必须与template_dests以分号隔开之后一一对应的数量一致</font>
+	 **/
+	private $templateAddStandards;
+	
+	/** 
+>>>>>>> #develop update w8
 	 * 邮费子项涉及的地区.结构: value1;value2;value3,value4
 <br>如:1,110000;1,110000;1,310000;1,320000,330000。 aredId解释(1=全国,110000=北京,310000=上海,320000=江苏,330000=浙江)
 如果template_types设置为post;ems;exmpress;cod则表示为平邮(post)指定默认地区(全国)和北京地区的运费;其他的类似以分号区分一一对应

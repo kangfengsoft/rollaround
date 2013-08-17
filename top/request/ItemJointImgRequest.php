@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.item.joint.img request
@@ -34,6 +35,44 @@ class ItemJointImgRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.item.joint.img request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ItemJointImgRequest
+{
+	/** 
+	 * 商品图片id(如果是更新图片，则需要传该参数)
+	 **/
+	private $id;
+	
+	/** 
+	 * 上传的图片是否关联为商品主图
+	 **/
+	private $isMajor;
+	
+	/** 
+	 * 商品数字ID，必选
+	 **/
+	private $numIid;
+	
+	/** 
+	 * 图片URL,图片空间图片的相对地址
+	 **/
+	private $picPath;
+	
+	/** 
+	 * 图片序号
+	 **/
+	private $position;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

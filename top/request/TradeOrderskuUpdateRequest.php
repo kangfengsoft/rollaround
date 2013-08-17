@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.trade.ordersku.update request
@@ -24,6 +25,34 @@ class TradeOrderskuUpdateRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.trade.ordersku.update request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TradeOrderskuUpdateRequest
+{
+	/** 
+	 * 子订单编号（对于单笔订单的交易可以传交易编号）。
+	 **/
+	private $oid;
+	
+	/** 
+	 * 销售属性编号，可以通过taobao.item.skus.get获取订单对应的商品的所有销售属性。
+	 **/
+	private $skuId;
+	
+	/** 
+	 * 销售属性组合串，格式：p1:v1;p2:v2，如：1627207:28329;20509:28314。可以通过taobao.item.skus.get获取订单对应的商品的所有销售属性。
+	 **/
+	private $skuProps;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setOid($oid)
 	{
 		$this->oid = $oid;

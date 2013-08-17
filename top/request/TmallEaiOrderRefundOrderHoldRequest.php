@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.order.hold request
@@ -38,6 +39,48 @@ class TmallEaiOrderRefundOrderHoldRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: tmall.eai.order.refund.order.hold request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TmallEaiOrderRefundOrderHoldRequest
+{
+	/** 
+	 * 1. 截停成功
+2. 截停失败
+	 **/
+	private $holdResult;
+	
+	/** 
+	 * 截停环节
+1. 订单处理环节
+2. 发货环节
+	 **/
+	private $holdStep;
+	
+	/** 
+	 * 截单时间
+	 **/
+	private $holdTime;
+	
+	/** 
+	 * 退款单编号
+	 **/
+	private $refundId;
+	
+	/** 
+	 * 售中：onsale
+售后：aftersale
+	 **/
+	private $refundPhase;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setHoldResult($holdResult)
 	{
 		$this->holdResult = $holdResult;

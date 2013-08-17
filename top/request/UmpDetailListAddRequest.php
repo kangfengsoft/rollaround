@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.ump.detail.list.add request
@@ -19,6 +20,29 @@ class UmpDetailListAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.ump.detail.list.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class UmpDetailListAddRequest
+{
+	/** 
+	 * 营销活动id。
+	 **/
+	private $actId;
+	
+	/** 
+	 * 营销详情的列表。此列表由detail的json字符串组成。最多插入为10个。
+	 **/
+	private $details;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setActId($actId)
 	{
 		$this->actId = $actId;

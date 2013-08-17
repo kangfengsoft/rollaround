@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.rpt.adgroupnonsearchbase.get request
@@ -49,6 +50,59 @@ class SimbaRptAdgroupnonsearchbaseGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.rpt.adgroupnonsearchbase.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaRptAdgroupnonsearchbaseGetRequest
+{
+	/** 
+	 * 推广组id
+	 **/
+	private $adgroupId;
+	
+	/** 
+	 * 推广计划id
+	 **/
+	private $campaignId;
+	
+	/** 
+	 * 结束时间,格式为：yyyy-mm-dd
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 昵称
+	 **/
+	private $nick;
+	
+	/** 
+	 * 页码
+	 **/
+	private $pageNo;
+	
+	/** 
+	 * 每页大小
+	 **/
+	private $pageSize;
+	
+	/** 
+	 * 开始时间,格式为：yyyy-mm-dd
+	 **/
+	private $startTime;
+	
+	/** 
+	 * 权限校验参数
+	 **/
+	private $subwayToken;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAdgroupId($adgroupId)
 	{
 		$this->adgroupId = $adgroupId;

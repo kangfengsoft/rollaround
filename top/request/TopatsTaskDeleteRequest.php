@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.topats.task.delete request
@@ -14,6 +15,24 @@ class TopatsTaskDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.topats.task.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TopatsTaskDeleteRequest
+{
+	/** 
+	 * 需要取消的任务ID
+	 **/
+	private $taskId;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setTaskId($taskId)
 	{
 		$this->taskId = $taskId;

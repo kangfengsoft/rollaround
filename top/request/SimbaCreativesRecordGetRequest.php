@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.simba.creatives.record.get request
@@ -19,6 +20,29 @@ class SimbaCreativesRecordGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.simba.creatives.record.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class SimbaCreativesRecordGetRequest
+{
+	/** 
+	 * 创意Id数组，最多200个
+	 **/
+	private $creativeIds;
+	
+	/** 
+	 * 主人昵称
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setCreativeIds($creativeIds)
 	{
 		$this->creativeIds = $creativeIds;

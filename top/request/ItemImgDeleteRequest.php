@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.item.img.delete request
@@ -19,6 +20,29 @@ class ItemImgDeleteRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.item.img.delete request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class ItemImgDeleteRequest
+{
+	/** 
+	 * 商品图片ID
+	 **/
+	private $id;
+	
+	/** 
+	 * 商品数字ID，必选
+	 **/
+	private $numIid;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setId($id)
 	{
 		$this->id = $id;

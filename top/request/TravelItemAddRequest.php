@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.travel.item.add request
@@ -172,6 +173,182 @@ class TravelItemAddRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.travel.item.add request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TravelItemAddRequest
+{
+	/** 
+	 * 商品上传后的状态。可选值:onsale(出售中),instock(仓库中);默认值:onsale。
+	 **/
+	private $approveStatus;
+	
+	/** 
+	 * 商品的积分返点比例。如:5,表示:返点比例0.5%. 注意：返点比例必须是>0的整数.B商家在发布非虚拟商品时，这个字段必须设置，返点必须是 5的倍数，即0.5%的倍数。注意该字段值最高值不超过500，即50%。
+	 **/
+	private $auctionPoint;
+	
+	/** 
+	 * 商品所属类目ID。发布旅游线路商品有两个值：1(国内线路类目ID)，2(国际线路类目ID)。
+	 **/
+	private $cid;
+	
+	/** 
+	 * 宝贝所在地城市。如杭州 。可以通过http://dl.open.taobao.com/sdk/商品城市列表.rar查询 ，该字段为必填字段
+	 **/
+	private $city;
+	
+	/** 
+	 * 商品描述，不超过50000个字符。
+	 **/
+	private $desc;
+	
+	/** 
+	 * 最晚成团提前天数，最小0天，最大为180天。
+	 **/
+	private $duration;
+	
+	/** 
+	 * 费用包含，不超过1500个字符。
+	 **/
+	private $feeInclude;
+	
+	/** 
+	 * 费用不包，不超过1500个字符。
+	 **/
+	private $feeNotInclude;
+	
+	/** 
+	 * 支持会员打折。可选值:true,false;默认值:false(不打折)。
+	 **/
+	private $hasDiscount;
+	
+	/** 
+	 * 是否有发票。可选值:true,false (商城卖家此字段必须为true);默认值:false(无发票)。
+	 **/
+	private $hasInvoice;
+	
+	/** 
+	 * 橱窗推荐。可选值:true,false;默认值:false(不推荐)，B商家不用设置该字段，均为true。
+	 **/
+	private $hasShowcase;
+	
+	/** 
+	 * 商品主图。类型:JPG,GIF;最大长度:500k，支持的文件类型：gif,jpg,jpeg,png。
+	 **/
+	private $image;
+	
+	/** 
+	 * 是否为铁定出游商品的参数
+设置为true，那么该商品为铁定出游商品；
+设置为false，那么该商品为非铁定出游商品。
+默认为false
+	 **/
+	private $isTdcy;
+	
+	/** 
+	 * 定时上架时间。(时间格式：yyyy-MM-dd HH:mm:ss)。
+	 **/
+	private $listTime;
+	
+	/** 
+	 * 商品库存。如果发布旅游度假线路宝贝，该字段可以忽略。
+	 **/
+	private $num;
+	
+	/** 
+	 * 预定须知，不超过1500个字符。
+	 **/
+	private $orderInfo;
+	
+	/** 
+	 * 商家的外部编码，最大为512字节。
+	 **/
+	private $outerId;
+	
+	/** 
+	 * 商品主图需要关联的图片空间的相对url。这个url所对应的图片必须要属于当前用户。pic_path和image只需要传入一个,如果两个都传，默认选择pic_path。
+	 **/
+	private $picPath;
+	
+	/** 
+	 * 玩法描述，已经废弃，不用填写。
+	 **/
+	private $playDesc;
+	
+	/** 
+	 * 线路玩法id，已经废弃，不用填写。
+	 **/
+	private $playId;
+	
+	/** 
+	 * 商品一口价,以“分”为单位。如果发布旅游度假线路的宝贝，该字段可以忽略。
+	 **/
+	private $price;
+	
+	/** 
+	 * Json串，价格日历信息（针对旅游度假线路的销售属性），定义了2012年6月8号成人价，儿童价，单房差均为10元，库存为100的日历价格。price_calendar属性中一个{}中表示1天的价格日历信息，可以最多输入90天的价格日历，最小和最大日期不能跨度超过90天。其中，"man_num"：成人名额； "man_price"：成人价格，以分为单位；"child_num"：儿童名额；"child_price"：儿童价格，以分为单位；"diff_price"：单人房差，以分为单位。
+	 **/
+	private $priceCalendar;
+	
+	/** 
+	 * 商品属性列表。格式为：pid:vid;pid:vid。例如发布度假线路商品，那么这里就需要填写：出发地属性id:城市id;目的地市属性id:目的地市id;……等等。
+	 **/
+	private $props;
+	
+	/** 
+	 * 宝贝所在地省份。如浙江，具体可以下载http://dl.open.taobao.com/sdk/商品城市列表.rar 取到，该字段为必填字段
+	 **/
+	private $prov;
+	
+	/** 
+	 * 退改规定，不超过1500个字符。
+	 **/
+	private $refundRegulation;
+	
+	/** 
+	 * 商品秒杀三个值：可选类型web_only(只能通过web网络秒杀)，wap_only(只能通过wap网络秒杀)，web_and_wap(既能通过web秒杀也能通过wap秒杀)。
+	 **/
+	private $secondKill;
+	
+	/** 
+	 * 关联商品与店铺类目，结构:",cid1,cid2,...,"，如果店铺类目存在二级类目，必须传入子类目cids。
+	 **/
+	private $sellerCids;
+	
+	/** 
+	 * sku销售属性串对应的价格，精确到分，每一个属性串都会对应一个价格，单位为分。sku_prices的数组大小应该和sku_properties的数组大小一致。如果发布线路的商品，该字段可以忽略。
+	 **/
+	private $skuPrices;
+	
+	/** 
+	 * sku销售属性串，调用taobao.travel.itemprops.get接口获取商品销售属性code，然后拼接成pid:vid;pid:vid格式。如果发布线路的商品，该字段可以忽略。
+	 **/
+	private $skuProperties;
+	
+	/** 
+	 * sku销售属性串对应的库存，每一个属性串都会对应一个库存，显然sku_quantities的数组大小应该和sku_properties的数组大小一致。如果发布线路的商品，该字段可以忽略。
+	 **/
+	private $skuQuantities;
+	
+	/** 
+	 * 商品是否支持拍下减库存:1支持;2取消支持(付款减库存);0(默认)不更改，集市卖家默认拍下减库存;商城卖家默认付款减库存。
+	 **/
+	private $subStock;
+	
+	/** 
+	 * 商品标题。不能超过60个字节或者30个汉字
+	 **/
+	private $title;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setApproveStatus($approveStatus)
 	{
 		$this->approveStatus = $approveStatus;

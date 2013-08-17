@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: tmall.eai.order.refund.billsum.get request
@@ -29,6 +30,39 @@ class TmallEaiOrderRefundBillsumGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: tmall.eai.order.refund.billsum.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class TmallEaiOrderRefundBillsumGetRequest
+{
+	/** 
+	 * 查找数量的单据类型 refund_bill:退款单， return_bill:退货单
+	 **/
+	private $billType;
+	
+	/** 
+	 * 批量查询结束时间
+	 **/
+	private $endTime;
+	
+	/** 
+	 * 批量查询开始时间
+	 **/
+	private $startTime;
+	
+	/** 
+	 * 退货单 退款单状态
+	 **/
+	private $status;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setBillType($billType)
 	{
 		$this->billType = $billType;

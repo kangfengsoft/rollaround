@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.inventory.authorize.get request
@@ -24,6 +25,34 @@ class InventoryAuthorizeGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.inventory.authorize.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class InventoryAuthorizeGetRequest
+{
+	/** 
+	 * 库存分配授权结果码
+	 **/
+	private $authorizeCode;
+	
+	/** 
+	 * sc_item_id商品后端id
+	 **/
+	private $scItemId;
+	
+	/** 
+	 * 分配用户列表，多个用户使用“,“分割开
+	 **/
+	private $userNickList;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setAuthorizeCode($authorizeCode)
 	{
 		$this->authorizeCode = $authorizeCode;

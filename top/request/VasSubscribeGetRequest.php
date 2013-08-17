@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * TOP API: taobao.vas.subscribe.get request
@@ -19,6 +20,29 @@ class VasSubscribeGetRequest
 	
 	private $apiParas = array();
 	
+=======
+<?php
+/**
+ * TOP API: taobao.vas.subscribe.get request
+ * 
+ * @author auto create
+ * @since 1.0, 2013-08-16 12:49:12
+ */
+class VasSubscribeGetRequest
+{
+	/** 
+	 * 应用收费代码，从合作伙伴后台（my.open.taobao.com）-收费管理-收费项目列表 能够获得该应用的收费代码
+	 **/
+	private $articleCode;
+	
+	/** 
+	 * 淘宝会员名
+	 **/
+	private $nick;
+	
+	private $apiParas = array();
+	
+>>>>>>> #develop update w8
 	public function setArticleCode($articleCode)
 	{
 		$this->articleCode = $articleCode;
