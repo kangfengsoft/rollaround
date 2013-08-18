@@ -46,7 +46,7 @@
 
 <!--inline styles if any-->
 
-
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
 
 
@@ -69,10 +69,6 @@
 
 			<!--basic scripts-->
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script type="text/javascript">
-			window.jQuery || document.write("<script src='<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.min.js'>"+"<"+"/script>");
-		</script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.ui.touch-punch.min.js"></script>

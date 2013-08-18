@@ -24,7 +24,7 @@
 		</div>
 		<!--#nav-search-->
 	</div>
-	<div id="content">
+	<div id="page-content" class="clearfix">
 		<?php echo $content; ?>
 	</div>
 	<!-- content -->
