@@ -1,4 +1,6 @@
 <?php
+//require top sdk
+// require_once("TopSdk.php");
 
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/../yii/framework/yii.php';

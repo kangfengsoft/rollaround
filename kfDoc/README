@@ -1,0 +1,24 @@
+沙盒用户
+sandbox_flk 
+123456
+
+
+使用taobao-sdk-php和Yii framework开发应用的配置方法
+         本来一直做Java，但是在搞Top云服务配置的时候，遇到各种各样的问题（是我自己不熟悉Linux以及apache的配置）。现学PHP开发简单的淘宝客应用，先花了一点时间研究了一下sdk自带的lotusphp框架，感觉简单明了。本来打算就使用它了，但g了一下，资料太少，由于是第一用php做项目，怕会遇到一些莫名其妙的问题，最后选择了资料比较丰富的Yii framework，在此记录自己开发的配置过程。
+         1、创建yii web项目（修改protected/runtime目录的权限为777）；
+         2、在protected目录下创建apis目录；
+         3、将php sdk解压后的lotusphp_runtime和top目录拷贝到apis目录中；
+         4、在TopClient.php文件中添加TaobaoSdk工作目录的定义（定义到protected/runtime/top目录）；
+                    define("TOP_SDK_WORK_DIR", Yii::app()->runtimePath . '/top/');
+         5、修改lotusphp_runtime/Logger/Logger.php为LtLogger.php（yii自动导入功能是根据类名来查找文件）；
+         6、在主配置文件protected/config/main.php中增加自动导入路径；
+                    'import'=>array(
+                           'application.models.*',
+                           'application.components.*',
+                           'application.apis.top.*',
+                           'application.apis.top.request.*',
+                           'application.apis.lotusphp_runtime.Logger.*',
+                    ),
+         7、在protected/components目录下新建TopService.php文件，编写使用TaobaoSdk进行业务处理的TopService类（所有使
+               用Taobao API的业务都放在这个类中）；
+        这样就算配置完成了，接下来就可以专注于业务开发。

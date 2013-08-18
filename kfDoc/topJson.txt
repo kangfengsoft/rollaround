@@ -1,0 +1,14 @@
+access tokeon json
+{
+"w2_expires_in":1800,
+"taobao_user_id":"3600303259",
+"taobao_user_nick":"sandbox_flk",
+"w1_expires_in":12960000,
+"re_expires_in":15552000,
+"r2_expires_in":259200,
+"expires_in":12960000,
+"token_type":"Bearer",
+"refresh_token":"6202614e8e1c321e1e829ceg370235d124d6e1a921fd0633600303259",
+"access_token":"6202814da31139ed4216b2ZZ8553df1626acbb12d61e3363600303259",
+"r1_expires_in":12960000
+}

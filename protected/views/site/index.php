@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 		'Index',
 );
 ?>
-
 <div class="span7 infobox-container">
+	<a href="?r=shelf/getAll" class="btn btn-large btn-primary">get good number demo</a>
 	<div class="infobox infobox-green  ">
 		<div class="infobox-icon">
 			<i class="icon-comments"></i>

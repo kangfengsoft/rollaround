@@ -56,11 +56,14 @@ class Controller extends CController {
 			$identity = new UserIdentity ( 'demo', 'demo' );
 			$identity->setToken ( $token );
 			Yii::app ()->user->login ( $identity );
-			header ( 'Location: ' . Yii::app ()->params ['redirect_uri'] );
+			$this->redirect ( $this->createUrl ( "site/index" ) );
+// 			header ( 'Location: ' . Yii::app ()->params ['redirect_uri'] );
+// 			$connection=Yii::app()->db;
 		} else {
 			$this->redirect ( $this->createUrl ( "site/login" ) );
 		}
 	}
+	
 	
 	// POST请求函数
 	public function curl($url, $postFields = null) {

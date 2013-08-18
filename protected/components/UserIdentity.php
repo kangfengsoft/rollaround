@@ -31,8 +31,21 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;
 	}
 	
-	public function setToken($token){
-		$this->setState('access_token', $token->access_token);
-		$this->setState('nick', $token->taobao_user_nick);
+	public function setToken($token) {
+		$this->setState ( 'access_token', $token->access_token );
+		$this->setState ( 'nick', $token->taobao_user_nick );
+		$this->setState ( 'json', json_encode ( $token ) );
+		// save date in database
+		$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+				':taobao_user_id' => $token->taobao_user_id 
+		) );
+		if ($user == null) {
+			$user = new User ();
+			$user->taobao_user_id = $token->taobao_user_id;
+			$user->taobao_user_nick = $token->taobao_user_nick;
+			$user->access_token = $token->access_token;
+			$user->refresh_token = $token->refresh_token;
+			$user->save ();
+		}
 	}
 }

@@ -5,9 +5,10 @@ class TopClient
 
 	public $secretKey;
 
-	public $gatewayUrl = "http://gw.api.taobao.com/router/rest";
+	public $gatewayUrl = "http://gw.api.tbsandbox.com/router/rest";
 
-	public $format = "xml";
+	//public $format = "xml";
+	public $format = "json";
 
 	/** 是否打开入参check**/
 	public $checkRequest = true;

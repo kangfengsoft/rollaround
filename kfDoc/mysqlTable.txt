@@ -1,0 +1,7 @@
+CREATE TABLE user (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
+    taobao_user_nick varchar(100) NOT NULL,
+    access_token varchar(100) NOT NULL,
+    refresh_token varchar(100) NOT NULL
+)CHARSET=utf8;
