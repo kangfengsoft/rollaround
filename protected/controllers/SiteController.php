@@ -100,7 +100,7 @@ class SiteController extends Controller
 // 		$this->render('login',array('model'=>$model));
 // 	}
 	public function actionLogin(){
-		$this->render('index',array('loginFirst'=>true));
+		$this->render('index');
 	}
 
 	/**

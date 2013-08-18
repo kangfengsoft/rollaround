@@ -167,7 +167,7 @@
 						<i class="icon-caret-down"></i>
 					</a>
 				<?php }else{?>
-					<a href="https://oauth.tbsandbox.com/authorize?response_type=code&client_id=1021594899&redirect_uri=http://127.0.0.1/kfsoft/index.php&state=1">login first</a>
+					<a href="<?php echo Yii::app()->params['oauthAuthorizeUrl']?>">login first</a>
 				<?php }?>
 					<ul
 						class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer"
