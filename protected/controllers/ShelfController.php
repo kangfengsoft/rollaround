@@ -3,7 +3,6 @@ class ShelfController extends Controller {
 	/**
 	 * Declares class-based actions.
 	 */
-	public $layout = '//layouts/column2';
 	public function actionGetGoodNum() {
 		// 实例化TopClient类
 		$c = new TopClient ();
