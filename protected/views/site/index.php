@@ -5,9 +5,10 @@ $this->breadcrumbs=array(
 		'Index',
 );
 ?>
-
 <div class="row-fluid">
 	<div class="span10 infobox-container">
+		<a href="?r=shelf/getGoodNum" class="btn btn-large btn-primary">get good number demo</a>
+		<a href="?r=shelf/getOnsaleGoods" class="btn btn-large btn-primary">get onsale goods</a>
 		<div class="infobox infobox-green  ">
 			<div class="infobox-icon">
 				<i class="icon-comments"></i>
