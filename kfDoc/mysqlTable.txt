@@ -6,8 +6,13 @@ CREATE TABLE user (
     refresh_token varchar(100) NOT NULL
 )CHARSET=utf8;
 
-
-
+CREATE TABLE shelf_strategy (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    uid int NOT NULL,
+    dayIndex int NOT NULL,
+    distribution text  NOT NULL,
+    number int DEFAULT -1
+)CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `adminuser` (
   `id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,

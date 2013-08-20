@@ -3,6 +3,7 @@ class ShelfController extends Controller {
 	/**
 	 * Declares class-based actions.
 	 */
+	public $layout = '//layouts/column2';
 	public function actionGetGoodNum() {
 		// 实例化TopClient类
 		$c = new TopClient ();
@@ -19,6 +20,9 @@ class ShelfController extends Controller {
 		) );
 	}
 	public function actionGetOnsaleGoods() {
+		$shelfService = new ShelfService();
+		$result = $shelfService->getDayStrategy();
+		
 		$c = new TopClient ();
 		$c->appkey = Yii::app ()->params ['client_id'];
 		$c->secretKey = Yii::app ()->params ['client_secret'];
