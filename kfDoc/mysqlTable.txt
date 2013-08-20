@@ -5,3 +5,12 @@ CREATE TABLE user (
     access_token varchar(100) NOT NULL,
     refresh_token varchar(100) NOT NULL
 )CHARSET=utf8;
+
+
+CREATE TABLE shelf_strategy (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    uid int NOT NULL,
+    dayIndex int NOT NULL,
+    distribution text  NOT NULL,
+    number text NOT NULL
+)CHARSET=utf8;
