@@ -27,7 +27,7 @@ class Controller extends CController
     public function filters()
     {
         return array(
-            'accessControl', // perform access control for CRUD operations
+            'accessControl - login', // perform access control for CRUD operations
         );
     }
 
