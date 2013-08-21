@@ -8,7 +8,11 @@ $this->breadcrumbs=array(
 	'Login',
 );
 ?>
-
+<div class="row-fluid">
+	<div class="span10 infobox-container">
+		<a href="<?php echo Yii::app()->params['oauthAuthorizeUrl']?>" class="btn btn-large btn-primary">请登录</a>
+	</div>
+</div>
 <div class="span5">
 								<div class="widget-box transparent">
 									<div class="widget-header widget-header-flat">

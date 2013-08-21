@@ -6,24 +6,26 @@ class ShelfService {
 	/*
 	 * if $day = -1, return current day's data
 	 */
-	public function getDayStrategy($day = -1) {
-		if ($day == - 1) {
+	public function getDayStrategy($uid = null, $day = null) {
+		if ($day == null) {
 			$day = date ( "w" );
 		}
+		if($uid == null){
+			$uid = Yii::app ()->user->id;
+		}
 		$shelfStrategy = ShelfStrategy::model ()->find ( 'uid=:uid and dayIndex=:dayIndex', array (
-				':uid' => Yii::app ()->user->id,
+				':uid' => $uid,
 				':dayIndex' => $day 
 		) );
+		$dayShelfStrategy = null;
 		if ($shelfStrategy == null) {
 			$weekShelfStrategy = new WeekShelfStrategy();
-			$weekShelfStrategy->generateDefaultStrategy();
-			$shelfStrategy = $weekShelfStrategy->getDayShelfStrategy();
+			$weekShelfStrategy->createDefaultStrategy();
+			$dayShelfStrategy = $weekShelfStrategy->getDayShelfStrategy($day);
+		}else{
+			$dayShelfStrategy = new DayShelfStrategy($shelfStrategy);
 		}
-		return $shelfStrategy;
-	}
-
-	private function saveDefaultStrategy(){
-		
+		return $dayShelfStrategy;
 	}
 }
 ?>
