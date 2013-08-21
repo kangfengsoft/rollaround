@@ -101,12 +101,66 @@ $this->breadcrumbs=array(
 <div class="hr hr32 hr-dotted"></div>
 
 <div class="row-fluid">
+	<div class="widget-box transparent">
+		<div class="widget-header widget-header-flat">
+			<h4>上架策略</h4>
+
+			<div class="widget-toolbar">
+				
+			</div>
+		</div>
 	<div class="widget-body">
 		<div class="widget-main padding-4">
 			<div id="sales-charts"></div>
 		</div><!--/widget-main-->
 	</div><!--/widget-body-->
 </div>
+
+<hr>
+
+<div class="row-fluid">
+	<div class="widget-box">
+		<div class="widget-header widget-header-flat">
+			<h4>上架设置</h4>
+
+			<div class="widget-toolbar">
+				
+			</div>
+		</div>
+
+		<div class="widget-body">
+			<div class="widget-main">
+				<label>
+					<small class="green">
+						<b>未启动</b>
+					</small>
+
+					<input id="id-check-horizontal" type="checkbox" class="ace-switch ace-switch-6" />
+					<span class="lbl" for="id-check-horizontal"></span>
+				</label>
+				
+				<hr>
+				
+					<ul id="tasks" class="item-list">
+						<li class="item-grey">
+							<label class="inline">
+								<input type="checkbox" />
+								<span class="lbl"> Adding new skins</span>
+							</label>
+						</li>
+
+						<li class="item-green">
+							<label class="inline">
+								<input type="checkbox" />
+								<span class="lbl"> Updating server software up</span>
+							</label>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 
 <script type="text/javascript">
