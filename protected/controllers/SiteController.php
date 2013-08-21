@@ -30,7 +30,11 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$shelfService = new ShelfService ();
+		$dayShelfStrategy = $shelfService->getDayStrategy ();
+		$this->render ( 'index', array (
+				"distribution" => json_encode($dayShelfStrategy->getDistribution())
+		) );
 	}
 
 	/**
@@ -99,7 +103,8 @@ class SiteController extends Controller
 // 		$this->render('login',array('model'=>$model));
 // 	}
 	public function actionLogin(){
-		$this->render('index');
+// 		$this->render('index');
+		$this->render('login');
 	}
 
 	/**

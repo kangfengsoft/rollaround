@@ -15,7 +15,7 @@ return array(
 	// autoloading model and component classes
 	'import' => array (
 				'application.models.*',
-				'application.models.modelsMemory*',
+				'application.models.modelsMemory.*',
 				'application.components.*',
 				'application.service.*',
 				'application.apis.top.*',

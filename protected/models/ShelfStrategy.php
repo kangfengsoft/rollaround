@@ -8,7 +8,7 @@
  * @property integer $uid
  * @property integer $dayIndex
  * @property string $distribution
- * @property string $number
+ * @property integer $number
  */
 class ShelfStrategy extends CActiveRecord
 {
@@ -38,8 +38,8 @@ class ShelfStrategy extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('uid, dayIndex, distribution, number', 'required'),
-			array('uid, dayIndex', 'numerical', 'integerOnly'=>true),
+			array('uid, dayIndex, distribution', 'required'),
+			array('uid, dayIndex, number', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, uid, dayIndex, distribution, number', 'safe', 'on'=>'search'),
@@ -86,7 +86,7 @@ class ShelfStrategy extends CActiveRecord
 		$criteria->compare('uid',$this->uid);
 		$criteria->compare('dayIndex',$this->dayIndex);
 		$criteria->compare('distribution',$this->distribution,true);
-		$criteria->compare('number',$this->number,true);
+		$criteria->compare('number',$this->number);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

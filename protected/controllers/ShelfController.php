@@ -20,9 +20,6 @@ class ShelfController extends Controller {
 		) );
 	}
 	public function actionGetOnsaleGoods() {
-		$shelfService = new ShelfService();
-		$result = $shelfService->getDayStrategy();
-		
 		$c = new TopClient ();
 		$c->appkey = Yii::app ()->params ['client_id'];
 		$c->secretKey = Yii::app ()->params ['client_secret'];

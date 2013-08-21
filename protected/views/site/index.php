@@ -162,14 +162,16 @@ $this->breadcrumbs=array(
 </div>
 
 
-
+<span id="dayShelfStrategy" class="hide"><?php echo $distribution?></span>
 <script type="text/javascript">
 		$(document).ready(function () {							
 			 var data = [];
 		        var dataset = [{ label: "各时间段上架分布", data: data, color: "#5482FF" }];
 		        var ticks = [];
+		        var tmpData = eval($("#dayShelfStrategy").text());
 		        for(var i=0; i<24; i++){
-			        data.push([i, i*2]);
+// 			        data.push([i, i*2]);
+		        	data.push([i, tmpData[i]]);
 					ticks.push([i, i+"点"]);
 			        }
 		 

@@ -1,12 +1,21 @@
 <?php
 class DayShelfStrategy {
-	// function __construct($shelfStrategy) {
-	// $tmp = $shelfStrategy->distribution;
-	// }
-	private $day;
-	private $distribution;
-	public function set($day) {
-		$this->day = $day;
+	private $SEP = ",";
+	private $id;
+	private $uid;
+	private $dayIndex;
+	private $distribution = array ();
+	function __construct($shelfStrategy) {
+		$this->id = $shelfStrategy->id;
+		$this->uid = $shelfStrategy->uid;
+		$this->dayIndex = $shelfStrategy->dayIndex;
+		$this->distribution = explode ( ",", $shelfStrategy->distribution );
+		foreach($this->distribution as $key => $value){
+			$this->distribution[$key] = floatval($this->distribution[$key]);
+		}
+	}
+	public function set($dayIndex) {
+		$this->dayIndex = $dayIndex;
 	}
 	
 	// [start, end)
@@ -15,25 +24,18 @@ class DayShelfStrategy {
 			$this->distribution [$i] = $percent;
 		}
 	}
-	public function finish() {
-		$sum = 0;
-		$count = 0;
-		for($i = 0; $i < 24; $i ++) {
-			if ($this->distribution [$i] != null) {
-				$sum += $this->distribution [$i];
-				$count ++;
-			}
-		}
-		if ($sum > 1 || ($count == 24 && $sum < 1)) {
-			throw new Exception ( "total setted percent is bigger then 100%" );
-		}
-		
-		$remainAvgPercent = (1 - $sum) / (24 - $count);
-		for($i = 0; $i < 24; $i ++) {
-			if ($this->distribution [$i] == null) {
-				$this->distribution [$i] = $remainAvgPercent;
-			}
-		}
+	public function setUid($uid) {
+		$this->uid = $uid;
+	}
+	public function getDistribution() {
+		return $this->distribution;
+	}
+	public function toShelfStrategy() {
+		$shelfStrategy = new ShelfStrategy ();
+		$shelfStrategy->uid = $this->uid;
+		$shelfStrategy->dayIndex = $this->dayIndex;
+		$shelfStrategy->distribution = join ( $this->SEP, $this->distribution );
+		return $shelfStrategy;
 	}
 }
 ?>

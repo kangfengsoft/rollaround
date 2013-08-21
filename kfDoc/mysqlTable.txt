@@ -11,7 +11,7 @@ CREATE TABLE shelf_strategy (
     uid int NOT NULL,
     dayIndex int NOT NULL,
     distribution text  NOT NULL,
-    number int DEFAULT -1
+    number int
 )CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `adminuser` (
