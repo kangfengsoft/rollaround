@@ -10,7 +10,7 @@ class ShelfService {
 		if ($day == null) {
 			$day = date ( "w" );
 		}
-		if($uid == null){
+		if ($uid == null) {
 			$uid = Yii::app ()->user->id;
 		}
 		$shelfStrategy = ShelfStrategy::model ()->find ( 'uid=:uid and dayIndex=:dayIndex', array (
@@ -19,11 +19,11 @@ class ShelfService {
 		) );
 		$dayShelfStrategy = null;
 		if ($shelfStrategy == null) {
-			$weekShelfStrategy = new WeekShelfStrategy();
-			$weekShelfStrategy->createDefaultStrategy();
-			$dayShelfStrategy = $weekShelfStrategy->getDayShelfStrategy($day);
-		}else{
-			$dayShelfStrategy = new DayShelfStrategy($shelfStrategy);
+			$weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy($uid);
+			$weekShelfStrategy->saveToDB();
+			$dayShelfStrategy = $weekShelfStrategy->getDayShelfStrategy ( $day );
+		} else {
+			$dayShelfStrategy = new DayShelfStrategy ( $shelfStrategy );
 		}
 		return $dayShelfStrategy;
 	}

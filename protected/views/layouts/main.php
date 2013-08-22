@@ -85,7 +85,5 @@
 
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/w8-elements.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/w8.min.js"></script>
-	
-	
 </body>
 </html>
