@@ -106,6 +106,16 @@ class SiteController extends Controller
 // 		$this->render('index');
 		$this->render('login');
 	}
+	
+	/** 
+	 * 展示自定义策略
+	 * 
+	 * 
+	 * */
+	public function actionCustom(){
+		// 		$this->render('index');
+		$this->render('custom');
+	}
 
 	/**
 	 * Logs out the current user and redirect to homepage.

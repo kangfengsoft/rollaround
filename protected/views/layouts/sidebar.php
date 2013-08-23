@@ -38,7 +38,7 @@
 					'submenuOptions'=>array('class'=>'submenu'),
 						'items'=>array(
 							array('label'=>'<i class="icon-double-angle-right"></i>上架总控制台', 'url'=>array('site/index','id'=>'12')),
-							array('label'=>'<i class="icon-double-angle-right"></i>自定义上架', 'url'=>array('site/login','id'=>'13')),
+							array('label'=>'<i class="icon-double-angle-right"></i>自定义上架', 'url'=>array('site/custom','id'=>'13')),
 							array('label'=>'<i class="icon-double-angle-right"></i>上架日志记录', 'url'=>array('site/login','id'=>'14'))
 			
 					)),

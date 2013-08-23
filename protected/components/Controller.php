@@ -27,7 +27,7 @@ class Controller extends CController {
 	// can we put it in concrete controller?
 	public function filters() {
 		return array (
-				'accessControl - login' 
+				'accessControl' 
 		);
 	}
 	
@@ -60,7 +60,8 @@ class Controller extends CController {
 // 			header ( 'Location: ' . Yii::app ()->params ['redirect_uri'] );
 // 			$connection=Yii::app()->db;
 		} else {
-			$this->redirect ( $this->createUrl ( "site/login" ) );
+			//$this->redirect ( $this->createUrl ( "site/login" ) );
+			$this->redirect ( Yii::app()->params['oauthAuthorizeUrl']);
 		}
 	}
 	
