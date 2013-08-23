@@ -103,7 +103,9 @@ class SiteController extends Controller
 // 		$this->render('login',array('model'=>$model));
 // 	}
 	public function actionLogin(){
-// 		$this->render('index');
+	if (! Yii::app ()->user->isGuest) {
+			$this->redirect ( $this->createUrl ( "site/index" ) );
+		}
 		$this->render('login');
 	}
 	

@@ -11,7 +11,7 @@ CREATE TABLE user (
     w2_expires_in datetime,
     re_expires_in datetime,
     refresh_token varchar(100) NOT NULL,
-    create_time datetime NOT NULL
+    create_time timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 )CHARSET=utf8;
 
 CREATE TABLE shelf_strategy (

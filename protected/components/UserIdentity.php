@@ -36,17 +36,27 @@ class UserIdentity extends CUserIdentity {
 		) );
 		if ($user == null) {
 			$user = new User ();
-			$user->taobao_user_id = $token->taobao_user_id;
-			$user->taobao_user_nick = $token->taobao_user_nick;
-			$user->sub_taobao_user_id = isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : null;
-			$user->sub_taobao_user_nick = isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : null;
-			$user->access_token = $token->access_token;
-			$user->refresh_token = $token->refresh_token;
-			$user->save ();
 		}
+		$user->taobao_user_id = $token->taobao_user_id;
+		$user->taobao_user_nick = $token->taobao_user_nick;
+		$user->sub_taobao_user_id = isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : null;
+		$user->sub_taobao_user_nick = isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : null;
+		$user->access_token = $token->access_token;
+		$user->refresh_token = $token->refresh_token;
+		$user->r1_expires_in = date ( 'Y-m-d H:i:s', time () + $token->r1_expires_in );
+		$user->r2_expires_in = date ( 'Y-m-d H:i:s', time () + $token->r2_expires_in );
+		$user->w1_expires_in = date ( 'Y-m-d H:i:s', time () + $token->w1_expires_in );
+		$user->w2_expires_in = date ( 'Y-m-d H:i:s', time () + $token->w2_expires_in );
+		$user->re_expires_in = date ( 'Y-m-d H:i:s', time () + $token->re_expires_in );
+		// $user->create_time = new CDbExpression ( 'NOW()' );
+		$user->create_time = date ( 'Y-m-d H:i:s', time () );
+		
+		if (! $user->save ()) {
+			throw new Exception ( $user->getErrors () );
+		}
+		
 		$this->setState ( 'id', $user->id );
 		$this->setState ( 'access_token', $token->access_token );
 		$this->setState ( 'nick', isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : $token->taobao_user_nick );
-		$this->setState ( 'json', json_encode ( $token ) );
 	}
 }

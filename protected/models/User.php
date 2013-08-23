@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "User".
+ * This is the model class for table "user".
  *
- * The followings are the available columns in table 'User':
+ * The followings are the available columns in table 'user':
  * @property integer $id
  * @property string $taobao_user_id
  * @property string $taobao_user_nick
@@ -35,7 +35,7 @@ class User extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'User';
+		return 'user';
 	}
 
 	/**
@@ -46,9 +46,9 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('taobao_user_id, taobao_user_nick, access_token, refresh_token, create_time', 'required'),
+			array('taobao_user_id, taobao_user_nick, access_token, refresh_token', 'required'),
 			array('taobao_user_id, taobao_user_nick, sub_taobao_user_id, sub_taobao_user_nick, access_token, refresh_token', 'length', 'max'=>100),
-			array('r1_expires_in, r2_expires_in, w1_expires_in, w2_expires_in, re_expires_in', 'safe'),
+			array('r1_expires_in, r2_expires_in, w1_expires_in, w2_expires_in, re_expires_in, create_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, taobao_user_id, taobao_user_nick, sub_taobao_user_id, sub_taobao_user_nick, access_token, r1_expires_in, r2_expires_in, w1_expires_in, w2_expires_in, re_expires_in, refresh_token, create_time', 'safe', 'on'=>'search'),
