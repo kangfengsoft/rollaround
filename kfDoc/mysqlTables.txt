@@ -1,0 +1,42 @@
+CREATE TABLE user (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
+    taobao_user_nick varchar(100) NOT NULL,
+    sub_taobao_user_id varchar(100),
+    sub_taobao_user_nick varchar(100),
+    access_token varchar(100) NOT NULL,
+    r1_expires_in datetime,
+    r2_expires_in datetime,
+    w1_expires_in datetime,
+    w2_expires_in datetime,
+    re_expires_in datetime,
+    refresh_token varchar(100) NOT NULL,
+    create_time datetime NOT NULL
+)CHARSET=utf8;
+
+CREATE TABLE shelf_strategy (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    uid int NOT NULL,
+    dayIndex int NOT NULL,
+    distribution text  NOT NULL,
+    number int
+)CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `adminuser` (
+  `id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `profile` varchar(50) NOT NULL
+)CHARSET=utf8;
+
+//默认用户是demo/demo
+
+INSERT INTO `adminuser` (`id`, `username`, `password`, `email`, `profile`) VALUES
+(0, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', '', '');
+
+CREATE TABLE user_config (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
+    create_time datetime NOT NULL
+)CHARSET=utf8;
