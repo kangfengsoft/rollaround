@@ -2,11 +2,11 @@ $(document).ready(function () {
 	var data = [];
     var dataset = [{ label: "各时间段上架分布", data: data, color: "#5482FF" }];
     var ticks = [];
-    var distribution = JSON.parse($("#dayShelfStrategy").text());
+    var weekShelfStrategy = JSON.parse($("#weekShelfStrategy").text());
     for(var i=0; i<24; i++){
-    	data.push([i, distribution[i]*100]);
+    	data.push([i, weekShelfStrategy.dayShelfStrategyList[weekShelfStrategy.currentDay].distribution[i]*100]);
 		ticks.push([i, i+"点"]);
-	        }
+	}
  
         var options = {
             series: {

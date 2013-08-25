@@ -162,5 +162,5 @@ $this->breadcrumbs=array(
 		</div>
 	</div>
 </div>
-<span id="dayShelfStrategy" class="hide"><?php echo $distribution?></span>
+<span id="weekShelfStrategy" class="hide"><?php echo $distribution?></span>
 

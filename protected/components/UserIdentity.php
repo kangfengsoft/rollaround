@@ -56,6 +56,7 @@ class UserIdentity extends CUserIdentity {
 		}
 		
 		$this->setState ( 'id', $user->id );
+		$this->setState ( 'taobao_user_id', $token->taobao_user_id );
 		$this->setState ( 'access_token', $token->access_token );
 		$this->setState ( 'nick', isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : $token->taobao_user_nick );
 	}

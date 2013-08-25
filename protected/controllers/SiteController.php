@@ -31,9 +31,9 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$shelfService = new ShelfService ();
-		$dayShelfStrategy = $shelfService->getDayStrategy ();
+		$weekShelfStrategy = $shelfService->getWeekShelfStrategy();
 		$this->render ( 'index', array (
-				"distribution" => json_encode($dayShelfStrategy->getDistribution())
+				"distribution" => json_encode($weekShelfStrategy)
 		) );
 	}
 

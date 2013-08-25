@@ -5,8 +5,8 @@
  *
  * The followings are the available columns in table 'shelf_strategy':
  * @property integer $id
- * @property integer $uid
- * @property integer $dayIndex
+ * @property integer $taobao_user_id
+ * @property integer $day
  * @property string $distribution
  * @property integer $number
  */
@@ -38,11 +38,11 @@ class ShelfStrategy extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('uid, dayIndex, distribution', 'required'),
-			array('uid, dayIndex, number', 'numerical', 'integerOnly'=>true),
+			array('taobao_user_id, day, distribution', 'required'),
+			array('taobao_user_id, day, number', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, uid, dayIndex, distribution, number', 'safe', 'on'=>'search'),
+			array('id, taobao_user_id, day, distribution, number', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,8 +64,8 @@ class ShelfStrategy extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'uid' => 'Uid',
-			'dayIndex' => 'Day Index',
+			'taobao_user_id' => 'Taobao User',
+			'day' => 'Day',
 			'distribution' => 'Distribution',
 			'number' => 'Number',
 		);
@@ -83,8 +83,8 @@ class ShelfStrategy extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('uid',$this->uid);
-		$criteria->compare('dayIndex',$this->dayIndex);
+		$criteria->compare('taobao_user_id',$this->taobao_user_id);
+		$criteria->compare('day',$this->day);
 		$criteria->compare('distribution',$this->distribution,true);
 		$criteria->compare('number',$this->number);
 

@@ -1,28 +1,37 @@
 <?php
 class DayShelfStrategy {
 	private $SEP = ",";
-	private $id;
-	private $uid;
-	private $dayIndex;
-	private $distribution = array ();
+	public $id;
+	public $taobao_user_id;
+	public $day;
+	public $distribution = array ();
 	function __construct($shelfStrategy = null) {
 		if ($shelfStrategy == null) {
 			return;
 		}
 		$this->id = $shelfStrategy->id;
-		$this->uid = $shelfStrategy->uid;
-		$this->dayIndex = $shelfStrategy->dayIndex;
+		$this->taobao_user_id = $shelfStrategy->taobao_user_id;
+		$this->day = $shelfStrategy->day;
 		$this->distribution = explode ( ",", $shelfStrategy->distribution );
+		
+		if (count ( $this->distribution ) != 24) {
+			throw new Exception ( "illegle distribution length!" );
+		} else {
+		}
+		
 		foreach ( $this->distribution as $key => $value ) {
+			if (! is_numeric ( $value )) {
+				throw new Exception ( "illegle distribution data!" );
+			}
 			$this->distribution [$key] = floatval ( $this->distribution [$key] );
 		}
 	}
-	public function setDayIndex($dayIndex) {
-		$dayIndex %= 7;
-		$this->dayIndex = $dayIndex;
+	public function setDay($day) {
+		$day %= 7;
+		$this->day = $day;
 	}
-	public function getDayIndex() {
-		return $this->dayIndex;
+	public function getDay() {
+		return $this->day;
 	}
 	
 	// [start, end)
@@ -31,22 +40,31 @@ class DayShelfStrategy {
 			$this->distribution [$i] = Util::floor ( $percent, 4 );
 		}
 	}
-	public function setUid($uid) {
-		$this->uid = $uid;
+	public function setTaobaoUserId($taobao_user_id) {
+		$this->taobao_user_id = $taobao_user_id;
 	}
 	public function getDistribution() {
 		return $this->distribution;
 	}
 	public function toShelfStrategy() {
 		$shelfStrategy = new ShelfStrategy ();
-		$shelfStrategy->uid = $this->uid;
-		$shelfStrategy->dayIndex = $this->dayIndex;
+		$shelfStrategy->taobao_user_id = $this->taobao_user_id;
+		$shelfStrategy->day = $this->day;
 		$seperator = "";
 		for($i = 0; $i < 24; $i ++) {
 			$shelfStrategy->distribution .= $seperator . $this->distribution [$i];
 			$seperator = $this->SEP;
 		}
 		return $shelfStrategy;
+	}
+	public static function checkDistribution($distribution) {
+		$distribution = explode ( ",", $shelfStrategy->distribution );
+		if (count ( $distribution ) != 24) {
+			return false;
+		} else {
+			foreach ( $distribution as $value ) {
+			}
+		}
 	}
 }
 ?>

@@ -1,8 +1,18 @@
 <?php
 class WeekShelfStrategy {
-	private $dayShelfStrategyList;
+	public $dayShelfStrategyList;
+	public $currentDay;
+	function __construct($shelfStrategyList = null) {
+		$this->currentDay = date ( "w" );
+		if ($shelfStrategyList == null) {
+			return;
+		}
+		foreach ( $shelfStrategyList as $value ) {
+			$this->dayShelfStrategyList [$value->day] = new DayShelfStrategy ( $value );
+		}
+	}
 	public function addDayShelfStrategy($dayShelfStrategy) {
-		$this->dayShelfStrategyList [$dayShelfStrategy->getDayIndex ()] = $dayShelfStrategy;
+		$this->dayShelfStrategyList [$dayShelfStrategy->getDay ()] = $dayShelfStrategy;
 	}
 	public function fillRemainPercent() {
 		$sum = 0;
@@ -10,7 +20,7 @@ class WeekShelfStrategy {
 		for($day = 0; $day < 7; $day ++) {
 			if (! isset ( $this->dayShelfStrategyList [$day] )) {
 				$dayShelfStrategy = new DayShelfStrategy ();
-				$dayShelfStrategy->setDayIndex ( $day );
+				$dayShelfStrategy->setDay ( $day );
 				$this->addDayShelfStrategy ( $dayShelfStrategy );
 			}
 			for($hour = 0; $hour < 24; $hour ++) {
@@ -33,7 +43,7 @@ class WeekShelfStrategy {
 		for($day = 0; $day < 7; $day ++) {
 			for($hour = 0; $hour < 24; $hour ++) {
 				if (! isset ( $this->dayShelfStrategyList [$day]->getDistribution ()[$hour] )) {
-					$percent = round($remainModValue,4) > 0 ? $remainAvgPercent + 0.0001 : $remainAvgPercent;
+					$percent = round ( $remainModValue, 4 ) > 0 ? $remainAvgPercent + 0.0001 : $remainAvgPercent;
 					$remainModValue -= 0.0001;
 					$this->dayShelfStrategyList [$day]->setPercent ( $hour, $hour + 1, $percent );
 				}
@@ -48,7 +58,7 @@ class WeekShelfStrategy {
 			}
 		}
 		
-		if (round($sum,0) != 1) {
+		if (round ( $sum, 0 ) != 1) {
 			throw new Exception ( "percentage sum is not equals to 1 !" );
 		}
 	}

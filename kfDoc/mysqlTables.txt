@@ -16,8 +16,8 @@ CREATE TABLE user (
 
 CREATE TABLE shelf_strategy (
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    uid int NOT NULL,
-    dayIndex int NOT NULL,
+    taobao_user_id int NOT NULL,
+    day int NOT NULL,
     distribution text  NOT NULL,
     number int
 )CHARSET=utf8;
