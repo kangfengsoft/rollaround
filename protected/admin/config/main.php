@@ -14,6 +14,7 @@ $backendArray=array(
     'import'=>array(   
         'application.models.*',  
         'application.components.*',  
+    	'application.admin.config.*',
         'backend.models.*',
         'backend.components.*',  
     ),  
