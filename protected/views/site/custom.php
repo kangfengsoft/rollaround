@@ -10,13 +10,103 @@ $this->breadcrumbs=array(
 ?>
 
 
-<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/highcharts.js"></script>
 
-<div id="container" style="height: 300px"></div>
-<div id="drag"></div>
-<div id="drop"></div>
+
+
+	<div class="widget-box">
+		<div class="widget-header widget-header-flat widget-header-small">
+			<h5>
+				<i class="icon-signal"></i>
+				各时间段上架分布图
+			</h5>
+
+			<div class="widget-toolbar no-border">
+				<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
+					星期一
+					<i class="icon-angle-down icon-on-right"></i>
+				</button>
+
+				<ul class="dropdown-menu dropdown-info pull-right dropdown-caret">
+					<li class="active">
+						<a href="#">星期一</a>
+					</li>
+
+					<li>
+						<a href="#">星期二</a>
+					</li>
+
+					<li>
+						<a href="#">星期三</a>
+					</li>
+
+					<li>
+						<a href="#">星期四</a>
+					</li>
+					<li>
+						<a href="#">星期五</a>
+					</li>
+					<li>
+						<a href="#">星期六</a>
+					</li>
+					<li>
+						<a href="#">星期天</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="widget-body">
+			<div class="widget-main">
+			
+				
+			<div id="container" style="height: 300px"></div>
+			<i class="icon-circle green"></i>
+					<span class="text-success">将鼠标移动到蓝色柱形上，上下拖动可以调节该时间段上架货物百分比</span>
+ 			<hr>
+			<div id="drag"></div>
+			<div id="drop"></div> 
+			<hr>
+			
+		
+				<div class="btn-group">
+  <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
+ 		平均策略
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    				<li class="active">
+						<a href="#">星期一</a>
+					</li>
+					<li>
+						<a href="#">星期二</a>
+					</li>
+  </ul>
+</div>
+				<hr>
+			<ul class="unstyled spaced2">
+
+				<li class="text-warning orange">
+					<i class="icon-warning-sign"></i>
+					平均抽取每个小时 0.01%进行再次分配
+				</li>
+			</ul>
+			<button class="btn btn-small btn-info no-radius" onclick=saveData()>
+				<i class="icon-share-alt"></i>
+				<span class="hidden-phone">保存设置</span>
+			</button>
+			
+			</div><!--/widget-main-->
+		</div><!--/widget-body-->
+	</div><!--/widget-box-->
+
+<span id="modifyStrategy" class="hide"><?php echo $distribution?></span>
+
 
 <script>
+
+
+
 /**
  * Experimental Draggable points plugin
  * Revised 2013-06-13 (get latest version from http://jsfiddle.net/highcharts/AyUbx/)
@@ -184,12 +274,11 @@ var chart = new Highcharts.Chart({
 
     chart: {
         renderTo: 'container',
-        animation: false,
-        borderWidth : 2
+        animation: false
     },
 
     title: {
-        text: '各时间段上架分布'
+        text: '0.5'
     },
     
     xAxis: {
@@ -217,17 +306,27 @@ var chart = new Highcharts.Chart({
                     
                     drag: function(e) {
                         // Returning false stops the drag and drops. Example:
-                        
-                        if (e.newY > 3) {
-                            this.y = 3;
+                        var remain = chart.title.text;
+                        if(remain < '0.00'){
                             return false;
-                        }
+                            }
+                        e.newY = Highcharts.numberFormat(e.newY, 2);
+                        var diff = Highcharts.numberFormat(e.newY - this.y, 2);
+                        
+	                        if (remain < diff) {
+	                            this.y = this.y + parseInt(remain);
+	                            return false;
+	                        }
+	                        remain = Highcharts.numberFormat(remain - diff, 2);
+	                       	chart.setTitle({text: remain});
+                        
                         
                         $('#drag').html(
                             'Dragging <b>' + this.series.name + '</b>, <b>' +
                             this.category + '</b> to <b>' + 
                             Highcharts.numberFormat(e.newY, 2) + '</b>'
                         );
+
                     },
                     drop: function() {
                         $('#drop').html(
@@ -265,4 +364,42 @@ var chart = new Highcharts.Chart({
     }]
 
 });
+
+
+$(document).ready(function () {	
+	var chart = $('#container').highcharts();
+	$("ul.dropdown-menu a").click(function(){
+			$("button.dropdown-toggle").html($(this).text()+'<i class="icon-angle-down icon-on-right"></i>');
+			var value = [];
+			for(var i=0;i<24; i++){
+				value.push( Math.random());
+			}
+			chart.series[0].setData(value);
+			chart.setTitle({text: "New Title"});
+		})
+	
+});
+
+function saveData(){
+	alert("aa");
+	$.ajax({
+		type: "get",
+		url: "http://www.cnblogs.com/rss",
+		beforeSend: function(XMLHttpRequest){
+			//ShowLoading();
+		},
+		success: function(data, textStatus){
+			$(".ajax.ajaxResult").html("");
+			$("item",data).each(function(i, domEle){
+				$(".ajax.ajaxResult").append("<li>"+$(domEle).children("title").text()+"</li>");
+			});
+		},
+		complete: function(XMLHttpRequest, textStatus){
+			//HideLoading();
+		},
+		error: function(){
+			//请求出错处理
+		}
+	});
+}
 </script>

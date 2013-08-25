@@ -116,7 +116,11 @@ class SiteController extends Controller
 	 * */
 	public function actionCustom(){
 		// 		$this->render('index');
-		$this->render('custom');
+		$uid = "aaaa";
+		$weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy($uid);
+		$this->render('custom', array (
+				"distribution" => json_encode($weekShelfStrategy->getWeekShelfStragegy())
+		));
 	}
 
 	/**

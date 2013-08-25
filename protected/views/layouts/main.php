@@ -2,6 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" > </meta>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="language" content="en" />
 
@@ -35,10 +36,7 @@
 
 <link rel="stylesheet"
 	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/w8.min.css" />
-<link rel="stylesheet"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/w8-responsive.min.css" />
-<link rel="stylesheet"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/w8-skins.min.css" />
+
 
 <!--[if lte IE 8]>
 		  <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/ace-ie.min.css" />
@@ -58,8 +56,7 @@
 <?php include '/protected/views/layouts/header.php'; ?>
 
 	<div class="container" id="main-container">
-		<a id="menu-toggler" href="#"> <span></span>
-		</a>
+
 
 	<?php echo $content; ?>
 
@@ -68,7 +65,7 @@
 	</div>
 
 			<!--basic scripts-->
-
+		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/pseudo.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.ui.touch-punch.min.js"></script>
