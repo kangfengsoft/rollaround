@@ -36,6 +36,19 @@ class SiteController extends Controller
 				"distribution" => json_encode($weekShelfStrategy)
 		) );
 	}
+	
+	/**
+	 * This is for save shelf strategy 
+	 */
+	public function actionSave()
+	{
+		if(isset($_POST['strategys']))
+		{
+			$strategy = $_POST['strategys'];
+		}
+		$shelfService = new ShelfService ();
+		$weekShelfStrategy = $shelfService->saveWeekShelfStrategy($strategy);
+	}
 
 	/**
 	 * This is the action to handle external exceptions.
@@ -116,10 +129,10 @@ class SiteController extends Controller
 	 * */
 	public function actionCustom(){
 		// 		$this->render('index');
-		$uid = "aaaa";
-		$weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy($uid);
+		$shelfService = new ShelfService ();
+		$weekShelfStrategy = $shelfService->getWeekShelfStrategy();
 		$this->render('custom', array (
-				"distribution" => json_encode($weekShelfStrategy->getWeekShelfStragegy())
+				"distribution" => json_encode($weekShelfStrategy)
 		));
 	}
 

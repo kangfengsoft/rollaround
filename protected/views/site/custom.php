@@ -29,28 +29,28 @@ $this->breadcrumbs=array(
 
 				<ul class="dropdown-menu dropdown-info pull-right dropdown-caret">
 					<li class="active">
-						<a href="#">星期一</a>
+						<a href="#" class='1'>星期一</a>
 					</li>
 
 					<li>
-						<a href="#">星期二</a>
+						<a href="#" class='2'>星期二</a>
 					</li>
 
 					<li>
-						<a href="#">星期三</a>
+						<a href="#" class='3'>星期三</a>
 					</li>
 
 					<li>
-						<a href="#">星期四</a>
+						<a href="#" class='4'>星期四</a>
 					</li>
 					<li>
-						<a href="#">星期五</a>
+						<a href="#" class='5'>星期五</a>
 					</li>
 					<li>
-						<a href="#">星期六</a>
+						<a href="#" class='6'>星期六</a>
 					</li>
 					<li>
-						<a href="#">星期天</a>
+						<a href="#" class='0'>星期天</a>
 					</li>
 				</ul>
 			</div>
@@ -64,9 +64,9 @@ $this->breadcrumbs=array(
 			<i class="icon-circle green"></i>
 					<span class="text-success">将鼠标移动到蓝色柱形上，上下拖动可以调节该时间段上架货物百分比</span>
  			<hr>
-			<div id="drag"></div>
+<!-- 			<div id="drag"></div>
 			<div id="drop"></div> 
-			<hr>
+			<hr> -->
 			
 		
 				<div class="btn-group">
@@ -261,14 +261,20 @@ $this->breadcrumbs=array(
 
 var xLayer = [];
 for(var i=0;i<24; i++){
-	j = i+1;
-	xLayer.push( i+'-'+j+'点');
+	xLayer.push( i + '点');
 }
 
 var yValue = [];
-for(var i=0;i<24; i++){
-	yValue.push( Math.random());
+
+var weekShelfStrategy = JSON.parse($("#modifyStrategy").text());
+//show which day of week
+var index = weekShelfStrategy.currentDay;
+for(var i=0; i<24; i++){
+	yValue.push([weekShelfStrategy.dayShelfStrategyList[weekShelfStrategy.currentDay].distribution[i]*100]);
 }
+
+var left_percent = 0.0;
+
 
 var chart = new Highcharts.Chart({
 
@@ -278,7 +284,7 @@ var chart = new Highcharts.Chart({
     },
 
     title: {
-        text: '0.5'
+        text: '可调节的商品余量（' + left_percent + '%）'
     },
     
     xAxis: {
@@ -306,7 +312,7 @@ var chart = new Highcharts.Chart({
                     
                     drag: function(e) {
                         // Returning false stops the drag and drops. Example:
-                        var remain = chart.title.text;
+                        var remain = left_percent;
                         if(remain < '0.00'){
                             return false;
                             }
@@ -318,8 +324,11 @@ var chart = new Highcharts.Chart({
 	                            return false;
 	                        }
 	                        remain = Highcharts.numberFormat(remain - diff, 2);
-	                       	chart.setTitle({text: remain});
-                        
+	                        left_percent = remain;
+	                       	chart.setTitle({text: '可调节的商品余量（' + left_percent + '%）'});
+
+	            			weekShelfStrategy.dayShelfStrategyList[index].distribution[this.x] = e.newY/100;
+	            			
                         
                         $('#drag').html(
                             'Dragging <b>' + this.series.name + '</b>, <b>' +
@@ -370,29 +379,29 @@ $(document).ready(function () {
 	var chart = $('#container').highcharts();
 	$("ul.dropdown-menu a").click(function(){
 			$("button.dropdown-toggle").html($(this).text()+'<i class="icon-angle-down icon-on-right"></i>');
+			index = $(this).attr('class');
 			var value = [];
-			for(var i=0;i<24; i++){
-				value.push( Math.random());
+			for(var i=0; i<24; i++){
+				value.push([weekShelfStrategy.dayShelfStrategyList[index].distribution[i]*100]);
 			}
+			
 			chart.series[0].setData(value);
-			chart.setTitle({text: "New Title"});
 		})
 	
 });
 
 function saveData(){
-	alert("aa");
 	$.ajax({
-		type: "get",
-		url: "http://www.cnblogs.com/rss",
-		beforeSend: function(XMLHttpRequest){
-			//ShowLoading();
-		},
+		type: "post",
+		url: "<?php echo Yii::app()->request->baseUrl;?>/index.php/site/save",
+		dataType: "json",
+		data: {'strategys' : weekShelfStrategy},
 		success: function(data, textStatus){
-			$(".ajax.ajaxResult").html("");
-			$("item",data).each(function(i, domEle){
-				$(".ajax.ajaxResult").append("<li>"+$(domEle).children("title").text()+"</li>");
-			});
+			alert("ok");
+// 			$(".ajax.ajaxResult").html("");
+// 			$("item",data).each(function(i, domEle){
+// 				$(".ajax.ajaxResult").append("<li>"+$(domEle).children("title").text()+"</li>");
+// 			});
 		},
 		complete: function(XMLHttpRequest, textStatus){
 			//HideLoading();

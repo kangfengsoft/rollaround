@@ -65,7 +65,6 @@
 	</div>
 
 			<!--basic scripts-->
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/pseudo.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.ui.touch-punch.min.js"></script>
