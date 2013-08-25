@@ -11,3 +11,5 @@ target
 *.log
 *.bak
 assets/*
+protected/runtime/*
+protected/admin/runtime/*
