@@ -44,7 +44,7 @@ class ShelfService {
 		return $weekShelfStrategy;
 	}
 	public function saveWeekShelfStrategy($distributionList) {
-		$taobao_user_id = Yii::app ()->user->$taobao_user_id;
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		$weekShelfStrategy = new WeekShelfStrategy();
 		for($day = 0; $day < 7; $day ++) {
 			$shelfStrategy = ShelfStrategy::model ()->find ( 'taobao_user_id=:taobao_user_id and day=:day', array (
@@ -60,8 +60,8 @@ class ShelfService {
 			$dayShelfStrategy = new DayShelfStrategy($shelfStrategy);
 			$weekShelfStrategy->addDayShelfStrategy($dayShelfStrategy);
 			$weekShelfStrategy->fillRemainPercent();
-			$weekShelfStrategy->saveToDB();
 		}
+		$weekShelfStrategy->saveToDB();
 	}
 }
 ?>
