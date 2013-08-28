@@ -12,7 +12,7 @@ class UserIdentity extends CUserIdentity {
 
     public function authenticate() {
         $this->errorCode = self::ERROR_PASSWORD_INVALID;
-        $user = User::model()->find('username=:username', array(':username' => $this->username));
+        $user = AdminUser::model()->find('username=:username', array(':username' => $this->username));
         if ($user) {
             $encrypted_passwd = trim($user->password);
             $inputpassword = trim(md5($this->password));

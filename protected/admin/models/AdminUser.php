@@ -1,6 +1,6 @@
 <?php
 
-class User extends CActiveRecord
+class AdminUser extends CActiveRecord
 {
 	/**
 	 * The followings are the available columns in table 'tbl_user':

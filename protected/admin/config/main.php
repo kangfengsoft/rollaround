@@ -15,6 +15,7 @@ $backendArray=array(
         'application.models.*',  
         'application.components.*',  
     	'application.admin.config.*',
+    	'application.admin.service.*',
         'backend.models.*',
         'backend.components.*',  
     ),  

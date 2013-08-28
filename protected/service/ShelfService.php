@@ -52,15 +52,15 @@ class ShelfService {
 					':day' => $day 
 			) );
 			if ($shelfStrategy == null) {
-				$shelfStrategy = new ShelfStrategy();
+				$shelfStrategy = new ShelfStrategy ();
 				$shelfStrategy->taobao_user_id = $taobao_user_id;
 				$shelfStrategy->day = $day;
 			}
 			$shelfStrategy->distribution = $distributionList [$day];
 			$dayShelfStrategy = new DayShelfStrategy($shelfStrategy);
 			$weekShelfStrategy->addDayShelfStrategy($dayShelfStrategy);
+			$weekShelfStrategy->fillRemainPercent();
 		}
-		//$weekShelfStrategy->fillRemainPercent();
 		$weekShelfStrategy->saveToDB();
 	}
 }

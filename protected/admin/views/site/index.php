@@ -6,7 +6,7 @@
 <?php
 if($enable){
 ?>
-<a href="?r=admin/enableTimedTask&enable=false" class="btn btn-large btn-primary">disable</a>
+<a href="?r=admin/enableShelfPlanRecount&enable=false" class="btn btn-large btn-primary">disable</a>
 <?php }else{ ?>
-<a href="?r=admin/enableTimedTask&enable=true" class="btn btn-large btn-primary">true</a>
+<a href="?r=admin/enableShelfPlanRecount&enable=true" class="btn btn-large btn-primary">enable</a>
 <?php } ?>

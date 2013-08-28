@@ -2,6 +2,7 @@
 class WeekShelfStrategy {
 	public $dayShelfStrategyList;
 	public $currentDay;
+	public $itemsCount;
 	function __construct($shelfStrategyList = null) {
 		$this->currentDay = date ( "w" );
 		if ($shelfStrategyList == null) {
@@ -24,8 +25,8 @@ class WeekShelfStrategy {
 				$this->addDayShelfStrategy ( $dayShelfStrategy );
 			}
 			for($hour = 0; $hour < 24; $hour ++) {
-				if (isset ( $this->dayShelfStrategyList [$day]->getDistribution ()[$hour] )) {
-					$sum += $this->dayShelfStrategyList [$day]->getDistribution ()[$hour];
+				if ($this->dayShelfStrategyList [$day]->getPercent($hour) !== null) {
+					$sum += $this->dayShelfStrategyList [$day]->getPercent ($hour);
 					$count ++;
 				}
 			}
@@ -42,7 +43,7 @@ class WeekShelfStrategy {
 		$remainModValue = 1 - $sum - $remainAvgPercent * (24 * 7 - $count);
 		for($day = 0; $day < 7; $day ++) {
 			for($hour = 0; $hour < 24; $hour ++) {
-				if (! isset ( $this->dayShelfStrategyList [$day]->getDistribution ()[$hour] )) {
+				if ($this->dayShelfStrategyList [$day]->getPercent ( $hour ) !== null) {
 					$percent = round ( $remainModValue, 4 ) > 0 ? $remainAvgPercent + 0.0001 : $remainAvgPercent;
 					$remainModValue -= 0.0001;
 					$this->dayShelfStrategyList [$day]->setPercent ( $hour, $hour + 1, $percent );
@@ -54,7 +55,7 @@ class WeekShelfStrategy {
 		$sum = 0;
 		for($day = 0; $day < 7; $day ++) {
 			for($hour = 0; $hour < 24; $hour ++) {
-				$sum += $this->dayShelfStrategyList [$day]->getDistribution ()[$hour];
+				$sum += $this->dayShelfStrategyList [$day]->getPercent ( $hour );
 			}
 		}
 		
@@ -70,6 +71,15 @@ class WeekShelfStrategy {
 	}
 	public function getDayShelfStrategy($day) {
 		return $this->dayShelfStrategyList [$day];
+	}
+	
+	public function insertItems($items) {
+		$onsaleItemsCount = count($items);
+		foreach ( $items as $item ) {
+			$this->dayShelfStrategyList[$day]->setOnsaleItemCount($onsaleItemsCount);
+			$day = date ( 'w', strtotime ( $item->list_time ) );
+			$this->dayShelfStrategyList[$day]->insertItem($item);
+		}
 	}
 }
 ?>
