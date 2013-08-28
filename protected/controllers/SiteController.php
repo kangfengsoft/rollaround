@@ -47,7 +47,7 @@ class SiteController extends Controller
 			$strategy = $_POST['strategys'];
 		}
 		$shelfService = new ShelfService ();
-		$weekShelfStrategy = $shelfService->saveWeekShelfStrategy($strategy);
+		$weekShelfStrategy = $shelfService->saveWeekShelfStrategy($strategy['dayShelfStrategyList']);
 	}
 
 	/**

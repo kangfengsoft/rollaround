@@ -320,7 +320,9 @@ var chart = new Highcharts.Chart({
                         var diff = Highcharts.numberFormat(e.newY - this.y, 2);
                         
 	                        if (remain < diff) {
-	                            this.y = this.y + parseInt(remain);
+	                            this.y += parseFloat(remain);
+	                            left_percent = '0.00';
+		                       	chart.setTitle({text: '可调节的商品余量（' + left_percent + '%）'});
 	                            return false;
 	                        }
 	                        remain = Highcharts.numberFormat(remain - diff, 2);
