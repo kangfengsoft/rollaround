@@ -1,4 +1,5 @@
-$(document).ready(function () {							
+$(document).ready(function () {	
+	window.$=jQuery
 	var data = [];
     var dataset = [{ label: "各时间段上架分布", data: data, color: "#5482FF" }];
     var ticks = [];

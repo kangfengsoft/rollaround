@@ -10,95 +10,60 @@ $this->breadcrumbs=array(
 ?>
 
 
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/highcharts.js"></script>
+<script
+	src="<?php echo Yii::app()->request->baseUrl; ?>/js/highcharts.js"></script>
 
-
-
-	<div class="widget-box">
-		<div class="widget-header widget-header-flat widget-header-small">
-			<h5>
-				<i class="icon-signal"></i>
-				各时间段上架分布图
-			</h5>
-
-			<div class="widget-toolbar no-border">
-				<button class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown">
-					星期一
-					<i class="icon-angle-down icon-on-right"></i>
-				</button>
-
-				<ul class="dropdown-menu dropdown-info pull-right dropdown-caret">
-					<li class="active">
-						<a href="#" class='1'>星期一</a>
-					</li>
-
-					<li>
-						<a href="#" class='2'>星期二</a>
-					</li>
-
-					<li>
-						<a href="#" class='3'>星期三</a>
-					</li>
-
-					<li>
-						<a href="#" class='4'>星期四</a>
-					</li>
-					<li>
-						<a href="#" class='5'>星期五</a>
-					</li>
-					<li>
-						<a href="#" class='6'>星期六</a>
-					</li>
-					<li>
-						<a href="#" class='0'>星期天</a>
-					</li>
-				</ul>
-			</div>
+<div class="widgetbox box-info">
+	<div class="headtitle">
+		<div class="btn-group">
+			<button data-toggle="dropdown" class="btn dropdown-toggle">
+				星期一<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li class="active"><a href="#" class='1'>星期一</a></li>
+				<li><a href="#" class='2'>星期二</a></li>
+				<li><a href="#" class='3'>星期三</a></li>
+				<li><a href="#" class='4'>星期四</a></li>
+				<li><a href="#" class='5'>星期五</a></li>
+				<li><a href="#" class='6'>星期六</a></li>
+				<li><a href="#" class='0'>星期天</a></li>
+			</ul>
 		</div>
-
-		<div class="widget-body">
-			<div class="widget-main">
-			
-				
-			<div id="container" style="height: 300px"></div>
-			<i class="icon-circle green"></i>
-					<span class="text-success">将鼠标移动到蓝色柱形上，上下拖动可以调节该时间段上架货物百分比</span>
- 			<hr>
-<!-- 			<div id="drag"></div>
+		<h4 class="widgettitle">各时间段上架分布图</h4>
+	</div>
+	<div class="widgetcontent">
+	
+	<div id="container" style="height: 300px"></div>
+			<h5><span class="text-success">将鼠标移动到蓝色柱形上，上下拖动可以调节该时间段上架货物百分比</span></h5> 
+			<hr>
+			<!-- 			<div id="drag"></div>
 			<div id="drop"></div> 
 			<hr> -->
-			
-		
-				<div class="btn-group">
-  <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" href="#">
- 		平均策略
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu">
-    				<li class="active">
-						<a href="#">星期一</a>
-					</li>
-					<li>
-						<a href="#">星期二</a>
-					</li>
-  </ul>
-</div>
-				<hr>
+
+
+			<div class="btn-group">
+				<a class="btn btn-small dropdown-toggle" data-toggle="dropdown"
+					href="#"> 平均策略 <span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li class="active"><a href="#">星期一</a></li>
+					<li><a href="#">星期二</a></li>
+				</ul>
+			</div>
+			<hr>
 			<ul class="unstyled spaced2">
 
-				<li class="text-warning orange">
-					<i class="icon-warning-sign"></i>
-					平均抽取每个小时 0.01%进行再次分配
-				</li>
+				<li class="text-warning orange"><i class="icon-warning-sign"></i>
+					平均抽取每个小时 0.01%进行再次分配</li>
 			</ul>
-			<button class="btn btn-small btn-info no-radius" onclick=saveData()>
-				<i class="icon-share-alt"></i>
+			<button class="btn btn-primary" onclick=saveData()>
 				<span class="hidden-phone">保存设置</span>
 			</button>
-			
-			</div><!--/widget-main-->
-		</div><!--/widget-body-->
-	</div><!--/widget-box-->
+	
+	</div>
+	<!--widgetcontent-->
+</div>
+<!--widgetbox-->
 
 <span id="modifyStrategy" class="hide"><?php echo $distribution?></span>
 
@@ -372,10 +337,11 @@ var chart = new Highcharts.Chart({
 });
 
 
-$(document).ready(function () {	
+$(document).ready(function () {
+	window.$=jQuery
 	var chart = $('#container').highcharts();
 	$("ul.dropdown-menu a").click(function(){
-			$("button.dropdown-toggle").html($(this).text()+'<i class="icon-angle-down icon-on-right"></i>');
+			$("button.dropdown-toggle").html($(this).text()+'<span class="caret"></span>');
 			index = $(this).attr('class');
 			var value = [];
 			for(var i=0; i<24; i++){

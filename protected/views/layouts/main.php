@@ -1,85 +1,38 @@
-<?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=9" > </meta>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="language" content="en" />
-
-<!-- W8 -->
-<!--basic styles-->
-
-<link
-	href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet" />
-<link
-	href="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/css/bootstrap-responsive.min.css"
-	rel="stylesheet" />
-<link rel="stylesheet"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/font-awesome/css/font-awesome.min.css" />
-
-<!--[if IE 7]>
-		  <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/themes/font-awesome/css/font-awesome-ie7.min.css" />
-		<![endif]-->
-
-<!--page specific plugin styles-->
-
-<link rel="stylesheet"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/prettify.css" />
-
-<!--fonts-->
-
-<link rel="stylesheet"
-	href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
-
-<!--ace styles-->
-
-<link rel="stylesheet"
-	href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/w8.min.css" />
-
-
-<!--[if lte IE 8]>
-		  <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/themes/css/ace-ie.min.css" />
-		<![endif]-->
-
-<!--inline styles if any-->
+<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.default.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/responsive-tables.css">
 
-
-<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
 
+<div class="mainwrapper">
+
 <?php include '/protected/views/layouts/header.php'; ?>
-
-	<div class="container" id="main-container">
-
 
 	<?php echo $content; ?>
 
-	<div class="clear"></div>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.9.2.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/modernizr.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.uniform.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/flot/jquery.flot.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/flot/jquery.flot.resize.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/responsive-tables.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/excanvas.min.js"></script><![endif]-->
+	
+	
 
-	</div>
-
-			<!--basic scripts-->
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap/js/bootstrap.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.ui.touch-punch.min.js"></script>
-		
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.slimscroll.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.easy-pie-chart.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.sparkline.min.js"></script>
-		
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.flot.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.flot.pie.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/jquery.flot.resize.min.js"></script>
-
-		<!--w8 scripts-->
-
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/w8-elements.min.js"></script>
-		<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/js/w8.min.js"></script>
 </body>
 </html>

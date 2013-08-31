@@ -1,192 +1,104 @@
+    <div class="header">
+        <div class="logo">
+            <a href="dashboard.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="" /></a>
+        </div>
+        <div class="headerinner">
+            <ul class="headmenu">
+                <li class="odd">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="count">4</span>
+                        <span class="head-icon head-message"></span>
+                        <span class="headmenu-label">Messages</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-header">Messages</li>
+                        <li><a href=""><span class="icon-envelope"></span> New message from <strong>Jack</strong> <small class="muted"> - 19 hours ago</small></a></li>
+                        <li><a href=""><span class="icon-envelope"></span> New message from <strong>Daniel</strong> <small class="muted"> - 2 days ago</small></a></li>
+                        <li><a href=""><span class="icon-envelope"></span> New message from <strong>Jane</strong> <small class="muted"> - 3 days ago</small></a></li>
+                        <li><a href=""><span class="icon-envelope"></span> New message from <strong>Tanya</strong> <small class="muted"> - 1 week ago</small></a></li>
+                        <li><a href=""><span class="icon-envelope"></span> New message from <strong>Lee</strong> <small class="muted"> - 1 week ago</small></a></li>
+                        <li class="viewmore"><a href="messages.html">View More Messages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+                    <span class="count">10</span>
+                    <span class="head-icon head-users"></span>
+                    <span class="headmenu-label">New Users</span>
+                    </a>
+                    <ul class="dropdown-menu newusers">
+                        <li class="nav-header">New Users</li>
+                        <li>
+                            <a href="">
+                                <img src="images/photos/thumb1.png" alt="" class="userthumb" />
+                                <strong>Draniem Daamul</strong>
+                                <small>April 20, 2013</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/photos/thumb2.png" alt="" class="userthumb" />
+                                <strong>Shamcey Sindilmaca</strong>
+                                <small>April 19, 2013</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/photos/thumb3.png" alt="" class="userthumb" />
+                                <strong>Nusja Paul Nawancali</strong>
+                                <small>April 19, 2013</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/photos/thumb4.png" alt="" class="userthumb" />
+                                <strong>Rose Cerona</strong>
+                                <small>April 18, 2013</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="images/photos/thumb5.png" alt="" class="userthumb" />
+                                <strong>John Doe</strong>
+                                <small>April 16, 2013</small>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="odd">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">
+                    <span class="count">1</span>
+                    <span class="head-icon head-bar"></span>
+                    <span class="headmenu-label">Statistics</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-header">Statistics</li>
+                        <li><a href=""><span class="icon-align-left"></span> New Reports from <strong>Products</strong> <small class="muted"> - 19 hours ago</small></a></li>
+                        <li><a href=""><span class="icon-align-left"></span> New Statistics from <strong>Users</strong> <small class="muted"> - 2 days ago</small></a></li>
+                        <li><a href=""><span class="icon-align-left"></span> New Statistics from <strong>Comments</strong> <small class="muted"> - 3 days ago</small></a></li>
+                        <li><a href=""><span class="icon-align-left"></span> Most Popular in <strong>Products</strong> <small class="muted"> - 1 week ago</small></a></li>
+                        <li><a href=""><span class="icon-align-left"></span> Most Viewed in <strong>Blog</strong> <small class="muted"> - 1 week ago</small></a></li>
+                        <li class="viewmore"><a href="charts.html">View More Statistics</a></li>
+                    </ul>
+                </li>
+                <li class="right">
+                    <div class="userloggedinfo">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb1.png" alt="" />
+                        <div class="userinfo">
+                        <?php if(!Yii::app()->user->isGuest){?>
+                            <h5><?php echo Yii::app()->user->nick; ?></h5>
+                            <ul>
+                                <li><a href="editprofile.html">Edit Profile</a></li>
+                                <li><a href="">Account Settings</a></li>
+                                <li><a href="/kfsoft/index.php?r=site/logout">退出系统</a></li>
+                            </ul>
+                        <?php }else{?>
+							<a href="<?php echo Yii::app()->params['oauthAuthorizeUrl']?>">login first</a>
+						<?php }?>
+                        </div>
 
-<div class="navbar navbar-inverse container">
-	<div class="navbar-inner">
-		<div class="container-fluid">
-			<a href="#" class="brand"> <small> <i class="icon-unlock-alt"></i>
-					无忧上架
-			</small>
-			</a>
-			<!--/.brand-->
-
-			<ul class="nav ace-nav pull-right">
-				<li class="grey"><a data-toggle="dropdown" class="dropdown-toggle"
-					href="#"> <i class="icon-tasks"></i> <span class="badge badge-grey">4</span>
-				</a>
-
-					<ul
-						class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
-						<li class="nav-header"><i class="icon-ok"></i> 4 Tasks to complete
-						</li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left">Software Update</span> <span
-										class="pull-right">65%</span>
-								</div>
-
-								<div class="progress progress-mini ">
-									<div style="width: 65%" class="bar"></div>
-								</div>
-						</a></li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left">Hardware Upgrade</span> <span
-										class="pull-right">35%</span>
-								</div>
-
-								<div class="progress progress-mini progress-danger">
-									<div style="width: 35%" class="bar"></div>
-								</div>
-						</a></li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left">Unit Testing</span> <span
-										class="pull-right">15%</span>
-								</div>
-
-								<div class="progress progress-mini progress-warning">
-									<div style="width: 15%" class="bar"></div>
-								</div>
-						</a></li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left">Bug Fixes</span> <span
-										class="pull-right">90%</span>
-								</div>
-
-								<div
-									class="progress progress-mini progress-success progress-striped active">
-									<div style="width: 90%" class="bar"></div>
-								</div>
-						</a></li>
-
-						<li><a href="#"> See tasks with details <i
-								class="icon-arrow-right"></i>
-						</a></li>
-					</ul></li>
-
-				<li class="purple"><a data-toggle="dropdown" class="dropdown-toggle"
-					href="#"> <i class="icon-bell-alt icon-only icon-animated-bell"></i>
-						<span class="badge badge-important">8</span>
-				</a>
-
-					<ul
-						class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-closer">
-						<li class="nav-header"><i class="icon-warning-sign"></i> 8
-							Notifications</li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left"> <i
-										class="btn btn-mini no-hover btn-pink icon-comment"></i> New
-										Comments
-									</span> <span class="pull-right badge badge-info">+12</span>
-								</div>
-						</a></li>
-
-						<li><a href="#"> <i class="btn btn-mini btn-primary icon-user"></i>
-								Bob just signed up as an editor ...
-						</a></li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left"> <i
-										class="btn btn-mini no-hover btn-success icon-shopping-cart"></i>
-										New Orders
-									</span> <span class="pull-right badge badge-success">+8</span>
-								</div>
-						</a></li>
-
-						<li><a href="#">
-								<div class="clearfix">
-									<span class="pull-left"> <i
-										class="btn btn-mini no-hover btn-info icon-twitter"></i>
-										Followers
-									</span> <span class="pull-right badge badge-info">+11</span>
-								</div>
-						</a></li>
-
-						<li><a href="#"> See all notifications <i class="icon-arrow-right"></i>
-						</a></li>
-					</ul></li>
-
-				<li class="green"><a data-toggle="dropdown" class="dropdown-toggle"
-					href="#"> <i
-						class="icon-envelope-alt icon-only icon-animated-vertical"></i> <span
-						class="badge badge-success">5</span>
-				</a>
-
-					<ul
-						class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
-						<li class="nav-header"><i class="icon-envelope"></i> 5 Messages</li>
-
-						<li><a href="#"> <img src="themes/images/avatar.png"
-								class="msg-photo" alt="Alex's Avatar" /> <span class="msg-body">
-									<span class="msg-title"> <span class="blue">Alex:</span> Ciao
-										sociis natoque penatibus et auctor ...
-								</span> <span class="msg-time"> <i class="icon-time"></i> <span>a
-											moment ago</span>
-								</span>
-							</span>
-						</a></li>
-
-						<li><a href="#"> <img src="themes/images/avatar3.png"
-								class="msg-photo" alt="Susan's Avatar" /> <span class="msg-body">
-									<span class="msg-title"> <span class="blue">Susan:</span>
-										Vestibulum id ligula porta felis euismod ...
-								</span> <span class="msg-time"> <i class="icon-time"></i> <span>20
-											minutes ago</span>
-								</span>
-							</span>
-						</a></li>
-
-						<li><a href="#"> <img src="themes/images/avatar4.png"
-								class="msg-photo" alt="Bob's Avatar" /> <span class="msg-body">
-									<span class="msg-title"> <span class="blue">Bob:</span> Nullam
-										quis risus eget urna mollis ornare ...
-								</span> <span class="msg-time"> <i class="icon-time"></i> <span>3:15
-											pm</span>
-								</span>
-							</span>
-						</a></li>
-
-						<li><a href="#"> See all messages <i class="icon-arrow-right"></i>
-						</a></li>
-					</ul></li>
-
-				<li class="light-blue user-profile">
-				<?php if(!Yii::app()->user->isGuest){?>
-					<a data-toggle="dropdown"
-						href="#" class="user-menu dropdown-toggle"> <img
-							class="nav-user-photo" src="themes/images/user.png"
-							alt="Jason's Photo" /> 
-						<span id="user_info"> <small>Welcome,</small><?php echo Yii::app()->user->nick; ?></span> 
-						<i class="icon-caret-down"></i>
-					</a>
-				<?php }else{?>
-					<a href="<?php echo Yii::app()->params['oauthAuthorizeUrl']?>">login first</a>
-				<?php }?>
-					<ul
-						class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer"
-						id="user_menu">
-						<li><a href="#"> <i class="icon-cog"></i> Settings
-						</a></li>
-
-						<li><a href="#"> <i class="icon-user"></i> Profile
-						</a></li>
-
-						<li class="divider"></li>
-
-						<li><a href="/kfsoft/index.php?r=site/logout"> <i class="icon-off"></i> Logout
-						</a></li>
-					</ul></li>
-			</ul>
-			<!--/.w8-nav-->
-		</div>
-		<!--/.container-fluid-->
-	</div>
-	<!--/.navbar-inner-->
-</div>
+                    </div>
+                </li>
+            </ul><!--headmenu-->
+        </div>
+    </div>

@@ -2,165 +2,111 @@
 /* @var $this SiteController */
 $this->pageTitle = Yii::app ()->name;
 $this->breadcrumbs=array(
-		'Index',
+		'上架总控制台',
 );
 ?>
+
 <!--kf scripts-->
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/site.js"></script>
-<div class="row-fluid">
-	<div class="span10 infobox-container">
-		<a href="?r=shelf/getGoodNum" class="btn btn-large btn-primary">get good number demo</a>
-		<a href="?r=shelf/getOnsaleGoods" class="btn btn-large btn-primary">get onsale goods</a>
-		<div class="infobox infobox-green  ">
-			<div class="infobox-icon">
-				<i class="icon-comments"></i>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-data-number">32</span>
-				<div class="infobox-content">comments + 2 reviews</div>
-			</div>
-			<div class="stat stat-success">8%</div>
-		</div>
-	
-		<div class="infobox infobox-blue  ">
-			<div class="infobox-icon">
-				<i class="icon-twitter"></i>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-data-number">11</span>
-				<div class="infobox-content">new followers</div>
-			</div>
-	
-			<div class="badge badge-success">
-				+32% <i class="icon-arrow-up"></i>
-			</div>
-		</div>
-	
-		<div class="infobox infobox-pink  ">
-			<div class="infobox-icon">
-				<i class="icon-shopping-cart"></i>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-data-number">8</span>
-				<div class="infobox-content">new orders</div>
-			</div>
-			<div class="stat stat-important">+4%</div>
-		</div>
-	
-		<div class="infobox infobox-red  ">
-			<div class="infobox-icon">
-				<i class="icon-beaker"></i>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-data-number">7</span>
-				<div class="infobox-content">experiments</div>
-			</div>
-		</div>
-	
-		<div class="infobox infobox-orange2  ">
-			<div class="infobox-chart">
-				<span class="sparkline"
-					data-values="196,128,202,177,154,94,100,170,224"></span>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-data-number">6,251</span>
-				<div class="infobox-content">pageviews</div>
-			</div>
-	
-			<div class="badge badge-success">
-				7.2% <i class="icon-arrow-up"></i>
-			</div>
-		</div>
-	
-		<div class="infobox infobox-blue2  ">
-			<div class="infobox-progress">
-				<div class="easy-pie-chart percentage" data-percent="42"
-					data-size="46">
-					<span class="percent">42</span>%
-				</div>
-			</div>
-	
-			<div class="infobox-data">
-				<span class="infobox-text">traffic used</span>
-	
-				<div class="infobox-content">
-					<span class="bigger-110">~</span> 58GB remaining
-				</div>
-			</div>
-		</div>
-	
-		<div class="spw8-6"></div>
-	
-		
-	</div>
-</div>
 
-<div class="hr hr32 hr-dotted"></div>
+                <div class="row-fluid">
+                    <div id="dashboard-left" class="">
+                        
+                        <h5 class="subtitle">Daily Statistics</h5><br />
+                        <div id="sales-charts" style="height:300px;"></div>
+                        
+                        <div class="divider30"></div>
+                        
+                        <table class="table table-bordered responsive">
+                            <thead>
+                                <tr>
+                                    <th class="head1">Rendering engine</th>
+                                    <th class="head0">Browser</th>
+                                    <th class="head1">Platform(s)</th>
+                                    <th class="head0">Engine version</th>
+                                    <th class="head1">CSS grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Trident</td>
+                                    <td>Internet  Explorer 5.5</td>
+                                    <td>Win 95+</td>
+                                    <td class="center">5.5</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr>
+                                    <td>Trident</td>
+                                    <td>Internet Explorer 6</td>
+                                    <td>Win 98+</td>
+                                    <td class="center">6</td>
+                                    <td class="center">A</td>
+                                </tr>
+                                <tr>
+                                    <td>Trident</td>
+                                    <td>Internet Explorer 7</td>
+                                    <td>Win XP SP2+</td>
+                                    <td class="center">7</td>
+                                    <td class="center">A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <br />
+                        
+                        <h4 class="widgettitle"><span class="icon-comment icon-white"></span> Recent Comments</h4>
+                        <div class="widgetcontent nopadding">
+                            <ul class="commentlist">
+                                <li>
+                                    <img src="images/photos/thumb2.png" alt="" class="pull-left" />
+                                    <div class="comment-info">
+                                        <h4><a href="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a></h4>
+                                        <h5>in <a href="">Sit Voluptatem</a></h5>
+                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+                                        <p>
+                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
+                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/photos/thumb1.png" alt="" class="pull-left" />
+                                    <div class="comment-info">
+                                        <h4><a href="">But I must explain to you how all this mistaken</a></h4>
+                                        <h5>in <a href="">At vero eos et accusamus et iusto odio dignissimos</a></h5>
+                                        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
+                                        <p>
+                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
+                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <img src="images/photos/thumb10.png" alt="" class="pull-left" />
+                                    <div class="comment-info">
+                                        <h4><a href="">On the other hand, we denounce with righteous indignation</a></h4>
+                                        <h5>in <a href="">These cases are perfectly simple and easy to distinguish</a></h5>
+                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                                        <p>
+                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
+                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li><a href="">View More Comments</a></li>
+                            </ul>
+                        </div>
+                        
+                        <br />
+                        
+                        
+                    </div><!--span8-->
+                    
+                    
+                </div><!--row-fluid-->
+                
 
-<div class="row-fluid">
-	<div class="widget-box transparent">
-		<div class="widget-header widget-header-flat">
-			<h4>上架策略</h4>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/site.js"></script>
 
-			<div class="widget-toolbar">
-				
-			</div>
-		</div>
-	<div class="widget-body">
-		<div class="widget-main padding-4">
-			<div id="sales-charts"></div>
-		</div><!--/widget-main-->
-	</div><!--/widget-body-->
-</div>
 
-<hr>
-
-<div class="row-fluid">
-	<div class="widget-box">
-		<div class="widget-header widget-header-flat">
-			<h4>上架设置</h4>
-
-			<div class="widget-toolbar">
-				
-			</div>
-		</div>
-
-		<div class="widget-body">
-			<div class="widget-main">
-				<label>
-					<small class="green">
-						<b>未启动</b>
-					</small>
-
-					<input id="id-check-horizontal" type="checkbox" class="ace-switch ace-switch-6" />
-					<span class="lbl" for="id-check-horizontal"></span>
-				</label>
-				
-				<hr>
-				
-					<ul id="tasks" class="item-list">
-						<li class="item-grey">
-							<label class="inline">
-								<input type="checkbox" />
-								<span class="lbl"> Adding new skins</span>
-							</label>
-						</li>
-
-						<li class="item-green">
-							<label class="inline">
-								<input type="checkbox" />
-								<span class="lbl"> Updating server software up</span>
-							</label>
-						</li>
-					</ul>
-			</div>
-		</div>
-	</div>
-</div>
 <span id="weekShelfStrategy" class="hide"><?php echo $distribution?></span>
 
