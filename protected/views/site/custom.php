@@ -340,11 +340,7 @@ var chart = new Highcharts.Chart({
 
                     },
                     drop: function() {
-                        $('#drop').html(
-                            'In <b>' + this.series.name + '</b>, <b>' +
-                            this.category + '</b> was set to <b>' + 
-                            Highcharts.numberFormat(this.y, 2) + '</b>'
-                        );
+                    	//chart.redraw();
                     }
                 }
             },
@@ -369,7 +365,6 @@ var chart = new Highcharts.Chart({
         //draggableX: true,
         draggableY: true,
         dragMinY: 0,
-        type: 'column',
         minPointLength: 2,
         name:'比例'
     }]
@@ -392,18 +387,29 @@ $(document).ready(function () {
 	
 });
 
+function formatData(weekShelfStrategy){
+	var list = weekShelfStrategy.dayShelfStrategyList;
+	var result = [];
+	for(var item in list){
+		var value = "";
+		for(var v in list[item].distribution){
+			value += list[item].distribution[v] + ",";
+		}
+		value = value.substr(0,value.length-1);
+		result[item] = value;
+	}
+	return result;
+}
+
 function saveData(){
+	
 	$.ajax({
 		type: "post",
 		url: "<?php echo Yii::app()->request->baseUrl;?>/index.php/site/save",
 		dataType: "json",
-		data: {'strategys' : weekShelfStrategy},
+		data: {'strategys' : formatData(weekShelfStrategy)},
 		success: function(data, textStatus){
-			alert("ok");
-// 			$(".ajax.ajaxResult").html("");
-// 			$("item",data).each(function(i, domEle){
-// 				$(".ajax.ajaxResult").append("<li>"+$(domEle).children("title").text()+"</li>");
-// 			});
+
 		},
 		complete: function(XMLHttpRequest, textStatus){
 			//HideLoading();
