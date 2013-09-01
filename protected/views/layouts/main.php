@@ -3,8 +3,6 @@
 <head>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.default.css" type="text/css" />
@@ -16,7 +14,6 @@
   $cs->registerScriptFile($baseUrl.'/js/jquery-1.9.1.min.js');
   $cs->registerScriptFile($baseUrl.'/js/jquery-ui-1.9.2.min.js');
 ?>
-<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
 </head>
 

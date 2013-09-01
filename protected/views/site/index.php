@@ -21,7 +21,7 @@ $this->breadcrumbs=array(
 <!-- for test end -->
 
 <!--kf scripts-->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/site.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/site.js"></script>
 
 <div class="row-fluid">
 	<div id="dashboard-left" class="">
