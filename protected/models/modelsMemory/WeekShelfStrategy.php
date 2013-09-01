@@ -32,8 +32,12 @@ class WeekShelfStrategy {
 			}
 		}
 		
-		if ($sum > 1 || ($count == 24 * 7 && $sum < 1)) {
+		if (bcsub($sum,1,6)  > 0 || ($count == 24 * 7 && bcsub($sum,1,6) < 0)) {
 			throw new Exception ( "illegal percent setting!" );
+		}
+		
+		if($count == 24 * 7){
+			return;
 		}
 		
 		// for example, 1/3 = 0.3333

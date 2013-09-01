@@ -288,8 +288,8 @@ function formatData(weekShelfStrategy){
 	var result = [];
 	for(var item in list){
 		var value = "";
-		for(var v in list[item].distribution){
-			value += list[item].distribution[v] + ",";
+		for(var v in list[item].hours){
+			value += list[item].hours[v].percent + ",";
 		}
 		value = value.substr(0,value.length-1);
 		result[item] = value;
