@@ -26,14 +26,24 @@ class SiteController extends Controller
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
-	public function actionIndex()
-	{
+	public function actionIndex() {
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$shelfService = new ShelfService ();
-		$weekShelfStrategy = $shelfService->getWeekShelfStrategy();
+		$weekShelfStrategy = $shelfService->getWeekShelfStrategy ();
+		
+		$userConfig = UserConfig::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+				':taobao_user_id' => Yii::app ()->user->taobao_user_id 
+		) );
+		if ($userConfig === null) {
+			$userConfig = new UserConfig ();
+			$userConfig->taobao_user_id = Yii::app ()->user->taobao_user_id;
+			$userConfig->enable_shelf_service = 0;
+			$userConfig->save ();
+		}
 		$this->render ( 'index', array (
-				"distribution" => json_encode($weekShelfStrategy)
+				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
+				"enableShelfService" => $userConfig->enable_shelf_service 
 		) );
 	}
 

@@ -4,7 +4,7 @@ $(document).ready(function () {
     var ticks = [];
     var weekShelfStrategy = JSON.parse($("#weekShelfStrategy").text());
     for(var i=0; i<24; i++){
-    	data.push([i, weekShelfStrategy.dayShelfStrategyList[weekShelfStrategy.currentDay].distribution[i]*100]);
+    	data.push([i, weekShelfStrategy.dayShelfStrategyList[weekShelfStrategy.currentDay].hours[i].percent*100]);
 		ticks.push([i, i+"点"]);
 	}
  

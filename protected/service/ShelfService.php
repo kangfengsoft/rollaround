@@ -59,8 +59,8 @@ class ShelfService {
 			$shelfStrategy->distribution = $distributionList [$day];
 			$dayShelfStrategy = new DayShelfStrategy($shelfStrategy);
 			$weekShelfStrategy->addDayShelfStrategy($dayShelfStrategy);
-			$weekShelfStrategy->fillRemainPercent();
 		}
+		$weekShelfStrategy->fillRemainPercent();
 		$weekShelfStrategy->saveToDB();
 	}
 }

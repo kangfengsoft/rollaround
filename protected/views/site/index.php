@@ -11,6 +11,11 @@ $this->breadcrumbs=array(
 	<div class="span10 infobox-container">
 		<a href="?r=shelf/getGoodNum" class="btn btn-large btn-primary">get good number demo</a>
 		<a href="?r=shelf/getOnsaleGoods" class="btn btn-large btn-primary">get onsale goods</a>
+		<?php if($enableShelfService){?>
+		<a href="?r=shelf/enableShelfService&enable=false" class="btn btn-large btn-primary">disable shelf service</a>
+		<?php }else{?>
+		<a href="?r=shelf/enableShelfService&enable=true" class="btn btn-large btn-primary">enable shelf service</a>
+		<?php }?>
 		<div class="infobox infobox-green  ">
 			<div class="infobox-icon">
 				<i class="icon-comments"></i>
@@ -162,5 +167,5 @@ $this->breadcrumbs=array(
 		</div>
 	</div>
 </div>
-<span id="weekShelfStrategy" class="hide"><?php echo $distribution?></span>
+<span id="weekShelfStrategy" class="hide"><?php echo $weekShelfStrategy?></span>
 
