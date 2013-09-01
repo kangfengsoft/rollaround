@@ -135,6 +135,24 @@ class SiteController extends Controller
 				"distribution" => json_encode($weekShelfStrategy)
 		));
 	}
+	
+	/**
+	 * 指定宝贝
+	 *
+	 *
+	 * */
+	public function actionAssign(){
+		$this->render('assign');
+	}
+	
+	/**
+	 * 展示排除宝贝
+	 *
+	 *
+	 * */
+	public function actionExclude(){
+		$this->render('exclude');
+	}
 
 	/**
 	 * Logs out the current user and redirect to homepage.

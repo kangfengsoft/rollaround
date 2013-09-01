@@ -29,17 +29,20 @@
         </ul>
         
         <div class="pageheader">
-            <form action="results.html" method="post" class="searchbar">
-                <input type="text" name="keyword" placeholder="To search type and hit enter..." />
-            </form>
-            <div class="pageicon"><span class="iconfa-laptop"></span></div>
+
+<!--             <div class="pageicon"><span class="iconfa-shopping-cart"></span></div>
             <div class="pagetitle">
                 <h5>All Features Summary</h5>
                 <h1>Dashboard</h1>
-            </div>
-            <div class="infobox-icon">
-				<i class="icon-twitter"></i>
-			</div>
+            </div> -->
+            <ul>
+            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
+            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
+            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
+            </ul>
+
+
+
         </div><!--pageheader-->
 
 	<div class="maincontent">

@@ -30,35 +30,35 @@
                         <li class="nav-header">New Users</li>
                         <li>
                             <a href="">
-                                <img src="images/photos/thumb1.png" alt="" class="userthumb" />
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb1.png" alt="" class="userthumb" />
                                 <strong>Draniem Daamul</strong>
                                 <small>April 20, 2013</small>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/photos/thumb2.png" alt="" class="userthumb" />
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb2.png" alt="" class="userthumb" />
                                 <strong>Shamcey Sindilmaca</strong>
                                 <small>April 19, 2013</small>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/photos/thumb3.png" alt="" class="userthumb" />
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb3.png" alt="" class="userthumb" />
                                 <strong>Nusja Paul Nawancali</strong>
                                 <small>April 19, 2013</small>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/photos/thumb4.png" alt="" class="userthumb" />
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb4.png" alt="" class="userthumb" />
                                 <strong>Rose Cerona</strong>
                                 <small>April 18, 2013</small>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/photos/thumb5.png" alt="" class="userthumb" />
+                                <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/photos/thumb5.png" alt="" class="userthumb" />
                                 <strong>John Doe</strong>
                                 <small>April 16, 2013</small>
                             </a>

@@ -15,9 +15,11 @@
 					'itemOptions'=>array('class'=>'dropdown'),
 					//'submenuOptions'=>array('class'=>'submenu'),
 						'items'=>array(
-							array('label'=>'上架总控制台', 'url'=>array('site/index','id'=>'12')),
-							array('label'=>'自定义上架', 'url'=>array('site/custom','id'=>'13')),
-							array('label'=>'上架日志记录', 'url'=>array('site/login','id'=>'14'))
+							array('label'=>'上架总控制台', 'url'=>array('site/index')),
+							array('label'=>'自定义上架', 'url'=>array('site/custom')),
+							array('label'=>'指定宝贝', 'url'=>array('site/assign')),
+							array('label'=>'排除宝贝', 'url'=>array('site/exclude')),
+							array('label'=>'上架日志记录', 'url'=>array('site/login'))
 			
 					)), 
 				array('label'=>'<span class="iconfa-picture"></span> 权限设置', 'url'=>array('site/contact'))
