@@ -5,20 +5,13 @@ class AdminController extends Controller {
 		if ($enable != "true") {
 			$enable = "false";
 		}
-		
-		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
-				':config_key' => Consts::CONFIG_KEY_TIMED_TASK 
-		) );
-		
-		if ($adminConfig == null) {
-			$adminConfig = new AdminConfig ();
-			$adminConfig->config_key = Consts::CONFIG_KEY_TIMED_TASK;
-		}
-		if( $enable == $adminConfig->config_value){
+		$adminShelfService = new AdminShelfService ();
+		$shelfPlanRecountConfig = $adminShelfService->getShelfPlanRecountConfig ();
+		if ($enable === $shelfPlanRecountConfig->config_value) {
 			return;
 		}
-		$adminConfig->config_value = $enable;
-		$adminConfig->save ();
+		$shelfPlanRecountConfig->config_value = $enable;
+		$shelfPlanRecountConfig->save ();
 		if( $enable == "true") {
 				// TODO start timed task
 			ignore_user_abort ( true );

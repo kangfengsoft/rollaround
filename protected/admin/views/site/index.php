@@ -1,10 +1,10 @@
 <?php
 /* @var $this SiteController */
 ?>
-<h1>enable/disable timed task</h1>
+<h1>enable/disable shelfPlanRecount</h1>
 <br/>
 <?php
-if($enable){
+if($enableShelfPlanRecount){
 ?>
 <a href="?r=admin/enableShelfPlanRecount&enable=false" class="btn btn-large btn-primary">disable</a>
 <?php }else{ ?>

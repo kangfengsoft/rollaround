@@ -36,4 +36,25 @@ class ShelfController extends Controller {
 				'items' => json_encode ( $resp->items ) 
 		) );
 	}
+	
+	public function actionEnableShelfService() {
+		$enable = Yii::app ()->request->getParam ( 'enable' );
+		if ($enable === "true") {
+			$enable = 1;
+		} else {
+			$enable = 0;
+		}
+		
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$userConfig = UserConfig::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+				':taobao_user_id' => $taobao_user_id 
+		) );
+		if ($userConfig === null) {
+			$userConfig = new UserConfig ();
+			$userConfig->taobao_user_id = $taobao_user_id;
+		}
+		$userConfig->enable_shelf_service = $enable;
+		$userConfig->save ();
+		$this->redirect ( $this->createUrl ( "site/index" ) );
+	}
 }

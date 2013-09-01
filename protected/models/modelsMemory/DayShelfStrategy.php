@@ -8,9 +8,13 @@ class DayShelfStrategy {
 	public $id;
 	public $taobao_user_id;
 	public $day;
-	public $hours = array ();
+	public $hours;
 	private $onsaleItemCount;
 	function __construct($shelfStrategy = null) {
+		$hours = array ();
+		for($hour=1;$hour<24;$hour++){
+			$hours[$hour] = array();
+		}
 		if ($shelfStrategy == null) {
 			return;
 		}
@@ -48,7 +52,7 @@ class DayShelfStrategy {
 	public function setTaobaoUserId($taobao_user_id) {
 		$this->taobao_user_id = $taobao_user_id;
 	}
-	public function getHours() {
+	public function &getHours() {
 		return $this->hours;
 	}
 	public function toShelfStrategy() {
@@ -64,7 +68,7 @@ class DayShelfStrategy {
 	}
 	
 	public function getPercent($hour){
-		if(isset($this->hours[$hour])){
+		if(!isset($this->hours[$hour]) || !isset($this->hours[$hour][self::HOUR_FIELD_PERCENT])){
 			return null;
 		}else{
 			return $this->hours[$hour][self::HOUR_FIELD_PERCENT];
@@ -82,7 +86,7 @@ class DayShelfStrategy {
 	public function setOnsaleItemCount($onsaleItemCount) {
 		$this->onsaleItemCount = $onsaleItemCount;
 		for($hour = 0; $hour < 24; $hour ++) {
-			$this->hours [$hour] [self::HOUR_FIELD_PLANCOUNT] = $this->hours [$hour] [self::HOUR_FIELD_PERCENT] * $onsaleItemCount;
+			$this->hours [$hour] [self::HOUR_FIELD_PLANCOUNT] = ( int ) ($this->hours [$hour] [self::HOUR_FIELD_PERCENT] * $onsaleItemCount);
 		}
 	}
 	

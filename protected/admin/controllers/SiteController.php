@@ -26,17 +26,17 @@ class SiteController extends Controller {
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
-				':config_key' => Consts::CONFIG_KEY_TIMED_TASK 
+				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT 
 		) );
 		
 		if ($adminConfig == null) {
 			$adminConfig = new AdminConfig ();
-			$adminConfig->config_key = Consts::CONFIG_KEY_TIMED_TASK;
+			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
 			$adminConfig->config_value = "false";
 		}
 		
 		$this->render ( 'index', array (
-				'enable' => $adminConfig->config_value == "true" 
+				'enableShelfPlanRecount' => $adminConfig->config_value === "true" 
 		) );
 	}
 	
