@@ -16,6 +16,7 @@
   $cs->registerScriptFile($baseUrl.'/js/jquery-1.9.1.min.js');
   $cs->registerScriptFile($baseUrl.'/js/jquery-ui-1.9.2.min.js');
 ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 
 </head>
 
@@ -38,7 +39,5 @@
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/excanvas.min.js"></script><![endif]-->
 	
-	
-
 </body>
 </html>
