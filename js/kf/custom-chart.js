@@ -1,3 +1,5 @@
+
+
 (function (Highcharts) {
     var addEvent = Highcharts.addEvent,
         each = Highcharts.each;
@@ -153,6 +155,12 @@ var yValue = [];
 var weekShelfStrategy = JSON.parse($("#modifyStrategy").text());
 //show which day of week
 var index = weekShelfStrategy.currentDay;
+$("ul.dropdown-menu a").each(function(){
+	if($(this).attr("class") == index){
+		$("button.dropdown-toggle").html($(this).text()+'<span class="caret"></span>');
+	}
+})
+
 for(var i=0; i<24; i++){
 	yValue.push([weekShelfStrategy.dayShelfStrategyList[weekShelfStrategy.currentDay].hours[i].percent*100]);
 }
@@ -292,7 +300,7 @@ function formatData(weekShelfStrategy){
 function saveData(){
 	$.ajax({
 		type: "post",
-		url: "<?php echo Yii::app()->request->baseUrl;?>/index.php/site/save",
+		url: BASE_PATH + "/index.php/site/save",
 		dataType: "json",
 		data: {'strategys' : formatData(weekShelfStrategy)},
 		success: function(data, textStatus){
