@@ -10,8 +10,43 @@ $this->breadcrumbs=array(
 
                 <div class="row-fluid">
                     <div id="dashboard-left" class="">
+                        <h5 class="subtitle">当前店铺状态</h5>
+                        <ul class="shortcuts">
+                            <li class="last images">
+                                <a href="">
+                                    <span class="shortcuts-icon iconsi-images"></span>
+                                    <span class="shortcuts-label">系统：已开启</span>
+                                </a>
+                            </li>
+                            <li class="events">
+                                <a href="">
+                                    <span class="shortcuts-icon iconsi-cart"></span>
+                                    <span class="shortcuts-label">在售商品：95</span>
+                                </a>
+                            </li>
+                            <li class="products">
+                                <a href="">
+                                    <span class="shortcuts-icon iconsi-cart"></span>
+                                    <span class="shortcuts-label">仓库中商品：6</span>
+                                </a>
+                            </li>
+                            <li class="archive">
+                                <a href="">
+                                    <span class="shortcuts-icon iconsi-cart"></span>
+                                    <span class="shortcuts-label">指定商品：16</span>
+                                </a>
+                            </li>
+                            <li class="help">
+                                <a href="">
+                                    <span class="shortcuts-icon iconsi-cart"></span>
+                                    <span class="shortcuts-label">排除商品：3</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <br>
                         
-                        <h5 class="subtitle">Daily Statistics</h5><br />
+                        <h5 class="subtitle">当天策略展示</h5><br />
                         <div id="sales-charts" style="height:300px;"></div>
                         
                         <div class="divider30"></div>
@@ -20,7 +55,7 @@ $this->breadcrumbs=array(
                             <thead>
                                 <tr>
                                     <th class="head1">Rendering engine</th>
-                                    <th class="head0">Browser</th>
+                                    <th class="head0">重要提示</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,28 +75,6 @@ $this->breadcrumbs=array(
                         </table>
                         
                         <br />
-                        
-                        <h4 class="widgettitle"><span class="icon-comment icon-white"></span> Recent Comments</h4>
-                        <div class="widgetcontent nopadding">
-                            <ul class="commentlist">
-                                <li>
-                                    <img src="images/photos/thumb2.png" alt="" class="pull-left" />
-                                    <div class="comment-info">
-                                        <h4><a href="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem</a></h4>
-                                        <h5>in <a href="">Sit Voluptatem</a></h5>
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-                                        <p>
-                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
-                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
-                                        </p>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                        
-                        <br />
-                        
                         
                     </div><!--span8-->
                     

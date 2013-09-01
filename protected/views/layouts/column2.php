@@ -30,18 +30,11 @@
         
         <div class="pageheader">
 
-            <div class="pageicon"><span class="iconfa-shopping-cart"></span></div>
+            <div class="pageicon"><span class="iconfa-bullhorn"></span></div>
             <div class="pagetitle">
                 <h5>All Features Summary</h5>
-                <h1>Dashboard</h1>
+                <h1>小贴士：只要998，终身会员带回家</h1>
             </div>
-<!--             <ul>
-            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
-            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
-            	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
-            </ul> -->
-
-
 
         </div><!--pageheader-->
 
