@@ -6,27 +6,12 @@
 
 <div class="rightpanel">
         
-        <ul class="breadcrumbs">
         	<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
         	'tagName'=>'ul',
-			'homeLink' => '<i class="icon-home"></i> <a href="#">Home</a>',
+			'homeLink' => '<i class="icon-home"></i> <a href="#">主页</a>',
 			'activeLinkTemplate'=>'<li><a href="{url}">{label}</a> <span class="separator"></span></li>',
 			)); ?><!-- breadcrumbs -->
-            <li><a href="dashboard.html"><i class="iconfa-home"></i></a> <span class="separator"></span></li>
-            <li>Dashboard</li>
-            <li class="right">
-                    <a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="icon-tint"></i> Color Skins</a>
-                    <ul class="dropdown-menu pull-right skin-color">
-                        <li><a href="default">Default</a></li>
-                        <li><a href="navyblue">Navy Blue</a></li>
-                        <li><a href="palegreen">Pale Green</a></li>
-                        <li><a href="red">Red</a></li>
-                        <li><a href="green">Green</a></li>
-                        <li><a href="brown">Brown</a></li>
-                    </ul>
-            </li>
-        </ul>
         
         <div class="pageheader">
 

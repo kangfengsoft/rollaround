@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
                         <br>
                         
                         <h5 class="subtitle">当天策略展示</h5><br />
-                        <div id="sales-charts" style="height:300px;"></div>
+                        <div id="sales-charts" style="height:220px;font-size:16px;"></div>
                         
                         <div class="divider30"></div>
                         
@@ -61,7 +61,7 @@ $this->breadcrumbs=array(
                             <tbody>
                                 <tr>
                                     <td>Trident</td>
-                                    <td><p class="text-warning">上架优化需要显示“已启动”状态，才会执行上架计划.</p></td>
+                                    <td><p class="text-warning">上架优化需要显示“已开启”状态，才会执行上架计划.</p></td>
                                 </tr>
                                 <tr>
                                     <td>Trident</td>
@@ -105,22 +105,22 @@ $this->breadcrumbs=array(
                             
                         </div>
                     
-                 	<div class="span6">
+                 	<div class="span6 profile-right">
                             
                         <div class="widgetbox tags">
-                                <h4 class="widgettitle">Tags</h4>
+                                <h4 class="widgettitle">常见问题</h4>
                                 <div class="widgetcontent">
                                     <ul class="taglist">
-                                        <li><a href="">HTML5 <span class="close">×</span></a></li>
-                                        <li><a href="">CSS <span class="close">×</span></a></li>
-                                        <li><a href="">PHP <span class="close">×</span></a></li>
-                                        <li><a href="">jQuery <span class="close">×</span></a></li>
-                                        <li><a href="">Java <span class="close">×</span></a></li>
-                                        <li><a href="">GWT <span class="close">×</span></a></li>
-                                        <li><a href="">CodeNgniter <span class="close">×</span></a></li>
-                                        <li><a href="">Bootstrap <span class="close">×</span></a></li>
+                                       <li><a href="">HTML5 <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">CSS <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">PHP <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">jQuery <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">Java <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">GWT <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">CodeNgniter <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">Bootstrap <span class="close"><i class="icon-chevron-right"></i></span></a></li>
                                     </ul>
-                                    <a style="display:block;margin-top:10px" href="">+ Add Tag</a>
+                                    <a style="display:block;margin-top:10px" href="">更多问题</a>
                                 </div>
                         </div>
                             
