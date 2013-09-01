@@ -343,11 +343,13 @@ $(document).ready(function () {
 	$("ul.dropdown-menu a").click(function(){
 			$("button.dropdown-toggle").html($(this).text()+'<span class="caret"></span>');
 			index = $(this).attr('class');
+			$(this).parents("ul").children().removeClass("active");
+			$(this).parent().addClass("active");
 			var value = [];
 			for(var i=0; i<24; i++){
 				value.push([weekShelfStrategy.dayShelfStrategyList[index].distribution[i]*100]);
 			}
-			
+
 			chart.series[0].setData(value);
 		})
 	
@@ -368,14 +370,12 @@ function formatData(weekShelfStrategy){
 }
 
 function saveData(){
-	
 	$.ajax({
 		type: "post",
 		url: "<?php echo Yii::app()->request->baseUrl;?>/index.php/site/save",
 		dataType: "json",
 		data: {'strategys' : formatData(weekShelfStrategy)},
 		success: function(data, textStatus){
-
 		},
 		complete: function(XMLHttpRequest, textStatus){
 			//HideLoading();
