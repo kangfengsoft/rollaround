@@ -21,32 +21,20 @@ $this->breadcrumbs=array(
                                 <tr>
                                     <th class="head1">Rendering engine</th>
                                     <th class="head0">Browser</th>
-                                    <th class="head1">Platform(s)</th>
-                                    <th class="head0">Engine version</th>
-                                    <th class="head1">CSS grade</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Trident</td>
-                                    <td>Internet  Explorer 5.5</td>
-                                    <td>Win 95+</td>
-                                    <td class="center">5.5</td>
-                                    <td class="center">A</td>
+                                    <td><p class="text-warning">上架优化需要显示“已启动”状态，才会执行上架计划.</p></td>
                                 </tr>
                                 <tr>
                                     <td>Trident</td>
-                                    <td>Internet Explorer 6</td>
-                                    <td>Win 98+</td>
-                                    <td class="center">6</td>
-                                    <td class="center">A</td>
+                                    <td><p class="text-info">目前不支持虚拟类宝贝和酒店类宝贝.</p></td>
                                 </tr>
                                 <tr>
                                     <td>Trident</td>
-                                    <td>Internet Explorer 7</td>
-                                    <td>Win XP SP2+</td>
-                                    <td class="center">7</td>
-                                    <td class="center">A</td>
+                                    <td><p class="text-error">上架优化，调整周期为一周，这段时间内流量不会有明显变化或轻微下降，之后流量将会有所增长 .</p></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -68,31 +56,7 @@ $this->breadcrumbs=array(
                                         </p>
                                     </div>
                                 </li>
-                                <li>
-                                    <img src="images/photos/thumb1.png" alt="" class="pull-left" />
-                                    <div class="comment-info">
-                                        <h4><a href="">But I must explain to you how all this mistaken</a></h4>
-                                        <h5>in <a href="">At vero eos et accusamus et iusto odio dignissimos</a></h5>
-                                        <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p>
-                                        <p>
-                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
-                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="images/photos/thumb10.png" alt="" class="pull-left" />
-                                    <div class="comment-info">
-                                        <h4><a href="">On the other hand, we denounce with righteous indignation</a></h4>
-                                        <h5>in <a href="">These cases are perfectly simple and easy to distinguish</a></h5>
-                                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
-                                        <p>
-                                            <a href="" class="btn btn-success btn-small"><span class="icon-thumbs-up icon-white"></span> Approve</a>
-                                            <a href="" class="btn btn-small"><span class="icon-thumbs-down"></span> Reject</a>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li><a href="">View More Comments</a></li>
+                                
                             </ul>
                         </div>
                         
@@ -101,8 +65,54 @@ $this->breadcrumbs=array(
                         
                     </div><!--span8-->
                     
+
+                    
                     
                 </div><!--row-fluid-->
+                
+                <div class='row-fluid'>
+                                    
+                    <div class="span6 profile-left">
+                            
+                        <div class="widgetbox tags">
+                                <h4 class="widgettitle">成功案例</h4>
+                                <div class="widgetcontent">
+                                    <ul class="taglist">
+                                        <li><a href="">HTML5 <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">CSS <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">PHP <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">jQuery <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">Java <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">GWT <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">CodeNgniter <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                        <li><a href="">Bootstrap <span class="close"><i class="icon-chevron-right"></i></span></a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                            
+                        </div>
+                    
+                 	<div class="span6">
+                            
+                        <div class="widgetbox tags">
+                                <h4 class="widgettitle">Tags</h4>
+                                <div class="widgetcontent">
+                                    <ul class="taglist">
+                                        <li><a href="">HTML5 <span class="close">×</span></a></li>
+                                        <li><a href="">CSS <span class="close">×</span></a></li>
+                                        <li><a href="">PHP <span class="close">×</span></a></li>
+                                        <li><a href="">jQuery <span class="close">×</span></a></li>
+                                        <li><a href="">Java <span class="close">×</span></a></li>
+                                        <li><a href="">GWT <span class="close">×</span></a></li>
+                                        <li><a href="">CodeNgniter <span class="close">×</span></a></li>
+                                        <li><a href="">Bootstrap <span class="close">×</span></a></li>
+                                    </ul>
+                                    <a style="display:block;margin-top:10px" href="">+ Add Tag</a>
+                                </div>
+                        </div>
+                            
+                        </div> 
+                </div>
                 
 
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/site.js"></script>

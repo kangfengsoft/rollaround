@@ -30,16 +30,16 @@
         
         <div class="pageheader">
 
-<!--             <div class="pageicon"><span class="iconfa-shopping-cart"></span></div>
+            <div class="pageicon"><span class="iconfa-shopping-cart"></span></div>
             <div class="pagetitle">
                 <h5>All Features Summary</h5>
                 <h1>Dashboard</h1>
-            </div> -->
-            <ul>
+            </div>
+<!--             <ul>
             	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
             	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
             	<li><div class="pageicon"><span class="iconfa-shopping-cart"></span></div></li>
-            </ul>
+            </ul> -->
 
 
 
