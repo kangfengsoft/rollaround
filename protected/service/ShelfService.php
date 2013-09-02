@@ -1,32 +1,31 @@
 <?php
 class ShelfService {
-	public function doJob() {
-	}
-	
 	/*
 	 * if $day = -1, return current day's data
 	 */
-	// public function getDayStrategy($taobao_user_id = null, $day = null) {
-	// if ($day == null) {
-	// $day = date ( "w" );
-	// }
-	// if ($taobao_user_id == null) {
-	// $taobao_user_id = Yii::app ()->user->taobao_user_id;
-	// }
-	// $shelfStrategy = ShelfStrategy::model ()->find ( 'taobao_user_id=:taobao_user_id and day=:day', array (
-	// ':taobao_user_id' => $taobao_user_id,
-	// ':day' => $day
-	// ) );
-	// $dayShelfStrategy = null;
-	// if ($shelfStrategy == null) {
-	// $weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy($taobao_user_id);
-	// $weekShelfStrategy->saveToDB();
-	// $dayShelfStrategy = $weekShelfStrategy->getDayShelfStrategy ( $day );
-	// } else {
-	// $dayShelfStrategy = new DayShelfStrategy ( $shelfStrategy );
-	// }
-	// return $dayShelfStrategy;
-	// }
+	/*
+	public function getDayStrategy($taobao_user_id = null, $day = null) {
+		if ($day == null) {
+			$day = date ( "w" );
+		}
+		if ($taobao_user_id == null) {
+			$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		}
+		$shelfStrategy = ShelfStrategy::model ()->find ( 'taobao_user_id=:taobao_user_id and day=:day', array (
+				':taobao_user_id' => $taobao_user_id,
+				':day' => $day 
+		) );
+		$dayShelfStrategy = null;
+		if ($shelfStrategy == null) {
+			$weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy ( $taobao_user_id );
+			$weekShelfStrategy->saveToDB ();
+			$dayShelfStrategy = $weekShelfStrategy->getDayShelfStrategy ( $day );
+		} else {
+			$dayShelfStrategy = new DayShelfStrategy ( $shelfStrategy );
+		}
+		return $dayShelfStrategy;
+	}
+	*/
 	public function getWeekShelfStrategy($taobao_user_id = null) {
 		if ($taobao_user_id == null) {
 			$taobao_user_id = Yii::app ()->user->taobao_user_id;

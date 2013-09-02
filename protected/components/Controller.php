@@ -51,14 +51,14 @@ class Controller extends CController {
 					'code' => $code,
 					'redirect_uri' => Yii::app ()->params ['redirect_uri'] 
 			);
-			
-			$token = json_decode ( $this->curl ( Yii::app ()->params ['oauthTokenUrl'], $postfields ) );
+			$c = new TopClient ();
+			$token = json_decode ( $c->curl(Yii::app ()->params ['oauthTokenUrl'], $postfields) );
+// 			$token = json_decode ( $this->curl ( Yii::app ()->params ['oauthTokenUrl'], $postfields ) );
 			$identity = new UserIdentity ( 'demo', 'demo' );
 			$identity->setToken ( $token );
-			Yii::app ()->user->login ( $identity );
+			//FIXME save the purchase time
+			Yii::app ()->user->login ( $identity,  $token->r1_expires_in);
 			$this->redirect ( $this->createUrl ( "site/index" ) );
-// 			header ( 'Location: ' . Yii::app ()->params ['redirect_uri'] );
-// 			$connection=Yii::app()->db;
 		} else {
 			//$this->redirect ( $this->createUrl ( "site/login" ) );
 			$this->redirect ( Yii::app()->params['oauthAuthorizeUrl']);

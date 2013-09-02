@@ -59,5 +59,11 @@ class UserIdentity extends CUserIdentity {
 		$this->setState ( 'taobao_user_id', $token->taobao_user_id );
 		$this->setState ( 'access_token', $token->access_token );
 		$this->setState ( 'nick', isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : $token->taobao_user_nick );
+		
+		$topService = new TopService ();
+		//FIXME remove it later
+		$mockAvatar = 'http://wwc.taobaocdn.com/avatar/getAvatar.do?userId=79997975&width=100&height=100&type=sns';
+		$avatar = isset ( $topService->getSeller ( $token->access_token )->user->avatar ) ? $topService->getSeller ( $token->access_token )->user->avatar : $mockAvatar;
+		$this->setState ( 'avatar', $avatar );
 	}
 }

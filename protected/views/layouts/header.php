@@ -7,7 +7,7 @@
                 
                 <li class="right">
                     <div class="userloggedinfo">
-                        <img src="http://assets.taobaocdn.com/app/sns/img/default/avatar-120.png" alt="" />
+                        <img src="<?php echo Yii::app()->user->avatar; ?>" alt="" />
                         <div class="userinfo">
                         <?php if(!Yii::app()->user->isGuest){?>
                             <h5><?php echo Yii::app()->user->nick; ?></h5>
