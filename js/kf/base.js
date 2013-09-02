@@ -1,1 +1,1 @@
-var BASE_PATH = "/kfsoft";
+var BASE_PATH = "/" + window.location.pathname.split("/")[1];

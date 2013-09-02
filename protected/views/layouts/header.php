@@ -14,7 +14,7 @@
                             <ul>
                                 <li><a href="#">有效期到：2013-9-25</a></li>
                                 <li><a href="#">还剩12天到期</a></li>
-                                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php?r=site/logout">退出系统</a></li>
+                                <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php/site/logout">退出系统</a></li>
                             </ul>
                         <?php }else{?>
 							<a href="<?php echo Yii::app()->params['oauthAuthorizeUrl']?>">login first</a>

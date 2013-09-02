@@ -11,13 +11,6 @@ $this->breadcrumbs=array(
 	number demo</a>
 <a href="?r=shelf/getOnsaleGoods" class="btn btn-large btn-primary">get
 	onsale goods</a>
-<?php if($enableShelfService){?>
-<a href="?r=shelf/enableShelfService&enable=false"
-	class="btn btn-large btn-primary">disable shelf service</a>
-<?php }else{?>
-<a href="?r=shelf/enableShelfService&enable=true"
-	class="btn btn-large btn-primary">enable shelf service</a>
-<?php }?>
 <!-- for test end -->
 
 <!--kf scripts-->
@@ -27,10 +20,20 @@ $this->breadcrumbs=array(
 	<div id="dashboard-left" class="">
 		<h5 class="subtitle">当前店铺状态</h5>
 		<ul class="shortcuts">
-			<li class="last images"><a href=""> <span
+			
+			
+			<?php if($enableShelfService){?>
+			<li class="system"><a href="?r=shelf/enableShelfService&enable=false"> <span
 					class="shortcuts-icon iconsi-images"></span> <span
 					class="shortcuts-label">系统：已开启</span>
 			</a></li>
+			<?php }else{?>
+			<li class="system"><a href="?r=shelf/enableShelfService&enable=true"> <span
+					class="shortcuts-icon iconsi-images"></span> <span
+					class="shortcuts-label">系统：已关闭</span>
+			</a></li>
+			<?php }?>
+			
 			<li class="events"><a href=""> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
 					class="shortcuts-label">在售商品：95</span>

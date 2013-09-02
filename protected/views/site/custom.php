@@ -39,9 +39,8 @@ $this->breadcrumbs=array(
 			<!-- 			<div id="drag"></div>
 			<div id="drop"></div> 
 			<hr> -->
-
-
-			<div class="btn-group">
+		
+			<div class="btn-group ">
 				<a class="btn btn-small dropdown-toggle" data-toggle="dropdown"
 					href="#"> 平均策略 <span class="caret"></span>
 				</a>
@@ -59,7 +58,6 @@ $this->breadcrumbs=array(
 			<button class="btn btn-primary" onclick=saveData()>
 				<span class="hidden-phone">保存设置</span>
 			</button>
-	
 	</div>
 	<!--widgetcontent-->
 </div>
