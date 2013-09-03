@@ -18,6 +18,7 @@ return array(
 				'application.models.modelsMemory.*',
 				'application.components.*',
 				'application.service.*',
+				'application.admin.service.*',
 				'application.apis.top.*',
 				'application.apis.top.request.*',
 				'application.apis.lotusphp_runtime.Logger.*' 

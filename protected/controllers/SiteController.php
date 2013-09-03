@@ -32,18 +32,18 @@ class SiteController extends Controller
 		$shelfService = new ShelfService ();
 		$weekShelfStrategy = $shelfService->getWeekShelfStrategy ();
 		
-		$userConfig = UserConfig::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
-				':taobao_user_id' => Yii::app ()->user->taobao_user_id 
-		) );
-		if ($userConfig === null) {
-			$userConfig = new UserConfig ();
-			$userConfig->taobao_user_id = Yii::app ()->user->taobao_user_id;
-			$userConfig->enable_shelf_service = 0;
-			$userConfig->save ();
-		}
+		$adminShelfService = new AdminShelfService();
+		$userConfig = $adminShelfService->getUserConfig($this->currentUser->taobao_user_id);
+		
+		$topService = new TopService();
+		$onlineGoodNum = $topService->getOnlineGoodNum($this->currentUser->access_token);
+		$inventoryGoodNum = $topService->getInventoryGoodNum($this->currentUser->access_token);
+		
 		$this->render ( 'index', array (
 				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
-				"enableShelfService" => $userConfig->enable_shelf_service 
+				"enableShelfService" => $userConfig->enable_shelf_service,
+				"onsaleGoodNum" => $onlineGoodNum,
+				"inventoryGoodNum" => $inventoryGoodNum
 		) );
 	}
 	

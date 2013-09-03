@@ -26,6 +26,7 @@ class ShelfService {
 		return $dayShelfStrategy;
 	}
 	*/
+	
 	public function getWeekShelfStrategy($taobao_user_id = null) {
 		if ($taobao_user_id == null) {
 			$taobao_user_id = Yii::app ()->user->taobao_user_id;

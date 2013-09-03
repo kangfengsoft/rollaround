@@ -36,11 +36,11 @@ $this->breadcrumbs=array(
 			
 			<li class="events"><a href=""> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
-					class="shortcuts-label">在售商品：95</span>
+					class="shortcuts-label">在售商品：<?php echo $onsaleGoodNum?></span>
 			</a></li>
 			<li class="products"><a href=""> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
-					class="shortcuts-label">仓库中商品：6</span>
+					class="shortcuts-label">仓库中商品：<?php echo $inventoryGoodNum?></span>
 			</a></li>
 			<li class="archive"><a href=""> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
