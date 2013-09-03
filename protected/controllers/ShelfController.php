@@ -19,21 +19,12 @@ class ShelfController extends Controller {
 				'seller_credit_goodNum' => $resp->user->seller_credit->good_num 
 		) );
 	}
-	public function actionGetOnsaleGoods() {
-		$c = new TopClient ();
-		$c->appkey = Yii::app ()->params ['client_id'];
-		$c->secretKey = Yii::app ()->params ['client_secret'];
-		$req = new ItemsOnsaleGetRequest ();
-		$req->setFields ( "num_iid,title,price,list_time,delist_time" );
-		$req->setPageNo ( 1 );
-		$req->setOrderBy ( "list_time:desc" );
-		$req->setIsTaobao ( "true" );
-		$req->setPageSize ( 100 );
-		$req->setStartModified ( "2000-01-01 00:00:00" );
-		$req->setEndModified ( "2020-01-01 00:00:00" );
-		$resp = $c->execute ( $req, Yii::app ()->user->access_token );
-		$this->render ( 'getOnsaleGoods', array (
-				'items' => json_encode ( $resp->items ) 
+	public function actionGetOnsaleGoodNum() {
+		$topService = new TopService();
+		$accessToken = Util::getCurrentUser()->access_token;
+		$onlineGoodNum = $topService->getOnlineGoodNum($this->user->$accessToken);
+		$this->render ( 'onsaleGoodNum', array (
+				'items' => $onlineGoodNum 
 		) );
 	}
 	

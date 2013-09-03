@@ -6,5 +6,16 @@ class Util{
 		$num = $tmp / $pow;
 		return $num;
 	}
+	
+	public static function getCurrentUser(){
+		$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+				':taobao_user_id' => Yii::app ()->user->taobao_user_id
+		) );
+		if($user === null){
+			//401（未授权）
+			throw new CHttpException(401,'未授权');
+		}
+		return $user;
+	}
 }
 ?>
