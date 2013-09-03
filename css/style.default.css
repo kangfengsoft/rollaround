@@ -180,6 +180,7 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 	display: block;
 }
 /*** MAIN PANEL ***/
+#info-table td{white-space: normal;}
 
 .rightpanel { margin-left: 260px; background: url(../images/bg1.png); }
 .rightpanel:after { clear: both; content: ''; display: block; }
@@ -223,7 +224,8 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .shortcuts { list-style: none; margin-top: 20px; overflow: hidden; clear: both; }
 .shortcuts li { display: inline-block; float: left; margin: 0 5px 5px 0; position: relative; }
 .shortcuts li a { display: block; width: 130px; height: 130px; background: #0866c6; color: #fff; font-size: 16px; }
-.shortcuts li a:hover { background: #282828; text-decoration: none; }
+.shortcuts li a:hover { text-decoration: none; cursor:default;}
+.shortcuts li.system a:hover { background: #282828; cursor:pointer;}
 .shortcuts li .shortcuts-label { display: block; padding: 0 12px; }
 .shortcuts li .shortcuts-icon { display: block; width: 48px; height: 48px; padding: 30px 0 20px 0; margin: 0 auto; }
 .shortcuts li .iconsi-event { background: url(../images/icons/icon-event.png) no-repeat center center; }
@@ -231,6 +233,8 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 .shortcuts li .iconsi-archive { background: url(../images/icons/icon-archive.png) no-repeat center center; }
 .shortcuts li .iconsi-help { background: url(../images/icons/icon-help.png) no-repeat center center; }
 .shortcuts li .iconsi-images { background: url(../images/icons/icon-images.png) no-repeat center center; }
+.shortcuts li .iconsi-on { background: url(../images/icons/icon-on.png) no-repeat center center; }
+.shortcuts li .iconsi-off { background: url(../images/icons/icon-off.png) no-repeat center center; }
 
 .widget {
 	-moz-box-shadow: 1px 1px 8px rgba(0,0,0,0.3);

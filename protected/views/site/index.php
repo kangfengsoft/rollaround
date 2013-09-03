@@ -24,12 +24,12 @@ $this->breadcrumbs=array(
 			
 			<?php if($enableShelfService){?>
 			<li class="system"><a href="?r=shelf/enableShelfService&enable=false"> <span
-					class="shortcuts-icon iconsi-images"></span> <span
+					class="shortcuts-icon iconsi-on"></span> <span
 					class="shortcuts-label">系统：已开启</span>
 			</a></li>
 			<?php }else{?>
 			<li class="system"><a href="?r=shelf/enableShelfService&enable=true"> <span
-					class="shortcuts-icon iconsi-images"></span> <span
+					class="shortcuts-icon iconsi-off"></span> <span
 					class="shortcuts-label">系统：已关闭</span>
 			</a></li>
 			<?php }?>
@@ -59,7 +59,7 @@ $this->breadcrumbs=array(
 
 		<div class="divider30"></div>
 
-		<table class="table table-bordered responsive">
+		<table class="table table-bordered responsive" id="info-table">
 			<thead>
 				<tr>
 					<th class="head1">Rendering engine</th>
@@ -69,16 +69,31 @@ $this->breadcrumbs=array(
 			<tbody>
 				<tr>
 					<td>Trident</td>
-					<td><p class="text-warning">上架优化需要显示“已开启”状态，才会执行上架计划.</p></td>
+					<td><p class="text-warning"><i class="icon-star-empty"></i>&nbsp;上架优化需要显示“已开启”状态，才会执行上架计划.</p></td>
 				</tr>
 				<tr>
 					<td>Trident</td>
-					<td><p class="text-info">目前不支持虚拟类宝贝和酒店类宝贝.</p></td>
+					<td><p class="text-info"><i class="icon-star-empty"></i>&nbsp;目前不支持虚拟类宝贝和酒店类宝贝.</p></td>
 				</tr>
 				<tr>
 					<td>Trident</td>
-					<td><p class="text-error">上架优化，调整周期为一周，这段时间内流量不会有明显变化或轻微下降，之后流量将会有所增长
-							.</p></td>
+					<td><p class="text-error"><i class="icon-star-empty"></i>&nbsp;上架优化，调整周期为一周，这段时间内流量不会有明显变化或轻微下降，之后流量将会有所增长.</p></td>
+				</tr>
+				<tr>
+					<td>Trident</td>
+					<td><p class="text-info"><i class="icon-star-empty"></i>&nbsp;添加新宝贝上架后，系统会自动检测到新宝贝，并安排上架计划，无需手动重新调整上架计划</p></td>
+				</tr>
+				<tr>
+					<td>Trident</td>
+					<td><p class="text-info"><i class="icon-star-empty"></i>&nbsp;系统只对在售的宝贝进行上下架，不会调整在仓库中的宝贝</p></td>
+				</tr>
+				<tr>
+					<td>Trident</td>
+					<td><p class="text-info"><i class="icon-star-empty"></i>&nbsp;系统根据选择的上架策略设置上架时间分布（均匀分布，自定义分布），让宝贝科学合理地分布在各时间段，由于最佳分布时间为7*14=98个小时，如果在售宝贝少于这个数字，某些时间段可能会出现无宝贝上架的情况</p></td>
+				</tr>
+				<tr>
+					<td>Trident</td>
+					<td><p class="text-info"><i class="icon-star-empty"></i>&nbsp;如果用户手动设置了指定宝贝在指定时间上架，系统会自动调整该时间段的宝贝上架，实现智能动态上架</p></td>
 				</tr>
 			</tbody>
 		</table>
