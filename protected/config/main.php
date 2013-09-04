@@ -80,7 +80,8 @@ return array(
                     'levels'=>'error, warning',
                 ),
                 array(
-                    'class'=>'CEmailLogRoute',
+//                     'class'=>'CEmailLogRoute',
+                    'class'=>'KfEmailLogRoute',
                     'levels'=>'error',
                     'emails'=>'kangfeng_soft@163.com',
                 ),
@@ -91,6 +92,11 @@ return array(
 				),
 				*/
 			),
+		),
+		'mailer' => array(
+				'class' => 'application.extensions.mailer.EMailer',
+				'pathViews' => 'application.views.email',
+				'pathLayouts' => 'application.views.email.layouts'
 		),
 	),
 

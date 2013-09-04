@@ -176,4 +176,24 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	
+	public function actionTestMail() {
+		Yii::log("test log", 'error', '');
+// 		$message = 'mail success!!!';
+// 		$mailer = Yii::createComponent ( 'application.extensions.mailer.EMailer' );
+// 		$mailer->Host = 'smtp.163.com';
+// 		$mailer->IsSMTP ();
+// 		$mailer->SMTPAuth = true;
+// 		$mailer->From = 'kangfeng_soft@163.com'; // 设置发件地址
+// 		$mailer->AddReplyTo ( 'kangfeng_soft@163.com' );
+// 		$mailer->AddAddress ( 'kangfeng_soft@163.com' ); // 设置收件件地址
+// 		$mailer->FromName = 'kf'; // 这里设置发件人姓名
+// 		$mailer->Username = 'kangfeng_soft@163.com'; // 这里输入发件地址的用户名
+// 		$mailer->Password = 'works123'; // 这里输入发件地址的密码
+// 		$mailer->SMTPDebug = true; // 设置SMTPDebug为true，就可以打开Debug功能，根据提示去修改配置
+// 		$mailer->CharSet = 'UTF-8';
+// 		$mailer->Subject = Yii::t ( 'demo', 'Yii rulez!' ); // 设置邮件的主题
+// 		$mailer->Body = $message;
+// 		$mailer->Send ();
+	}
 }
