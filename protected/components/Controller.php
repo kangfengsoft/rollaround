@@ -31,13 +31,10 @@ class Controller extends CController {
 		);
 	}
 	
-	public $currentUser;
-	
 	// FIXME
 	// later will move to a filter class
 	public function filterAccessControl($filterChain) {
 		if (! Yii::app ()->user->isGuest) {
-			$this->currentUser = Util::getCurrentUser();
 			$filterChain->run ();
 			return;
 		}
@@ -60,11 +57,14 @@ class Controller extends CController {
 			$identity->setToken ( $token );
 			//FIXME save the purchase time
 			Yii::app ()->user->login ( $identity,  $token->r1_expires_in);
-			$this->currentUser = Util::getCurrentUser();
 			$this->redirect ( $this->createUrl ( "site/index" ) );
 		} else {
 			//$this->redirect ( $this->createUrl ( "site/login" ) );
 			$this->redirect ( Yii::app()->params['oauthAuthorizeUrl']);
 		}
+	}
+	
+	public function getCurrentAccessToken(){
+		return Util::getCurrentUser()->access_token;
 	}
 }

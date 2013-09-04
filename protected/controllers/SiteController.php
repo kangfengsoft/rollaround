@@ -29,21 +29,23 @@ class SiteController extends Controller
 	public function actionIndex() {
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
+		
+		$access_token = $this->getCurrentAccessToken ();
 		$shelfService = new ShelfService ();
 		$weekShelfStrategy = $shelfService->getWeekShelfStrategy ();
 		
-		$adminShelfService = new AdminShelfService();
-		$userConfig = $adminShelfService->getUserConfig($this->currentUser->taobao_user_id);
+		$adminShelfService = new AdminShelfService ();
+		$userConfig = $adminShelfService->getUserConfig ( Yii::app ()->user->taobao_user_id );
 		
-		$topService = new TopService();
-		$onlineGoodNum = $topService->getOnlineGoodNum($this->currentUser->access_token);
-		$inventoryGoodNum = $topService->getInventoryGoodNum($this->currentUser->access_token);
+		$topService = new TopService ();
+		$onlineGoodNum = $topService->getOnlineGoodNum ( $access_token );
+		$inventoryGoodNum = $topService->getInventoryGoodNum ( $access_token );
 		
 		$this->render ( 'index', array (
 				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
 				"enableShelfService" => $userConfig->enable_shelf_service,
 				"onsaleGoodNum" => $onlineGoodNum,
-				"inventoryGoodNum" => $inventoryGoodNum
+				"inventoryGoodNum" => $inventoryGoodNum 
 		) );
 	}
 	
