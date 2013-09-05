@@ -6,13 +6,6 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<!-- for test -->
-<a href="?r=shelf/getGoodNum" class="btn btn-large btn-primary">get good
-	number demo</a>
-<a href="?r=shelf/getOnsaleGoods" class="btn btn-large btn-primary">get
-	onsale goods</a>
-<!-- for test end -->
-
 <!--kf scripts-->
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/site.js"></script>
 

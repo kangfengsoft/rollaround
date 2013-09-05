@@ -160,6 +160,31 @@ class SiteController extends Controller
 	}
 	
 	/**
+	 * 得到所有商品
+	 *
+	 *
+	 * */
+	public function actionGetAllGood(){
+		$topService = new TopService();
+		$pageNo = $_GET['iDisplayStart'];
+		$pageSize = $_GET['iDisplayLength'];
+		$sEcho = $_GET['sEcho'];
+		$sSearch = $_GET['sSearch'];
+		$access_token = $this->getCurrentAccessToken ();
+		$goods = $topService->searchOnsaleItems($sSearch, $access_token, $pageNo, $pageSize);
+		$goods->sEcho = $sEcho;
+		$goods->iTotalRecords = $goods->total_results;
+// 		if($pageNo < $goods->total_results){
+// 			$goods->iTotalDisplayRecords = $pageNo;
+// 		}else{
+		$goods->iTotalDisplayRecords = $goods->total_results;
+		//}
+		$goods->aaData = $goods->items->item;
+		//unset($goods['items']);
+		echo json_encode($goods);
+	}
+	
+	/**
 	 * 展示排除宝贝
 	 *
 	 *
