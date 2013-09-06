@@ -48,6 +48,7 @@ CREATE TABLE admin_config (
 
 CREATE TABLE list_task (
     id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
     num_iid varchar(100) NOT NULL,
     list_time datetime
 )CHARSET=utf8;

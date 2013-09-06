@@ -70,5 +70,25 @@ class TopService {
 		$resp = $c->execute ( $req, $access_token );
 		return $resp;
 	}
+	
+	public function applyListTask($listTask, $access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		$req = new ItemGetRequest();
+		$req->setFields("num");
+		$req->setNumIid($listTask->num_iid);
+		$resp = $c->execute ( $req, $access_token );
+		$num = $resp->item->num;
+		
+		$req = new ItemUpdateDelistingRequest();
+		$req->setNumIid($listTask->num_iid);
+		$resp = $c->execute ( $req, $access_token );
+		
+		$req = new ItemUpdateListingRequest();
+		$req->setNumIid($listTask->num_iid);
+		$req->setNum($num);
+		$resp = $c->execute ( $req, $access_token );
+	}
 }
-?>
+?>r

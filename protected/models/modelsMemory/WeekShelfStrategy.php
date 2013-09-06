@@ -106,7 +106,7 @@ class WeekShelfStrategy {
 		}
 	}
 	
-	public function recountShelfPlan($items) {
+	public function recountShelfPlan($items, $taobao_user_id) {
 		$this->insertItems ( $items );
 		$day = (date ( "w" ) + 1) % 7;
 		$hourPointer = 23;
@@ -148,7 +148,7 @@ class WeekShelfStrategy {
 						if($needCount <= 0){
 							$itemListCount = count($this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST]);
 							$addItemList = array_slice ( $this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST], $itemListCount-$CONST_NEED_COUNT );
-							$this->addTimedTask($addItemList, $hour);
+							$this->addTimedTask($addItemList, $hour, $taobao_user_id);
 						}
 					}
 				}
@@ -156,7 +156,7 @@ class WeekShelfStrategy {
 		}
 	}
 	
-	public function addTimedTask($itemList, $hour){
+	public function addTimedTask($itemList, $hour, $taobao_user_id){
 		$secondInterval = (int)(3600 / count($itemList));
 		if($secondInterval == 0){
 			$secondInterval = 1;
@@ -172,6 +172,7 @@ class WeekShelfStrategy {
 				$listTask = new ListTask();
 				$listTask->num_iid = $item->num_iid;
 			}
+			$listTask->taobao_user_id = $taobao_user_id;
 			$taskYear = date ( "Y" );
 			$taskMonth  = date ( "m" );
 			$taskDay = date("d",strtotime("+1 day"));

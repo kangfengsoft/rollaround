@@ -6,18 +6,41 @@ class AdminController extends Controller {
 			$enable = "false";
 		}
 		$adminShelfService = new AdminShelfService ();
-		$shelfPlanRecountConfig = $adminShelfService->getShelfPlanRecountConfig ();
-		if ($enable === $shelfPlanRecountConfig->config_value) {
+		$adminConfig = $adminShelfService->getShelfPlanRecountConfig ();
+		if ($enable === $adminConfig->config_value) {
 			return;
 		}
-		$shelfPlanRecountConfig->config_value = $enable;
-		$shelfPlanRecountConfig->save ();
+		$adminConfig->config_value = $enable;
+		$adminConfig->save ();
 		if( $enable == "true") {
 				// TODO start timed task
 			ignore_user_abort ( true );
 			set_time_limit ( 0 );
 			$adminShelfService = new AdminShelfService();
 			$adminShelfService->enableShelfPlanRecount();
+		} else {
+			$this->redirect ( $this->createUrl ( "site/index" ) );
+		}
+	}
+	
+	public function actionEnableShelfTask(){
+		$enable = Yii::app ()->request->getParam ( 'enable' );
+		if ($enable != "true") {
+			$enable = "false";
+		}
+		$adminShelfService = new AdminShelfService ();
+		$adminConfig = $adminShelfService->getListTaskConfig ();
+		if ($enable === $adminConfig->config_value) {
+			return;
+		}
+		$adminConfig->config_value = $enable;
+		$adminConfig->save ();
+		if( $enable == "true") {
+			// TODO start timed task
+			ignore_user_abort ( true );
+			set_time_limit ( 0 );
+			$adminShelfService = new AdminShelfService();
+			$adminShelfService->enableShelfTask();
 		} else {
 			$this->redirect ( $this->createUrl ( "site/index" ) );
 		}

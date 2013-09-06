@@ -53,7 +53,7 @@ class AdminShelfService{
 			}
 			$shelfService = new ShelfService();
 			$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
-			$weekShelfStrategy->recountShelfPlan($items);
+			$weekShelfStrategy->recountShelfPlan($items, $taobao_user_id);
 		}
 	}
 	
@@ -65,6 +65,38 @@ class AdminShelfService{
 		if ($adminConfig == null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
+			$adminConfig->config_value= "false";
+			$adminConfig->save();
+		}
+		return $adminConfig;
+	}
+	
+	public function enableListTask(){
+		$topService = new TopService();
+		while ( true ) {
+			if ($this->getListTaskConfig ()->config_value !== "true") {
+				return;
+			}
+			$nextListTime = date('Y-m-d H:i:s',strtotime('+30 second'));
+			$listTasks = ListTask::model ()->findAll ( 'list_time<=:list_time', array (
+					':list_time' => $nextListTime
+			) );
+			foreach($listTasks as $listTask){
+				$access_token = Util::getAccessToken($listTask->$taobao_user_id);
+				$topService->applyListTask($listTask, $access_token);
+			}
+		}
+	}
+	
+	
+	public function getListTaskConfig(){
+		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
+				':config_key' => Consts::CONFIG_KEY_LIST_TASK
+		) );
+	
+		if ($adminConfig == null) {
+			$adminConfig = new AdminConfig ();
+			$adminConfig->config_key = Consts::CONFIG_KEY_LIST_TASK;
 			$adminConfig->config_value= "false";
 			$adminConfig->save();
 		}

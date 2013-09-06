@@ -25,15 +25,18 @@ class SiteController extends Controller {
 	public function actionIndex() {
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
-				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT 
-		) );
+// 		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
+// 				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT 
+// 		) );
 		
-		if ($adminConfig == null) {
-			$adminConfig = new AdminConfig ();
-			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
-			$adminConfig->config_value = "false";
-		}
+// 		if ($adminConfig == null) {
+// 			$adminConfig = new AdminConfig ();
+// 			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
+// 			$adminConfig->config_value = "false";
+// 		}
+		
+		$adminShelfService = new AdminShelfService();
+		$adminConfig = $adminShelfService->getShelfPlanRecountConfig();
 		
 		$this->render ( 'index', array (
 				'enableShelfPlanRecount' => $adminConfig->config_value === "true" 
