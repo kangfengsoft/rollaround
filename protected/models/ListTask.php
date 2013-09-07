@@ -5,6 +5,7 @@
  *
  * The followings are the available columns in table 'list_task':
  * @property integer $id
+ * @property string $taobao_user_id
  * @property string $num_iid
  * @property string $list_time
  */
@@ -36,12 +37,12 @@ class ListTask extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('num_iid', 'required'),
-			array('num_iid', 'length', 'max'=>100),
+			array('taobao_user_id, num_iid', 'required'),
+			array('taobao_user_id, num_iid', 'length', 'max'=>100),
 			array('list_time', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, num_iid, list_time', 'safe', 'on'=>'search'),
+			array('id, taobao_user_id, num_iid, list_time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,6 +64,7 @@ class ListTask extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'taobao_user_id' => 'Taobao User',
 			'num_iid' => 'Num Iid',
 			'list_time' => 'List Time',
 		);
@@ -80,6 +82,7 @@ class ListTask extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('taobao_user_id',$this->taobao_user_id,true);
 		$criteria->compare('num_iid',$this->num_iid,true);
 		$criteria->compare('list_time',$this->list_time,true);
 

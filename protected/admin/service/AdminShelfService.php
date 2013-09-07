@@ -20,10 +20,10 @@ class AdminShelfService{
 		
 		//FIXME use interator instead
 		for($i = 0; $i < count ( $userConfigs ); $i ++) {
-			if($this->getShelfPlanRecountConfig()->config_value !== "true"){
+			if(!$this->isShelfPlanRecountEnable()){
 				return;
 			}
-			if($userConfigs[$i]->enable_shelf_service === 0){
+			if((int)$userConfigs[$i]->enable_shelf_service === 0){
 				continue;
 			}
 			$taobao_user_id = $userConfigs[$i]->taobao_user_id;
@@ -57,7 +57,7 @@ class AdminShelfService{
 		}
 	}
 	
-	public function getShelfPlanRecountConfig(){
+	public function isShelfPlanRecountEnable(){
 		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
 				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT
 		) );
@@ -68,13 +68,26 @@ class AdminShelfService{
 			$adminConfig->config_value= "false";
 			$adminConfig->save();
 		}
-		return $adminConfig;
+		return $adminConfig->config_value === "true";
+	}
+	
+	public function setShelfPlanRecountConfig($enable){
+		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
+				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT
+		) );
+		
+		if ($adminConfig == null) {
+			$adminConfig = new AdminConfig ();
+			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
+		}
+		$adminConfig->config_value= $enable === true ? "true" : "false";
+		$adminConfig->save();
 	}
 	
 	public function enableListTask(){
 		$topService = new TopService();
 		while ( true ) {
-			if ($this->getListTaskConfig ()->config_value !== "true") {
+			if (!$this->isListTaskEnable()) {
 				return;
 			}
 			$nextListTime = date('Y-m-d H:i:s',strtotime('+30 second'));
@@ -82,25 +95,40 @@ class AdminShelfService{
 					':list_time' => $nextListTime
 			) );
 			foreach($listTasks as $listTask){
-				$access_token = Util::getAccessToken($listTask->$taobao_user_id);
+				$access_token = Util::getAccessToken($listTask->taobao_user_id);
 				$topService->applyListTask($listTask, $access_token);
+				$listTask->delete();
 			}
+			
+			//FIXME remove later
+			return;
 		}
 	}
 	
-	
-	public function getListTaskConfig(){
+	public function isListTaskEnable() {
 		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
-				':config_key' => Consts::CONFIG_KEY_LIST_TASK
+				':config_key' => Consts::CONFIG_KEY_LIST_TASK 
 		) );
-	
+		
 		if ($adminConfig == null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_LIST_TASK;
-			$adminConfig->config_value= "false";
-			$adminConfig->save();
+			$adminConfig->config_value = "false";
+			$adminConfig->save ();
 		}
-		return $adminConfig;
+		return $adminConfig->config_value === "true";
+	}
+	public function setListTaskConfig($enable) {
+		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
+				':config_key' => Consts::CONFIG_KEY_LIST_TASK 
+		) );
+		
+		if ($adminConfig == null) {
+			$adminConfig = new AdminConfig ();
+			$adminConfig->config_key = Consts::CONFIG_KEY_LIST_TASK;
+		}
+		$adminConfig->config_value = $enable === true ? "true" : "false";
+		$adminConfig->save ();
 	}
 }
 ?>

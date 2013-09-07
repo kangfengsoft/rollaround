@@ -8,11 +8,18 @@ class Util{
 	}
 	
 	public static function getCurrentUser() {
-		$sub_taobao_user_id = isset ( Yii::app ()->user->sub_taobao_user_id ) ? Yii::app ()->user->sub_taobao_user_id : null;
-		$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id AND sub_taobao_user_id=:sub_taobao_user_id', array (
-				':taobao_user_id' => Yii::app ()->user->taobao_user_id,
-				':sub_taobao_user_id' =>$sub_taobao_user_id
-		) );
+		$user = null;
+		if (!isset ( Yii::app ()->user->sub_taobao_user_id )) {
+			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id AND sub_taobao_user_id IS NULL', array (
+					':taobao_user_id' => Yii::app ()->user->taobao_user_id 
+			) );
+		} else {
+			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id AND sub_taobao_user_id IS NULL', array (
+					':taobao_user_id' => Yii::app ()->user->taobao_user_id,
+					':sub_taobao_user_id' => Yii::app ()->user->sub_taobao_user_id 
+			) );
+		}
+		
 		if ($user === null) {
 			// 401（未授权）
 			Yii::log("can't get current user !", 'error', '');
@@ -23,7 +30,7 @@ class Util{
 	
 	public static function getAccessToken($taobao_user_id){
 		$userList = User::model ()->findAll ( 'taobao_user_id=:taobao_user_id', array (
-				':taobao_user_id' => Yii::app ()->user->taobao_user_id
+				':taobao_user_id' => $taobao_user_id
 		) );
 		
 		if(count($userList) === 0){

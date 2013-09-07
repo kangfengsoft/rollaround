@@ -36,10 +36,11 @@ class SiteController extends Controller {
 // 		}
 		
 		$adminShelfService = new AdminShelfService();
-		$adminConfig = $adminShelfService->getShelfPlanRecountConfig();
-		
+		$enableShelfPlanRecount = $adminShelfService->isShelfPlanRecountEnable();
+		$enableListTask = $adminShelfService->isListTaskEnable();
 		$this->render ( 'index', array (
-				'enableShelfPlanRecount' => $adminConfig->config_value === "true" 
+				'enableShelfPlanRecount' => $enableShelfPlanRecount,
+				'enableListTask' => $enableListTask
 		) );
 	}
 	

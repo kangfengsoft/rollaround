@@ -14,21 +14,20 @@ $this->breadcrumbs=array(
 <!-- for test end -->
 
 <!--kf scripts-->
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/site.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/kf/site.js"></script>
 
 <div class="row-fluid">
 	<div id="dashboard-left" class="">
 		<h5 class="subtitle">当前店铺状态</h5>
 		<ul class="shortcuts">
 			
-			
 			<?php if($enableShelfService){?>
-			<li class="system"><a href="?r=shelf/enableShelfService&enable=false"> <span
+			<li class="system"><a href="<?php echo Yii::app()->baseUrl; ?>/index.php/shelf/enableShelfService?enable=false"> <span
 					class="shortcuts-icon iconsi-on"></span> <span
 					class="shortcuts-label">系统：已开启</span>
 			</a></li>
 			<?php }else{?>
-			<li class="system"><a href="?r=shelf/enableShelfService&enable=true"> <span
+			<li class="system"><a href="<?php echo Yii::app()->baseUrl; ?>/index.php/shelf/enableShelfService?enable=true"> <span
 					class="shortcuts-icon iconsi-off"></span> <span
 					class="shortcuts-label">系统：已关闭</span>
 			</a></li>

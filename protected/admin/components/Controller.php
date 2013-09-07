@@ -40,11 +40,11 @@ class Controller extends CController
     {
         return array(
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions'=>array('create','update', 'index', 'login', 'logout', 'enableShelfPlanRecount'),
+                'actions'=>array('create','update', 'index', 'login', 'logout', 'enableShelfPlanRecount', 'enableListTask'),
                 'users'=>array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions'=>array('admin','delete', 'enableTimedTask'),
+                'actions'=>array('admin','delete', 'enableShelfPlanRecount', 'enableListTask'),
                 'users'=>array('admin'),
             ),
             array('deny',  // deny all users
