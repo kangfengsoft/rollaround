@@ -60,6 +60,7 @@ jQuery(document).ready(function(){
 
 <script type="text/javascript">
     jQuery(document).ready(function(){
+    	window.$ = jQuery;
         // dynamic table
         jQuery('#dyntable').dataTable({
         	"iDisplayLength": 50,
@@ -79,7 +80,7 @@ jQuery(document).ready(function(){
 				  			"sWidth" : "60px",
             				"sDefaultContent": "",
 							"mRender": function (data, type, full) {
-	                                return '<img src="'+ data +'"/>';}
+	                                return '<img width="40px" src="'+ data +'"/>';}
 						  },
 
                           { "mDataProp": "title",
@@ -124,8 +125,17 @@ jQuery(document).ready(function(){
 	        	"sNext": "后一页",
 	        	"sLast": "尾页"
 	        	}
-        	}
+        	},
+        	"fnDrawCallback": function() {
+        		$("td.table-select button.btn").click(function(){
+        	        var id = $(this).parents('tr').children('td:first').text();
+        	        alert(id);
+        	    });
+      		}
         });
 
+
     });
+
+    
 </script>
