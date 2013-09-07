@@ -166,7 +166,7 @@ class SiteController extends Controller
 	 * */
 	public function actionGetAllGood(){
 		$topService = new TopService();
-		$pageNo = $_GET['iDisplayStart'];
+		$pageNo = $_GET['iDisplayStart']/$_GET['iDisplayLength'];
 		$pageSize = $_GET['iDisplayLength'];
 		$sEcho = $_GET['sEcho'];
 		$sSearch = $_GET['sSearch'];

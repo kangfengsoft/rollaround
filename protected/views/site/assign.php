@@ -23,14 +23,7 @@ jQuery(document).ready(function(){
 		<li><a href="#a-1">已经指定的宝贝</a></li>
 		<li><a href="#a-2">选择宝贝</a></li>
 	</ul>
-	<div id="a-1">Your content goes here for tab 1</div>
-	<div id="a-2">Your content goes here for tab 2</div>
-</div>
-<!--tabbedwidget-->
-
-
-
-                <table id="dyntable" class="table table-bordered responsive">
+	<div id="a-1"><table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
                         <col class="con0" style="align: center; width: 4%" />
                         <col class="con1" />
@@ -51,7 +44,14 @@ jQuery(document).ready(function(){
                     </thead>
                     <tbody>
                     </tbody>
-                </table>
+                </table></div>
+	<div id="a-2">Your content goes here for tab 2</div>
+</div>
+<!--tabbedwidget-->
+
+
+
+                
 
 
 
@@ -76,21 +76,44 @@ jQuery(document).ready(function(){
 
             "aoColumns": [{ "mDataProp": "num_iid" },
 						  { "mDataProp": "pic_url", 
+				  			"sWidth" : "60px",
+            				"sDefaultContent": "",
 							"mRender": function (data, type, full) {
 	                                return '<img src="'+ data +'"/>';}
 						  },
-                          { "mDataProp": "title" },
+
+                          { "mDataProp": "title",
+	                          "sWidth" : '40%',
+	                          "sClass" : 'title'},
                           
                           
                           { "mDataProp": "price" },
                           { "mDataProp": "delist_time" },
-                          { "mDataProp": "delist_time" }
+                          { "mData": null,
+                        	"bSortable":false,
+                        	"sClass":"table-select",
+                        	"fnRender": function(oObj){
+                            	   return "计划下架<select class='input-small'>"+
+                            	   "<option>星期一</option>"
+                            	   +"<option>星期二</option>"
+                            	   +"<option>星期三</option>"
+                            	   +"<option>星期四</option>"
+                            	   +"<option>星期五</option>"
+                            	   +"<option>星期六</option>"
+                            	   +"<option>星期天</option>"
+                            	   +"</select>"+
+                            	   "<select class='input-small'>"+
+                            	   "<option>00:00-01:00</option>"
+                            	   +"<option>01:00-02:00</option>"
+                            	   +"</select>"+
+                            	   "<button class='btn btn-primary'>保存</button>"
+                           }}
                       ],
 
         	"oLanguage": {
 	        	"sLengthMenu": "每页显示 _MENU_条",
 	        	"sZeroRecords": "没有找到符合条件的数据",
-	        	//"sProcessing": "&lt;img src=’./loading.gif’ /&gt;",
+	        	"sProcessing": "正在从数据库加载数据",
 	        	"sInfo": "当前第 _START_ - _END_ 条　共计 _TOTAL_ 条",
 	        	"sInfoEmpty": "木有记录",
 	        	"sInfoFiltered": "(从 _MAX_ 条记录中过滤)",
