@@ -3,6 +3,7 @@
 <head>
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.default.css" type="text/css" />
