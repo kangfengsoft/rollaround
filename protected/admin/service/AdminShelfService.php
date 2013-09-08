@@ -16,6 +16,9 @@ class AdminShelfService{
 	}
 	
 	public function enableShelfPlanRecount() {
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
 		$userConfigs = UserConfig::model ()->findAll ();
 		
 		//FIXME use interator instead
@@ -31,22 +34,18 @@ class AdminShelfService{
 					':taobao_user_id' => $taobao_user_id
 			) );
 			
-			$c = new TopClient ();
-			$c->appkey = Yii::app ()->params ['client_id'];
-			$c->secretKey = Yii::app ()->params ['client_secret'];
-			
 			$count = self::BLOCK_SIZE;
-			$pageNum = 1;
+			$pageNo = 1;
 			$items = array ();
 			while ( $count == self::BLOCK_SIZE ) {
 				$req = new ItemsOnsaleGetRequest ();
 				$req->setFields ( "num_iid,list_time,delist_time" );
-				$req->setPageNo ( $pageNum ++ );
+				$req->setPageNo ( $pageNo ++ );
 				$req->setOrderBy ( "list_time:desc" );
-				$req->setIsTaobao ( "true" );
+// 				$req->setIsTaobao ( "true" );
 				$req->setPageSize ( self::BLOCK_SIZE );
-				$req->setStartModified ( "2000-01-01 00:00:00" );
-				$req->setEndModified ( "2020-01-01 00:00:00" );
+// 				$req->setStartModified ( "2000-01-01 00:00:00" );
+// 				$req->setEndModified ( "2020-01-01 00:00:00" );
 				$resp = $c->execute ( $req, $user->access_token );
 				$count = count ( $resp->items->item );
 				$items = array_merge ( $items, $resp->items->item );
