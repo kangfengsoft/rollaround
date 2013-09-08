@@ -113,7 +113,9 @@ class ShelfService {
 			$conbinedItemList[$key]["num_iid"] = $allItemList[$key]->num_iid;
 			$conbinedItemList[$key]["title"] = $allItemList[$key]->title;
 			$conbinedItemList[$key]["price"] = $allItemList[$key]->price;
-			$conbinedItemList[$key]["pic_url"] = $allItemList[$key]->pic_url;
+			if(isset($allItemList[$key]->pic_url)){
+				$conbinedItemList[$key]["pic_url"] = $allItemList[$key]->pic_url;
+			}
 			$conbinedItemList[$key]["day"] = $assignListTask->day;
 			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
 		}
