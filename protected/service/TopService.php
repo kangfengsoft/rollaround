@@ -41,32 +41,32 @@ class TopService {
 		return $resp->total_results;
 	}
 	
-	public function searchOnsaleItems($query, $access_token, $pageNo){
+	public function searchOnsaleItems($query, $access_token, $pageNo, $pageSize){
 		$c = new TopClient ();
 		$c->appkey = Yii::app ()->params ['client_id'];
 		$c->secretKey = Yii::app ()->params ['client_secret'];
 		$req = new ItemsOnsaleGetRequest();
-		$req->setFields ( "num_iid,price" );
+		$req->setFields ( "num_iid,price, delist_time, pic_url, title" );
 		$req->setPageNo ( $pageNo );
 		$req->setOrderBy ( "title:desc" );
 		$req->setIsTaobao ( "true" );
 		$req->setQ( $query );
-		$req->setPageSize ( 200 );
+		$req->setPageSize ( $pageSize );
 		$resp = $c->execute ( $req, $access_token );
 		return $resp;
 	}
 	
-	public function searchInventoryItems($query, $access_token, $pageNo){
+	public function searchInventoryItems($query, $access_token, $pageNo, $pageSize){
 		$c = new TopClient ();
 		$c->appkey = Yii::app ()->params ['client_id'];
 		$c->secretKey = Yii::app ()->params ['client_secret'];
 		$req = new ItemsInventoryGetRequest();
-		$req->setFields ( "num_iid" );
+		$req->setFields ( "num_iid,price, delist_time, pic_url, title" );
 		$req->setPageNo ( $pageNo );
 		$req->setOrderBy ( "title:desc" );
 		$req->setIsTaobao ( "true" );
 		$req->setQ( $query );
-		$req->setPageSize ( 200 );
+		$req->setPageSize ( $pageSize );
 		$resp = $c->execute ( $req, $access_token );
 		return $resp;
 	}

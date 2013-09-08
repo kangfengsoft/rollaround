@@ -180,7 +180,33 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 	display: block;
 }
 /*** MAIN PANEL ***/
-#info-table td{white-space: normal;}
+.table th.sorting {
+	background: url('../images/sort_both.png') #333333 no-repeat center right;
+}
+.table th.sorting_asc {
+background: url('../images/sort_asc.png') #333333 no-repeat center right;
+}
+
+.table th.sorting_desc {
+background: url('../images/sort_desc.png') #333333 no-repeat center right;
+}
+
+#info-table td, table.responsive td.title{white-space: normal;}
+table.responsive img{max-height:50px!important; width:50px!important; height:expression(this.height > 50 ? "50px" : true)!important;}
+#dyntable_info { height: 21px;}
+.table td.table-select {vertical-align: middle;}
+.dataTables_processing {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 250px;
+    margin-left: -125px;
+    border: 1px solid #000;
+    text-align: center;
+    color: #0866c6;
+    font-size: 11px;
+    padding: 2px 0;
+}
 
 .rightpanel { margin-left: 260px; background: url(../images/bg1.png); }
 .rightpanel:after { clear: both; content: ''; display: block; }
