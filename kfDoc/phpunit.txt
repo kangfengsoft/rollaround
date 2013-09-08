@@ -1,0 +1,12 @@
+教程
+http://flyer0126.iteye.com/blog/1441817
+
+重点
+>pear channel-discover pear.phpunit.de
+>pear install phpunit/PHPUnit
+
+输入 phpunit 测试是否成功
+
+进入
+kfsoft\protected\tests 目录
+输入phpunit unit\WeekShelfStrategyTest.php 跑测试用例
