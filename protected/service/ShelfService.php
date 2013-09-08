@@ -63,5 +63,61 @@ class ShelfService {
 		$weekShelfStrategy->fillRemainPercent();
 		$weekShelfStrategy->saveToDB();
 	}
+	public function saveAssignTask($num_iid, $day, $hour, $taobao_user_id) {
+		$assignListTask = AssignListTask::model ()->find ( "num_iid=:num_iid AND taobao_user_id=:taobao_user_id AND exclude=:exclude", array (
+				":num_iid" => $num_iid,
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 0 
+		) );
+		if ($assignListTask === null) {
+			$assignListTask = new AssignListTask ();
+			$assignListTask->num_iid = $num_iid;
+			$assignListTask->taobao_user_id = $taobao_user_id;
+		}
+		$assignListTask->day = $day;
+		$assignListTask->hour = $hour;
+		$assignListTask->save ();
+	}
+	
+	public function deleteAssignTask($num_iid, $taobao_user_id){
+		$assignListTask = AssignListTask::model() -> find("num_iid=:num_iid AND taobao_user_id=:taobao_user_id", array(
+				":num_iid" => $num_iid,
+				":taobao_user_id" => $taobao_user_id
+		));
+		if($assignListTask !== null){
+			$assignListTask->delete();
+		}
+	}
+	
+	public function getAllAssignTask($taobao_user_id){
+		$assignListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 0
+		));
+		$numIids = array();
+		$allItemList = array ();
+		$access_token = Util::getAccessToken ( $taobao_user_id );
+		$topService = new TopService ();
+		foreach ( $assignListTasks as $assignListTask ) {
+			$numIids [] = $assignListTask->num_iid;
+			if (count ( $numIids ) === 1) {
+				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
+				foreach ( $itemList->items->item as $item ) {
+					$allItemList [] = $item;
+				}
+				$numIids = array ();
+			}
+		}
+		$conbinedItemList = array();
+		foreach($assignListTasks as $key=>$assignListTask){
+			$conbinedItemList[$key]["num_iid"] = $allItemList[$key]->num_iid;
+			$conbinedItemList[$key]["title"] = $allItemList[$key]->title;
+			$conbinedItemList[$key]["price"] = $allItemList[$key]->price;
+			$conbinedItemList[$key]["pic_url"] = $allItemList[$key]->pic_url;
+			$conbinedItemList[$key]["day"] = $assignListTask->day;
+			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
+		}
+		return $conbinedItemList;
+	}
 }
 ?>

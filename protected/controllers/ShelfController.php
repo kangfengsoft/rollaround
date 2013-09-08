@@ -48,4 +48,39 @@ class ShelfController extends Controller {
 		$userConfig->save ();
 		$this->redirect ( $this->createUrl ( "site/index" ) );
 	}
+	
+	public function actionSaveAssignTask() {
+		$num_iid = Yii::app ()->request->getParam ( 'num_iid' );
+		$day = Yii::app ()->request->getParam ( 'day' );
+		$hour = Yii::app ()->request->getParam ( 'hour' );
+		if(!isset( $num_iid ) || ! isset ( $day ) || ! isset ( $hour )) {
+			// 400 错误请求 — 请求中有语法问题，或不能满足请求。
+			Yii::log ( "illegal argument when SaveAssignTask!", 'warning', '' );
+			throw new CHttpException ( 400, '参数非法' );
+		}
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$shelfService -> saveAssignTask($num_iid, $day, $hour, $taobao_user_id);
+		return "ok";
+	}
+	
+	public function actionDeleteAssignTask(){
+		$num_iid = Yii::app ()->request->getParam ( 'num_iid' );
+		if (! isset ( $num_iid ) ) {
+			// 400 错误请求 — 请求中有语法问题，或不能满足请求。
+			Yii::log ( "illegal argument when DeleteAssignTask!", 'warning', '' );
+			throw new CHttpException ( 400, '参数非法' );
+		}
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$shelfService -> deleteAssignTask($num_iid, $taobao_user_id);
+		
+	}
+	
+	public function actionGetAssignTask() {
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$result = $shelfService -> getAllAssignTask($taobao_user_id);
+		echo json_encode($result);
+	}
 }

@@ -90,5 +90,15 @@ class TopService {
 		$req->setNum($num);
 		$resp = $c->execute ( $req, $access_token );
 	}
+	
+	public function getItemList($numIids, $access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		$req = new ItemsListGetRequest();
+		$req->setFields("title,pic_url,price,num_iid,delist_time");
+		$req->setNumIids($numIids);
+		return $c->execute ( $req, $access_token );
+	}
 }
 ?>

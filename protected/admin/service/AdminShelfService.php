@@ -62,7 +62,7 @@ class AdminShelfService{
 				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT
 		) );
 		
-		if ($adminConfig == null) {
+		if ($adminConfig === null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
 			$adminConfig->config_value= "false";
@@ -76,7 +76,7 @@ class AdminShelfService{
 				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT
 		) );
 		
-		if ($adminConfig == null) {
+		if ($adminConfig === null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
 		}
@@ -110,7 +110,7 @@ class AdminShelfService{
 				':config_key' => Consts::CONFIG_KEY_LIST_TASK 
 		) );
 		
-		if ($adminConfig == null) {
+		if ($adminConfig === null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_LIST_TASK;
 			$adminConfig->config_value = "false";
@@ -123,7 +123,7 @@ class AdminShelfService{
 				':config_key' => Consts::CONFIG_KEY_LIST_TASK 
 		) );
 		
-		if ($adminConfig == null) {
+		if ($adminConfig === null) {
 			$adminConfig = new AdminConfig ();
 			$adminConfig->config_key = Consts::CONFIG_KEY_LIST_TASK;
 		}
