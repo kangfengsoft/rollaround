@@ -101,11 +101,13 @@ jQuery(document).ready(function(){
 
                           { "mDataProp": "title",
 	                          "sWidth" : '40%',
+	                          "bSortable": false,
 	                          "sClass" : 'title'},
                           
                           
                           { "mDataProp": "price",
-	                        "sWidth" : '80px',},
+	                        "sWidth" : '80px',
+	                        "bSortable": false},
                           { "mDataProp": "delist_time" },
                           { "mData": null,
                         	"bSortable":false,
