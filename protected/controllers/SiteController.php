@@ -167,12 +167,12 @@ class SiteController extends Controller
 		$topService = new TopService();
 		$pageNo = $_GET['iDisplayStart']/$_GET['iDisplayLength'];
 		$pageSize = $_GET['iDisplayLength'];
-		if($_GET['iSortCol_1'] == 4){
+		if($_GET['iSortCol_0'] == 4){
 			$sortType = $_GET['mDataProp_4'];
 		}else{
 			$sortType = "";
 		};
-		$sortDir = $_GET['sSortDir_1'];
+		$sortDir = $_GET['sSortDir_0'];
 		$sEcho = $_GET['sEcho'];
 		$sSearch = $_GET['sSearch'];
 		$access_token = $this->getCurrentAccessToken ();
@@ -181,7 +181,7 @@ class SiteController extends Controller
 		$goods->iTotalRecords = $goods->total_results;
 		$goods->iTotalDisplayRecords = $goods->total_results;
 		$goods->aaData = $goods->items->item;
-		//unset($goods['items']);
+		$goods->items = "";
 		echo json_encode($goods);
 	}
 	
@@ -202,7 +202,7 @@ class SiteController extends Controller
 		$goods->iTotalRecords = $goods->total_results;
 		$goods->iTotalDisplayRecords = $goods->total_results;
 		$goods->aaData = $goods->items->item;
-		//unset($goods['items']);
+		$goods->items = "";
 		echo json_encode($goods);
 	}
 	

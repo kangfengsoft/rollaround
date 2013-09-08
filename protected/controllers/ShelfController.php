@@ -112,7 +112,13 @@ class ShelfController extends Controller {
 	public function actionGetAllExcludeTasks() {
 		$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		$shelfService = new ShelfService();
-		$result = $shelfService -> getAllExcludeTasks($taobao_user_id);
+		$aaData = $shelfService -> getAllAssignTask($taobao_user_id);
+		
+		
+		//$count = count($aaData);
+		$result = array(
+				"aaData" => $aaData
+		);
 		echo json_encode($result);
 	}
 }
