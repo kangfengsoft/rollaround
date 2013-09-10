@@ -190,6 +190,9 @@ background: url('../images/sort_asc.png') #333333 no-repeat center right;
 .table th.sorting_desc {
 background: url('../images/sort_desc.png') #333333 no-repeat center right;
 }
+.right-block-num{
+	float:right;
+}
 
 #info-table td, table.responsive td.title{white-space: normal;}
 table.responsive img{max-height:50px!important; width:50px!important; height:expression(this.height > 50 ? "50px" : true)!important;}
@@ -252,8 +255,8 @@ table.responsive img{max-height:50px!important; width:50px!important; height:exp
 .shortcuts li a { display: block; width: 130px; height: 130px; background: #0866c6; color: #fff; font-size: 16px; }
 .shortcuts li a:hover { text-decoration: none; cursor:default;}
 .shortcuts li.system a:hover { background: #282828; cursor:pointer;}
-.shortcuts li .shortcuts-label { display: block; padding: 0 12px; }
-.shortcuts li .shortcuts-icon { display: block; width: 48px; height: 48px; padding: 30px 0 20px 0; margin: 0 auto; }
+.shortcuts li .shortcuts-label { display: block; padding: 0 6px; }
+.shortcuts li .shortcuts-icon { display: block; width: 48px; height: 48px; padding: 30px 0 10px 0; margin: 0 auto; }
 .shortcuts li .iconsi-event { background: url(../images/icons/icon-event.png) no-repeat center center; }
 .shortcuts li .iconsi-cart { background: url(../images/icons/icon-cart.png) no-repeat center center; }
 .shortcuts li .iconsi-archive { background: url(../images/icons/icon-archive.png) no-repeat center center; }

@@ -313,3 +313,14 @@ function saveData(){
 		}
 	});
 }
+
+function extract(){
+	var list = weekShelfStrategy.dayShelfStrategyList;
+	for(var item in list){
+		for(var v in list[item].hours){
+			if(list[item].hours[v].percent > 0.0001){
+				list[item].hours[v].percent -= 0.0001;
+			}
+		}
+	}
+}
