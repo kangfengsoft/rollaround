@@ -26,20 +26,24 @@ $this->breadcrumbs=array(
 			</a></li>
 			<?php }?>
 			
-			<li class="events"><a href=""> <span
+			<li class="events"><a> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
-					class="shortcuts-label">在售商品：<?php echo $onsaleGoodNum?></span>
+					class="shortcuts-label">出售中的商品：</span>
+					<span class="shortcuts-label right-block-num"><?php echo $onsaleGoodNum?></span>
 			</a></li>
-			<li class="products"><a href=""> <span
+			<li class="products"><a> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
-					class="shortcuts-label">仓库中商品：<?php echo $inventoryGoodNum?></span>
+					class="shortcuts-label">仓库中的商品：</span>
+					<span class="shortcuts-label right-block-num"><?php echo $inventoryGoodNum?></span>
 			</a></li>
-			<li class="archive"><a href=""> <span
+			<li class="archive"><a> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
-					class="shortcuts-label">指定商品：16</span>
+					class="shortcuts-label">指定上架商品：</span>
+					<span class="shortcuts-label right-block-num">16</span>
 			</a></li>
-			<li class="help"><a href=""> <span class="shortcuts-icon iconsi-cart"></span>
-					<span class="shortcuts-label">排除商品：3</span>
+			<li class="help"><a> <span class="shortcuts-icon iconsi-cart"></span>
+					<span class="shortcuts-label">排除上架商品：</span>
+					<span class="shortcuts-label right-block-num">4</span>
 			</a></li>
 
 		</ul>
