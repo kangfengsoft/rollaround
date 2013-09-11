@@ -52,5 +52,18 @@ class Util{
 		}
 		return $access_token;
 	}
+	
+	public static function getUserConfig($taobao_user_id){
+		$userConfig = UserConfig::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+				':taobao_user_id' => $taobao_user_id
+		) );
+		if ($userConfig === null) {
+			$userConfig = new UserConfig ();
+			$userConfig->taobao_user_id = $taobao_user_id;
+			$userConfig->enable_shelf_service = 0;
+			$userConfig->save ();
+		}
+		return $userConfig;
+	}
 }
 ?>

@@ -168,5 +168,20 @@ class ShelfService {
 		}
 		return $allItemList;
 	}
+
+	public function getShopScore($taobao_user_id){
+		$shopScore = ShopScore::model()->find("taobao_user_id=:taobao_user_id", array(
+				":taobao_user_id" => $taobao_user_id
+		));
+		$todayDate = date ( 'Y-m-d', time ());
+		$createDate = "";
+		$scoreCreateDate = null;
+		if($shopScore !== null){
+			$createDate = date("Y-m-d",strtotime($shopScore->create_time)); 
+		}
+		if($todayDate != $createDate){
+			
+		}
+	}
 }
 ?>
