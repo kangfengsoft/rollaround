@@ -77,10 +77,42 @@ class ShelfController extends Controller {
 		
 	}
 	
-	public function actionGetAssignTask() {
+	public function actionGetAllAssignTasks() {
 		$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		$shelfService = new ShelfService();
-		$result = $shelfService -> getAllAssignTask($taobao_user_id);
+		$result = $shelfService -> getAllAssignTasks($taobao_user_id);
+		echo json_encode($result);
+	}
+	
+	public function actionSaveExcludeTask(){
+		$num_iid = Yii::app ()->request->getParam ( 'num_iid' );
+		if(!isset( $num_iid )) {
+			// 400 错误请求 — 请求中有语法问题，或不能满足请求。
+			Yii::log ( "illegal argument when SaveExcludeTask!", 'warning', '' );
+			throw new CHttpException ( 400, '参数非法' );
+		}
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$shelfService -> saveExcludeTask($num_iid, $taobao_user_id);
+		return "ok";
+	}
+	
+	public function actionDeleteExcludeTask(){
+		$num_iid = Yii::app ()->request->getParam ( 'num_iid' );
+		if (! isset ( $num_iid ) ) {
+			// 400 错误请求 — 请求中有语法问题，或不能满足请求。
+			Yii::log ( "illegal argument when DeleteExcludeTask!", 'warning', '' );
+			throw new CHttpException ( 400, '参数非法' );
+		}
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$shelfService -> deleteExcludeTask($num_iid, $taobao_user_id);
+	}
+	
+	public function actionGetAllExcludeTasks() {
+		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		$shelfService = new ShelfService();
+		$result = $shelfService -> getAllExcludeTasks($taobao_user_id);
 		echo json_encode($result);
 	}
 }

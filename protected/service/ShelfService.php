@@ -89,7 +89,7 @@ class ShelfService {
 		}
 	}
 	
-	public function getAllAssignTask($taobao_user_id){
+	public function getAllAssignTasks($taobao_user_id){
 		$assignListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
 				":taobao_user_id" => $taobao_user_id,
 				":exclude" => 0
@@ -100,7 +100,7 @@ class ShelfService {
 		$topService = new TopService ();
 		foreach ( $assignListTasks as $assignListTask ) {
 			$numIids [] = $assignListTask->num_iid;
-			if (count ( $numIids ) === 1) {
+			if (count ( $numIids ) === 20) {
 				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
 				foreach ( $itemList->items->item as $item ) {
 					$allItemList [] = $item;
@@ -120,6 +120,53 @@ class ShelfService {
 			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
 		}
 		return $conbinedItemList;
+	}
+	
+	public function saveExcludeTask($num_iid, $taobao_user_id) {
+		$assignListTask = AssignListTask::model ()->find ( "num_iid=:num_iid AND taobao_user_id=:taobao_user_id", array (
+				":num_iid" => $num_iid,
+				":taobao_user_id" => $taobao_user_id
+		) );
+		if ($assignListTask === null) {
+			$assignListTask = new AssignListTask ();
+			$assignListTask->num_iid = $num_iid;
+			$assignListTask->taobao_user_id = $taobao_user_id;
+		}
+		$assignListTask->exclude = 1;
+		$assignListTask->save ();
+	}
+	
+	public function deleteExcludeTask($num_iid, $taobao_user_id){
+		$assignListTask = AssignListTask::model() -> find("num_iid=:num_iid AND taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
+				":num_iid" => $num_iid,
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 1
+		));
+		if($assignListTask !== null){
+			$assignListTask->delete();
+		}
+	}
+	
+	public function getAllExcludeTasks($taobao_user_id){
+		$assignListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 1
+		));
+		$numIids = array();
+		$allItemList = array ();
+		$access_token = Util::getAccessToken ( $taobao_user_id );
+		$topService = new TopService ();
+		foreach ( $assignListTasks as $assignListTask ) {
+			$numIids [] = $assignListTask->num_iid;
+			if (count ( $numIids ) === 20) {
+				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
+				foreach ( $itemList->items->item as $item ) {
+					$allItemList [] = $item;
+				}
+				$numIids = array ();
+			}
+		}
+		return $allItemList;
 	}
 }
 ?>
