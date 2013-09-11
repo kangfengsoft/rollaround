@@ -2,19 +2,6 @@
 class AdminShelfService{
 	const BLOCK_SIZE = 200;
 
-	public function getUserConfig($taobao_user_id){
-		$userConfig = UserConfig::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
-				':taobao_user_id' => $taobao_user_id
-		) );
-		if ($userConfig === null) {
-			$userConfig = new UserConfig ();
-			$userConfig->taobao_user_id = $taobao_user_id;
-			$userConfig->enable_shelf_service = 0;
-			$userConfig->save ();
-		}
-		return $userConfig;
-	}
-	
 	public function enableShelfPlanRecount() {
 		$c = new TopClient ();
 		$c->appkey = Yii::app ()->params ['client_id'];

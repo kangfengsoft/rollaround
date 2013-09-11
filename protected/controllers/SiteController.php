@@ -33,10 +33,9 @@ class SiteController extends Controller
 		$access_token = $this->getCurrentAccessToken ();
 		$shelfService = new ShelfService ();
 		$weekShelfStrategy = $shelfService->getWeekShelfStrategy ();
+		$shopScore = $shelfService->getShopScore(Yii::app ()->user->taobao_user_id);
 		
-		$adminShelfService = new AdminShelfService ();
-		$userConfig = $adminShelfService->getUserConfig ( Yii::app ()->user->taobao_user_id );
-		
+		$userConfig = Util::getUserConfig ( Yii::app ()->user->taobao_user_id );
 		$topService = new TopService ();
 		$onlineGoodNum = $topService->getOnlineGoodNum ( $access_token );
 		$inventoryGoodNum = $topService->getInventoryGoodNum ( $access_token );

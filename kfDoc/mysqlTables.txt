@@ -61,3 +61,10 @@ CREATE TABLE assign_list_task (
     hour int NOT NULL,
     exclude int default 0
 )CHARSET=utf8;
+
+CREATE TABLE shop_score (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
+    score int NOT NULL,
+    create_time datetime NOT NULL
+)CHARSET=utf8;
