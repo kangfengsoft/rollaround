@@ -303,7 +303,7 @@ jQuery(document).ready(function(){
 
 
 		var option1 = option;
-		option1.sAjaxSource = BASE_PATH + "/index.php/shelf/getAssignTask";
+		option1.sAjaxSource = BASE_PATH + "/index.php/shelf/getAllAssignTasks";
 		option1.bServerSide = false,
 		option1.aoColumns = [{
 			"mDataProp" : "num_iid"

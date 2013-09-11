@@ -110,6 +110,7 @@ class ShelfService {
 		}
 		$conbinedItemList = array();
 		foreach($assignListTasks as $key=>$assignListTask){
+			$conbinedItemList[$key] = array();
 			$conbinedItemList[$key]["num_iid"] = $allItemList[$key]->num_iid;
 			$conbinedItemList[$key]["title"] = $allItemList[$key]->title;
 			$conbinedItemList[$key]["price"] = $allItemList[$key]->price;

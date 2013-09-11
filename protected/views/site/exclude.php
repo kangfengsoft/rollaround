@@ -22,7 +22,7 @@ jQuery(document).ready(function(){
 <div class="tabbedwidget tab-primary">
 	<ul>
 		<li><a href="#a-1">已经排除的宝贝</a></li>
-		<li><a href="#a-2">选择宝贝</a></li>
+		<li><a href="#a-2">选择要排除的宝贝</a></li>
 	</ul>
 	<div id="a-1"><table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
@@ -51,6 +51,7 @@ jQuery(document).ready(function(){
                         <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
+                         <col class="con1" />
                     </colgroup>
                     <thead>
                         <tr>
@@ -58,7 +59,8 @@ jQuery(document).ready(function(){
                             <th class="head0">图片</th>
                             <th class="head1">标题</th>
                             <th class="head0">价格</th>
-                            <th class="head1">操作</th>
+                             <th class="head1">当前下架时间</th>
+                            <th class="head0">操作</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -166,7 +168,7 @@ jQuery(document).ready(function(){
 		};
 
 		var option2 = option;
-		option2.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
+		option2.sAjaxSource = BASE_PATH + "/index.php/shelf/getAllExcludeTasks";
 		option2.fnDrawCallback = function () {
 			$("#dyntable button").click(function () {
 				var id = $(this).parents('tr').children('td:first').text();
@@ -197,7 +199,7 @@ jQuery(document).ready(function(){
 		jQuery('#dyntable').dataTable(option2);
 
 		var option3 = option;
-		option3.sAjaxSource = BASE_PATH + "/index.php/site/getInventoryGood";
+		option3.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
 		option3.aoColumns = [{
 				"mDataProp" : "num_iid"
 			}, {
@@ -227,29 +229,19 @@ jQuery(document).ready(function(){
 				"bSortable" : false,
 				"sClass" : "table-select",
 				"fnRender" : function (oObj) {
-					return "计划上架<select class='input-small'>" +
-					weekString
-					 + "</select>" +
-					"<select class='input-medium'>" +
-					hourString
-					 + "</select>" +
-					"<button class='btn btn-primary'>上架宝贝</button>"
+					return "<button class='btn btn-primary'>排除宝贝</button>"
 				}
 			}
 		];
 		option3.fnDrawCallback = function () {
-			$("#dyntable3 button").click(function () {
+			$("#dyntable1 button").click(function () {
 				var id = $(this).parents('tr').children('td:first').text();
-				var hour = $(this).prevAll('.hour').val();
-				var day = $(this).prevAll('.day').val();
 				$.ajax({
 					type : "post",
-					url : BASE_PATH + "/index.php/shelf/saveAssignTask",
+					url : BASE_PATH + "/index.php/shelf/saveExcludeTask",
 					dataType : "json",
 					data : {
-						'num_iid' : id,
-						'hour' : hour,
-						'day' : day
+						'num_iid' : id
 					},
 					success : function (data, textStatus) {
 						jQuery.jGrowl("任务设置成功");
@@ -264,5 +256,6 @@ jQuery(document).ready(function(){
 			});
 		}
 
-		jQuery('#dyntable3').dataTable(option3);
+		jQuery('#dyntable1').dataTable(option3);
+	});
 </script>
