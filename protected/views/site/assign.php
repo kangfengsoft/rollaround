@@ -14,6 +14,17 @@ $this->breadcrumbs=array(
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('.tabbedwidget').tabs();
+	jQuery("#certain-good").click(function(){
+		$('#dyntable').dataTable().fnAddData( {
+			"num_iid" : 2000034377683,
+			"title" : "\u65f6\u5c1a\u4f11\u95f22013201320132013\u6c99\u7bb1\u6d4b\u8bd5\u5546\u54c1\u6807\u9898",
+			"price" : "12.00",
+			"day" : "1",
+			"hour" : "0"
+		});
+		
+	})
+		
 })
 </script>
 
@@ -21,7 +32,7 @@ jQuery(document).ready(function(){
 <div class="row-fluid">
 <div class="tabbedwidget tab-primary">
 	<ul>
-		<li><a href="#a-1">已经指定的宝贝</a></li>
+		<li id="certain-good"><a href="#a-1">已经指定的宝贝</a></li>
 		<li><a href="#a-2">选择出售中的宝贝</a></li>
 		<li><a href="#a-3">选择仓库中的宝贝</a></li>
 	</ul>
