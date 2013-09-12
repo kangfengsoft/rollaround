@@ -21,22 +21,22 @@ class AdminShelfService{
 					':taobao_user_id' => $taobao_user_id
 			) );
 			
-			$count = self::BLOCK_SIZE;
-			$pageNo = 1;
-			$items = array ();
-			while ( $count == self::BLOCK_SIZE ) {
-				$req = new ItemsOnsaleGetRequest ();
-				$req->setFields ( "num_iid,list_time,delist_time" );
-				$req->setPageNo ( $pageNo ++ );
-				$req->setOrderBy ( "list_time:desc" );
-// 				$req->setIsTaobao ( "true" );
-				$req->setPageSize ( self::BLOCK_SIZE );
-// 				$req->setStartModified ( "2000-01-01 00:00:00" );
-// 				$req->setEndModified ( "2020-01-01 00:00:00" );
-				$resp = $c->execute ( $req, $user->access_token );
-				$count = count ( $resp->items->item );
-				$items = array_merge ( $items, $resp->items->item );
-			}
+// 			$count = self::BLOCK_SIZE;
+// 			$pageNo = 1;
+// 			$items = array ();
+// 			while ( $count == self::BLOCK_SIZE ) {
+// 				$req = new ItemsOnsaleGetRequest ();
+// 				$req->setFields ( "num_iid,list_time,delist_time" );
+// 				$req->setPageNo ( $pageNo ++ );
+// 				$req->setOrderBy ( "list_time:desc" );
+// 				$req->setPageSize ( self::BLOCK_SIZE );
+// 				$resp = $c->execute ( $req, $user->access_token );
+// 				$count = count ( $resp->items->item );
+// 				$items = array_merge ( $items, $resp->items->item );
+// 			}
+			$topService = new TopService();
+			$items = $topService->getItemListForPlanRecount($user->access_token);
+			
 			$shelfService = new ShelfService();
 			$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
 			$weekShelfStrategy->recountShelfPlan($items, $taobao_user_id);

@@ -39,12 +39,12 @@ class SiteController extends Controller
 		$topService = new TopService ();
 		$onlineGoodNum = $topService->getOnlineGoodNum ( $access_token );
 		$inventoryGoodNum = $topService->getInventoryGoodNum ( $access_token );
-		
 		$this->render ( 'index', array (
 				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
 				"enableShelfService" => $userConfig->enable_shelf_service,
 				"onsaleGoodNum" => $onlineGoodNum,
-				"inventoryGoodNum" => $inventoryGoodNum 
+				"inventoryGoodNum" => $inventoryGoodNum,
+				"shopScore" => $shopScore
 		) );
 	}
 	

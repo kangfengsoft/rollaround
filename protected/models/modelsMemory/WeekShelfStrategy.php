@@ -106,6 +106,24 @@ class WeekShelfStrategy {
 		}
 	}
 	
+	public function calculateShopScore($items){
+		$this->insertItems($items);
+		$totalItemCount = count($items);
+		$deta = 0;
+		for($day = 0; $day < 7; $day ++) {
+			for($hour = 0; $hour < 24; $hour ++) {
+				$planPercent = $this->dayShelfStrategyList[$day]->getHours()[$hour][DayShelfStrategy::HOUR_FIELD_PERCENT];
+				$actualItemCount = isset($this->dayShelfStrategyList[$day]->getHours()[$hour][DayShelfStrategy::HOUR_FIELD_ITEMLIST]) ?
+						count($this->dayShelfStrategyList[$day]->getHours()[$hour][DayShelfStrategy::HOUR_FIELD_ITEMLIST]) : 0;
+				$actualPercent = (float)$actualItemCount/$totalItemCount;
+				$deta += abs($actualPercent - $planPercent);
+// 				$deta += ($actualPercent - $planPercent)*($actualPercent - $planPercent);
+			}
+		}
+		$score = (int)((2-$deta)/2 * 100);
+		return $score;
+	}
+	
 	public function recountShelfPlan($items, $taobao_user_id) {
 		$this->insertItems ( $items );
 		$day = (date ( "w" ) + 1) % 7;

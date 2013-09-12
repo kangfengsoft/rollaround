@@ -178,10 +178,26 @@ class ShelfService {
 		$scoreCreateDate = null;
 		if($shopScore !== null){
 			$createDate = date("Y-m-d",strtotime($shopScore->create_time)); 
+		}else{
+			$shopScore = new ShopScore();
+			$shopScore->taobao_user_id = $taobao_user_id;
 		}
 		if($todayDate != $createDate){
-			
+			$shopScore->score = $this->calculateShopScore($taobao_user_id);
+			$shopScore->create_time = date ( 'Y-m-d H:i:s', time ());
+			$shopScore->save();
 		}
+		return $shopScore->score;
+	}
+	
+	private function calculateShopScore($taobao_user_id){
+		$topService = new TopService();
+		$access_token = Util::getAccessToken ( $taobao_user_id );
+		$items = $topService->getItemListForPlanRecount($access_token);
+		
+		$shelfService = new ShelfService();
+		$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
+		return $weekShelfStrategy->calculateShopScore($items);
 	}
 }
 ?>
