@@ -100,5 +100,27 @@ class TopService {
 		$req->setNumIids($numIids);
 		return $c->execute ( $req, $access_token );
 	}
+	
+	public function getItemListForPlanRecount($access_token){
+		$PAGE_SIZE = 200;
+		$count = $PAGE_SIZE;
+		$pageNo = 1;
+		$items = array ();
+		
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		while ( $count == $PAGE_SIZE ) {
+			$req = new ItemsOnsaleGetRequest ();
+			$req->setFields ( "num_iid,list_time,delist_time" );
+			$req->setPageNo ( $pageNo ++ );
+			$req->setOrderBy ( "list_time:desc" );
+			$req->setPageSize ( $PAGE_SIZE );
+			$resp = $c->execute ( $req, $access_token );
+			$count = count ( $resp->items->item );
+			$items = array_merge ( $items, $resp->items->item );
+		}
+		return $items;
+	}
 }
 ?>

@@ -8,7 +8,7 @@ $this->breadcrumbs=array(
 
 <!--kf scripts-->
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/kf/site.js"></script>
-
+<h1><?php echo $shopScore?></h1>>
 <div class="row-fluid">
 	<div id="dashboard-left" class="">
 		<h5 class="subtitle">当前店铺状态</h5>
