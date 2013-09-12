@@ -98,9 +98,11 @@ class ShelfService {
 		$allItemList = array ();
 		$access_token = Util::getAccessToken ( $taobao_user_id );
 		$topService = new TopService ();
+		$k = 0;
 		foreach ( $assignListTasks as $assignListTask ) {
 			$numIids [] = $assignListTask->num_iid;
-			if (count ( $numIids ) === 20) {
+			$k++;
+			if (count ( $numIids ) === 20 || $k === count($assignListTasks)) {
 				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
 				foreach ( $itemList->items->item as $item ) {
 					$allItemList [] = $item;
