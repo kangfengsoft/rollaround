@@ -109,7 +109,7 @@ jQuery(document).ready(function(){
 			 + "<option value='22'>22:00-23:00</option>"
 			 + "<option value='23'>23:00-24:00</option>";
 		var option = {
-			"iDisplayLength" : 50,
+			"iDisplayLength" : 25,
 			"bProcessing" : true, //数据加载中的提示
 			"bServerSide" : true,
 			"bPaginate" : true,
