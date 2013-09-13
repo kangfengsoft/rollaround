@@ -18,6 +18,7 @@ class WeekShelfStrategy {
 	public function fillRemainPercent() {
 		$sum = 0;
 		$count = 0;
+		$nonZeroCount = 0;
 		for($day = 0; $day < 7; $day ++) {
 			if (! isset ( $this->dayShelfStrategyList [$day] )) {
 				$dayShelfStrategy = new DayShelfStrategy ();
@@ -29,28 +30,66 @@ class WeekShelfStrategy {
 					$sum += $this->dayShelfStrategyList [$day]->getPercent ($hour);
 					$count ++;
 				}
+				if (bcsub($this->dayShelfStrategyList [$day]->getPercent($hour),0,6) !== 0) {
+					$nonZeroCount ++;
+				}
 			}
 		}
 		
-		if (bcsub($sum,1,6)  > 0 || ($count == 24 * 7 && bcsub($sum,1,6) < 0)) {
-			throw new Exception ( "illegal percent setting!" );
-		}
+		//do not remove there code. it's for test
+// 		if (bcsub($sum,1,6)  > 0 || ($count == 24 * 7 && bcsub($sum,1,6) < 0)) {
+// 			throw new Exception ( "illegal percent setting!" );
+// 		}
 		
+// 		if($count == 24 * 7){
+// 			return;
+// 		}
+
+		$isAllHourHasValue = false;
 		if($count == 24 * 7){
-			return;
+			//usually it's from front layer, means user customized strategy
+			$isAllHourHasValue = true;
 		}
-		
-		// for example, 1/3 = 0.3333
-		// so 0.3333 is the $remainAvgPercent, 0.0001 is the $remainModValue;
-		$remainAvgPercent = (1 - $sum) / (24 * 7 - $count);
-		$remainAvgPercent = Util::floor ( $remainAvgPercent, 4 );
-		$remainModValue = 1 - $sum - $remainAvgPercent * (24 * 7 - $count);
-		for($day = 0; $day < 7; $day ++) {
-			for($hour = 0; $hour < 24; $hour ++) {
-				if ($this->dayShelfStrategyList [$day]->getPercent ( $hour ) === null) {
-					$percent = round ( $remainModValue, 4 ) > 0 ? $remainAvgPercent + 0.0001 : $remainAvgPercent;
-					$remainModValue -= 0.0001;
-					$this->dayShelfStrategyList [$day]->setPercent ( $hour, $hour + 1, $percent );
+		if($isAllHourHasValue){
+			$remainAvgPercent = (1 - $sum)/ $nonZeroCount;
+			$remainAvgPercent = Util::floor ( $remainAvgPercent, 4 );
+			$remainModValue = 1 - $sum - $remainAvgPercent * $nonZeroCount;
+			$step = 0.0001;
+			if($remainAvgPercent < 0){
+				$step = -0.0001;
+			}
+			
+			for($day = 0; $day < 7; $day ++) {
+				for($hour = 0; $hour < 24; $hour ++) {
+					$originPercent = $this->dayShelfStrategyList [$day]->getPercent ( $hour );
+					if(bcsub($originPercent,0,6) === 0){
+						continue;
+					}
+					
+					$remainModValue = round ( $remainModValue, 4 );
+					if(bcsub($remainModValue,0,6) != 0){
+						$percent = $remainAvgPercent + $step;
+						$remainModValue -= $step;
+					}else{
+						$percent = $remainAvgPercent;
+					}
+					$this->dayShelfStrategyList [$day]->setPercent ( $hour, $hour + 1, $percent + $originPercent );
+				}
+			}
+		}else{
+			//for programmically set percent
+			// for example, 1/3 = 0.3333
+			// so 0.3333 is the $remainAvgPercent, 0.0001 is the $remainModValue;
+			$remainAvgPercent = (1 - $sum) / (24 * 7 - $count);
+			$remainAvgPercent = Util::floor ( $remainAvgPercent, 4 );
+			$remainModValue = 1 - $sum - $remainAvgPercent * (24 * 7 - $count);
+			for($day = 0; $day < 7; $day ++) {
+				for($hour = 0; $hour < 24; $hour ++) {
+					if ($this->dayShelfStrategyList [$day]->getPercent ( $hour ) === null) {
+						$percent = round ( $remainModValue, 4 ) > 0 ? $remainAvgPercent + 0.0001 : $remainAvgPercent;
+						$remainModValue -= 0.0001;
+						$this->dayShelfStrategyList [$day]->setPercent ( $hour, $hour + 1, $percent );
+					}
 				}
 			}
 		}
@@ -63,7 +102,7 @@ class WeekShelfStrategy {
 			}
 		}
 		
-		if (round ( $sum, 0 ) != 1) {
+		if (Util::floor ( $sum, 4 ) != 1) {
 			throw new Exception ( "percentage sum is not equals to 1 !" );
 		}
 	}
