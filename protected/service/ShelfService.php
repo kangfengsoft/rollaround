@@ -134,9 +134,13 @@ class ShelfService {
 			$assignListTask = new AssignListTask ();
 			$assignListTask->num_iid = $num_iid;
 			$assignListTask->taobao_user_id = $taobao_user_id;
+			$assignListTask->day = 0;
+			$assignListTask->hour = 0;
 		}
 		$assignListTask->exclude = 1;
-		$assignListTask->save ();
+		if(!$assignListTask->save ()){
+			throw new Exception("saveExcludeTask fail");
+		}
 	}
 	
 	public function deleteExcludeTask($num_iid, $taobao_user_id){
@@ -159,9 +163,11 @@ class ShelfService {
 		$allItemList = array ();
 		$access_token = Util::getAccessToken ( $taobao_user_id );
 		$topService = new TopService ();
+		$k = 0;
 		foreach ( $assignListTasks as $assignListTask ) {
+			$k ++;
 			$numIids [] = $assignListTask->num_iid;
-			if (count ( $numIids ) === 20) {
+			if (count ( $numIids ) === 20 || $k === count($assignListTasks)) {
 				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
 				foreach ( $itemList->items->item as $item ) {
 					$allItemList [] = $item;
