@@ -63,26 +63,6 @@ jQuery(document).ready(function(){
                         <col class="con0" />
                         <col class="con1" />
                         <col class="con0" />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                          	<th class="head0 nosort"><input type="checkbox" class="checkall" /></th>
-                            <th class="head0">图片</th>
-                            <th class="head1">标题</th>
-                            <th class="head0">价格</th>
-                            <th class="head1">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table></div>
-	<div id="a-2"><table id="dyntable1" class="table table-bordered responsive">
-                    <colgroup>
-                        <col class="con0" style="align: center; width: 4%" />
-                        <col class="con1" />
-                        <col class="con0" />
-                        <col class="con1" />
-                        <col class="con0" />
                         <col class="con1" />
                     </colgroup>
                     <thead>
