@@ -79,8 +79,12 @@ class ShelfController extends Controller {
 	
 	public function actionGetAllAssignTasks() {
 		$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		//$sEcho = $_GET['sEcho'];
 		$shelfService = new ShelfService();
-		$result = $shelfService -> getAllAssignTasks($taobao_user_id);
+		$aaData = $shelfService -> getAllAssignTasks($taobao_user_id);
+		$result = array(
+				"aaData" => $aaData
+		);
 		echo json_encode($result);
 	}
 	
@@ -113,9 +117,6 @@ class ShelfController extends Controller {
 		$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		$shelfService = new ShelfService();
 		$aaData = $shelfService -> getAllAssignTask($taobao_user_id);
-		
-		
-		//$count = count($aaData);
 		$result = array(
 				"aaData" => $aaData
 		);
