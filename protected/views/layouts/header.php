@@ -1,6 +1,6 @@
     <div class="header">
         <div class="logo">
-            <a href="dashboard.html"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="" /></a>
+            <a href="#"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="" /></a>
         </div>
         <div class="headerinner">
             <ul class="headmenu">

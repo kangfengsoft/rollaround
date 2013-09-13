@@ -11,9 +11,19 @@ $this->breadcrumbs=array(
 
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.jgrowl.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/reloadAjax.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('.tabbedwidget').tabs();
+	refresh = true;
+	jQuery("#exclude-good").click(function(){
+		if(refresh){
+			$('#dyntable').dataTable().fnReloadAjax();
+		}else{
+			refresh = false;
+		}
+		
+	})
 })
 </script>
 
@@ -21,7 +31,7 @@ jQuery(document).ready(function(){
 <div class="row-fluid">
 <div class="tabbedwidget tab-primary">
 	<ul>
-		<li><a href="#a-1">已经排除的宝贝</a></li>
+		<li id="exclude-good"><a href="#a-1">已经排除的宝贝</a></li>
 		<li><a href="#a-2">选择要排除的宝贝</a></li>
 	</ul>
 	<div id="a-1"><table id="dyntable" class="table table-bordered responsive">
@@ -111,7 +121,6 @@ jQuery(document).ready(function(){
 		var option = {
 			"iDisplayLength" : 25,
 			"bProcessing" : true, //数据加载中的提示
-			"bServerSide" : true,
 			"bPaginate" : true,
 			"bAutoWidth" : false,
 			"sPaginationType" : "full_numbers",
@@ -134,18 +143,11 @@ jQuery(document).ready(function(){
 					"mDataProp" : "price",
 					"bSortable" : false
 				}, {
-					"mDataProp" : "delist_time"
-				}, {
 					"mData" : null,
 					"bSortable" : false,
 					"sClass" : "table-select",
 					"fnRender" : function (oObj) {
-						return "计划下架<select class='input-small day'>" +
-						weekString + "</select>" +
-						"<select class='input-medium hour'>" +
-						hourString
-						 + "</select>" +
-						"<button class='btn btn-primary'>保存</button>"
+						return "<button class='btn btn-danger'>取消排除</button>"
 					}
 				}
 			],
@@ -167,24 +169,22 @@ jQuery(document).ready(function(){
 			}
 		};
 
-		var option2 = option;
+		var option2 = cloneObject(option);
 		option2.sAjaxSource = BASE_PATH + "/index.php/shelf/getAllExcludeTasks";
-		option2.fnDrawCallback = function () {
-			$("#dyntable button").click(function () {
-				var id = $(this).parents('tr').children('td:first').text();
-				var hour = $(this).prevAll('.hour').val();
-				var day = $(this).prevAll('.day').val();
+		option2.fnCreatedRow = function (nRow, aData, iDataIndex) {
+			$('td:eq(4) button', nRow).click(function () {
+				var id = aData.num_iid;
+				var row = $(nRow);
 				$.ajax({
 					type : "post",
-					url : BASE_PATH + "/index.php/shelf/saveAssignTask",
+					url : BASE_PATH + "/index.php/shelf/deleteExcludeTask",
 					dataType : "json",
 					data : {
-						'num_iid' : id,
-						'hour' : hour,
-						'day' : day
+						'num_iid' : id
 					},
 					success : function (data, textStatus) {
-						jQuery.jGrowl("任务设置成功");
+						jQuery.jGrowl("取消排除成功");
+						$('#dyntable').dataTable().fnDeleteRow(row[0]);
 					},
 					complete : function (XMLHttpRequest, textStatus) {
 						//HideLoading();
@@ -198,7 +198,8 @@ jQuery(document).ready(function(){
 
 		jQuery('#dyntable').dataTable(option2);
 
-		var option3 = option;
+		var option3 = cloneObject(option);
+		option3.bServerSide = true,
 		option3.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
 		option3.aoColumns = [{
 				"mDataProp" : "num_iid"
@@ -245,6 +246,7 @@ jQuery(document).ready(function(){
 					},
 					success : function (data, textStatus) {
 						jQuery.jGrowl("任务设置成功");
+						refresh = true;
 					},
 					complete : function (XMLHttpRequest, textStatus) {
 						//HideLoading();
@@ -258,4 +260,5 @@ jQuery(document).ready(function(){
 
 		jQuery('#dyntable1').dataTable(option3);
 	});
+	
 </script>
