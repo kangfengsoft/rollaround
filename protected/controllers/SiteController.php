@@ -182,6 +182,9 @@ class SiteController extends Controller
 		$goods->iTotalDisplayRecords = $goods->total_results;
 		$goods->aaData = $goods->items->item;
 		$goods->items = "";
+		//set list time which already assigned
+		$shelfService = new ShelfService();
+		$shelfService->setAssignedListTime($goods, Yii::app ()->user->taobao_user_id);
 		echo json_encode($goods);
 	}
 	
@@ -203,6 +206,9 @@ class SiteController extends Controller
 		$goods->iTotalDisplayRecords = $goods->total_results;
 		$goods->aaData = $goods->items->item;
 		$goods->items = "";
+		//set list time which already assigned
+		$shelfService = new ShelfService();
+		$shelfService->setAssignedListTime($goods, Yii::app ()->user->taobao_user_id);
 		echo json_encode($goods);
 	}
 	

@@ -345,8 +345,10 @@ jQuery(document).ready(function(){
 		option1.fnCreatedRow = function (nRow, aData, iDataIndex) {
 			$('.btn-primary', nRow).click(function () {
 				var id = aData.num_iid;
-				var hour = aData.hour;
-				var day = aData.day;
+// 				var hour = aData.hour;
+// 				var day = aData.day;
+				var hour = $(this).prevAll('.hour').val();
+				var day = $(this).prevAll('.day').val();
 				$.ajax({
 					type : "post",
 					url : BASE_PATH + "/index.php/shelf/saveAssignTask",

@@ -121,6 +121,7 @@ class ShelfService {
 			}
 			$conbinedItemList[$key]["day"] = $assignListTask->day;
 			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
+			$conbinedItemList[$key]["exclude"] = $assignListTask->exclude;
 		}
 		return $conbinedItemList;
 	}
@@ -207,6 +208,24 @@ class ShelfService {
 		$shelfService = new ShelfService();
 		$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
 		return $weekShelfStrategy->calculateShopScore($items);
+	}
+	
+	public function setAssignedListTime(&$goods, $taobao_user_id){
+		$assignTasks = $this->getAllAssignTasks($taobao_user_id);
+		$hashAssignTasks = array();
+		foreach($assignTasks as $assignTask){
+			$hashAssignTasks[(string)$assignTask["num_iid"]] = $assignTask;
+		}
+		foreach($goods->aaData as $item){
+			$item->day = 1;
+			$item->hour = 0;
+			if(isset($hashAssignTasks[(string)$item->num_iid])){
+				$item->day = $hashAssignTasks[(string)$item->num_iid]["day"];
+				$item->hour = $hashAssignTasks[(string)$item->num_iid]["hour"];
+				$item->exclude = $hashAssignTasks[(string)$item->num_iid]["exclude"];
+				$item->alreadyAssigned = true;
+			}
+		}
 	}
 }
 ?>
