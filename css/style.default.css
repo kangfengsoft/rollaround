@@ -903,7 +903,7 @@ table.responsive img{max-height:50px!important; width:50px!important; height:exp
 .dataTables_wrapper { position: relative; }
 .dataTables_length, .dataTables_info { background: #eee; padding: 10px; font-size: 11px; border: 1px solid #ddd; }
 .dataTables_length { border-bottom: 0; }
-.dataTables_info { border-top: 0; }
+.dataTables_info { border-top: 0; height: 21px;}
 .dataTables_filter { position: absolute; top: 12px; right: 10px; }
 .dataTables_filter input { width: 150px; margin: 0 0 0 10px; }
 .dataTables_paginate { position: absolute; bottom: 10px; right: 10px; }

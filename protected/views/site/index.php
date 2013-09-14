@@ -8,7 +8,6 @@ $this->breadcrumbs=array(
 
 <!--kf scripts-->
 <script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/js/kf/site.js"></script>
-<h1><?php echo $shopScore?></h1>
 <div class="row-fluid">
 	<div id="dashboard-left" class="">
 		<h5 class="subtitle">当前店铺状态</h5>
@@ -45,7 +44,10 @@ $this->breadcrumbs=array(
 					<span class="shortcuts-label">排除上架商品：</span>
 					<span class="shortcuts-label right-block-num">4</span>
 			</a></li>
-
+			<li class="help"><a> <span class="shortcuts-icon" style='font-size: 3em'><?php echo $shopScore?></span>
+					<span class="shortcuts-label">本店当前得分</span>
+					<span class="shortcuts-label right-block-num"></span>
+			</a></li>
 		</ul>
 		<br>
 
