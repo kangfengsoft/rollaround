@@ -233,9 +233,13 @@ jQuery(document).ready(function(){
 				}
 			}
 		];
-		option3.fnDrawCallback = function () {
-			$("#dyntable1 button").click(function () {
-				var id = $(this).parents('tr').children('td:first').text();
+
+		option3.fnCreatedRow = function (nRow, aData, iDataIndex) {
+			if(aData.exclude === "0"){
+				$(nRow).addClass('exclude-row');
+			}
+				$('button', nRow).click(function () {
+					var id = aData.num_iid;
 				$.ajax({
 					type : "post",
 					url : BASE_PATH + "/index.php/shelf/saveExcludeTask",

@@ -172,10 +172,16 @@ jQuery(document).ready(function(){
 					"bSortable" : false,
 					"sClass" : "table-select",
 					"fnRender" : function (oObj) {
+						var newWeekString = weekString;
+						var newHourString = hourString;
+						if(oObj.aData.alreadyAssigned){
+							newWeekString = weekString.replace("value='"+oObj.aData.day+"'", "value='"+oObj.aData.day+"' selected");
+							newHourString = hourString.replace("value='"+oObj.aData.hour+"'", "value='"+oObj.aData.hour+"' selected")
+						}
 						return "计划下架<select class='input-small day'>" +
-						weekString + "</select>" +
+						newWeekString + "</select>" +
 						"<select class='input-medium hour'>" +
-						hourString
+						newHourString
 						 + "</select>" +
 						"<button class='btn btn-primary'>保存</button>"
 					}
@@ -203,6 +209,9 @@ jQuery(document).ready(function(){
 		option2.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
 
 		option2.fnCreatedRow = function (nRow, aData, iDataIndex) {
+			if(aData.alreadyAssigned){
+				$(nRow).addClass('selected-row');
+			}
 			$('button', nRow).click(function () {
 				var id = aData.num_iid;
 				var hour = $(this).prevAll('.hour').val();
@@ -349,10 +358,10 @@ jQuery(document).ready(function(){
 		option1.fnCreatedRow = function (nRow, aData, iDataIndex) {
 			$('.btn-primary', nRow).click(function () {
 				var id = aData.num_iid;
-// 				var hour = aData.hour;
-// 				var day = aData.day;
-				var hour = $(this).prevAll('.hour').val();
-				var day = $(this).prevAll('.day').val();
+ 				var hour = aData.hour;
+ 				var day = aData.day;
+//				var hour = $(this).prevAll('.hour').val();
+//				var day = $(this).prevAll('.day').val();
 				$.ajax({
 					type : "post",
 					url : BASE_PATH + "/index.php/shelf/saveAssignTask",

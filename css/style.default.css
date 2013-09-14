@@ -180,6 +180,13 @@ h1,h2,h3,h4,h5 { font-weight: normal; line-height: normal; }
 	display: block;
 }
 /*** MAIN PANEL ***/
+.selected-row{
+	background-color:rgb(223,240,216);
+}
+.exclude-row{
+	background-color:rgb(246,216,216);
+}
+
 .table th.sorting {
 	background: url('../images/sort_both.png') #333333 no-repeat center right;
 }
