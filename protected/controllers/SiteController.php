@@ -184,7 +184,7 @@ class SiteController extends Controller
 		$goods->items = "";
 		//set list time which already assigned
 		$shelfService = new ShelfService();
-		$shelfService->setAssignedListTime($goods, Yii::app ()->user->taobao_user_id);
+		$shelfService->mergeAssignOrExcludeInfo($goods, Yii::app ()->user->taobao_user_id);
 		echo json_encode($goods);
 	}
 	
@@ -208,7 +208,7 @@ class SiteController extends Controller
 		$goods->items = "";
 		//set list time which already assigned
 		$shelfService = new ShelfService();
-		$shelfService->setAssignedListTime($goods, Yii::app ()->user->taobao_user_id);
+		$shelfService->mergeAssignOrExcludeInfo($goods, Yii::app ()->user->taobao_user_id);
 		echo json_encode($goods);
 	}
 	

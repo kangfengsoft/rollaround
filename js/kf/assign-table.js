@@ -66,7 +66,7 @@
 					"fnRender" : function (oObj) {
 						var newWeekString = weekString;
 						var newHourString = hourString;
-						if(oObj.aData.alreadyAssigned){
+						if(oObj.aData.type === "assign"){
 							newWeekString = weekString.replace("value='"+oObj.aData.day+"'", "value='"+oObj.aData.day+"' selected");
 							newHourString = hourString.replace("value='"+oObj.aData.hour+"'", "value='"+oObj.aData.hour+"' selected")
 						}
@@ -101,7 +101,7 @@
 		option2.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
 
 		option2.fnCreatedRow = function (nRow, aData, iDataIndex) {
-			if(aData.alreadyAssigned){
+			if(aData.type === "assign"){
 				$(nRow).addClass('selected-row');
 			}
 			$('button', nRow).click(function () {

@@ -150,7 +150,7 @@
 		];
 
 		option3.fnCreatedRow = function (nRow, aData, iDataIndex) {
-			if(aData.exclude === "0"){
+			if(aData.type === "exclude"){
 				$(nRow).addClass('exclude-row');
 			}
 				$('button', nRow).click(function () {

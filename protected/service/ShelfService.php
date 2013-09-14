@@ -110,18 +110,31 @@ class ShelfService {
 				$numIids = array ();
 			}
 		}
-		$conbinedItemList = array();
-		foreach($assignListTasks as $key=>$assignListTask){
-			$conbinedItemList[$key] = array();
-			$conbinedItemList[$key]["num_iid"] = $allItemList[$key]->num_iid;
-			$conbinedItemList[$key]["title"] = $allItemList[$key]->title;
-			$conbinedItemList[$key]["price"] = $allItemList[$key]->price;
-			if(isset($allItemList[$key]->pic_url)){
-				$conbinedItemList[$key]["pic_url"] = $allItemList[$key]->pic_url;
+// 		$conbinedItemList = array();
+// 		foreach($assignListTasks as $key=>$assignListTask){
+// 			$conbinedItemList[$key] = array();
+// 			$conbinedItemList[$key]["num_iid"] = $allItemList[$key]->num_iid;
+// 			$conbinedItemList[$key]["title"] = $allItemList[$key]->title;
+// 			$conbinedItemList[$key]["price"] = $allItemList[$key]->price;
+// 			if(isset($allItemList[$key]->pic_url)){
+// 				$conbinedItemList[$key]["pic_url"] = $allItemList[$key]->pic_url;
+// 			}
+// 			$conbinedItemList[$key]["day"] = $assignListTask->day;
+// 			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
+// 			$conbinedItemList[$key]["exclude"] = $assignListTask->exclude;
+// 		}
+		$conbinedItemList = array ();
+		foreach ( $assignListTasks as $key => $assignListTask ) {
+			$conbinedItemList [$key] = new stdClass ();
+			$conbinedItemList [$key]->num_iid = $allItemList [$key]->num_iid;
+			$conbinedItemList [$key]->title = $allItemList [$key]->title;
+			$conbinedItemList [$key]->price = $allItemList [$key]->price;
+			if (isset ( $allItemList [$key]->pic_url )) {
+				$conbinedItemList [$key]->pic_url = $allItemList [$key]->pic_url;
 			}
-			$conbinedItemList[$key]["day"] = $assignListTask->day;
-			$conbinedItemList[$key]["hour"] = $assignListTask->hour;
-			$conbinedItemList[$key]["exclude"] = $assignListTask->exclude;
+			$conbinedItemList [$key]->day = $assignListTask->day;
+			$conbinedItemList [$key]->hour = $assignListTask->hour;
+			$conbinedItemList [$key]->exclude = $assignListTask->exclude;
 		}
 		return $conbinedItemList;
 	}
@@ -210,20 +223,19 @@ class ShelfService {
 		return $weekShelfStrategy->calculateShopScore($items);
 	}
 	
-	public function setAssignedListTime(&$goods, $taobao_user_id){
-		$assignTasks = $this->getAllAssignTasks($taobao_user_id);
+	public function mergeAssignOrExcludeInfo(&$goods, $taobao_user_id){
+		$assignTasks = AssignListTask::model ()->findAll ( "taobao_user_id=:taobao_user_id", array (
+				":taobao_user_id" => $taobao_user_id
+		) );
 		$hashAssignTasks = array();
 		foreach($assignTasks as $assignTask){
-			$hashAssignTasks[(string)$assignTask["num_iid"]] = $assignTask;
+			$hashAssignTasks[(string)$assignTask->num_iid] = $assignTask;
 		}
 		foreach($goods->aaData as $item){
-			$item->day = 1;
-			$item->hour = 0;
 			if(isset($hashAssignTasks[(string)$item->num_iid])){
-				$item->day = $hashAssignTasks[(string)$item->num_iid]["day"];
-				$item->hour = $hashAssignTasks[(string)$item->num_iid]["hour"];
-				$item->exclude = $hashAssignTasks[(string)$item->num_iid]["exclude"];
-				$item->alreadyAssigned = true;
+				$item->type = (int)$hashAssignTasks[(string)$item->num_iid]->exclude === 1 ? "exclude" : "assign";
+				$item->day = $hashAssignTasks[(string)$item->num_iid]->day;
+				$item->hour = $hashAssignTasks[(string)$item->num_iid]->hour;
 			}
 		}
 	}
