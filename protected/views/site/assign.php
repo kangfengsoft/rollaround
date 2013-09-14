@@ -15,12 +15,11 @@ $this->breadcrumbs=array(
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('.tabbedwidget').tabs();
-	refresh = true;
+	window.refresh = false;
 	jQuery("#certain-good").click(function(){
-		if(refresh){
+		if(window.refresh){
 			$('#dyntable').dataTable().fnReloadAjax();
-		}else{
-			refresh = false;
+			window.refresh = false;
 		}
 		
 	})
@@ -202,11 +201,13 @@ jQuery(document).ready(function(){
 
 		var option2 = cloneObject(option);
 		option2.sAjaxSource = BASE_PATH + "/index.php/site/getAllGood";
-		option2.fnDrawCallback = function () {
-			$("#dyntable1 button").click(function () {
-				var id = $(this).parents('tr').children('td:first').text();
+
+		option2.fnCreatedRow = function (nRow, aData, iDataIndex) {
+			$('button', nRow).click(function () {
+				var id = aData.num_iid;
 				var hour = $(this).prevAll('.hour').val();
 				var day = $(this).prevAll('.day').val();
+		
 				$.ajax({
 					type : "post",
 					url : BASE_PATH + "/index.php/shelf/saveAssignTask",
@@ -218,6 +219,7 @@ jQuery(document).ready(function(){
 					},
 					success : function (data, textStatus) {
 						jQuery.jGrowl("任务设置成功");
+						window.refresh = true;
 					},
 					complete : function (XMLHttpRequest, textStatus) {
 						//HideLoading();
@@ -262,21 +264,23 @@ jQuery(document).ready(function(){
 				"bSortable" : false,
 				"sClass" : "table-select",
 				"fnRender" : function (oObj) {
-					return "计划上架<select class='input-small'>" +
+					return "计划上架<select class='input-small day'>" +
 					weekString
 					 + "</select>" +
-					"<select class='input-medium'>" +
+					"<select class='input-medium hour'>" +
 					hourString
 					 + "</select>" +
 					"<button class='btn btn-primary'>上架宝贝</button>"
 				}
 			}
 		];
-		option3.fnDrawCallback = function () {
-			$("#dyntable3 button").click(function () {
-				var id = $(this).parents('tr').children('td:first').text();
+
+		option3.fnCreatedRow = function (nRow, aData, iDataIndex) {
+			$('button', nRow).click(function () {
+				var id = aData.num_iid;
 				var hour = $(this).prevAll('.hour').val();
 				var day = $(this).prevAll('.day').val();
+		
 				$.ajax({
 					type : "post",
 					url : BASE_PATH + "/index.php/shelf/saveAssignTask",
@@ -288,7 +292,7 @@ jQuery(document).ready(function(){
 					},
 					success : function (data, textStatus) {
 						jQuery.jGrowl("任务设置成功");
-						refresh = true;
+						window.refresh = true;
 					},
 					complete : function (XMLHttpRequest, textStatus) {
 						//HideLoading();
@@ -328,12 +332,12 @@ jQuery(document).ready(function(){
 			"bSortable" : false,
 			"sClass" : "table-select",
 			"fnRender" : function (oObj) {
-				weekString = weekString.replace("value='"+oObj.aData.day+"'", "value='"+oObj.aData.day+"' selected");
-				hourString = hourString.replace("value='"+oObj.aData.hour+"'", "value='"+oObj.aData.hour+"' selected")
-				return "计划下架<select class='input-small day' value='4'>" +
-				weekString + "</select>" +
+				var newWeekString = weekString.replace("value='"+oObj.aData.day+"'", "value='"+oObj.aData.day+"' selected");
+				var newHourString = hourString.replace("value='"+oObj.aData.hour+"'", "value='"+oObj.aData.hour+"' selected")
+				return "计划下架<select class='input-small day'>" +
+				newWeekString + "</select>" +
 				"<select class='input-medium hour'>" +
-				hourString
+				newHourString
 				 + "</select>" +
 				"<button class='btn btn-primary'>保存</button>"+
 				"<button class='btn btn-danger'>删除</button>"

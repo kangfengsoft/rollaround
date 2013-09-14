@@ -15,11 +15,10 @@ $this->breadcrumbs=array(
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('.tabbedwidget').tabs();
-	refresh = true;
+	refresh = false;
 	jQuery("#exclude-good").click(function(){
 		if(refresh){
 			$('#dyntable').dataTable().fnReloadAjax();
-		}else{
 			refresh = false;
 		}
 		
