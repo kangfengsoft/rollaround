@@ -10,8 +10,8 @@ if ($testMode) {
 	// FIXME modify it
 // 	$client_id = '1021594899';
 // 	$client_secret = 'sandboxb679435b6605bdd6c189ce03d';
-	$client_id = '1021595218';
-	$client_secret = 'sandbox39c7a3dd9b6d44e8c9b791630';
+	$client_id = '1021624161';
+	$client_secret = 'sandbox023d2ee5c70ab1dffcd0738b6';
 	// 沙箱环境提交URL
 	$oauthAuthorizeUrl = 'https://oauth.tbsandbox.com/authorize?response_type=code&client_id=' . $client_id . '&redirect_uri=' . $redirect_uri . '&state=1';
 	// 沙箱环境获取AccessToekn
