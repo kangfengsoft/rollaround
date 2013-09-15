@@ -1,5 +1,6 @@
 <?php
 class WeekShelfStrategy {
+	public $name;
 	public $dayShelfStrategyList;
 	public $currentDay;
 	public $itemsCount;
@@ -37,9 +38,9 @@ class WeekShelfStrategy {
 		}
 		
 		//do not remove there code. it's for test
-// 		if (bcsub($sum,1,6)  > 0 || ($count == 24 * 7 && bcsub($sum,1,6) < 0)) {
-// 			throw new Exception ( "illegal percent setting!" );
-// 		}
+		if ($count < 24 * 7 && bcsub($sum,1,6) > 0) {
+			throw new Exception ( "illegal percent setting!" );
+		}
 		
 // 		if($count == 24 * 7){
 // 			return;
@@ -102,7 +103,7 @@ class WeekShelfStrategy {
 			}
 		}
 		
-		if (Util::floor ( $sum, 4 ) != 1) {
+		if (bcsub($sum,1,6) != 0) {
 			throw new Exception ( "percentage sum is not equals to 1 !" );
 		}
 	}

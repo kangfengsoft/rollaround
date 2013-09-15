@@ -27,7 +27,7 @@ class ShelfService {
 	}
 	*/
 	
-	public function getWeekShelfStrategy($taobao_user_id = null) {
+	public function getSavedtWeekShelfStrategy($taobao_user_id = null) {
 		if ($taobao_user_id == null) {
 			$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		}
@@ -35,14 +35,30 @@ class ShelfService {
 				':taobao_user_id' => $taobao_user_id 
 		) );
 		$weekShelfStrategy = null;
-		if (count ( $shelfStrategyList ) == 0) {
+		if (count ( $shelfStrategyList ) != 7) {
 			$weekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy ( $taobao_user_id );
+			$weekShelfStrategy -> name = "自定义策略";
 			$weekShelfStrategy->saveToDB ();
 		} else {
 			$weekShelfStrategy = new WeekShelfStrategy ( $shelfStrategyList );
 		}
 		return $weekShelfStrategy;
 	}
+	
+	public function getAllWeekShelfStrategy($taobao_user_id = null){
+		if ($taobao_user_id == null) {
+			$taobao_user_id = Yii::app ()->user->taobao_user_id;
+		}
+		$savedWeekShelfStrategy = $this -> getSavedtWeekShelfStrategy($taobao_user_id);
+		$defaultWeekShelfStrategy = WeekShelfStrategyFactory::createDefaultStrategy ( $taobao_user_id );
+		$weekendWeekShelfStrategy = WeekShelfStrategyFactory::createWeekendStrategy ( $taobao_user_id );
+		$shelfStrategyList = array();
+		$shelfStrategyList[] = $savedWeekShelfStrategy;
+		$shelfStrategyList[] = $defaultWeekShelfStrategy;
+		$shelfStrategyList[] = $weekendWeekShelfStrategy;
+		return $shelfStrategyList;
+	}
+	
 	public function saveWeekShelfStrategy($distributionList) {
 		$taobao_user_id = Yii::app ()->user->taobao_user_id;
 		$weekShelfStrategy = new WeekShelfStrategy();
@@ -238,6 +254,21 @@ class ShelfService {
 				$item->hour = $hashAssignTasks[(string)$item->num_iid]->hour;
 			}
 		}
+	}
+	
+	public function getAssignAndExcludeCount($taobao_user_id){
+		$assignListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 0
+		));
+		$excludeListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id AND exclude=:exclude", array(
+				":taobao_user_id" => $taobao_user_id,
+				":exclude" => 1
+		));
+		return array(
+				"assign" => count($assignListTasks),
+				"exclude" => count($excludeListTasks)
+		);
 	}
 }
 ?>

@@ -32,19 +32,22 @@ class SiteController extends Controller
 		
 		$access_token = $this->getCurrentAccessToken ();
 		$shelfService = new ShelfService ();
-		$weekShelfStrategy = $shelfService->getWeekShelfStrategy ();
+		$weekShelfStrategy = $shelfService->getSavedtWeekShelfStrategy();
 		$shopScore = $shelfService->getShopScore(Yii::app ()->user->taobao_user_id);
 		
 		$userConfig = Util::getUserConfig ( Yii::app ()->user->taobao_user_id );
 		$topService = new TopService ();
 		$onlineGoodNum = $topService->getOnlineGoodNum ( $access_token );
 		$inventoryGoodNum = $topService->getInventoryGoodNum ( $access_token );
+		$assignAndExcludeCount = $shelfService->getAssignAndExcludeCount(Yii::app ()->user->taobao_user_id);
 		$this->render ( 'index', array (
 				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
 				"enableShelfService" => $userConfig->enable_shelf_service,
 				"onsaleGoodNum" => $onlineGoodNum,
 				"inventoryGoodNum" => $inventoryGoodNum,
-				"shopScore" => $shopScore
+				"shopScore" => $shopScore,
+				"assignCount" => $assignAndExcludeCount["assign"],
+				"exlucdeCount" => $assignAndExcludeCount["exclude"]
 		) );
 	}
 	
@@ -143,9 +146,9 @@ class SiteController extends Controller
 	public function actionCustom(){
 		// 		$this->render('index');
 		$shelfService = new ShelfService ();
-		$weekShelfStrategy = $shelfService->getWeekShelfStrategy();
+		$weekShelfStrategy = $shelfService->getAllWeekShelfStrategy();
 		$this->render('custom', array (
-				"distribution" => json_encode($weekShelfStrategy)
+				"shelfStrategyList" => json_encode($weekShelfStrategy)
 		));
 	}
 	

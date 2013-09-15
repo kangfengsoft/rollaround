@@ -38,11 +38,11 @@ $this->breadcrumbs=array(
 			<li class="archive"><a> <span
 					class="shortcuts-icon iconsi-cart"></span> <span
 					class="shortcuts-label">指定上架商品：</span>
-					<span class="shortcuts-label right-block-num">16</span>
+					<span class="shortcuts-label right-block-num"><?php echo $assignCount?></span>
 			</a></li>
 			<li class="help"><a> <span class="shortcuts-icon iconsi-cart"></span>
 					<span class="shortcuts-label">排除上架商品：</span>
-					<span class="shortcuts-label right-block-num">4</span>
+					<span class="shortcuts-label right-block-num"><?php echo $exlucdeCount?></span>
 			</a></li>
 			<li class="help"><a> <span class="shortcuts-icon" style='font-size: 3em'><?php echo $shopScore?></span>
 					<span class="shortcuts-label">本店当前得分</span>

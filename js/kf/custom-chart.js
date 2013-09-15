@@ -152,7 +152,8 @@ for(var i=0;i<24; i++){
 
 var yValue = [];
 
-var weekShelfStrategy = JSON.parse($("#modifyStrategy").text());
+var shelfStrategyList = JSON.parse($("#shelfStrategyList").text());
+var weekShelfStrategy = shelfStrategyList[0]; 
 //show which day of week
 var index = weekShelfStrategy.currentDay;
 $("ul.dropdown-menu a").each(function(){

@@ -70,6 +70,6 @@ $this->breadcrumbs=array(
 </div>
 <!--widgetbox-->
 
-<span id="modifyStrategy" class="hide"><?php echo $distribution?></span>
+<span id="shelfStrategyList" class="hide"><?php echo $shelfStrategyList?></span>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/custom-chart.js"></script>
 
