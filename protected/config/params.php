@@ -4,7 +4,7 @@ $testMode = true;
 
 // FIXME modify it
 // 此处回调url要和后台设置的回调url相同
-$redirect_uri = 'http://127.0.0.1/kfsoft/index.php';
+$redirect_uri = 'http://121.196.131.85/kfsoft/index.php';
 
 if ($testMode) {
 	// FIXME modify it
