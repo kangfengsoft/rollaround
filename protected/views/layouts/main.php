@@ -22,7 +22,7 @@
 
 <div class="mainwrapper">
 
-<?php include '/protected/views/layouts/header.php'; ?>
+<?php include 'header.php'; ?>
 
 	<?php echo $content; ?>
 

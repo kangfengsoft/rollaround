@@ -1,7 +1,7 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 
-<?php include '/protected/views/layouts/sidebar.php'; ?>
+<?php include 'sidebar.php'; ?>
 
 
 <div class="rightpanel">
@@ -26,7 +26,7 @@
 	<div class="maincontent">
 		<div class="maincontentinner">
 			<?php echo $content; ?>
-				<?php include '/protected/views/layouts/footer.php'; ?>	
+				<?php include 'footer.php'; ?>	
 		</div>
 	</div>
 	<!-- content -->
