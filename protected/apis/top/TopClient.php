@@ -1,7 +1,8 @@
 <?php
 if (!defined("TOP_SDK_WORK_DIR"))
 {
-	define("TOP_SDK_WORK_DIR", "../../runtime");
+	//define("TOP_SDK_WORK_DIR", "../../runtime");
+	define("TOP_SDK_WORK_DIR", "topLogs");
 }
 class TopClient
 {
