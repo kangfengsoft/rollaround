@@ -1,8 +1,9 @@
 <?php 
 class Util{
 	public static function floor($num, $length = 0){
+		$num = round($num,$length+2);
 		$pow = pow(10, $length);
-		$tmp = floor($num * $pow);
+		$tmp = floor(round($num * $pow,4));
 		$num = $tmp / $pow;
 		return $num;
 	}

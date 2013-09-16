@@ -56,9 +56,18 @@ class DayShelfStrategy {
 		return $this->hours;
 	}
 	public function toShelfStrategy() {
-		$shelfStrategy = new ShelfStrategy ();
+		$shelfStrategy = null;
+		if($this->id !== null){
+// 			$shelfStrategy->id = $this->id;
+			$shelfStrategy = ShelfStrategy::model()->findByPk($this->id);
+		}
+		
+		if($shelfStrategy === null){
+			$shelfStrategy = new ShelfStrategy ();
+		}
 		$shelfStrategy->taobao_user_id = $this->taobao_user_id;
 		$shelfStrategy->day = $this->day;
+		$shelfStrategy->distribution = "";
 		$seperator = "";
 		for($i = 0; $i < 24; $i ++) {
 			$shelfStrategy->distribution .= $seperator . $this->hours [$i][self::HOUR_FIELD_PERCENT];

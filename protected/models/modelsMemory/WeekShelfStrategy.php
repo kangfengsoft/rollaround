@@ -31,7 +31,7 @@ class WeekShelfStrategy {
 					$sum += $this->dayShelfStrategyList [$day]->getPercent ($hour);
 					$count ++;
 				}
-				if (bcsub($this->dayShelfStrategyList [$day]->getPercent($hour),0,6) !== 0) {
+				if (bcsub($this->dayShelfStrategyList [$day]->getPercent($hour),0,6) != 0) {
 					$nonZeroCount ++;
 				}
 			}
@@ -54,16 +54,13 @@ class WeekShelfStrategy {
 		if($isAllHourHasValue){
 			$remainAvgPercent = (1 - $sum)/ $nonZeroCount;
 			$remainAvgPercent = Util::floor ( $remainAvgPercent, 4 );
-			$remainModValue = 1 - $sum - $remainAvgPercent * $nonZeroCount;
+			$remainModValue = round(1 - $sum - $remainAvgPercent * $nonZeroCount,4);
 			$step = 0.0001;
-			if($remainAvgPercent < 0){
-				$step = -0.0001;
-			}
 			
 			for($day = 0; $day < 7; $day ++) {
 				for($hour = 0; $hour < 24; $hour ++) {
 					$originPercent = $this->dayShelfStrategyList [$day]->getPercent ( $hour );
-					if(bcsub($originPercent,0,6) === 0){
+					if(bcsub($originPercent,0,6) == 0){
 						continue;
 					}
 					
@@ -110,7 +107,9 @@ class WeekShelfStrategy {
 	public function saveToDB() {
 		for($day = 0; $day < 7; $day ++) {
 			$shelfStrategy = $this->dayShelfStrategyList [$day]->toShelfStrategy ();
-			$shelfStrategy->save ();
+			if(!$shelfStrategy->save ()){
+				//TODO exception handle
+			}
 		}
 	}
 	public function getDayShelfStrategy($day) {
