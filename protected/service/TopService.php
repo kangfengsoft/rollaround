@@ -79,11 +79,29 @@ class TopService {
 		$c->appkey = Yii::app ()->params ['client_id'];
 		$c->secretKey = Yii::app ()->params ['client_secret'];
 		$req = new ItemGetRequest();
-		$req->setFields("num");
+		$req->setFields("num,list_time,approve_status");
 		$req->setNumIid($listTask->num_iid);
 		$resp = $c->execute ( $req, $access_token );
 		$num = $resp->item->num;
+		$list_time = $resp->item->list_time;
 		
+		//only adjust the item which is onsale.
+		if($resp->item->approve_status != "onsale"){
+			return;
+		}
+		
+		//check if the item is already in right list time
+		$actual_day = date ( 'w', strtotime ( $list_time ) );
+		$actual_hour = (int)date ( 'H', strtotime ( $list_time ) );
+		$task_day = date ( 'w', strtotime ( $listTask->list_time ) );
+		$task_hour = (int)date ( 'H', strtotime ( $listTask->list_time ) );
+		if($actual_day == $task_day && $actual_hour == $task_hour){
+			//the item is already in right time
+			return;
+		}
+		
+		
+		//FIXME is it necessary?
 		$req = new ItemUpdateDelistingRequest();
 		$req->setNumIid($listTask->num_iid);
 		$resp = $c->execute ( $req, $access_token );

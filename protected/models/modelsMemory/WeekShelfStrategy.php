@@ -140,8 +140,20 @@ class WeekShelfStrategy {
 			}
 		}
 		foreach ( $items as $item ) {
-			$day = date ( 'w', strtotime ( $item->list_time ) );
-			$this->dayShelfStrategyList[$day]->insertItem($item);
+			//check the item's task info in db. if already exit, use the list_time in db.
+			$listTask = ListTask::model()->find( 'num_iid=:num_iid', array (
+				':num_iid' => $item->num_iid
+			) );
+			$day = -1;
+			$hour = -1;
+			if($listTask !== null){
+				$day = date ( 'w', strtotime ( $listTask->list_time ) );
+				$hour = (int)date ( 'H', strtotime ( $listTask->list_time ) );
+			}else{
+				$day = date ( 'w', strtotime ( $item->list_time ) );
+				$hour = (int)date ( 'H', strtotime ( $item->list_time ) );
+			}
+			$this->dayShelfStrategyList[$day]->insertItem($item, $hour);
 		}
 	}
 	
@@ -163,9 +175,12 @@ class WeekShelfStrategy {
 		return $score;
 	}
 	
-	public function recountShelfPlan($items, $taobao_user_id) {
+	
+	public function recountShelfPlan($items, $taobao_user_id, $day = null) {
 		$this->insertItems ( $items );
-		$day = (date ( "w" ) + 1) % 7;
+		if($day === null){
+			$day = (date ( "w" ) + 1) % 7;
+		}
 		$hourPointer = 23;
 		$dayPointer = $day;
 		for($hour = 23; $hour >= 0; $hour --) {
@@ -193,27 +208,66 @@ class WeekShelfStrategy {
 					} else {
 						$abundantCount = $preItemCount - $prePlanCount;
 						$moveCount = ($needCount <= $abundantCount) ? $needCount : $abundantCount;
+
 						$head = array_slice ( $this->dayShelfStrategyList [$dayPointer]->getHours ()[$hourPointer] [DayShelfStrategy::HOUR_FIELD_ITEMLIST], 0, $itemCount - $moveCount );
 						$tail = array_slice ( $this->dayShelfStrategyList [$dayPointer]->getHours ()[$hourPointer] [DayShelfStrategy::HOUR_FIELD_ITEMLIST], $itemCount - $moveCount );
 						
-						$this->dayShelfStrategyList [$dayPointer]->getHours ()[$dayPointer] [DayShelfStrategy::HOUR_FIELD_ITEMLIST] = $head;
+						$this->dayShelfStrategyList [$dayPointer]->getHours ()[$hourPointer] [DayShelfStrategy::HOUR_FIELD_ITEMLIST] = $head;
 						// move some items
 						foreach ( $tail as $value ) {
-							$this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST] [] = $value;
+// 							$this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST] [] = $value;
+							array_push($this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST], $value);
 						}
+						
 						$needCount -= $moveCount;
 						if($needCount <= 0){
 							$itemListCount = count($this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST]);
 							$addItemList = array_slice ( $this->dayShelfStrategyList [$day]->getHours ()[$hour] [DayShelfStrategy::HOUR_FIELD_ITEMLIST], $itemListCount-$CONST_NEED_COUNT );
-							$this->addTimedTask($addItemList, $hour, $taobao_user_id);
+							$this->addTimedTask($addItemList, $day, $hour, $taobao_user_id);
 						}
 					}
 				}
 			}
 		}
+		$this->fixAssignTasks($taobao_user_id);
 	}
 	
-	public function addTimedTask($itemList, $hour, $taobao_user_id){
+	public function fixAssignTasks($taobao_user_id){
+		//apply assign_list_task and exclude_list_task
+		$assignListTasks = AssignListTask::model() -> findAll("taobao_user_id=:taobao_user_id", array(
+				":taobao_user_id" => $taobao_user_id
+		));
+		foreach($assignListTasks as $assignListTask){
+			ListTask::model()->deleteAll("taobao_user_id=:taobao_user_id AND num_iid=:num_iid",array(
+					":taobao_user_id" => $taobao_user_id,
+					":num_iid" => $assignListTask->num_iid
+			));
+// 			$tomorrow =( date ( "w" ) +1 ) % 7;
+			if((int)$assignListTask->exclude === 0){
+				$listTask = new ListTask();
+				$listTask->taobao_user_id = $taobao_user_id;
+				$listTask->num_iid = $assignListTask->num_iid;
+					
+					// calculate the task day
+				$detaDay = $assignListTask->day - date ( "w" );
+				if ($detaDay < 0) {
+					$detaDay += 7;
+				}
+				
+				$taskYear = date ( "Y", strtotime ( "+".$detaDay." day" ) );
+				$taskMonth = date ( "m", strtotime ( "+".$detaDay." day" ) );
+				$taskDay = date ( "d", strtotime ( "+".$detaDay." day" ) );
+				$hour = $assignListTask->hour;
+				$min = 0;
+				$second = 0;
+				$listTask->list_time = date ( 'Y-m-d H:i:s', mktime ( $hour, $min, $second, $taskMonth, $taskDay, $taskYear ) );
+				$listTask->save();
+			}
+		}
+	}
+	
+	
+	public function addTimedTask($itemList, $day, $hour, $taobao_user_id){
 		$secondInterval = (int)(3600 / count($itemList));
 		if($secondInterval == 0){
 			$secondInterval = 1;
@@ -222,6 +276,8 @@ class WeekShelfStrategy {
 		$min = 0;
 		$second = 0;
 		foreach($itemList as $item){
+			$t1 = microtime(true);
+
 			$listTask = ListTask::model()->find( 'num_iid=:num_iid', array (
 			':num_iid' => $item->num_iid
 			) );
@@ -230,9 +286,15 @@ class WeekShelfStrategy {
 				$listTask->num_iid = $item->num_iid;
 			}
 			$listTask->taobao_user_id = $taobao_user_id;
-			$taskYear = date ( "Y" );
-			$taskMonth  = date ( "m" );
-			$taskDay = date("d",strtotime("+1 day"));
+			
+			$detaDay = $day - date ( "w" );
+			if ($detaDay < 0) {
+				$detaDay += 7;
+			}
+			
+			$taskYear = date ( "Y", strtotime ( "+".$detaDay." day" ) );
+			$taskMonth = date ( "m", strtotime ( "+".$detaDay." day" ) );
+			$taskDay = date ( "d", strtotime ( "+".$detaDay." day" ) );
 			$listTask->list_time = date ( 'Y-m-d H:i:s', mktime($hour,$min,$second,$taskMonth,$taskDay,$taskYear) );
 			$listTask->save();
 			$second += $secondInterval;
@@ -241,6 +303,12 @@ class WeekShelfStrategy {
 				$min = 59;
 			}
 			$second %= 60;
+			
+// 			$t2 = microtime(true);
+// 			echo (($t2-$t1)*1000)."ms\n";
+// 			flush();
+// 			ob_flush();
+			//flk echo
 		}
 	}
 }
