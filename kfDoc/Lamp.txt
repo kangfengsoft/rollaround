@@ -1,0 +1,16 @@
+http://www.apachefriends.org/zh_cn/xampp-linux.html
+
+su
+chmod 755 xampp-linux-1.8.2-installer.run
+./xampp-linux-1.8.2-installer.run
+
+/opt/lampp/lampp start
+
+您应该能在屏幕上看到类似下面的提示信息：
+
+Starting XAMPP 1.8.2...
+LAMPP: Starting Apache...
+LAMPP: Starting MySQL...
+LAMPP started.
+
+好了。Apache 和 MySQL 
