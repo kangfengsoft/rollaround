@@ -11,9 +11,10 @@ class DayShelfStrategy {
 	public $hours;
 	private $onsaleItemCount;
 	function __construct($shelfStrategy = null) {
-		$hours = array ();
-		for($hour=1;$hour<24;$hour++){
-			$hours[$hour] = array();
+		$this->hours = array ();
+		for($hour=0;$hour<24;$hour++){
+			$this->hours[$hour] = array();
+			$this->hours[$hour][self::HOUR_FIELD_ITEMLIST] = array();
 		}
 		if ($shelfStrategy == null) {
 			return;
@@ -87,8 +88,7 @@ class DayShelfStrategy {
 	/*
 	 * $item json item from top
 	 */
-	public function insertItem($item){
-		$hour = date ( 'H', strtotime ( $item->list_time ) );
+	public function insertItem($item, $hour){
 		$this->hours[$hour][DayShelfStrategy::HOUR_FIELD_ITEMLIST][] = $item;
 	}
 	
