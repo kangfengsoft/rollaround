@@ -235,7 +235,7 @@ class ShelfService {
 		$items = $topService->getItemListForPlanRecount($access_token);
 		
 		$shelfService = new ShelfService();
-		$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
+		$weekShelfStrategy = $shelfService->getSavedtWeekShelfStrategy($taobao_user_id);
 		return $weekShelfStrategy->calculateShopScore($items);
 	}
 	
