@@ -61,6 +61,6 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params' => CMap::mergeArray(require('params.php'),array(
-		'logBasePath' => 'apis/lotusphp_runtime/Logger'
+		'logBasePath' => dirname(__FILE__).'/../apis/lotusphp_runtime/Logger'
 	)),
 );
