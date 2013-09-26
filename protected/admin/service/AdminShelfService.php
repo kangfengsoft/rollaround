@@ -38,7 +38,7 @@ class AdminShelfService{
 			$items = $topService->getItemListForPlanRecount($user->access_token);
 			
 			$shelfService = new ShelfService();
-			$weekShelfStrategy = $shelfService->getWeekShelfStrategy($taobao_user_id);
+			$weekShelfStrategy = $shelfService->getSavedtWeekShelfStrategy($taobao_user_id);
 			$weekShelfStrategy->recountShelfPlan($items, $taobao_user_id);
 		}
 	}
