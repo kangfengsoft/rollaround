@@ -14,15 +14,15 @@ return array(
 
 	// autoloading model and component classes
 	'import' => array (
-				'application.models.*',
-				'application.models.modelsMemory.*',
-				'application.components.*',
-				'application.service.*',
-				'application.admin.service.*',
-				'application.apis.top.*',
-				'application.apis.top.request.*',
-				'application.apis.lotusphp_runtime.Logger.*' 
-		),
+		'application.models.*',
+		'application.models.modelsMemory.*',
+		'application.components.*',
+		'application.service.*',
+		'application.admin.service.*',
+		'application.apis.top.*',
+		'application.apis.top.request.*',
+		'application.apis.lotusphp_runtime.Logger.*' 
+	),
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -102,5 +102,7 @@ return array(
 
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
-	'params' => require('params.php'),
+	'params' => CMap::mergeArray(require('params.php'),array(
+		'logBasePath' => 'protected/apis/lotusphp_runtime/Logger'
+	)),
 );

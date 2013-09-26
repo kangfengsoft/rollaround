@@ -5,7 +5,8 @@ if (!defined("TOP_SDK_WORK_DIR"))
 	define("TOP_SDK_WORK_DIR", "topLogs");
 }
 // include '/protected/apis/lotusphp_runtime/Logger/LtLogger.php';
-require_once 'protected/apis/lotusphp_runtime/Logger/LtLogger.php';
+// require_once 'protected/apis/lotusphp_runtime/Logger/LtLogger.php';
+require_once Yii::app()->params['logBasePath'].'/LtLogger.php';
 class TopClient
 {
 	public $appkey;
