@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/wang.ico" media="screen" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.default.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/responsive-tables.css">
 

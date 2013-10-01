@@ -164,6 +164,7 @@
 					},
 					success : function (data, textStatus) {
 						jQuery.jGrowl("任务设置成功");
+						$(nRow).addClass('exclude-row');
 						refresh = true;
 					},
 					complete : function (XMLHttpRequest, textStatus) {
