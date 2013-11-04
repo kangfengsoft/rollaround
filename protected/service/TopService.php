@@ -138,6 +138,9 @@ class TopService {
 			$req->setOrderBy ( "list_time:desc" );
 			$req->setPageSize ( $PAGE_SIZE );
 			$resp = $c->execute ( $req, $access_token );
+			if($resp->total_results ===0){
+				break;
+			}
 			$count = count ( $resp->items->item );
 			$items = array_merge ( $items, $resp->items->item );
 		}

@@ -7,13 +7,22 @@ if (!defined("TOP_SDK_WORK_DIR"))
 // include '/protected/apis/lotusphp_runtime/Logger/LtLogger.php';
 // require_once 'protected/apis/lotusphp_runtime/Logger/LtLogger.php';
 require_once Yii::app()->params['logBasePath'].'/LtLogger.php';
+
+//set gatewayUrl
+if(Yii::app()->params['testMode']){
+	define("GATE_WAY_URL", "http://gw.api.tbsandbox.com/router/rest");
+}else{
+	define("GATE_WAY_URL", "http://gw.api.taobao.com/router/rest");
+}
+
 class TopClient
 {
 	public $appkey;
 
 	public $secretKey;
 
-	public $gatewayUrl = "http://gw.api.tbsandbox.com/router/rest";
+	//public $gatewayUrl = "http://gw.api.tbsandbox.com/router/rest";
+	public $gatewayUrl = GATE_WAY_URL;
 
 	//public $format = "xml";
 	public $format = "json";

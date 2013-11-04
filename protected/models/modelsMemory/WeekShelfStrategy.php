@@ -158,6 +158,9 @@ class WeekShelfStrategy {
 	}
 	
 	public function calculateShopScore($items){
+		if(count($items) ===0){
+			return 60;
+		}
 		$this->insertItems($items);
 		$totalItemCount = count($items);
 		$deta = 0;
