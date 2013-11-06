@@ -15,7 +15,7 @@ class Util{
 					':taobao_user_id' => Yii::app ()->user->taobao_user_id 
 			) );
 		} else {
-			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id AND sub_taobao_user_id IS NULL', array (
+			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id AND sub_taobao_user_id=:sub_taobao_user_id', array (
 					':taobao_user_id' => Yii::app ()->user->taobao_user_id,
 					':sub_taobao_user_id' => Yii::app ()->user->sub_taobao_user_id 
 			) );

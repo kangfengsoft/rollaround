@@ -39,6 +39,7 @@ class SiteController extends Controller
 		$topService = new TopService ();
 		$onlineGoodNum = $topService->getOnlineGoodNum ( $access_token );
 		$inventoryGoodNum = $topService->getInventoryGoodNum ( $access_token );
+		$expiredTime = $shelfService->getExpiredTime(Yii::app ()->user->taobao_user_id);
 		$assignAndExcludeCount = $shelfService->getAssignAndExcludeCount(Yii::app ()->user->taobao_user_id);
 		$this->render ( 'index', array (
 				"weekShelfStrategy" => json_encode ( $weekShelfStrategy ),
@@ -47,7 +48,8 @@ class SiteController extends Controller
 				"inventoryGoodNum" => $inventoryGoodNum,
 				"shopScore" => $shopScore,
 				"assignCount" => $assignAndExcludeCount["assign"],
-				"exlucdeCount" => $assignAndExcludeCount["exclude"]
+				"exlucdeCount" => $assignAndExcludeCount["exclude"],
+				"expiredTime" => $expiredTime
 		) );
 	}
 	
@@ -183,7 +185,7 @@ class SiteController extends Controller
 		$goods->sEcho = $sEcho;
 		$goods->iTotalRecords = $goods->total_results;
 		$goods->iTotalDisplayRecords = $goods->total_results;
-		$goods->aaData = $goods->items->item;
+		$goods->aaData = $goods->total_results === 0 ? [] : $goods->items->item;
 		$goods->items = "";
 		//set list time which already assigned
 		$shelfService = new ShelfService();
@@ -207,7 +209,7 @@ class SiteController extends Controller
 		$goods->sEcho = $sEcho;
 		$goods->iTotalRecords = $goods->total_results;
 		$goods->iTotalDisplayRecords = $goods->total_results;
-		$goods->aaData = $goods->items->item;
+		$goods->aaData = $goods->total_results === 0 ? [] : $goods->items->item;
 		$goods->items = "";
 		//set list time which already assigned
 		$shelfService = new ShelfService();

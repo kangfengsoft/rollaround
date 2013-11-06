@@ -57,8 +57,14 @@ class UserIdentity extends CUserIdentity {
 		
 		$this->setState ( 'id', $user->id );
 		$this->setState ( 'taobao_user_id', $token->taobao_user_id );
+// 		$this->setState ( 'access_token', $token->access_token );
+		if(isset ( $token->sub_taobao_user_id )){
+			$this->setState ( 'sub_taobao_user_id', $token->sub_taobao_user_id );
+		}
 		$this->setState ( 'access_token', $token->access_token );
 		$this->setState ( 'nick', isset ( $token->sub_taobao_user_nick ) ? $token->sub_taobao_user_nick : $token->taobao_user_nick );
+		$this->setState ( 'expiredDate', date ( 'Y-m-d', time () + $token->r1_expires_in ) );
+		$this->setState ( 'expiredDateTime', date ( 'Y-m-d H:i:s', time () + $token->r1_expires_in ));
 		
 		$topService = new TopService ();
 		//FIXME remove it later

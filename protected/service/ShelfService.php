@@ -270,5 +270,10 @@ class ShelfService {
 				"exclude" => count($excludeListTasks)
 		);
 	}
+	
+	public function getExpiredTime($taobao_user_id){
+		$user = User::model() -> find('taobao_user_id=:taobao_user_id', array(':taobao_user_id' => $taobao_user_id));
+		return $user->r1_expires_in;
+	}
 }
 ?>
