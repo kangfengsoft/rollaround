@@ -19,7 +19,7 @@ $this->breadcrumbs=array(
 			<button data-toggle="dropdown" class="btn dropdown-toggle">
 				星期一<span class="caret"></span>
 			</button>
-			<ul class="dropdown-menu">
+			<ul class="dropdown-menu" id="selectCurrentDay">
 				<li class="active"><a href="#" class='1'>星期一</a></li>
 				<li><a href="#" class='2'>星期二</a></li>
 				<li><a href="#" class='3'>星期三</a></li>
@@ -48,9 +48,11 @@ $this->breadcrumbs=array(
 				<a class="btn btn-small dropdown-toggle" data-toggle="dropdown"
 					href="#"> 平均策略 <span class="caret"></span>
 				</a>
-				<ul class="dropdown-menu">
-					<li class="active"><a href="#">星期一</a></li>
-					<li><a href="#">星期二</a></li>
+				<ul class="dropdown-menu" id='selectCurrentStrategy'>
+					<li class="active"><a href="#" class="0">策略一</a></li>
+					<li><a href="#" class="1">策略二</a></li>
+					<li><a href="#" class="2">策略三</a></li>
+					<li><a href="#" class="3">策略四</a></li>
 				</ul>
 			</div>
 			<hr>

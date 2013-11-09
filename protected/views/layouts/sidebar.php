@@ -22,7 +22,7 @@
 							array('label'=>'上架日志记录', 'url'=>array('site/login'))
 			
 					)), 
-				array('label'=>'<span class="iconfa-picture"></span> 权限设置', 'url'=>array('site/contact'))
+				array('label'=>'<span class="iconfa-picture"></span> 新功能研发中', 'url'=>array(''))
 			),
 		)); ?>
         

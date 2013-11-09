@@ -267,8 +267,9 @@ var chart = new Highcharts.Chart({
 
 $(document).ready(function () {
 	window.$=jQuery
+	var showDay = 0;
 	var chart = $('#container').highcharts();
-	$("ul.dropdown-menu a").click(function(){
+	$("#selectCurrentDay a").click(function(){
 			$("button.dropdown-toggle").html($(this).text()+'<span class="caret"></span>');
 			index = $(this).attr('class');
 			$(this).parents("ul").children().removeClass("active");
@@ -278,10 +279,23 @@ $(document).ready(function () {
 				value.push([weekShelfStrategy.dayShelfStrategyList[index].hours[i].percent*100]);
 				
 			}
-
+			showDay = index;
 			chart.series[0].setData(value);
 		})
 	
+	$("#selectCurrentStrategy a").click(function(){
+			$("a.dropdown-toggle").html($(this).text()+'<span class="caret"></span>');
+			index = $(this).attr('class');
+			$(this).parents("ul").children().removeClass("active");
+			$(this).parent().addClass("active");
+			weekShelfStrategy = shelfStrategyList[index];
+			
+			var value = [];
+			for(var i=0; i<24; i++){
+				value.push([weekShelfStrategy.dayShelfStrategyList[showDay].hours[i].percent*100]);
+			}
+			chart.series[0].setData(value);
+		})
 });
 
 function formatData(weekShelfStrategy){
