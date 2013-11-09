@@ -19,7 +19,7 @@
 							array('label'=>'自定义上架', 'url'=>array('site/custom')),
 							array('label'=>'指定宝贝', 'url'=>array('site/assign')),
 							array('label'=>'排除宝贝', 'url'=>array('site/exclude')),
-							array('label'=>'上架日志记录', 'url'=>array('site/login'))
+							array('label'=>'上架日志记录', 'url'=>array('site/operation'))
 			
 					)), 
 				array('label'=>'<span class="iconfa-picture"></span> 新功能研发中', 'url'=>array(''))

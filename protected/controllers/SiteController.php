@@ -225,6 +225,15 @@ class SiteController extends Controller
 	public function actionExclude(){
 		$this->render('exclude');
 	}
+	
+	/**
+	 * 操作日志
+	 *
+	 *
+	 * */
+	public function actionOperation(){
+		$this->render('operationLog');
+	}
 
 	/**
 	 * Logs out the current user and redirect to homepage.
