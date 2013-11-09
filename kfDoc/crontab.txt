@@ -1,6 +1,7 @@
 http://blog.csdn.net/tianlesoftware/article/details/5315039
 
 windows:
+cd D:\xampp\htdocs\kfsoft\protected
 yiic timedTask recountPlan
 
 linux:

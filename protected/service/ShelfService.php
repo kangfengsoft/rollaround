@@ -207,6 +207,29 @@ class ShelfService {
 		}
 		return $allItemList;
 	}
+	
+	public function getAllListLog($taobao_user_id){
+		$listLogs = ListLog::model() -> findAll("taobao_user_id=:taobao_user_id", array(
+				":taobao_user_id" => $taobao_user_id,
+		));
+		$numIids = array();
+		$allItemList = array ();
+		$access_token = Util::getAccessToken ( $taobao_user_id );
+		$topService = new TopService ();
+		$k = 0;
+		foreach ( $listLogs as $listLog ) {
+			$k ++;
+			$numIids [] = $listLog->num_iid;
+			if (count ( $numIids ) === 20 || $k === count($listLogs)) {
+				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
+				foreach ( $itemList->items->item as $item ) {
+					$allItemList [] = $item;
+				}
+				$numIids = array ();
+			}
+		}
+		return $allItemList;
+	}
 
 	public function getShopScore($taobao_user_id){
 		$shopScore = ShopScore::model()->find("taobao_user_id=:taobao_user_id", array(

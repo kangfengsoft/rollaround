@@ -121,4 +121,13 @@ class ShelfController extends Controller {
 		);
 		echo json_encode($result);
 	}
+	
+	public function actionGetAllListLog(){
+		$shelfService = new ShelfService();
+		$aaData = $shelfService->getAllListLog(Yii::app ()->user->taobao_user_id);
+		$result = array(
+				"aaData" => $aaData
+		);
+		echo json_encode($result);
+	}
 }

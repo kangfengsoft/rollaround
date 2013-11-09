@@ -27,7 +27,7 @@ class Controller extends CController {
 	// can we put it in concrete controller?
 	public function filters() {
 		return array (
-				'accessControl' 
+				'accessControl - test' 
 		);
 	}
 	

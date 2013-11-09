@@ -19,6 +19,8 @@ return array(
 		'application.components.*',
 		'application.service.*',
 		'application.admin.service.*',
+		'application.admin.models.*',
+		'application.admin.config.*',
 		'application.apis.top.*',
 		'application.apis.top.request.*',
 		'application.apis.lotusphp_runtime.Logger.*' 

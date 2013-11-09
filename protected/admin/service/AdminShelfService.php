@@ -83,6 +83,11 @@ class AdminShelfService{
 			foreach($listTasks as $listTask){
 				$access_token = Util::getAccessToken($listTask->taobao_user_id);
 				$topService->applyListTask($listTask, $access_token);
+				$listLog = new ListLog();
+				$listLog->taobao_user_id = $listTask->taobao_user_id;
+				$listLog->num_iid = $listTask->num_iid;
+				$listLog->execute_time = $listTask->list_time;
+				$listLog->save();
 				$listTask->delete();
 			}
 			

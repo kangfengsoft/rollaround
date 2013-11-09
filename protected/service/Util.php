@@ -66,5 +66,10 @@ class Util{
 		}
 		return $userConfig;
 	}
+	
+	public static function startsWith($haystack, $needle)
+	{
+		return $needle === "" || strpos($haystack, $needle) === 0;
+	}
 }
 ?>

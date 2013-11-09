@@ -254,4 +254,8 @@ class SiteController extends Controller
 // 		$mailer->Body = $message;
 // 		$mailer->Send ();
 	}
+	
+	public function actionTest(){
+		//just for test  url: site/test
+	}
 }

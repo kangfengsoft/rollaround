@@ -68,3 +68,10 @@ CREATE TABLE shop_score (
     score int NOT NULL,
     create_time datetime NOT NULL
 )CHARSET=utf8;
+
+CREATE TABLE list_log (
+    id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    taobao_user_id varchar(100) NOT NULL,
+    num_iid varchar(100) NOT NULL,
+    execute_time datetime NOT NULL
+)CHARSET=utf8;

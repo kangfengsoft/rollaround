@@ -146,5 +146,102 @@ class TopService {
 		}
 		return $items;
 	}
+	
+	//FIXME not decide
+	public function getShowcaseItems($access_token){
+		$PAGE_SIZE = 200;
+		$count = $PAGE_SIZE;
+		$pageNo = 1;
+		$items = array ();
+		
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		while ( $count == $PAGE_SIZE ) {
+			$req = new ItemsOnsaleGetRequest ();
+			$req->setFields ( "num_iid" );
+			$req->setHasShowcase("true");
+			$req->setPageNo ( $pageNo ++ );
+			$req->setPageSize ( $PAGE_SIZE );
+			$resp = $c->execute ( $req, $access_token );
+			if($resp->total_results ===0){
+				break;
+			}
+			$count = count ( $resp->items->item );
+			$items = array_merge ( $items, $resp->items->item );
+		}
+		return $items;
+	}
+	
+	public function addShowcaseItems($numIids, $access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		for($i = 0;$i<count($numIids);$i++){
+			$req = new ItemRecommendAddRequest();
+			$req->setNumIid($numIids[$i]);
+			$resp = $c->execute ( $req, $access_token );
+		}
+	}
+	
+	public function deleteShowcaseItems($numIids, $access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		for($i = 0;$i<count($numIids);$i++){
+			$req = new ItemRecommendDeleteRequest();
+			$req->setNumIid($numIids[$i]);
+			$resp = $c->execute ( $req, $access_token );
+		}
+	}
+	
+	public function getShopShowcase($access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		$req = new ShopRemainshowcaseGetRequest();
+		$resp = $c->execute ( $req, $access_token );
+		return $resp;
+	}
+	
+	public function useAllShowcase($access_token){
+		$c = new TopClient ();
+		$c->appkey = Yii::app ()->params ['client_id'];
+		$c->secretKey = Yii::app ()->params ['client_secret'];
+		$req = new ShopRemainshowcaseGetRequest();
+		$resp = $c->execute ( $req, $access_token );
+		$remainShowcase = $resp->shop->remain_count;
+		
+		//get certain number of un-showcase items
+		$PAGE_SIZE = 200;
+		$count = $PAGE_SIZE;
+		$pageNo = 1;
+		$items = array ();
+		
+		while ( $count == $PAGE_SIZE ) {
+			$req = new ItemsOnsaleGetRequest ();
+			$req->setFields ( "num_iid" );
+			$req->setHasShowcase("false");
+			$req->setOrderBy("list_time:asc");
+			$req->setPageNo ( $pageNo ++ );
+			$req->setPageSize ( $PAGE_SIZE );
+			$resp = $c->execute ( $req, $access_token );
+			if($resp->total_results ===0){
+				break;
+			}
+			$count = count ( $resp->items->item );
+			$items = array_merge ( $items, $resp->items->item );
+			if(count($items) >= $remainShowcase){
+				break;
+			}
+		}
+		
+		$minCount = min(count ( $items ), $remainShowcase);
+		for($i = 0; $i < $minCount; $i ++) {
+			$req = new ItemRecommendAddRequest();
+			$req->setNumIid($items[$i]->num_iid);
+			$resp = $c->execute ( $req, $access_token );
+		}
+	}
 }
 ?>
