@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.jgrowl.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/reloadAjax.js"></script>
-<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/exclude-table.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/kf/log-table.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function(){
 	jQuery('.tabbedwidget').tabs();
@@ -27,7 +27,7 @@ jQuery(document).ready(function(){
 })
 </script>
 
-<h4 class="widgettitle">上架操作日志</h4>
+<h4 class="widgettitle">最近上架日志</h4>
 <div class="row-fluid">
 	<div id="a-1"><table id="dyntable" class="table table-bordered responsive">
                     <colgroup>
@@ -43,7 +43,7 @@ jQuery(document).ready(function(){
                             <th class="head0">图片</th>
                             <th class="head1">标题</th>
                             <th class="head0">价格</th>
-                            <th class="head1">操作</th>
+                            <th class="head1">上架时间</th>
                         </tr>
                     </thead>
                     <tbody>
