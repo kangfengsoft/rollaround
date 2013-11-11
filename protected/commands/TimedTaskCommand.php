@@ -13,7 +13,7 @@ class TimedTaskCommand extends CConsoleCommand {
 		$userConfigs = UserConfig::model ()->findAll ();
 		
 		for($i = 0; $i < count ( $userConfigs ); $i ++) {
-			if (! $this->isShelfPlanRecountEnable ()) {
+			if (! Util::isShelfPlanRecountEnable ()) {
 				return;
 			}
 			if (( int ) $userConfigs [$i]->enable_shelf_service === 0) {
@@ -23,6 +23,16 @@ class TimedTaskCommand extends CConsoleCommand {
 			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
 					':taobao_user_id' => $taobao_user_id 
 			) );
+			if($user === null){
+				continue;
+			}
+			//FIXME for test
+			if(Yii::app ()->params ['testMode'] && !Util::startsWith($user->taobao_user_nick,"sandbox")){
+				continue;
+			}
+			if(!Yii::app ()->params ['testMode'] && Util::startsWith($user->taobao_user_nick,"sandbox")){
+				continue;
+			}
 			
 			$topService = new TopService ();
 			$items = $topService->getItemListForPlanRecount ( $user->access_token );
@@ -53,6 +63,20 @@ class TimedTaskCommand extends CConsoleCommand {
 // 		$listTasks = ListTask::model ()->findAll ();
 		echo count($listTasks);
 		foreach($listTasks as $listTask){
+			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
+					':taobao_user_id' => $listTask->taobao_user_id
+			) );
+			if($user === null){
+				continue;
+			}
+			//FIXME for test
+			if(Yii::app ()->params ['testMode'] && !Util::startsWith($user->taobao_user_nick,"sandbox")){
+				continue;
+			}
+			if(!Yii::app ()->params ['testMode'] && Util::startsWith($user->taobao_user_nick,"sandbox")){
+				continue;
+			}
+			
 			$access_token = Util::getAccessToken($listTask->taobao_user_id);
 			$topService->applyListTask($listTask, $access_token);
 			$listLog = new ListLog();
@@ -68,20 +92,6 @@ class TimedTaskCommand extends CConsoleCommand {
 		echo 'executeListTask finish in '.date('Y-m-d H:i:s').', cost time: '.(($t2-$t1)*1000)."ms\n";
 	}
 	
-	public function isShelfPlanRecountEnable() {
-		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
-				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT 
-		) );
-		
-		if ($adminConfig === null) {
-			$adminConfig = new AdminConfig ();
-			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
-			$adminConfig->config_value = "false";
-			$adminConfig->save ();
-		}
-		return $adminConfig->config_value === "true";
-	}
-	
 	public function actionResetShowcase() {
 		//FIXME for test
 		$t1 = microtime(true);
@@ -93,14 +103,17 @@ class TimedTaskCommand extends CConsoleCommand {
 		$items = [];
 		for($i = 0; $i < count ( $userConfigs ); $i ++) {
 			//FIXME for test
-// 			if (( int ) $userConfigs [$i]->enable_shelf_service === 0) {
-// 				continue;
-// 			}
+			if (( int ) $userConfigs [$i]->enable_shelf_service === 0) {
+				continue;
+			}
 
 			$taobao_user_id = $userConfigs [$i]->taobao_user_id;
 			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
 					':taobao_user_id' => $taobao_user_id
 			) );
+			if($user === null){
+				continue;
+			}
 			
 			//FIXME for test
 			if(Yii::app ()->params ['testMode'] && !Util::startsWith($user->taobao_user_nick,"sandbox")){

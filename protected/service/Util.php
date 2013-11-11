@@ -71,5 +71,19 @@ class Util{
 	{
 		return $needle === "" || strpos($haystack, $needle) === 0;
 	}
+	
+	public static function isShelfPlanRecountEnable() {
+		$adminConfig = AdminConfig::model ()->find ( 'config_key=:config_key', array (
+				':config_key' => Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT
+		) );
+	
+		if ($adminConfig === null) {
+			$adminConfig = new AdminConfig ();
+			$adminConfig->config_key = Consts::CONFIG_KEY_SHELF_PLAN_RECOUNT;
+			$adminConfig->config_value = "false";
+			$adminConfig->save ();
+		}
+		return $adminConfig->config_value === "true";
+	}
 }
 ?>
