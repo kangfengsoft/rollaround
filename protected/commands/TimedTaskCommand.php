@@ -61,7 +61,7 @@ class TimedTaskCommand extends CConsoleCommand {
 				':list_time' => $nextListTime
 		) );
 // 		$listTasks = ListTask::model ()->findAll ();
-		echo "list task count: ".count($listTasks);
+		echo "list task count: ".count($listTasks)."  ";
 		foreach($listTasks as $listTask){
 			$user = User::model ()->find ( 'taobao_user_id=:taobao_user_id', array (
 					':taobao_user_id' => $listTask->taobao_user_id
