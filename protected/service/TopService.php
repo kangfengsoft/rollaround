@@ -82,6 +82,9 @@ class TopService {
 		$req->setFields("num,list_time,approve_status");
 		$req->setNumIid($listTask->num_iid);
 		$resp = $c->execute ( $req, $access_token );
+		if(!isset($resp->item)){
+			return;
+		}
 		$num = $resp->item->num;
 		$list_time = $resp->item->list_time;
 		
@@ -123,7 +126,7 @@ class TopService {
 	}
 	
 	public function getItemListForPlanRecount($access_token){
-		$PAGE_SIZE = 200;
+		$PAGE_SIZE = 198;
 		$count = $PAGE_SIZE;
 		$pageNo = 1;
 		$items = array ();
@@ -138,7 +141,7 @@ class TopService {
 			$req->setOrderBy ( "list_time:desc" );
 			$req->setPageSize ( $PAGE_SIZE );
 			$resp = $c->execute ( $req, $access_token );
-			if($resp->total_results ===0){
+			if($resp->total_results === 0 || !isset($resp->items)){
 				break;
 			}
 			$count = count ( $resp->items->item );
@@ -164,7 +167,7 @@ class TopService {
 			$req->setPageNo ( $pageNo ++ );
 			$req->setPageSize ( $PAGE_SIZE );
 			$resp = $c->execute ( $req, $access_token );
-			if($resp->total_results ===0){
+			if($resp->total_results ===0 || !isset($resp->items)){
 				break;
 			}
 			$count = count ( $resp->items->item );
@@ -210,6 +213,9 @@ class TopService {
 		$c->secretKey = Yii::app ()->params ['client_secret'];
 		$req = new ShopRemainshowcaseGetRequest();
 		$resp = $c->execute ( $req, $access_token );
+		if(!isset($resp->shop)){
+			return;
+		}
 		$remainShowcase = $resp->shop->remain_count;
 		
 		//get certain number of un-showcase items
@@ -226,7 +232,7 @@ class TopService {
 			$req->setPageNo ( $pageNo ++ );
 			$req->setPageSize ( $PAGE_SIZE );
 			$resp = $c->execute ( $req, $access_token );
-			if($resp->total_results ===0){
+			if($resp->total_results ===0 || !isset($resp->items)){
 				break;
 			}
 			$count = count ( $resp->items->item );
