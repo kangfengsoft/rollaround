@@ -331,11 +331,19 @@ function saveData(){
 
 function extract(){
 	var list = weekShelfStrategy.dayShelfStrategyList;
+	var temp_add = 0;
 	for(var item in list){
 		for(var v in list[item].hours){
 			if(list[item].hours[v].percent > 0.0001){
 				list[item].hours[v].percent -= 0.0001;
+				temp_add += 0.0001;
 			}
 		}
 	}
+	left_percent = parseFloat(left_percent);
+	left_percent += temp_add;
+	left_percent = Math.round(left_percent * 10000) / 10000
+	chart.setTitle({
+		text : "可调节的商品余量（"+ left_percent * 100 +"%）"
+	})
 }
