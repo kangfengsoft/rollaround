@@ -115,17 +115,45 @@ class ShelfService {
 		$access_token = Util::getAccessToken ( $taobao_user_id );
 		$topService = new TopService ();
 		$k = 0;
+		$deletedItemIds = [];
 		foreach ( $assignListTasks as $assignListTask ) {
 			$numIids [] = $assignListTask->num_iid;
 			$k++;
 			if (count ( $numIids ) === 20 || $k === count($assignListTasks)) {
 				$itemList = $topService->getItemList ( join ( ",", $numIids ), $access_token );
-				foreach ( $itemList->items->item as $item ) {
-					$allItemList [] = $item;
+				if(isset($itemList->items)){
+					foreach ( $itemList->items->item as $item ) {
+						$allItemList [] = $item;
+					}
+					//FIXME delete the items which is already deleted online. this code is not verified
+					if(count ( $numIids ) !== count($itemList->items->item)){
+						foreach($numIids as $id){
+							$findFlag = false;
+							foreach($itemList->items->item as $item){
+								if($item->num_iid === $id){
+									$findFlag  = true;
+								}
+							}
+							if(!$findFlag){
+								$deletedItemIds[] = $id;
+							}
+						}
+					}
 				}
 				$numIids = array ();
 			}
 		}
+		if(count($deletedItemIds) !== 0){
+			foreach ( $assignListTasks as $assignListTask ) {
+				foreach ( $deletedItemIds as $id ) {
+					if($assignListTask->num_iid === $id){
+						$assignListTask -> delete();
+					}
+				}
+			}
+		}
+
+		
 // 		$conbinedItemList = array();
 // 		foreach($assignListTasks as $key=>$assignListTask){
 // 			$conbinedItemList[$key] = array();
